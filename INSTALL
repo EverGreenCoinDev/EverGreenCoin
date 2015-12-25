@@ -1,0 +1,9 @@
+Building EverGreenCoin
+
+See doc/readme-qt.rst for instructions on building EverGreenCoin QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of EverGreenCoin.
+
+See doc/build-*.txt for instructions on building eveergreencoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of EverGreenCoin.
