@@ -50,7 +50,6 @@
     <qresource prefix="/images">
         <file alias="splash">res/images/splash.png</file>
         <file alias="Wallet_Logo">res/images/wallet_logo.png</file>
-        <file alias="EverGreenBG">res/images/backg.png</file>
         <file alias="Small_logo">res/images/evergreen60x60.png</file>
         <file alias="tor_logo">res/images/tor.png</file>
         <file alias="about">res/images/about.png</file>

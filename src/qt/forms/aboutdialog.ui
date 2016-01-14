@@ -91,7 +91,7 @@
         <cursorShape>IBeamCursor</cursorShape>
        </property>
        <property name="text">
-        <string>Copyright © 2015 EverGreenCoin 
+        <string>Copyright © 2015-2016 EverGreenCoin 
 evergreencoindev@gmail.com</string>
        </property>
        <property name="textInteractionFlags">

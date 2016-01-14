@@ -1,3 +1,5 @@
-# EverGreenCoin
 
-https://bitcointalk.org/index.php?topic=1272091.0
+EverGreenCoin version 1.1
+
+
+Visit http://EverGreenCoin.org for more details.
