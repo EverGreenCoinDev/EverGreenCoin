@@ -351,7 +351,7 @@ namespace Checkpoints
 }
 
 // evergreencoin: sync-checkpoint master key
-const std::string CSyncCheckpoint::strMasterPubKey = "04a18357665ed7a802dcf252ef528d3dc786da38653b51d1ab8e9f4820b55aca807892a056781967315908ac205940ec9d6f2fd0a85941966971eac7e475a27826";
+const std::string CSyncCheckpoint::strMasterPubKey = "04135a182febeeb18b660dc17a8c4619de61990e6a914b675da8bab28b817c358ca23762e94a2682d899270d97e140c29ac2f0794dd156942baca57633f8f810b3";
 
 std::string CSyncCheckpoint::strMasterPrivKey = "";
 
