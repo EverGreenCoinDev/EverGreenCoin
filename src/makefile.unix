@@ -77,11 +77,14 @@ endif
     # Build position independent code to take advantage of Address Space Layout Randomization
     # offered by some kernels.
     # see doc/build-unix.txt for more information.
-	ifdef PIE
+	ifdef PIC
+		LEVELDB_FLAG=-fPIC
+		HARDENING+=-fPIC
+		LDHARDENING+=-pie
+	else ifdef PIE
 		HARDENING+=-fPIE
 		LDHARDENING+=-pie
 	endif
-
     # -D_FORTIFY_SOURCE=2 does some checking for potentially exploitable code patterns in
     # the source such overflowing a statically defined buffer.
 	HARDENING+=-D_FORTIFY_SOURCE=2
@@ -163,7 +166,7 @@ DEFS += $(addprefix -I,$(CURDIR)/leveldb/include)
 DEFS += $(addprefix -I,$(CURDIR)/leveldb/helpers)
 OBJS += obj/txdb-leveldb.o
 leveldb/libleveldb.a:
-	@echo "Building LevelDB ..."; cd leveldb; make libleveldb.a libmemenv.a; cd ..;
+	@echo "Building LevelDB ..."; cd leveldb; EXTRA_CXXFLAGS="$(LEVELDB_FLAG)" make libleveldb.a libmemenv.a; cd ..;
 obj/txdb-leveldb.o: leveldb/libleveldb.a
 
 # auto-generated dependencies:
@@ -217,6 +220,11 @@ clean:
 	-rm -f obj-test/*.P
 	-rm -f obj/build.h
 	-rm -f leveldb/libleveldb.a
-	-rm -f leveldb/libmemenv.a
+	-rm -f leveldb/wlibmemenv.a
+	-rm -f leveldb/db/*.o
+	-rm -f leveldb/table/*.o
+	-rm -f leveldb/util/*.o
+	-rm -f leveldb/port/*.o
+	-rm -f leveldb/helpers/memenv/*.o
 
 FORCE:
