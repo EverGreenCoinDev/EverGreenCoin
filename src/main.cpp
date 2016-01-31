@@ -2584,7 +2584,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nNonce   = 4891360;
         if(fTestNet)
         {
-            block.nNonce   = 19760907;
+            block.nNonce   = 19859362;
         }
         if (false  && (block.GetHash() != hashGenesisBlock)) {
 
