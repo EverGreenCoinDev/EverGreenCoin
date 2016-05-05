@@ -2,7 +2,6 @@
 #define OVERVIEWPAGE_H
 
 #include <QWidget>
-#include <QtWebKit>
 
 QT_BEGIN_NAMESPACE
 class QModelIndex;
@@ -46,10 +45,8 @@ private:
     TransactionFilterProxy *filter;
 
 private slots:
-    void reloadTwitter();
     void updateDisplayUnit();
     void handleTransactionClicked(const QModelIndex &index);
-    void sslErrorHandler(QNetworkReply *reply, const QList<QSslError> & errors);
 };
 
 #endif // OVERVIEWPAGE_H

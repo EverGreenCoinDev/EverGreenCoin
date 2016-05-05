@@ -12,11 +12,6 @@
 
 #include <QAbstractItemDelegate>
 #include <QPainter>
-#include <QWebView>
-#include <QSslError>
-#include <QNetworkReply>
-#include <QSslConfiguration>
-#include <QUrl>
 
 #define DECORATION_SIZE 64
 #define NUM_ITEMS 5
@@ -106,21 +101,6 @@ OverviewPage::OverviewPage(QWidget *parent) :
     filter(0)
 {
     ui->setupUi(this);
-   // connect( ui->reload, SIGNAL(clicked()), this, SLOT(reloadTwitter()));
-       connect( ui->twitter->page()->networkAccessManager(),
-                    SIGNAL(sslErrors(QNetworkReply*, const QList<QSslError> & )),
-                    this,
-                    SLOT(sslErrorHandler(QNetworkReply*, const QList<QSslError> & )));
-                   QSslConfiguration sslCfg = QSslConfiguration::defaultConfiguration();
-                   QList<QSslCertificate> ca_list = sslCfg.caCertificates();
-                   QList<QSslCertificate> ca_new = QSslCertificate::fromPath("c:/global.pem");
-                   ca_list += ca_new;
-
-                   sslCfg.setCaCertificates(ca_list);
-                   sslCfg.setProtocol(QSsl::AnyProtocol);
-                   QSslConfiguration::setDefaultConfiguration(sslCfg);
-       ui->twitter->load(QUrl("http://evergreencoin.org/feed.html"));
-       ui->twitter->show();
 
     // Recent transactions
     ui->listTransactions->setItemDelegate(txdelegate);
@@ -149,10 +129,6 @@ OverviewPage::~OverviewPage()
     delete ui;
 }
 
-void OverviewPage::reloadTwitter()
-{
-    ui->twitter->load(QUrl("http://evergreencoin.org/feed.html"));
-}
 
 void OverviewPage::setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBalance, qint64 immatureBalance)
 {
@@ -248,15 +224,6 @@ void OverviewPage::updateDisplayUnit()
 
         ui->listTransactions->update();
     }
-}
-
-void OverviewPage::sslErrorHandler(QNetworkReply *reply, const QList<QSslError> & errors )
-{
-    qDebug() << "sslErrorHandler:";
-    foreach (QSslError err, errors)
-      qDebug() << "ssl error: " << err;
-
-    reply->ignoreSslErrors();
 }
 
 void OverviewPage::showOutOfSyncWarning(bool fShow)
