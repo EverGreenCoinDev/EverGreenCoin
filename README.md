@@ -1,5 +1,5 @@
 
-EverGreenCoin version 1.2
+EverGreenCoin version 1.2.1
 
 Copyright Steven Saxton (Steve@EverGreenCoin.org)
 
