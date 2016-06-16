@@ -1,5 +1,5 @@
 
-EverGreenCoin version 1.2.1
+EverGreenCoin version 1.3.0.0
 
 Copyright (c) 2015-2016 EverGreenCoin Foundation - Founded and developed by Steven Saxton (Steve@EverGreenCoin.org) 
 
