@@ -1048,6 +1048,8 @@ const CBlockIndex* GetLastBlockIndex(const CBlockIndex* pindex, bool fProofOfSta
 // legacy diff-mode
 unsigned int static GetNextWorkRequired_legacy(const CBlockIndex* pindexLast)
 {
+    if (pindexBest->nHeight > 494999)
+    { nTargetSpacing =180; }
     unsigned int nProofOfWorkLimit = bnProofOfWorkLimit.GetCompact();
 
     // Genesis block
