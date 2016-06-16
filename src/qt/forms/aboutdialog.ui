@@ -91,8 +91,8 @@
         <cursorShape>IBeamCursor</cursorShape>
        </property>
        <property name="text">
-        <string>Copyright © 2015-2016 EverGreenCoin 
-evergreencoindev@gmail.com</string>
+        <string>Copyright © 2015-2016 EverGreenCoin Foundation
+Steve@EverGreenCoin.org</string>
        </property>
        <property name="textInteractionFlags">
         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
