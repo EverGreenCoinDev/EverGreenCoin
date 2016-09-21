@@ -1082,7 +1082,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good())
-        return; // No bitcoin.conf file is OK
+        return; // No evergreencoin.conf file is OK
 
     set<string> setOptions;
     setOptions.insert("*");
