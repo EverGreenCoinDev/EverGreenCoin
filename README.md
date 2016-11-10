@@ -1,5 +1,5 @@
 
-EverGreenCoin version 1.3.0.0
+EverGreenCoin version 1.4
 
 Cryptocurrency meets our environment. 
 
@@ -22,5 +22,5 @@ RPC port: 5758 (testnet 15758).
 
 Visit http://EverGreenCoin.org and our Bitcoin Talk thread https://bitcointalk.org/index.php?topic=1272091.0 for more details.
 
-EverGreenCoin Copyright (c) 2015-2016 Steven Thomas Saxton (Steve@EverGreenCoin.org) and the EverGreenCoin Foundation.
+EverGreenCoin Copyright (c) 2015-2017 Steven Saxton (Steve@EverGreenCoin.org) and the EverGreenCoin Foundation.
 EverGreenCoin and the EverGreenCoin logo are protected by registered trademarks. All rights reserved.
