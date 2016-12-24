@@ -1,4 +1,6 @@
 // Copyright (c) 2009-2012 The Bitcoin developers
+// Copyright (c) 2014-2016 The MaiaCoin developers
+// Copyright (c) 2015-2016 The EverGreenCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -41,6 +43,7 @@ namespace Checkpoints
         (446023, uint256("0x00000000245cd1d12f16893305bc4c21357a598916dc7bb54b3873643b42d3d5"))
         (487135, uint256("0x000000008691d6c33c3e400f369d13f8d59afc527492b7e3255bf539bde7f00d"))
         (732854, uint256("0x58a6ef4c386b6664875f409da489ac56dcde750bb39f1b88f73f10fe54087faa"))
+        (804006, uint256("0x137146a8e2a4c60eee3ce806aa1b4ab20a9f6118ffd9f7c6b7064ba854e57a5c"))
     ;
 
     // TestNet has no checkpoints
@@ -200,7 +203,7 @@ namespace Checkpoints
         return false;
     }
 
-    // Automatically select a suitable sync-checkpoint 
+    // Automatically select a suitable sync-checkpoint
     uint256 AutoSelectSyncCheckpoint()
     {
         const CBlockIndex *pindex = pindexBest;
@@ -245,7 +248,7 @@ namespace Checkpoints
             return false;
         if (hashBlock == hashPendingCheckpoint)
             return true;
-        if (mapOrphanBlocks.count(hashPendingCheckpoint) 
+        if (mapOrphanBlocks.count(hashPendingCheckpoint)
             && hashBlock == WantedByOrphan(mapOrphanBlocks[hashPendingCheckpoint]))
             return true;
         return false;
