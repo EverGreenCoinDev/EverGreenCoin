@@ -1,5 +1,5 @@
 
-EverGreenCoin version 1.4.1.0
+EverGreenCoin version 1.4.2.0
 
 Cryptocurrency meets our environment. 
 
@@ -20,7 +20,7 @@ Maximum coin age for staking: none.
 P2P port: 5757 (testnet 15757). 
 RPC port: 5758 (testnet 15758). 
 
-Visit http://EverGreenCoin.org and our Bitcoin Talk thread https://bitcointalk.org/index.php?topic=1272091.0 for more details.
+Visit https://EverGreenCoin.org and our Bitcoin Talk thread https://bitcointalk.org/index.php?topic=1272091.0 for more details.
 
-EverGreenCoin Copyright (c) 2015-2016 Steven Saxton (Steve@EverGreenCoin.org) and the EverGreenCoin Foundation.
+EverGreenCoin Copyright (c) 2015-2017 Steven Saxton (Steve@EverGreenCoin.org) and the EverGreenCoin Foundation.
 EverGreenCoin and the EverGreenCoin logo are protected by registered trademarks. All rights reserved.
