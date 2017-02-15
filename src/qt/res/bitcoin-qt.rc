@@ -18,11 +18,11 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "EverGreenCoin"
+            VALUE "CompanyName",        "EverGreenCoin Foundation"
             VALUE "FileDescription",    "EverGreenCoin-Qt (OSS GUI client for EverGreenCoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "EverGreenCoin-Qt"
-            VALUE "LegalCopyright",     "2014 The EverGreenCoin developers"
+            VALUE "LegalCopyright",     "2015 - 2017 EverGreenCoin Foundation"
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "EverGreenCoin-Qt.exe"
             VALUE "ProductName",        "EverGreenCoin-Qt"

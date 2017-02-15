@@ -50,6 +50,13 @@
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="passLabel2">
+       <property name="font">
+        <font>
+         <family>Typola</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>New EGC passphrase</string>
        </property>
@@ -64,6 +71,13 @@
      </item>
      <item row="2" column="0">
       <widget class="QLabel" name="passLabel3">
+       <property name="font">
+        <font>
+         <family>Typola</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>Repeat new EGC passphrase</string>
        </property>
@@ -94,6 +108,13 @@
      </item>
      <item row="0" column="0">
       <widget class="QLabel" name="passLabel1">
+       <property name="font">
+        <font>
+         <family>Typola</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>Enter EGC passphrase</string>
        </property>
@@ -119,6 +140,13 @@
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="font">
+      <font>
+       <family>Typola</family>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>

@@ -1,4 +1,4 @@
-// Copyright (c) 2015 The evergreencoin developers
+// Copyright (c) 2015 2017 evergreencoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -35,6 +35,7 @@ static std::map<int, unsigned int> mapStakeModifierCheckpoints =
         ( 487135, 0xfd4d427cu )
         ( 732854, 0xff7431d3u )
         ( 804006, 0x2e5fdbc5u )
+        ( 865663, 0x8ef9dfdcu )
     ;
 
 // Hard checkpoints of stake modifiers to ensure they are deterministic (testNet)

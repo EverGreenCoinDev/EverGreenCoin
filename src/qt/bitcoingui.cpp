@@ -87,7 +87,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 
 
     resize(1000, 600);
-    setWindowTitle(tr("EverGreenCoin") + " " + tr("Wallet") );
+    setWindowTitle(tr("EverGreenCoin") );
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
@@ -250,13 +250,13 @@ void BitcoinGUI::createActions()
     statisticsAction->setCheckable(true);
     statisticsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_8));
     tabGroup->addAction(statisticsAction);
-    sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send coins"), this);
+    sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
     sendCoinsAction->setToolTip(tr("Send EverGreenCoins to an EverGreenCoin address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
 
-    receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive coins"), this);
+    receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive"), this);
     receiveCoinsAction->setToolTip(tr("Show your list of EverGreenCoin addresses for receiving payments"));
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
@@ -268,13 +268,13 @@ void BitcoinGUI::createActions()
     historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
     tabGroup->addAction(historyAction);
 
-    addressBookAction = new QAction(QIcon(":/icons/address-book"), tr("&Address Book"), this);
+    addressBookAction = new QAction(QIcon(":/icons/address-book"), tr("&Addresses"), this);
     addressBookAction->setToolTip(tr("Edit the list of your stored EverGreenCoin addresses and labels"));
     addressBookAction->setCheckable(true);
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(addressBookAction);
 
-    blockAction = new QAction(QIcon(":/icons/block"), tr("&Block Explorer"), this);
+    blockAction = new QAction(QIcon(":/icons/block"), tr("&Explorer"), this);
     blockAction->setToolTip(tr("Explore the EverGreenCoin blockchain"));
     blockAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
     blockAction->setCheckable(true);
@@ -323,7 +323,7 @@ void BitcoinGUI::createActions()
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
 
-    exportAction = new QAction(QIcon(":/icons/export"), tr("&Export..."), this);
+    exportAction = new QAction(QIcon(":/icons/export"), tr("E&xport..."), this);
     exportAction->setToolTip(tr("Export the data in the current tab to a file"));
     openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setToolTip(tr("Open debugging and diagnostic console"));
@@ -390,7 +390,6 @@ void BitcoinGUI::createToolBars(QToolBar* toolbar)
     toolbar->addAction(receiveCoinsAction);
     toolbar->addAction(historyAction);
     toolbar->addAction(addressBookAction);
-
 	toolbar->addAction(statisticsAction);
 	toolbar->addAction(blockAction);
     toolbar->addAction(exportAction);
@@ -1015,7 +1014,7 @@ void BitcoinGUI::updateStakingIcon()
         }
 
         labelStakingIcon->setPixmap(QIcon(":/icons/staking_on").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-        labelStakingIcon->setToolTip(tr("Staking.<br>Your weight is %1<br>Network weight is %2<br>Expected time to earn reward is %3").arg(nWeight).arg(nNetworkWeight).arg(text));
+        labelStakingIcon->setToolTip(tr("Staking (earning interest)<br>Your weight is %1<br>Network weight is %2<br>Expected time to earn reward is %3").arg(nWeight).arg(nNetworkWeight).arg(text));
     }
     else
     {
