@@ -1,11 +1,9 @@
 ###############################################################################################
 # EverGreenCoin comes from original source of MaiaCoin by Mammix2
 ###############################################################################################
-# Public code, doesnt include anonymous mixer tech, for daemons etc...
-###############################################################################################
 TEMPLATE = app
 TARGET = EverGreenCoin-Qt
-VERSION = 1.4.2.0 
+VERSION = 1.5.0.0
 INCLUDEPATH += src src/json \
     src/qt \
     src/sph

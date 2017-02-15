@@ -159,13 +159,13 @@ void OverviewPage::unlockWallet()
         dlg.setModel(model);
         if(dlg.exec() == QDialog::Accepted)
         {
-            ui->unlockWalletButton->setText(QString("Lock Wallet"));
+            ui->unlockWalletButton->setText(QString("Lock Software"));
         }
     }
     else
     {
         model->setWalletLocked(true);
-        ui->unlockWalletButton->setText(QString("Unlock Wallet"));
+        ui->unlockWalletButton->setText(QString("Unlock Software"));
     }
 }
 
@@ -197,13 +197,13 @@ void OverviewPage::setModel(WalletModel *model)
         if(status == WalletModel::Unencrypted)
         {
             ui->unlockWalletButton->setDisabled(true);
-            ui->unlockWalletButton->setText(QString("Wallet is not encrypted!"));
+            ui->unlockWalletButton->setText(QString("Not encrypted!"));
 
         }
 
         else
         {
-            ui->unlockWalletButton->setText(QString("Unlock Wallet"));
+            ui->unlockWalletButton->setText(QString("Unlock Software"));
         }
         connect(ui->unlockWalletButton, SIGNAL(clicked()), this, SLOT(unlockWallet()));
     }

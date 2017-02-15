@@ -7,6 +7,7 @@
 #include "clientmodel.h"
 #include "bitcoinrpc.h"
 #include "pow_control.h"
+#include "blockbrowser.h"
 #include <sstream>
 #include <string>
 
@@ -48,9 +49,10 @@ void StatisticsPage::updateStatistics()
 {
     double pHardness = GetDifficulty();
     double pHardness2 = GetDifficulty(GetLastBlockIndex(pindexBest, true));
-    int pPawrate = GetPoWMHashPS();
+    //int pPawrate = GetPoWMHashPS();
     double pPawrate2 = 0.000;
     int nHeight = pindexBest->nHeight;
+    int pPawrate = getBlockHashrate(nHeight);
     double nSubsidy = 50;
     uint64_t nMinWeight = 0, nMaxWeight = 0, nWeight = 0;
     pwalletMain->GetStakeWeight(*pwalletMain, nMinWeight, nMaxWeight, nWeight);
@@ -71,7 +73,7 @@ void StatisticsPage::updateStatistics()
     QString subsidy = QString::number(nSubsidy, 'f', 6);
     QString hardness = QString::number(pHardness, 'f', 6);
     QString hardness2 = QString::number(pHardness2, 'f', 6);
-    QString pawrate = QString::number(pPawrate2, 'f', 3);
+    QString pawrate = QString::number(pPawrate2, 'f', 0);
     QString Qlpawrate = model->getLastBlockDate().toString();
 
     QString QPeers = QString::number(peers);
@@ -132,11 +134,11 @@ void StatisticsPage::updateStatistics()
     
     if(pPawrate2 > netPawratePrevious)
     {
-        ui->pawrateBox->setText("<b><font color=\"yellow\">" + pawrate + " MH/s</font></b>");
+        ui->pawrateBox->setText("<b><font color=\"yellow\">" + pawrate + " H/s</font></b>");
     } else if(pPawrate2 < netPawratePrevious) {
-        ui->pawrateBox->setText("<b><font color=\"red\">" + pawrate + " MH/s</font></b>");
+        ui->pawrateBox->setText("<b><font color=\"red\">" + pawrate + " H/s</font></b>");
     } else {
-        ui->pawrateBox->setText(pawrate + " MH/s");
+        ui->pawrateBox->setText(pawrate + " H/s");
     }
 
     if(Qlpawrate != pawratePrevious)

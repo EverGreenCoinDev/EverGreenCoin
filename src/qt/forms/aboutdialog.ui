@@ -46,6 +46,14 @@
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="cursor">
           <cursorShape>IBeamCursor</cursorShape>
          </property>
@@ -59,6 +67,14 @@
        </item>
        <item>
         <widget class="QLabel" name="versionLabel">
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="cursor">
           <cursorShape>IBeamCursor</cursorShape>
          </property>
@@ -87,12 +103,20 @@
      </item>
      <item>
       <widget class="QLabel" name="copyrightLabel">
+       <property name="font">
+        <font>
+         <family>Typola</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="cursor">
         <cursorShape>IBeamCursor</cursorShape>
        </property>
        <property name="text">
         <string>Copyright © 2015-2017 EverGreenCoin Foundation
-Steve@EverGreenCoin.org</string>
+For support, please make a ticket at http://support.EverGreenCoin.org
+Please join us at https://EverGreenCoin.org</string>
        </property>
        <property name="textInteractionFlags">
         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -101,6 +125,13 @@ Steve@EverGreenCoin.org</string>
      </item>
      <item>
       <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>Typola</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="cursor">
         <cursorShape>IBeamCursor</cursorShape>
        </property>
