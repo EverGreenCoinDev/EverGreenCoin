@@ -43,6 +43,7 @@ static const int64_t nTargetTimespan = 16 * 60;
 
 CBigNum bnProofOfWorkLimit(~uint256(0) >> 20);        // PoW starting difficulty = 0.0002441
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);       // PoS starting difficulty = 0.0002441
+CBigNum bnProofOfStakeHardforkLimit(~uint256(0) >> 26);
 CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 16); // PoW starting difficulty on Testnet
 CBigNum bnProofOfWorkFirstBlock(~uint256(0) >> 30);
 
@@ -1101,7 +1102,11 @@ unsigned int static GetNextWorkRequired_legacy(const CBlockIndex* pindexLast)
 
 static unsigned int GetNextTargetRequired_(const CBlockIndex* pindexLast, bool fProofOfStake)
 {
-    CBigNum bnTargetLimit = fProofOfStake ? bnProofOfStakeLimit : bnProofOfWorkLimit;
+    CBigNum bnTargetLimit;
+    if (pindexBest->nHeight > 892000)
+        bnTargetLimit = fProofOfStake ? bnProofOfStakeHardforkLimit : bnProofOfWorkLimit;
+    else
+        bnTargetLimit = fProofOfStake ? bnProofOfStakeLimit : bnProofOfWorkLimit;
 
     if (pindexLast == NULL)
         return bnTargetLimit.GetCompact(); // genesis block
