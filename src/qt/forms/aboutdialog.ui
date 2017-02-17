@@ -58,6 +58,10 @@
          <property name="cursor">
           <cursorShape>IBeamCursor</cursorShape>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel { color: #266C3F; }
+</string>
+         </property>
          <property name="text">
           <string>&lt;b&gt;EverGreenCoin&lt;/b&gt; </string>
          </property>
@@ -75,6 +79,10 @@
          </property>
          <property name="cursor">
           <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel { color: #266C3F; }
+</string>
          </property>
          <property name="text">
           <string notr="true">0.1.1.2-beta</string>
@@ -104,6 +112,10 @@
        <property name="cursor">
         <cursorShape>IBeamCursor</cursorShape>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel { color: #266C3F; }
+</string>
+       </property>
        <property name="text">
         <string>Copyright © 2015-2017 The EverGreenCoin Foundation and Steven Saxton
 For support, please make a ticket at http://support.EverGreenCoin.org
@@ -118,6 +130,10 @@ Please join us at https://EverGreenCoin.org</string>
       <widget class="QLabel" name="label_2">
        <property name="cursor">
         <cursorShape>IBeamCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel { color: #266C3F; }
+</string>
        </property>
        <property name="text">
         <string>
