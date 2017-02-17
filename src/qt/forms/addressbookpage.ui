@@ -19,13 +19,14 @@
      <property name="font">
       <font>
        <family>Typola</family>
+       <pointsize>13</pointsize>
        <weight>75</weight>
        <bold>true</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="text">
-      <string>These are your EverGreenCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</string>
+      <string>These are your EverGreenCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of how you received each transaction.                            </string>
      </property>
      <property name="textFormat">
       <enum>Qt::PlainText</enum>

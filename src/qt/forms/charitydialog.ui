@@ -296,7 +296,7 @@
              <string/>
             </property>
             <property name="statusTip">
-             <string>Click to turn on Stake For Charity</string>
+             <string>Click to turn on EverGreenCoin Stake For Charity</string>
             </property>
             <property name="text">
              <string>Enable</string>
@@ -315,7 +315,7 @@
              </font>
             </property>
             <property name="statusTip">
-             <string>Click to turn off Stake For Charity</string>
+             <string>Click to turn off EverGreenCoin Stake For Charity</string>
             </property>
             <property name="text">
              <string>Disable</string>
@@ -337,7 +337,7 @@
              <number>1</number>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;EverGreenCoin Stake For Charity allows you to automatically send up to 100% of your stake rewards to another EverGreenCoin address after it matures. Note that you pay the tansaction fee&lt;br /&gt;(.0001 EGC) in addition to the percentage.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Please enter the percentage to give and the EverGreenCoin address to give to. Min and Max amount and change address are optional.&lt;/span&gt;&lt;/p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;EverGreenCoin Stake For Charity allows you to automatically send up to 100% of your stake rewards to another EverGreenCoin address after it matures. Note that you pay the tansaction fee&lt;br /&gt;(.0001 EGC) in addition to the percentage. Visit https://EverGreenCoin.org for a list of charities.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Please enter the percentage to give and the EverGreenCoin address to give to. Min and Max amount and change address are optional.&lt;/span&gt;&lt;/p&gt;&lt;br /&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>

@@ -88,6 +88,7 @@
             <property name="font">
              <font>
               <family>Typola</family>
+              <pointsize>11</pointsize>
               <weight>75</weight>
               <bold>true</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
@@ -807,7 +808,7 @@
         <x>0</x>
         <y>0</y>
         <width>830</width>
-        <height>178</height>
+        <height>175</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">

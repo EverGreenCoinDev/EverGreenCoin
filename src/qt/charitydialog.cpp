@@ -98,7 +98,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if(model->getEncryptionStatus() == WalletModel::Locked)
     {
         ui->message->setStyleSheet("QLabel { color: black; }");
-        ui->message->setText(tr("Please unlock wallet before starting Stake For Charity."));
+        ui->message->setText(tr("Please unlock wallet before starting EverGreenCoin Stake For Charity."));
         return;
     }
 
@@ -199,6 +199,6 @@ void StakeForCharityDialog::on_disableButton_clicked()
     ui->charityMinEdit->clear();
     ui->charityPercentEdit->clear();
     ui->message->setStyleSheet("QLabel { color: black; }");
-    ui->message->setText(tr("Stake For Charity is now off"));
+    ui->message->setText(tr("EverGreenCoin Stake For Charity is now off"));
     return;
 }
