@@ -43,6 +43,7 @@ static const int64_t nTargetTimespan = 16 * 60;
 
 CBigNum bnProofOfWorkLimit(~uint256(0) >> 20);        // PoW starting difficulty = 0.0002441
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);       // PoS starting difficulty = 0.0002441
+CBigNum bnProofOfStakeHardforkLimit(~uint256(0) >> 26);
 CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 16); // PoW starting difficulty on Testnet
 CBigNum bnProofOfWorkFirstBlock(~uint256(0) >> 30);
 
@@ -1045,63 +1046,13 @@ const CBlockIndex* GetLastBlockIndex(const CBlockIndex* pindex, bool fProofOfSta
     return pindex;
 }
 
-// legacy diff-mode
-unsigned int static GetNextWorkRequired_legacy(const CBlockIndex* pindexLast)
-{
-    if (pindexBest->nHeight > 494999)
-    { nTargetSpacing =180; }
-    unsigned int nProofOfWorkLimit = bnProofOfWorkLimit.GetCompact();
-
-    // Genesis block
-    if (pindexLast == NULL)
-        return bnProofOfWorkFirstBlock.GetCompact();
-
-    // Only change once per interval
-    if ((pindexLast->nHeight+1) % nInterval != 0)
-    {
-        // Special difficulty rule for testnet:
-        return pindexLast->nBits;
-    }
-
-    // Genesiscoin: This fixes an issue where a 51% attack can change difficulty at will.
-    // Go back the full period unless it's the first retarget after genesis. Code courtesy of Art Forz
-    int blockstogoback = nInterval-1;
-    if ((pindexLast->nHeight+1) != nInterval)
-        blockstogoback = nInterval;
-
-    // Go back by what we want to be 14 days worth of blocks
-    const CBlockIndex* pindexFirst = pindexLast;
-    for (int i = 0; pindexFirst && i < blockstogoback; i++)
-        pindexFirst = pindexFirst->pprev;
-    assert(pindexFirst);
-
-    // Limit adjustment step
-    int64_t nActualTimespan = pindexLast->GetBlockTime() - pindexFirst->GetBlockTime();
-    if (nActualTimespan < nTargetTimespan/4)
-        nActualTimespan = nTargetTimespan/4;
-    if (nActualTimespan > nTargetTimespan*4)
-        nActualTimespan = nTargetTimespan*4;
-
-    // Retarget
-    CBigNum bnNew;
-    bnNew.SetCompact(pindexLast->nBits);
-    bnNew *= nActualTimespan;
-    bnNew /= nTargetTimespan;
-
-    if (bnNew > bnProofOfWorkLimit)
-        bnNew = bnProofOfWorkLimit;
-
-    /// debug print
-    printf("GetNextWorkRequired (legacy) RETARGET\n");
-    printf("Before: %08x  %s\n", pindexLast->nBits, CBigNum().SetCompact(pindexLast->nBits).getuint256().ToString().c_str());
-    printf("After:  %08x  %s\n", bnNew.GetCompact(), bnNew.getuint256().ToString().c_str());
-
-    return bnNew.GetCompact();
-}
-
 static unsigned int GetNextTargetRequired_(const CBlockIndex* pindexLast, bool fProofOfStake)
 {
-    CBigNum bnTargetLimit = fProofOfStake ? bnProofOfStakeLimit : bnProofOfWorkLimit;
+    CBigNum bnTargetLimit;
+    if (pindexBest->nHeight > 892000)
+        bnTargetLimit = fProofOfStake ? bnProofOfStakeHardforkLimit : bnProofOfWorkLimit;
+    else
+        bnTargetLimit = fProofOfStake ? bnProofOfStakeLimit : bnProofOfWorkLimit;
 
     if (pindexLast == NULL)
         return bnTargetLimit.GetCompact(); // genesis block
@@ -1134,15 +1085,7 @@ static unsigned int GetNextTargetRequired_(const CBlockIndex* pindexLast, bool f
 
 unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfStake)
 {
-  /*  int change;
-    if(fTestNet)
-        change = 130; // originally 130 (tried 20)
-    else
-        change = 20; // originally 20  (tried 250)
-    if(pindexLast->nHeight + 1 > change) */
         return GetNextTargetRequired_(pindexLast, fProofOfStake);
-   /* else
-        return GetNextWorkRequired_legacy(pindexLast); */
 }
 
 bool CheckProofOfWork(uint256 hash, unsigned int nBits)

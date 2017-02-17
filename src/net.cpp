@@ -1216,8 +1216,7 @@ void ThreadDNSAddressSeed2(void* parg)
     printf("%d addresses found from DNS seeds\n", found);
 }
 
-unsigned int pnSeed[] =
-{};
+unsigned int pnSeed[] = {}; // evergreencoin: Ancestral Satoshi client IP seed addresses unset.
 
 void DumpAddresses()
 {
