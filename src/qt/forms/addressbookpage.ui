@@ -26,7 +26,7 @@
       </font>
      </property>
      <property name="text">
-      <string>These are your EverGreenCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of how you received each transaction.                            </string>
+      <string>These are your EverGreenCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of how you received each transaction.</string>
      </property>
      <property name="textFormat">
       <enum>Qt::PlainText</enum>
