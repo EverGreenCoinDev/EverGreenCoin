@@ -1977,6 +1977,9 @@
         </property>
        </widget>
        <widget class="QPushButton" name="startButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>0</x>
