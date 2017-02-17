@@ -1523,7 +1523,7 @@
         <widget class="QLabel" name="inputBox">
          <property name="font">
           <font>
-           <pointsize>11</pointsize>
+           <pointsize>9</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -1629,12 +1629,6 @@
        </item>
        <item row="18" column="1">
         <spacer name="verticalSpacer_3">
-         <property name="font">
-          <font>
-           <family>Typola</family>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>

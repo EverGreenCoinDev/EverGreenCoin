@@ -459,10 +459,6 @@
        <property name="toolTip">
         <string>Enter a label for this address to add it to your address book</string>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel { font: 9pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
-       </property>
       </widget>
      </item>
     </layout>
@@ -2219,10 +2215,6 @@ QLabel { font-weight: 900; }</string>
        </property>
        <property name="toolTip">
         <string>The EGC address to send the payment to  (e.g. EdFwYw4Mo2Zq6CFM2yNJgXvE2DTJxgdBRX)</string>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel { font: 9pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
        </property>
        <property name="maxLength">
         <number>34</number>
@@ -3986,10 +3978,6 @@ QLabel { font-weight: 900; }</string>
      </property>
      <property name="autoFillBackground">
       <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel { font: 9pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
      </property>
     </widget>
    </item>
