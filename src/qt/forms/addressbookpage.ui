@@ -169,9 +169,6 @@
      </item>
      <item>
       <widget class="QPushButton" name="stakeForCharityPushButton">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
        <property name="font">
         <font>
          <weight>50</weight>
