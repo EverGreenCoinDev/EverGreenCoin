@@ -1050,10 +1050,11 @@ static unsigned int GetNextTargetRequired_(const CBlockIndex* pindexLast, bool f
 {
     CBigNum bnTargetLimit;
     if (pindexBest->nHeight > 892000)
+    {
         nTargetSpacing = 3 * 60;
         bnTargetLimit = fProofOfStake ? bnProofOfStakeHardforkLimit : bnProofOfWorkLimit;
-    else
-        bnTargetLimit = fProofOfStake ? bnProofOfStakeLimit : bnProofOfWorkLimit;
+    }  else  {
+        bnTargetLimit = fProofOfStake ? bnProofOfStakeLimit : bnProofOfWorkLimit;  }
 
     if (pindexLast == NULL)
         return bnTargetLimit.GetCompact(); // genesis block
