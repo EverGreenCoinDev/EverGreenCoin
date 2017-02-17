@@ -117,7 +117,7 @@
         <cursorShape>IBeamCursor</cursorShape>
        </property>
        <property name="text">
-        <string>Copyright © 2015-2017 EverGreenCoin Foundation and Steven T. Saxton
+        <string>Copyright © 2015-2017 The EverGreenCoin Foundation and Steven Saxton
 For support, please make a ticket at http://support.EverGreenCoin.org
 Please join us at https://EverGreenCoin.org</string>
        </property>
@@ -147,7 +147,7 @@ Distributed under the MIT/X11 software license, see the accompanying file COPYIN
 
 This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.
 
-The Typola font is used by EverGreenCoin with permission from its authors, Willy Riftian and Dewi Sata.</string>
+The Typola font is used by EverGreenCoin with permission from its authors, Willy Riftian (willyriftian@gmail.com) and Dewi Sata (dwsata@gmail.com).</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>

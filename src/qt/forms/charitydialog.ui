@@ -88,10 +88,10 @@
           </font>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::NoFrame</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Plain</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="1" column="0">
@@ -337,7 +337,7 @@
              <number>1</number>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Stake for charity allows you to automatically send up to 100% of your stake rewards to another EverGreenCoin address after it matures. Note that you pay the tansaction fee (.0001 EGC) in addition to the percentage.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Please enter the percentage to give and the EverGreenCoin address to give to. Min and Max amount and change address are optional.&lt;/span&gt;&lt;/p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;EverGreenCoin Stake For Charity allows you to automatically send up to 100% of your stake rewards to another EverGreenCoin address after it matures. Note that you pay the tansaction fee (.0001 EGC) in addition to the percentage.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Please enter the percentage to give and the EverGreenCoin address to give to. Min and Max amount and change address are optional.&lt;/span&gt;&lt;/p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -595,13 +595,13 @@
              </font>
             </property>
             <property name="toolTip">
-             <string>Enter whole numbers 1 - 50</string>
+             <string>Enter whole numbers 1 - 100</string>
             </property>
             <property name="maxLength">
              <number>3</number>
             </property>
             <property name="placeholderText">
-             <string>%</string>
+             <string> % </string>
             </property>
            </widget>
           </item>

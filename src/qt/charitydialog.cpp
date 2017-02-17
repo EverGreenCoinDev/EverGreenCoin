@@ -18,7 +18,7 @@ StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->charityPercentEdit->setPlaceholderText(tr("Enter % to Give (1-50)"));
+    ui->charityPercentEdit->setPlaceholderText(tr(" % "));
     ui->charityAddressEdit->setPlaceholderText(tr("Enter Charity Address"));
     ui->charityMinEdit->setPlaceholderText(tr("Enter Min Amount (optional)"));
     ui->charityMaxEdit->setPlaceholderText(tr("Enter Max Amount (optional)"));
@@ -98,7 +98,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if(model->getEncryptionStatus() == WalletModel::Locked)
     {
         ui->message->setStyleSheet("QLabel { color: black; }");
-        ui->message->setText(tr("Please unlock wallet before starting stake for charity."));
+        ui->message->setText(tr("Please unlock wallet before starting Stake For Charity."));
         return;
     }
 
@@ -199,6 +199,6 @@ void StakeForCharityDialog::on_disableButton_clicked()
     ui->charityMinEdit->clear();
     ui->charityPercentEdit->clear();
     ui->message->setStyleSheet("QLabel { color: black; }");
-    ui->message->setText(tr("Stake for Charity is now off"));
+    ui->message->setText(tr("Stake For Charity is now off"));
     return;
 }
