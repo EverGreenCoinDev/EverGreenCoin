@@ -323,7 +323,8 @@ HEADERS += src/qt/bitcoingui.h \
     src/limitedmap.h \
     src/threadsafety.h \
     src/txdb-leveldb.h \
-    src/pow_control.h
+    src/pow_control.h \
+    src/qt/charitydialog.h
 
 
 
@@ -402,7 +403,8 @@ SOURCES += src/qt/bitcoin.cpp \
     src/pbkdf2.cpp \
     src/txdb-leveldb.cpp \
     src/json/json_spirit_reader.cpp \
-    src/json/json_spirit_writer.cpp 
+    src/json/json_spirit_writer.cpp \
+    src/qt/charitydialog.cpp
 
 RESOURCES += \
     src/qt/bitcoin.qrc
@@ -421,7 +423,8 @@ FORMS += \
     src/qt/forms/rpcconsole.ui \
     src/qt/forms/optionsdialog.ui \
     src/qt/forms/blockbrowser.ui \
-    src/qt/forms/statisticspage.ui
+    src/qt/forms/statisticspage.ui \
+    src/qt/forms/charitydialog.ui
 
 contains(USE_QRCODE, 1) {
 HEADERS += src/qt/qrcodedialog.h

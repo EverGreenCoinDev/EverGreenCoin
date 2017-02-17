@@ -450,9 +450,10 @@
        </property>
        <property name="font">
         <font>
-         <family>Sans Serif</family>
+         <family>Typola</family>
          <weight>50</weight>
          <bold>false</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="toolTip">
@@ -890,6 +891,7 @@ QLabel { font-weight: 900; }</string>
        <weight>99</weight>
        <italic>false</italic>
        <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="styleSheet">
@@ -1331,6 +1333,7 @@ QLabel { font-weight: 900; }</string>
        <weight>99</weight>
        <italic>false</italic>
        <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="styleSheet">
@@ -1772,6 +1775,7 @@ QLabel { font-weight: 900; }</string>
        <weight>99</weight>
        <italic>false</italic>
        <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="styleSheet">
@@ -2213,9 +2217,10 @@ QLabel { font-weight: 900; }</string>
        </property>
        <property name="font">
         <font>
-         <family>Sans Serif</family>
+         <family>Typola</family>
          <weight>50</weight>
          <bold>false</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="toolTip">
@@ -2650,8 +2655,9 @@ QLabel { font-weight: 900; }</string>
        <property name="font">
         <font>
          <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="toolTip">
@@ -3089,8 +3095,9 @@ QLabel { font-weight: 900; }</string>
        <property name="font">
         <font>
          <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="toolTip">
@@ -3528,8 +3535,9 @@ QLabel { font-weight: 900; }</string>
        <property name="font">
         <font>
          <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="toolTip">
@@ -3977,9 +3985,10 @@ QLabel { font-weight: 900; }</string>
      </property>
      <property name="font">
       <font>
-       <family>Sans Serif</family>
+       <family>Typola</family>
        <weight>50</weight>
        <bold>false</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="toolTip">

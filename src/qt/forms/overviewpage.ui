@@ -21,6 +21,11 @@
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
       <widget class="QFrame" name="frame">
+       <property name="font">
+        <font>
+         <stylestrategy>PreferAntialias</stylestrategy>
+        </font>
+       </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
        </property>
@@ -460,6 +465,7 @@
               <weight>99</weight>
               <italic>false</italic>
               <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="styleSheet">
@@ -481,6 +487,7 @@ QLabel { font-weight: 900; }</string>
               <weight>99</weight>
               <italic>false</italic>
               <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="toolTip">
@@ -501,6 +508,11 @@ QLabel { font-weight: 900; }</string>
           </item>
           <item>
            <spacer name="horizontalSpacer_2">
+            <property name="font">
+             <font>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
+            </property>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -955,6 +967,7 @@ QLabel { font-weight: 900; }</string>
               <weight>99</weight>
               <italic>false</italic>
               <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="styleSheet">
@@ -991,6 +1004,7 @@ QLabel { font-weight: 900; }</string>
               <weight>99</weight>
               <italic>false</italic>
               <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="cursor">
@@ -1030,6 +1044,7 @@ QLabel { font-weight: 900; }</string>
               <weight>99</weight>
               <italic>false</italic>
               <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="styleSheet">
@@ -1060,6 +1075,7 @@ QLabel { font-weight: 900; }</string>
               <weight>99</weight>
               <italic>false</italic>
               <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="cursor">
@@ -1099,6 +1115,7 @@ QLabel { font-weight: 900; }</string>
               <weight>99</weight>
               <italic>false</italic>
               <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="styleSheet">
@@ -1129,6 +1146,7 @@ QLabel { font-weight: 900; }</string>
               <weight>99</weight>
               <italic>false</italic>
               <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="cursor">
@@ -1168,6 +1186,7 @@ QLabel { font-weight: 900; }</string>
               <weight>99</weight>
               <italic>false</italic>
               <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="styleSheet">
@@ -1198,6 +1217,7 @@ QLabel { font-weight: 900; }</string>
               <weight>99</weight>
               <italic>false</italic>
               <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="toolTip">
@@ -1642,6 +1662,11 @@ QLabel { font-weight: 900; }</string>
               </disabled>
              </palette>
             </property>
+            <property name="font">
+             <font>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -1666,6 +1691,16 @@ QLabel { font-weight: 900; }</string>
               <width>0</width>
               <height>22</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Typola</family>
+              <pointsize>16</pointsize>
+              <weight>99</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
             </property>
             <property name="styleSheet">
              <string notr="true">QLabel { color: rgb(1,132,87); }
@@ -1695,6 +1730,7 @@ QLabel { font-weight: 900; }</string>
               <weight>99</weight>
               <italic>false</italic>
               <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="cursor">
@@ -1726,6 +1762,11 @@ QLabel { font-weight: 900; }</string>
      </item>
      <item>
       <spacer name="verticalSpacer_4">
+       <property name="font">
+        <font>
+         <stylestrategy>PreferAntialias</stylestrategy>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
@@ -1739,6 +1780,11 @@ QLabel { font-weight: 900; }</string>
      </item>
      <item>
       <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <stylestrategy>PreferAntialias</stylestrategy>
+        </font>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -1752,6 +1798,11 @@ QLabel { font-weight: 900; }</string>
      </item>
      <item>
       <spacer name="verticalSpacer">
+       <property name="font">
+        <font>
+         <stylestrategy>PreferAntialias</stylestrategy>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
@@ -1769,6 +1820,11 @@ QLabel { font-weight: 900; }</string>
     <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
       <widget class="QFrame" name="frame_2">
+       <property name="font">
+        <font>
+         <stylestrategy>PreferAntialias</stylestrategy>
+        </font>
+       </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
        </property>
@@ -1790,6 +1846,7 @@ QLabel { font-weight: 900; }</string>
              <font>
               <family>Typola</family>
               <pointsize>12</pointsize>
+              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="text">
@@ -1799,6 +1856,16 @@ QLabel { font-weight: 900; }</string>
           </item>
           <item>
            <widget class="QLabel" name="labelTransactionsStatus">
+            <property name="font">
+             <font>
+              <family>Typola</family>
+              <pointsize>10</pointsize>
+              <weight>99</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
+            </property>
             <property name="toolTip">
              <string>The displayed information may be out of date. Your wallet automatically synchronizes with the EverGreenCoin network after a connection is established, but this process has not completed yet.</string>
             </property>
@@ -1817,6 +1884,11 @@ QLabel { font-weight: 900; }</string>
           </item>
           <item>
            <spacer name="horizontalSpacer">
+            <property name="font">
+             <font>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
+            </property>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -1832,6 +1904,11 @@ QLabel { font-weight: 900; }</string>
         </item>
         <item>
          <widget class="QListView" name="listTransactions">
+          <property name="font">
+           <font>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">QListView { background: transparent; }</string>
           </property>
@@ -1852,54 +1929,116 @@ QLabel { font-weight: 900; }</string>
        </layout>
       </widget>
      </item>
-     <item alignment="Qt::AlignRight">
-      <widget class="QPushButton" name="unlockWalletButton">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
+     <item>
+      <widget class="QGroupBox" name="groupBox">
        <property name="minimumSize">
         <size>
-         <width>300</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>77214</width>
-         <height>16777214</height>
+         <width>0</width>
+         <height>45</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <family>Typola</family>
-         <pointsize>12</pointsize>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
-       <property name="toolTip">
+       <property name="title">
         <string/>
        </property>
-       <property name="styleSheet">
-        <string notr="true">unlockWalletButton {        border-radius: 6px;
+       <widget class="QPushButton" name="unlockWalletButton">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>0</y>
+          <width>300</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>77214</width>
+          <height>16777214</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Typola</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+          <stylestrategy>PreferAntialias</stylestrategy>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">unlockWalletButton {        border-radius: 6px;
         background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #BCED91, stop: 1 #00b300); }</string>
-       </property>
-       <property name="text">
-        <string>wallet unlock button</string>
-       </property>
-       <property name="checkable">
-        <bool>false</bool>
-       </property>
-       <property name="autoDefault">
-        <bool>false</bool>
-       </property>
-       <property name="default">
-        <bool>true</bool>
-       </property>
-       <property name="flat">
-        <bool>false</bool>
-       </property>
+        </property>
+        <property name="text">
+         <string>wallet unlock button</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>true</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="startButton">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>150</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Typola</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+          <stylestrategy>PreferAntialias</stylestrategy>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">startButton {        border-radius: 6px;
+        background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #BCED91, stop: 1 #00b300); }</string>
+        </property>
+        <property name="text">
+         <string>Stake for charity</string>
+        </property>
+       </widget>
       </widget>
      </item>
     </layout>

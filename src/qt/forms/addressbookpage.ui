@@ -21,6 +21,7 @@
        <family>Typola</family>
        <weight>75</weight>
        <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="text">
@@ -71,6 +72,7 @@
          <family>Typola</family>
          <weight>75</weight>
          <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="toolTip">
@@ -92,6 +94,7 @@
          <family>Typola</family>
          <weight>75</weight>
          <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="toolTip">
@@ -113,6 +116,7 @@
          <family>Typola</family>
          <weight>75</weight>
          <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="text">
@@ -131,6 +135,7 @@
          <family>Typola</family>
          <weight>75</weight>
          <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="toolTip">
@@ -152,6 +157,7 @@
          <family>Typola</family>
          <weight>75</weight>
          <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="toolTip">
@@ -167,12 +173,31 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="stakeForCharityPushButton">
+       <property name="font">
+        <font>
+         <family>Typola</family>
+         <weight>75</weight>
+         <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Stake for charity</string>
+       </property>
+       <property name="text">
+        <string>&amp;Stake For Charity</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="deleteButton">
        <property name="font">
         <font>
          <family>Typola</family>
          <weight>75</weight>
          <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="toolTip">

@@ -16,6 +16,7 @@ class Notificator;
 class RPCConsole;
 class StatisticsPage;
 class BlockBrowser;
+class StakeForCharityDialog;
 QT_BEGIN_NAMESPACE
 class QLabel;
 class QLineEdit;
@@ -67,6 +68,7 @@ private:
     AddressBookPage *receiveCoinsPage;
     SendCoinsDialog *sendCoinsPage;
     SignVerifyMessageDialog *signVerifyMessageDialog;
+    StakeForCharityDialog *stakeForCharityDialog;
 
     QLabel *labelEncryptionIcon;
     QLabel *labelStakingIcon;
@@ -98,6 +100,7 @@ private:
     QAction *aboutQtAction;
     QAction *openRPCConsoleAction;
     QAction *setStyleSheetAction;
+    QAction *charityAction;
 
     QSystemTrayIcon *trayIcon;
     Notificator *notificator;
@@ -105,6 +108,11 @@ private:
     RPCConsole *rpcConsole;
 
     QMovie *syncIconMovie;
+
+    bool fStakeForCharity;
+    bool fS4CNotificator;
+    int nCharityPercent;
+    QString strCharityAddress;
 
     /** Create the main UI actions. */
     void createActions();
@@ -191,6 +199,8 @@ private slots:
     void toggleHidden();
 
     void updateStakingIcon();
+
+    void charityClicked(QString addr = "");
 };
 
 #endif

@@ -14,7 +14,7 @@
 #include <QPainter>
 
 #define DECORATION_SIZE 64
-#define NUM_ITEMS 6
+#define NUM_ITEMS 7
 
 class TxViewDelegate : public QAbstractItemDelegate
 {
@@ -102,6 +102,12 @@ OverviewPage::OverviewPage(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    QAction *stakeForCharityAction = new QAction(ui->startButton->text(), this);
+
+    // contextMenu = new QMenu();
+    // contextMenu->addAction(stakeForCharityAction);
+    connect(stakeForCharityAction, SIGNAL(triggered()), this, SLOT(on_startButton_clicked()));
+
     // Recent transactions
     ui->listTransactions->setItemDelegate(txdelegate);
     ui->listTransactions->setIconSize(QSize(DECORATION_SIZE, DECORATION_SIZE));
@@ -116,6 +122,11 @@ OverviewPage::OverviewPage(QWidget *parent) :
 
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
+}
+
+void OverviewPage::on_startButton_clicked()
+{
+    return stakeForCharitySignal();
 }
 
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)

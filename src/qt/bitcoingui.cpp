@@ -28,6 +28,7 @@
 #include "guiutil.h"
 #include "rpcconsole.h"
 #include "wallet.h"
+#include "charitydialog.h"
 
 #ifdef Q_OS_MAC
 #include "macdockiconhandler.h"
@@ -143,6 +144,8 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 
     signVerifyMessageDialog = new SignVerifyMessageDialog(this);
 
+    stakeForCharityDialog = new StakeForCharityDialog(this);
+
     centralWidget = new QStackedWidget(this);
     centralWidget->setObjectName("central");
     centralWidget->addWidget(overviewPage);
@@ -152,6 +155,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     centralWidget->addWidget(addressBookPage);
     centralWidget->addWidget(receiveCoinsPage);
     centralWidget->addWidget(sendCoinsPage);
+    centralWidget->addWidget(stakeForCharityDialog);
     setCentralWidget(centralWidget);
 
     // Create status bar
@@ -223,6 +227,11 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     // Clicking on "Sign Message" in the receive coins page sends you to the sign message tab
     connect(receiveCoinsPage, SIGNAL(signMessage(QString)), this, SLOT(gotoSignMessageTab(QString)));
 
+    // Clicking on stake for charity button in the address book sends you to the S4C page
+    connect(addressBookPage, SIGNAL(stakeForCharitySignal(QString)), this, SLOT(charityClicked(QString)));
+    // Clicking on stake for charity button in the Overview Page sends you to the S4C page
+    connect(overviewPage, SIGNAL(stakeForCharitySignal()), this, SLOT(charityClicked()));
+
     gotoOverviewPage();
 }
 
@@ -279,6 +288,8 @@ void BitcoinGUI::createActions()
     blockAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
     blockAction->setCheckable(true);
     tabGroup->addAction(blockAction);
+
+    charityAction = new QAction(this);
 
     connect(blockAction, SIGNAL(triggered()), this, SLOT(gotoBlockBrowser()));
     connect(blockAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
@@ -372,6 +383,7 @@ void BitcoinGUI::createMenuBar()
     settings->addAction(unlockWalletAction);
     settings->addAction(lockWalletAction);
     settings->addSeparator();
+    settings->addAction(charityAction);
     settings->addAction(optionsAction);
 
     QMenu *help = appMenuBar->addMenu(tr("&Help"));
@@ -454,6 +466,7 @@ void BitcoinGUI::setWalletModel(WalletModel *walletModel)
         signVerifyMessageDialog->setModel(walletModel);
 		statisticsPage->setModel(clientModel);
 		blockBrowser->setModel(clientModel);
+        stakeForCharityDialog->setModel(walletModel);
 
         setEncryptionStatus(walletModel->getEncryptionStatus());
         connect(walletModel, SIGNAL(encryptionStatusChanged(int)), this, SLOT(setEncryptionStatus(int)));
@@ -732,7 +745,7 @@ void BitcoinGUI::incomingTransaction(const QModelIndex & parent, int start, int 
                         .data(Qt::DecorationRole));
 
         notificator->notify(Notificator::Information,
-                            (amount)<0 ? tr("Sent transaction") :
+                            (amount)<0 ? (fS4CNotificator == true ? tr("Sent charity transaction") : tr("Sent transaction") ):
                                          tr("Incoming transaction"),
                               tr("Date: %1\n"
                                  "Amount: %2\n"
@@ -1014,7 +1027,7 @@ void BitcoinGUI::updateStakingIcon()
         }
 
         labelStakingIcon->setPixmap(QIcon(":/icons/staking_on").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-        labelStakingIcon->setToolTip(tr("Staking (earning interest)<br>Your weight is %1<br>Network weight is %2<br>Expected time to earn reward is %3").arg(nWeight).arg(nNetworkWeight).arg(text));
+        labelStakingIcon->setToolTip(tr("Staking<br>Your weight is %1<br>Network weight is %2<br>Expected time to earn reward is %3").arg(nWeight).arg(nNetworkWeight).arg(text));
     }
     else
     {
@@ -1030,4 +1043,16 @@ void BitcoinGUI::updateStakingIcon()
         else
             labelStakingIcon->setToolTip(tr("Not staking"));
     }
+}
+
+void BitcoinGUI::charityClicked(QString addr)
+{
+    charityAction->setChecked(true);
+    centralWidget->setCurrentWidget(stakeForCharityDialog);
+
+    if(!addr.isEmpty())
+        stakeForCharityDialog->setAddress(addr);
+
+    exportAction->setEnabled(false);
+    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }

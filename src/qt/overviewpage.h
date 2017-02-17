@@ -43,10 +43,15 @@ private:
 
     TxViewDelegate *txdelegate;
     TransactionFilterProxy *filter;
+  //  QMenu *contextMenu;
 
 private slots:
     void updateDisplayUnit();
     void handleTransactionClicked(const QModelIndex &index);
+    void on_startButton_clicked();
+
+signals:
+    void stakeForCharitySignal();
 };
 
 #endif // OVERVIEWPAGE_H

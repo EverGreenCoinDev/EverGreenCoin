@@ -21,6 +21,7 @@
        <family>Typola</family>
        <weight>75</weight>
        <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="toolTip">
@@ -38,6 +39,7 @@
        <family>Typola</family>
        <weight>75</weight>
        <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="orientation">

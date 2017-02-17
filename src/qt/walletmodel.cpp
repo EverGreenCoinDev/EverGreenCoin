@@ -311,6 +311,58 @@ bool WalletModel::backupWallet(const QString &filename)
     return BackupWallet(*wallet, filename.toLocal8Bit().data());
 }
 
+void WalletModel::setStakeForCharity(bool fStakeForCharity, int& nStakeForCharityPercent,
+                                     CBitcoinAddress& strStakeForCharityAddress,
+                                     CBitcoinAddress& strStakeForCharityChangeAddress,
+                                     qint64& nStakeForCharityMinAmout,
+                                     qint64& nStakeForCharityMaxAmount)
+{
+    // This function assumes the values were checked before being called
+    if (wallet->fFileBacked) // Tranz add option to not save.
+    {
+        CWalletDB walletdb(wallet->strWalletFile);
+        if (fStakeForCharity) {
+            walletdb.EraseStakeForCharity(wallet->strStakeForCharityAddress.ToString());
+            walletdb.WriteStakeForCharity(strStakeForCharityAddress.ToString(),
+                                          nStakeForCharityPercent,
+                                          strStakeForCharityChangeAddress.ToString(),
+                                          nStakeForCharityMinAmout,
+                                          nStakeForCharityMaxAmount);
+        }
+        else {
+            walletdb.EraseStakeForCharity(wallet->strStakeForCharityAddress.ToString());
+            walletdb.EraseStakeForCharity(strStakeForCharityAddress.ToString());
+        }
+
+        if(fDebug)
+          printf("setStakeForCharity: %s %d\n", strStakeForCharityAddress.ToString().c_str(), nStakeForCharityPercent);
+    }
+
+    {
+        LOCK(wallet->cs_wallet);
+        wallet->fStakeForCharity = fStakeForCharity;
+        wallet->nStakeForCharityPercent = nStakeForCharityPercent;
+        wallet->strStakeForCharityAddress = strStakeForCharityAddress;
+        wallet->strStakeForCharityChangeAddress = strStakeForCharityChangeAddress;
+        wallet->nStakeForCharityMin = nStakeForCharityMinAmout;
+        wallet->nStakeForCharityMax = nStakeForCharityMaxAmount;
+    }
+}
+
+void  WalletModel::getStakeForCharity(int& nStakeForCharityPercent,
+                                      CBitcoinAddress& strStakeForCharityAddress,
+                                      CBitcoinAddress& strStakeForCharityChangeAddress,
+                                      qint64& nStakeForCharityMinAmout,
+                                      qint64& nStakeForCharityMaxAmount)
+{
+     nStakeForCharityPercent = wallet->nStakeForCharityPercent;
+     strStakeForCharityAddress = wallet->strStakeForCharityAddress;
+     strStakeForCharityChangeAddress = wallet->strStakeForCharityChangeAddress;
+     nStakeForCharityMinAmout = wallet->nStakeForCharityMin;
+     nStakeForCharityMaxAmount =  wallet->nStakeForCharityMax;
+
+}
+
 // Handlers for core signals
 static void NotifyKeyStoreStatusChanged(WalletModel *walletmodel, CCryptoKeyStore *wallet)
 {
@@ -445,6 +497,11 @@ void WalletModel::listCoins(std::map<QString, std::vector<COutput> >& mapCoins) 
         if(!ExtractDestination(cout.tx->vout[cout.i].scriptPubKey, address)) continue;
         mapCoins[CBitcoinAddress(address).ToString().c_str()].push_back(out);
     }
+}
+
+bool WalletModel::isMine(const CBitcoinAddress &address)
+{
+	return IsMine(*wallet, address.Get());
 }
 
 bool WalletModel::isLockedCoin(uint256 hash, unsigned int n) const

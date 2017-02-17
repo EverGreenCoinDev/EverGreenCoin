@@ -27,6 +27,7 @@
        <family>Typola</family>
        <weight>75</weight>
        <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="tabPosition">
@@ -47,6 +48,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="text">
@@ -69,6 +71,7 @@
              <family>Typola</family>
              <weight>75</weight>
              <bold>true</bold>
+             <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
            <property name="text">
@@ -89,6 +92,7 @@
              <family>Typola</family>
              <weight>75</weight>
              <bold>true</bold>
+             <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
           </widget>
@@ -100,6 +104,7 @@
              <family>Typola</family>
              <weight>75</weight>
              <bold>true</bold>
+             <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
            <property name="orientation">
@@ -122,6 +127,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="text">
@@ -144,6 +150,7 @@
              <family>Typola</family>
              <weight>75</weight>
              <bold>true</bold>
+             <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
            <property name="text">
@@ -164,6 +171,7 @@
              <family>Typola</family>
              <weight>75</weight>
              <bold>true</bold>
+             <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
           </widget>
@@ -175,6 +183,7 @@
              <family>Typola</family>
              <weight>75</weight>
              <bold>true</bold>
+             <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
            <property name="orientation">
@@ -197,6 +206,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="toolTip">
@@ -214,6 +224,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="toolTip">
@@ -231,6 +242,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="orientation">
@@ -514,6 +526,7 @@
          <family>Typola</family>
          <weight>75</weight>
          <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="orientation">
@@ -534,6 +547,7 @@
          <family>Typola</family>
          <weight>75</weight>
          <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="text">
@@ -554,6 +568,7 @@
          <family>Typola</family>
          <weight>75</weight>
          <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="orientation">
@@ -574,6 +589,7 @@
          <family>Typola</family>
          <weight>75</weight>
          <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="text">
@@ -588,6 +604,7 @@
          <family>Typola</family>
          <weight>75</weight>
          <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="text">
@@ -605,6 +622,7 @@
          <family>Typola</family>
          <weight>75</weight>
          <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="text">

@@ -43,6 +43,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -61,6 +62,7 @@
            <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -84,6 +86,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -102,6 +105,7 @@
            <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -141,6 +145,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -159,6 +164,7 @@
            <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -182,6 +188,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -200,6 +207,7 @@
            <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -239,6 +247,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -257,6 +266,7 @@
            <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -283,6 +293,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -304,6 +315,7 @@
            <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -343,6 +355,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -361,6 +374,7 @@
            <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -387,6 +401,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -408,6 +423,7 @@
            <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -441,6 +457,7 @@
        <family>Typola</family>
        <weight>75</weight>
        <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="frameShape">
@@ -463,6 +480,7 @@
         <family>Typola</family>
         <weight>75</weight>
         <bold>true</bold>
+        <stylestrategy>PreferAntialias</stylestrategy>
        </font>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayoutPanel" stretch="0,0,0,0">
@@ -482,6 +500,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="text">
@@ -502,6 +521,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="text">
@@ -525,6 +545,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="text">
@@ -539,6 +560,7 @@
            <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="orientation">
@@ -563,6 +585,7 @@
        <family>Typola</family>
        <weight>75</weight>
        <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="contextMenuPolicy">
@@ -653,6 +676,7 @@
        <family>Typola</family>
        <weight>75</weight>
        <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="orientation">
