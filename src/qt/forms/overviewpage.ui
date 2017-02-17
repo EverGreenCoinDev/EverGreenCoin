@@ -23,6 +23,8 @@
       <widget class="QFrame" name="frame">
        <property name="font">
         <font>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -460,21 +462,18 @@
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>22</pointsize>
-              <weight>99</weight>
+              <pointsize>20</pointsize>
+              <weight>50</weight>
               <italic>false</italic>
-              <bold>true</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
+              <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
              <string notr="true">QLabel { color: rgb(1,132,87); }
-QLabel { font: 22pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+</string>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; font-weight:600; color:#018457;&quot;&gt;EverGreenCoin&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;EverGreenCoin&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
@@ -487,7 +486,6 @@ QLabel { font-weight: 900; }</string>
               <weight>99</weight>
               <italic>false</italic>
               <bold>true</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="toolTip">
@@ -510,6 +508,8 @@ QLabel { font-weight: 900; }</string>
            <spacer name="horizontalSpacer_2">
             <property name="font">
              <font>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -962,18 +962,14 @@ QLabel { font-weight: 900; }</string>
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>16</pointsize>
-              <weight>99</weight>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
               <italic>false</italic>
-              <bold>true</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
+              <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-QLabel { font: 16pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+             <string notr="true">QLabel { color: #266C3F; }</string>
             </property>
             <property name="text">
              <string>Spendable:</string>
@@ -999,12 +995,10 @@ QLabel { font-weight: 900; }</string>
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>16</pointsize>
-              <weight>99</weight>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
               <italic>false</italic>
-              <bold>true</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
+              <bold>false</bold>
              </font>
             </property>
             <property name="cursor">
@@ -1014,9 +1008,7 @@ QLabel { font-weight: 900; }</string>
              <string>Your current spendable balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-QLabel { font: 16pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+             <string notr="true">QLabel { color: #266C3F; }</string>
             </property>
             <property name="text">
              <string notr="true">0 EGC</string>
@@ -1039,18 +1031,14 @@ QLabel { font-weight: 900; }</string>
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>16</pointsize>
-              <weight>99</weight>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
               <italic>false</italic>
-              <bold>true</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
+              <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-QLabel { font: 16pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+             <string notr="true">QLabel { color: #266C3F; }</string>
             </property>
             <property name="text">
              <string>Stake:</string>
@@ -1070,12 +1058,10 @@ QLabel { font-weight: 900; }</string>
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>16</pointsize>
-              <weight>99</weight>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
               <italic>false</italic>
-              <bold>true</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
+              <bold>false</bold>
              </font>
             </property>
             <property name="cursor">
@@ -1085,9 +1071,7 @@ QLabel { font-weight: 900; }</string>
              <string>Total of coins that was staked, and do not yet count toward the current balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-QLabel { font: 16pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+             <string notr="true">QLabel { color: #266C3F; }</string>
             </property>
             <property name="text">
              <string notr="true">0 EGC</string>
@@ -1110,18 +1094,14 @@ QLabel { font-weight: 900; }</string>
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>16</pointsize>
-              <weight>99</weight>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
               <italic>false</italic>
-              <bold>true</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
+              <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-QLabel { font: 16pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+             <string notr="true">QLabel { color: #266C3F; }</string>
             </property>
             <property name="text">
              <string>Unconfirmed:</string>
@@ -1141,12 +1121,10 @@ QLabel { font-weight: 900; }</string>
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>16</pointsize>
-              <weight>99</weight>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
               <italic>false</italic>
-              <bold>true</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
+              <bold>false</bold>
              </font>
             </property>
             <property name="cursor">
@@ -1156,9 +1134,7 @@ QLabel { font-weight: 900; }</string>
              <string>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-QLabel { font: 16pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+             <string notr="true">QLabel { color: #266C3F; }</string>
             </property>
             <property name="text">
              <string notr="true">0 EGC</string>
@@ -1181,18 +1157,14 @@ QLabel { font-weight: 900; }</string>
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>16</pointsize>
-              <weight>99</weight>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
               <italic>false</italic>
-              <bold>true</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
+              <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-QLabel { font: 16pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+             <string notr="true">QLabel { color: #266C3F; }</string>
             </property>
             <property name="text">
              <string>Immature:</string>
@@ -1212,21 +1184,17 @@ QLabel { font-weight: 900; }</string>
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>16</pointsize>
-              <weight>99</weight>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
               <italic>false</italic>
-              <bold>true</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
+              <bold>false</bold>
              </font>
             </property>
             <property name="toolTip">
              <string>Mined balance that has not yet matured</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-QLabel { font: 16pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+             <string notr="true">QLabel { color: #266C3F; }</string>
             </property>
             <property name="text">
              <string notr="true">0 EGC</string>
@@ -1664,6 +1632,8 @@ QLabel { font-weight: 900; }</string>
             </property>
             <property name="font">
              <font>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -1694,18 +1664,14 @@ QLabel { font-weight: 900; }</string>
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>16</pointsize>
-              <weight>99</weight>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
               <italic>false</italic>
-              <bold>true</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
+              <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel { color: rgb(1,132,87); }
-QLabel { font: 16pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+             <string notr="true">QLabel { color: rgb(1,132,87); }</string>
             </property>
             <property name="text">
              <string>Total:</string>
@@ -1725,12 +1691,10 @@ QLabel { font-weight: 900; }</string>
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>16</pointsize>
-              <weight>99</weight>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
               <italic>false</italic>
-              <bold>true</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
+              <bold>false</bold>
              </font>
             </property>
             <property name="cursor">
@@ -1740,9 +1704,7 @@ QLabel { font-weight: 900; }</string>
              <string>Your current total balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel { color: rgb(1,132,87); }
-QLabel { font: 16pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+             <string notr="true">QLabel { color: rgb(1,132,87); }</string>
             </property>
             <property name="text">
              <string notr="true">0 EGC</string>
@@ -1764,6 +1726,8 @@ QLabel { font-weight: 900; }</string>
       <spacer name="verticalSpacer_4">
        <property name="font">
         <font>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -1782,6 +1746,8 @@ QLabel { font-weight: 900; }</string>
       <widget class="QLabel" name="label_2">
        <property name="font">
         <font>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -1800,6 +1766,8 @@ QLabel { font-weight: 900; }</string>
       <spacer name="verticalSpacer">
        <property name="font">
         <font>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -1822,6 +1790,8 @@ QLabel { font-weight: 900; }</string>
       <widget class="QFrame" name="frame_2">
        <property name="font">
         <font>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -1844,8 +1814,9 @@ QLabel { font-weight: 900; }</string>
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
               <pointsize>12</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -1863,7 +1834,6 @@ QLabel { font-weight: 900; }</string>
               <weight>99</weight>
               <italic>false</italic>
               <bold>true</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="toolTip">
@@ -1886,6 +1856,8 @@ QLabel { font-weight: 900; }</string>
            <spacer name="horizontalSpacer">
             <property name="font">
              <font>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -1906,6 +1878,8 @@ QLabel { font-weight: 900; }</string>
          <widget class="QListView" name="listTransactions">
           <property name="font">
            <font>
+            <weight>50</weight>
+            <bold>false</bold>
             <stylestrategy>PreferAntialias</stylestrategy>
            </font>
           </property>
@@ -1939,6 +1913,8 @@ QLabel { font-weight: 900; }</string>
        </property>
        <property name="font">
         <font>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -1974,10 +1950,9 @@ QLabel { font-weight: 900; }</string>
         </property>
         <property name="font">
          <font>
-          <family>Typola</family>
           <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
           <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>
@@ -2024,10 +1999,9 @@ QLabel { font-weight: 900; }</string>
         </property>
         <property name="font">
          <font>
-          <family>Typola</family>
           <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
           <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>

@@ -24,9 +24,8 @@
     <widget class="QTabWidget" name="tabWidget">
      <property name="font">
       <font>
-       <family>Typola</family>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
@@ -45,9 +44,8 @@
         <widget class="QLabel" name="transactionFeeInfoLabel">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -68,9 +66,8 @@
           <widget class="QLabel" name="transactionFeeLabel">
            <property name="font">
             <font>
-             <family>Typola</family>
-             <weight>75</weight>
-             <bold>true</bold>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -89,9 +86,8 @@
           <widget class="BitcoinAmountField" name="transactionFee">
            <property name="font">
             <font>
-             <family>Typola</family>
-             <weight>75</weight>
-             <bold>true</bold>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -101,9 +97,8 @@
           <spacer name="horizontalSpacerFee">
            <property name="font">
             <font>
-             <family>Typola</family>
-             <weight>75</weight>
-             <bold>true</bold>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -124,9 +119,8 @@
         <widget class="QLabel" name="reserveBalanceInfoLabel">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -147,9 +141,8 @@
           <widget class="QLabel" name="reserveBalanceLabel">
            <property name="font">
             <font>
-             <family>Typola</family>
-             <weight>75</weight>
-             <bold>true</bold>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -168,9 +161,8 @@
           <widget class="BitcoinAmountField" name="reserveBalance">
            <property name="font">
             <font>
-             <family>Typola</family>
-             <weight>75</weight>
-             <bold>true</bold>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -180,9 +172,8 @@
           <spacer name="horizontalSpacerReserveBalance">
            <property name="font">
             <font>
-             <family>Typola</family>
-             <weight>75</weight>
-             <bold>true</bold>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -203,9 +194,8 @@
         <widget class="QCheckBox" name="bitcoinAtStartup">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -221,9 +211,8 @@
         <widget class="QCheckBox" name="detachDatabases">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -239,9 +228,8 @@
         <spacer name="verticalSpacer_Main">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -523,9 +511,8 @@
       <spacer name="horizontalSpacer_1">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -544,9 +531,8 @@
       <widget class="QLabel" name="statusLabel">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -565,9 +551,8 @@
       <spacer name="horizontalSpacer_2">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -586,9 +571,8 @@
       <widget class="QPushButton" name="okButton">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -601,9 +585,8 @@
       <widget class="QPushButton" name="cancelButton">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -619,9 +602,8 @@
       <widget class="QPushButton" name="applyButton">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>

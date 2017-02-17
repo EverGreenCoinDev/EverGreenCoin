@@ -57,9 +57,8 @@
       <widget class="QLabel" name="passLabel2">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -84,9 +83,8 @@
       <widget class="QLabel" name="passLabel3">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -128,9 +126,8 @@
       <widget class="QLabel" name="passLabel1">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -161,9 +158,8 @@
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="font">
       <font>
-       <family>Typola</family>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>

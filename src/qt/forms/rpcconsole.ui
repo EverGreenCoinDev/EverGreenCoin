@@ -18,9 +18,8 @@
     <widget class="QTabWidget" name="tabWidget">
      <property name="font">
       <font>
-       <family>Typola</family>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
@@ -42,9 +41,8 @@
         <widget class="QLabel" name="label_9">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -57,9 +55,8 @@
         <widget class="QLabel" name="label_5">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -72,9 +69,8 @@
         <widget class="QLabel" name="clientName">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -96,9 +92,8 @@
         <widget class="QLabel" name="label_6">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -111,9 +106,8 @@
         <widget class="QLabel" name="clientVersion">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -135,9 +129,8 @@
         <widget class="QLabel" name="label_14">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -153,9 +146,8 @@
         <widget class="QLabel" name="openSSLVersion">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -177,9 +169,8 @@
         <widget class="QLabel" name="label_12">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -192,9 +183,8 @@
         <widget class="QLabel" name="buildDate">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -216,9 +206,8 @@
         <widget class="QLabel" name="label_13">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -231,9 +220,8 @@
         <widget class="QLabel" name="startupTime">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -255,9 +243,8 @@
         <widget class="QLabel" name="label_11">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -270,9 +257,8 @@
         <widget class="QLabel" name="label_7">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -285,9 +271,8 @@
         <widget class="QLabel" name="numberOfConnections">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -309,9 +294,8 @@
         <widget class="QLabel" name="label_8">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -327,9 +311,8 @@
          </property>
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -342,9 +325,8 @@
         <widget class="QLabel" name="label_10">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -357,9 +339,8 @@
         <widget class="QLabel" name="label_3">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -372,9 +353,8 @@
         <widget class="QLabel" name="numberOfBlocks">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -396,9 +376,8 @@
         <widget class="QLabel" name="label_4">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -411,9 +390,8 @@
         <widget class="QLabel" name="totalBlocks">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -435,9 +413,8 @@
         <widget class="QLabel" name="label_2">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -450,9 +427,8 @@
         <widget class="QLabel" name="lastBlockTime">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -487,9 +463,8 @@
         <widget class="QLabel" name="labelDebugLogfile">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -502,9 +477,8 @@
         <widget class="QPushButton" name="openDebugLogfileButton">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -523,9 +497,8 @@
         <widget class="QLabel" name="labelCLOptions">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -538,9 +511,8 @@
         <widget class="QPushButton" name="showCLOptionsButton">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -559,6 +531,8 @@
         <spacer name="verticalSpacer">
          <property name="font">
           <font>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -593,7 +567,6 @@
          </property>
          <property name="font">
           <font>
-           <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -625,7 +598,6 @@
           <widget class="QLineEdit" name="lineEdit">
            <property name="font">
             <font>
-             <family>Typola</family>
              <weight>75</weight>
              <bold>true</bold>
             </font>

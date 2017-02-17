@@ -23,18 +23,14 @@
       <widget class="QLabel" name="label">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <pointsize>14</pointsize>
-         <weight>99</weight>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
-         <bold>true</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
+         <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">QLabel { font: 14pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }
-QLabel { color:#266C3F; }</string>
+        <string notr="true">QLabel { color:#266C3F; }</string>
        </property>
        <property name="text">
         <string>&amp;Label</string>
@@ -48,9 +44,8 @@ QLabel { color:#266C3F; }</string>
       <widget class="QLineEdit" name="labelEdit">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -63,18 +58,14 @@ QLabel { color:#266C3F; }</string>
       <widget class="QLabel" name="label_2">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <pointsize>14</pointsize>
-         <weight>99</weight>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
          <italic>false</italic>
-         <bold>true</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
+         <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">QLabel { font: 14pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }
-QLabel { color:#266C3F; }</string>
+        <string notr="true">QLabel { color:#266C3F; }</string>
        </property>
        <property name="text">
         <string>&amp;Address</string>
@@ -88,9 +79,8 @@ QLabel { color:#266C3F; }</string>
       <widget class="QLineEdit" name="addressEdit">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -105,9 +95,8 @@ QLabel { color:#266C3F; }</string>
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="font">
       <font>
-       <family>Typola</family>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>

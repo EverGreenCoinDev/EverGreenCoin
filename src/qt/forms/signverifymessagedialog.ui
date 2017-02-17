@@ -21,9 +21,8 @@
     <widget class="QTabWidget" name="tabWidget">
      <property name="font">
       <font>
-       <family>Typola</family>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
@@ -39,6 +38,8 @@
         <widget class="QLabel" name="infoLabel_SM">
          <property name="font">
           <font>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -62,6 +63,8 @@
           <widget class="QValidatedLineEdit" name="addressIn_SM">
            <property name="font">
             <font>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -77,6 +80,8 @@
           <widget class="QPushButton" name="addressBookButton_SM">
            <property name="font">
             <font>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -102,6 +107,8 @@
           <widget class="QPushButton" name="pasteButton_SM">
            <property name="font">
             <font>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -129,6 +136,8 @@
         <widget class="QPlainTextEdit" name="messageIn_SM">
          <property name="font">
           <font>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -146,7 +155,9 @@
           <widget class="QLineEdit" name="signatureOut_SM">
            <property name="font">
             <font>
+             <weight>50</weight>
              <italic>true</italic>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -159,6 +170,8 @@
           <widget class="QPushButton" name="copySignatureButton_SM">
            <property name="font">
             <font>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -185,6 +198,8 @@
           <widget class="QPushButton" name="signMessageButton_SM">
            <property name="font">
             <font>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -207,6 +222,8 @@
           <widget class="QPushButton" name="clearButton_SM">
            <property name="font">
             <font>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -242,8 +259,8 @@
           <widget class="QLabel" name="statusLabel_SM">
            <property name="font">
             <font>
-             <weight>75</weight>
-             <bold>true</bold>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -259,6 +276,8 @@
           <spacer name="horizontalSpacer_2_SM">
            <property name="font">
             <font>
+             <weight>50</weight>
+             <bold>false</bold>
              <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
@@ -286,9 +305,8 @@
         <widget class="QLabel" name="infoLabel_VM">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
           </font>
          </property>
          <property name="text">
@@ -354,9 +372,8 @@
           <widget class="QPushButton" name="verifyMessageButton_VM">
            <property name="font">
             <font>
-             <family>Typola</family>
-             <weight>75</weight>
-             <bold>true</bold>
+             <weight>50</weight>
+             <bold>false</bold>
             </font>
            </property>
            <property name="toolTip">
@@ -378,9 +395,8 @@
           <widget class="QPushButton" name="clearButton_VM">
            <property name="font">
             <font>
-             <family>Typola</family>
-             <weight>75</weight>
-             <bold>true</bold>
+             <weight>50</weight>
+             <bold>false</bold>
             </font>
            </property>
            <property name="toolTip">

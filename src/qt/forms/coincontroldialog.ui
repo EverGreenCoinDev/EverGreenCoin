@@ -40,10 +40,8 @@
         <widget class="QLabel" name="labelCoinControlQuantityText">
          <property name="font">
           <font>
-           <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -58,10 +56,9 @@
         <widget class="QLabel" name="labelCoinControlQuantity">
          <property name="font">
           <font>
-           <family>Typola</family>
            <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -83,10 +80,8 @@
         <widget class="QLabel" name="labelCoinControlBytesText">
          <property name="font">
           <font>
-           <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -101,10 +96,9 @@
         <widget class="QLabel" name="labelCoinControlBytes">
          <property name="font">
           <font>
-           <family>Typola</family>
            <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -142,10 +136,8 @@
         <widget class="QLabel" name="labelCoinControlAmountText">
          <property name="font">
           <font>
-           <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -160,10 +152,9 @@
         <widget class="QLabel" name="labelCoinControlAmount">
          <property name="font">
           <font>
-           <family>Typola</family>
            <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -185,10 +176,8 @@
         <widget class="QLabel" name="labelCoinControlPriorityText">
          <property name="font">
           <font>
-           <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -203,10 +192,9 @@
         <widget class="QLabel" name="labelCoinControlPriority">
          <property name="font">
           <font>
-           <family>Typola</family>
            <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -244,10 +232,8 @@
         <widget class="QLabel" name="labelCoinControlFeeText">
          <property name="font">
           <font>
-           <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -262,10 +248,9 @@
         <widget class="QLabel" name="labelCoinControlFee">
          <property name="font">
           <font>
-           <family>Typola</family>
            <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -290,10 +275,8 @@
          </property>
          <property name="font">
           <font>
-           <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -311,10 +294,9 @@
          </property>
          <property name="font">
           <font>
-           <family>Typola</family>
            <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -352,10 +334,8 @@
         <widget class="QLabel" name="labelCoinControlAfterFeeText">
          <property name="font">
           <font>
-           <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -370,10 +350,9 @@
         <widget class="QLabel" name="labelCoinControlAfterFee">
          <property name="font">
           <font>
-           <family>Typola</family>
            <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -398,10 +377,8 @@
          </property>
          <property name="font">
           <font>
-           <family>Typola</family>
            <weight>75</weight>
            <bold>true</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="styleSheet">
@@ -419,10 +396,9 @@
          </property>
          <property name="font">
           <font>
-           <family>Typola</family>
            <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -454,9 +430,8 @@
      </property>
      <property name="font">
       <font>
-       <family>Typola</family>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
@@ -477,9 +452,8 @@
       </property>
       <property name="font">
        <font>
-        <family>Typola</family>
-        <weight>75</weight>
-        <bold>true</bold>
+        <weight>50</weight>
+        <bold>false</bold>
         <stylestrategy>PreferAntialias</stylestrategy>
        </font>
       </property>
@@ -497,9 +471,8 @@
          </property>
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -518,9 +491,8 @@
          </property>
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -542,9 +514,8 @@
          </property>
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -557,9 +528,8 @@
         <spacer name="horizontalSpacer">
          <property name="font">
           <font>
-           <family>Typola</family>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -582,9 +552,8 @@
     <widget class="CoinControlTreeWidget" name="treeWidget">
      <property name="font">
       <font>
-       <family>Typola</family>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
@@ -673,9 +642,8 @@
      </property>
      <property name="font">
       <font>
-       <family>Typola</family>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>

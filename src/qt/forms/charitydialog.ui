@@ -33,10 +33,9 @@
     <widget class="QScrollArea" name="scrollArea">
      <property name="font">
       <font>
-       <family>Typola</family>
-       <pointsize>13</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <pointsize>9</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
@@ -58,7 +57,7 @@
         <x>0</x>
         <y>0</y>
         <width>636</width>
-        <height>465</height>
+        <height>484</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_3">
@@ -66,6 +65,9 @@
         <spacer name="verticalSpacer_2">
          <property name="font">
           <font>
+           <pointsize>9</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -84,6 +86,9 @@
         <widget class="QFrame" name="gridLayout_4">
          <property name="font">
           <font>
+           <pointsize>9</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -98,10 +103,9 @@
            <widget class="QLabel" name="label">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -109,7 +113,8 @@
              <string>Percentage of stake to send</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">background:transparent;</string>
+             <string notr="true">QLabel { color: #266C3F; }
+</string>
             </property>
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Percentage:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -120,10 +125,9 @@
            <widget class="QLabel" name="label_4">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -131,7 +135,8 @@
              <string>Max amount to send</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">background:transparent;</string>
+             <string notr="true">QLabel { color: #266C3F; }
+</string>
             </property>
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&quot;&gt;Max Amount:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -142,10 +147,9 @@
            <widget class="QLineEdit" name="charityMinEdit">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -164,10 +168,9 @@
            <widget class="QLineEdit" name="charityMaxEdit">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -189,15 +192,18 @@
            <widget class="QLabel" name="label_5">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="toolTip">
              <string>Address to send portion of stake to</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel { color: #266C3F; }
+</string>
             </property>
             <property name="text">
              <string>Charity Address:</string>
@@ -208,10 +214,9 @@
            <widget class="QPushButton" name="addressBookButton">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -237,15 +242,18 @@
            <widget class="QLabel" name="label_6">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="toolTip">
              <string>The amount left over returned to you</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel { color: #266C3F; }
+</string>
             </property>
             <property name="text">
              <string>Change Address:</string>
@@ -256,10 +264,9 @@
            <widget class="QPushButton" name="changeAddressBookButton">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -285,10 +292,9 @@
            <widget class="QPushButton" name="enableButton">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -307,10 +313,9 @@
            <widget class="QPushButton" name="disableButton">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -326,18 +331,21 @@
            <widget class="QLabel" name="label_2">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>16</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel { color: #266C3F; }
+</string>
             </property>
             <property name="lineWidth">
              <number>1</number>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;EverGreenCoin Stake For Charity allows you to automatically send up to 100% of your stake rewards to another EverGreenCoin address after it matures. Note that you pay the tansaction fee&lt;br /&gt;(.0001 EGC) in addition to the percentage. Visit https://EverGreenCoin.org for a list of charities.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Please enter the percentage to give and the EverGreenCoin address to give to. Min and Max amount and change address are optional.&lt;/span&gt;&lt;/p&gt;&lt;br /&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;EverGreenCoin Stake For Charity allows you to automatically send up to 100% of your stake rewards to another EverGreenCoin address after it matures. Note that you pay the tansaction fee (.0001 EGC) in addition to the percentage. Visit https://EverGreenCoin.org for a list of charities.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Please enter the percentage to give and the EverGreenCoin address to give to. Min and Max amount and change address are optional.&lt;/span&gt;&lt;/p&gt;&lt;br /&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -355,9 +363,9 @@
                <colorrole role="WindowText">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>255</red>
-                  <green>170</green>
-                  <blue>0</blue>
+                  <red>38</red>
+                  <green>108</green>
+                  <blue>63</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -373,9 +381,18 @@
                <colorrole role="Text">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>255</red>
-                  <green>170</green>
-                  <blue>0</blue>
+                  <red>38</red>
+                  <green>108</green>
+                  <blue>63</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="ButtonText">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>38</red>
+                  <green>108</green>
+                  <blue>63</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -402,9 +419,9 @@
                <colorrole role="WindowText">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>255</red>
-                  <green>170</green>
-                  <blue>0</blue>
+                  <red>38</red>
+                  <green>108</green>
+                  <blue>63</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -420,9 +437,18 @@
                <colorrole role="Text">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>255</red>
-                  <green>170</green>
-                  <blue>0</blue>
+                  <red>38</red>
+                  <green>108</green>
+                  <blue>63</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="ButtonText">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>38</red>
+                  <green>108</green>
+                  <blue>63</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -449,9 +475,9 @@
                <colorrole role="WindowText">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>120</red>
-                  <green>120</green>
-                  <blue>120</blue>
+                  <red>38</red>
+                  <green>108</green>
+                  <blue>63</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -467,9 +493,18 @@
                <colorrole role="Text">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>120</red>
-                  <green>120</green>
-                  <blue>120</blue>
+                  <red>38</red>
+                  <green>108</green>
+                  <blue>63</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="ButtonText">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>38</red>
+                  <green>108</green>
+                  <blue>63</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -496,15 +531,15 @@
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">background:transparent;</string>
+             <string notr="true">QLabel { color: #266C3F; }
+</string>
             </property>
             <property name="text">
              <string/>
@@ -515,10 +550,9 @@
            <widget class="QLabel" name="label_3">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -526,7 +560,8 @@
              <string>Min amount to send</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">background:transparent;</string>
+             <string notr="true">QLabel { color: #266C3F; }
+</string>
             </property>
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Min Amount:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -537,10 +572,9 @@
            <widget class="QLineEdit" name="charityAddressEdit">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -559,10 +593,9 @@
            <widget class="QLineEdit" name="charityChangeAddressEdit">
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
@@ -587,10 +620,9 @@
             </property>
             <property name="font">
              <font>
-              <family>Typola</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
               <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>

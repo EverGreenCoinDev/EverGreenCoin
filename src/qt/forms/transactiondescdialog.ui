@@ -18,7 +18,6 @@
     <widget class="QTextEdit" name="detailText">
      <property name="font">
       <font>
-       <family>Typola</family>
        <weight>75</weight>
        <bold>true</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
@@ -36,9 +35,8 @@
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="font">
       <font>
-       <family>Typola</family>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>

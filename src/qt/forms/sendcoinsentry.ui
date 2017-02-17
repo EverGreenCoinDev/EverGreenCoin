@@ -450,7 +450,7 @@
        </property>
        <property name="font">
         <font>
-         <family>Typola</family>
+         <pointsize>12</pointsize>
          <weight>50</weight>
          <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
@@ -475,9 +475,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -529,9 +529,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -547,9 +547,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -612,9 +612,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -666,9 +666,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -684,9 +684,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -749,9 +749,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>19</red>
-           <green>54</green>
-           <blue>31</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -803,9 +803,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>19</red>
-           <green>54</green>
-           <blue>31</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -821,9 +821,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>19</red>
-           <green>54</green>
-           <blue>31</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -886,20 +886,18 @@ QLabel { font-weight: 900; }</string>
      </property>
      <property name="font">
       <font>
-       <family>Typola</family>
-       <pointsize>14</pointsize>
-       <weight>99</weight>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
        <italic>false</italic>
-       <bold>true</bold>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel { font: 14pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+      <string notr="true">QLabel { color: #266C3F; }</string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#266C3F;&quot;&gt;&amp;amp;Label:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;&amp;amp;Label:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -917,9 +915,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -971,9 +969,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -989,9 +987,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1054,9 +1052,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1108,9 +1106,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1126,9 +1124,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1191,9 +1189,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>19</red>
-           <green>54</green>
-           <blue>31</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1245,9 +1243,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>19</red>
-           <green>54</green>
-           <blue>31</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1263,9 +1261,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>19</red>
-           <green>54</green>
-           <blue>31</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1328,20 +1326,18 @@ QLabel { font-weight: 900; }</string>
      </property>
      <property name="font">
       <font>
-       <family>Typola</family>
-       <pointsize>14</pointsize>
-       <weight>99</weight>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
        <italic>false</italic>
-       <bold>true</bold>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel { font: 14pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+      <string notr="true">QLabel { color: #266C3F; }</string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#266C3F;&quot;&gt;A&amp;amp;mount:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;A&amp;amp;mount:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1359,9 +1355,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1413,9 +1409,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1431,9 +1427,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1496,9 +1492,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1550,9 +1546,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1568,9 +1564,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>255</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1633,9 +1629,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>19</red>
-           <green>54</green>
-           <blue>31</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1687,9 +1683,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>19</red>
-           <green>54</green>
-           <blue>31</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1705,9 +1701,9 @@ QLabel { font-weight: 900; }</string>
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>19</red>
-           <green>54</green>
-           <blue>31</blue>
+           <red>38</red>
+           <green>108</green>
+           <blue>63</blue>
           </color>
          </brush>
         </colorrole>
@@ -1770,20 +1766,18 @@ QLabel { font-weight: 900; }</string>
      </property>
      <property name="font">
       <font>
-       <family>Typola</family>
-       <pointsize>14</pointsize>
-       <weight>99</weight>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
        <italic>false</italic>
-       <bold>true</bold>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel { font: 14pt &quot;Typola&quot;; }
-QLabel { font-weight: 900; }</string>
+      <string notr="true">QLabel { color: #266C3F; }</string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#266C3F;&quot;&gt;Pay &amp;amp;To:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Pay &amp;amp;To:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2217,7 +2211,7 @@ QLabel { font-weight: 900; }</string>
        </property>
        <property name="font">
         <font>
-         <family>Typola</family>
+         <pointsize>12</pointsize>
          <weight>50</weight>
          <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
@@ -2654,7 +2648,6 @@ QLabel { font-weight: 900; }</string>
        </property>
        <property name="font">
         <font>
-         <family>Typola</family>
          <weight>50</weight>
          <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
@@ -3094,7 +3087,6 @@ QLabel { font-weight: 900; }</string>
        </property>
        <property name="font">
         <font>
-         <family>Typola</family>
          <weight>50</weight>
          <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
@@ -3534,7 +3526,6 @@ QLabel { font-weight: 900; }</string>
        </property>
        <property name="font">
         <font>
-         <family>Typola</family>
          <weight>50</weight>
          <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
@@ -3985,7 +3976,6 @@ QLabel { font-weight: 900; }</string>
      </property>
      <property name="font">
       <font>
-       <family>Typola</family>
        <weight>50</weight>
        <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>

@@ -18,10 +18,9 @@
     <widget class="QLabel" name="labelExplanation">
      <property name="font">
       <font>
-       <family>Typola</family>
-       <pointsize>13</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <pointsize>9</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
@@ -70,9 +69,8 @@
       <widget class="QPushButton" name="newAddressButton">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -92,9 +90,8 @@
       <widget class="QPushButton" name="copyToClipboard">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -114,9 +111,8 @@
       <widget class="QPushButton" name="showQRCode">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -133,9 +129,8 @@
       <widget class="QPushButton" name="signMessage">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -155,9 +150,8 @@
       <widget class="QPushButton" name="verifyMessage">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -177,9 +171,8 @@
       <widget class="QPushButton" name="stakeForCharityPushButton">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -195,9 +188,8 @@
       <widget class="QPushButton" name="deleteButton">
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
          <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
@@ -236,9 +228,8 @@
        </property>
        <property name="font">
         <font>
-         <family>Typola</family>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="standardButtons">
