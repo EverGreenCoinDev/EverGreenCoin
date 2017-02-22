@@ -19,8 +19,16 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTabWidget" name="tabWidget">
+     <property name="font">
+      <font>
+       <family>Typola</family>
+       <weight>75</weight>
+       <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tabSignMessage">
       <attribute name="title">
@@ -29,6 +37,11 @@
       <layout class="QVBoxLayout" name="verticalLayout_SM">
        <item>
         <widget class="QLabel" name="infoLabel_SM">
+         <property name="font">
+          <font>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="text">
           <string>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</string>
          </property>
@@ -47,6 +60,11 @@
          </property>
          <item>
           <widget class="QValidatedLineEdit" name="addressIn_SM">
+           <property name="font">
+            <font>
+             <stylestrategy>PreferAntialias</stylestrategy>
+            </font>
+           </property>
            <property name="toolTip">
             <string>The address to sign the message with (e.g. EdFwYw4Mo2Zq6CFM2yNJgXvE2DTJxgdBRX)</string>
            </property>
@@ -57,6 +75,11 @@
          </item>
          <item>
           <widget class="QPushButton" name="addressBookButton_SM">
+           <property name="font">
+            <font>
+             <stylestrategy>PreferAntialias</stylestrategy>
+            </font>
+           </property>
            <property name="toolTip">
             <string>Choose an address from the address book</string>
            </property>
@@ -77,6 +100,11 @@
          </item>
          <item>
           <widget class="QPushButton" name="pasteButton_SM">
+           <property name="font">
+            <font>
+             <stylestrategy>PreferAntialias</stylestrategy>
+            </font>
+           </property>
            <property name="toolTip">
             <string>Paste address from clipboard</string>
            </property>
@@ -99,6 +127,11 @@
        </item>
        <item>
         <widget class="QPlainTextEdit" name="messageIn_SM">
+         <property name="font">
+          <font>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="toolTip">
           <string>Enter the message you want to sign here</string>
          </property>
@@ -114,6 +147,7 @@
            <property name="font">
             <font>
              <italic>true</italic>
+             <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
            <property name="readOnly">
@@ -123,6 +157,11 @@
          </item>
          <item>
           <widget class="QPushButton" name="copySignatureButton_SM">
+           <property name="font">
+            <font>
+             <stylestrategy>PreferAntialias</stylestrategy>
+            </font>
+           </property>
            <property name="toolTip">
             <string>Copy the current signature to the system clipboard</string>
            </property>
@@ -144,6 +183,11 @@
         <layout class="QHBoxLayout" name="horizontalLayout_3_SM">
          <item>
           <widget class="QPushButton" name="signMessageButton_SM">
+           <property name="font">
+            <font>
+             <stylestrategy>PreferAntialias</stylestrategy>
+            </font>
+           </property>
            <property name="toolTip">
             <string>Sign the message to prove you own this EverGreenCoin address</string>
            </property>
@@ -161,6 +205,11 @@
          </item>
          <item>
           <widget class="QPushButton" name="clearButton_SM">
+           <property name="font">
+            <font>
+             <stylestrategy>PreferAntialias</stylestrategy>
+            </font>
+           </property>
            <property name="toolTip">
             <string>Reset all sign message fields</string>
            </property>
@@ -195,6 +244,7 @@
             <font>
              <weight>75</weight>
              <bold>true</bold>
+             <stylestrategy>PreferAntialias</stylestrategy>
             </font>
            </property>
            <property name="text">
@@ -207,6 +257,11 @@
          </item>
          <item>
           <spacer name="horizontalSpacer_2_SM">
+           <property name="font">
+            <font>
+             <stylestrategy>PreferAntialias</stylestrategy>
+            </font>
+           </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
@@ -229,6 +284,13 @@
       <layout class="QVBoxLayout" name="verticalLayout_VM">
        <item>
         <widget class="QLabel" name="infoLabel_VM">
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</string>
          </property>
@@ -290,6 +352,13 @@
         <layout class="QHBoxLayout" name="horizontalLayout_2_VM">
          <item>
           <widget class="QPushButton" name="verifyMessageButton_VM">
+           <property name="font">
+            <font>
+             <family>Typola</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="toolTip">
             <string>Verify the message to ensure it was signed with the specified EverGreenCoin address</string>
            </property>
@@ -307,6 +376,13 @@
          </item>
          <item>
           <widget class="QPushButton" name="clearButton_VM">
+           <property name="font">
+            <font>
+             <family>Typola</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="toolTip">
             <string>Reset all verify message fields</string>
            </property>

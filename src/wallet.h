@@ -20,6 +20,7 @@
 
 extern bool fWalletUnlockStakingOnly;
 extern bool fConfChange;
+extern bool fGlobalStakeForCharity;
 class CAccountingEntry;
 class CWalletTx;
 class CReserveKey;
@@ -86,6 +87,12 @@ public:
 
     bool fFileBacked;
     std::string strWalletFile;
+    bool fStakeForCharity;
+    int nStakeForCharityPercent;
+    int64_t nStakeForCharityMin = MIN_TX_FEE;
+    int64_t nStakeForCharityMax = MAX_MONEY;
+    CBitcoinAddress strStakeForCharityAddress;
+    CBitcoinAddress strStakeForCharityChangeAddress;
 
     std::set<int64_t> setKeyPool;
     std::map<CKeyID, CKeyMetadata> mapKeyMetadata;
@@ -309,6 +316,8 @@ public:
 
     // get the current wallet format (the oldest client version guaranteed to understand this wallet)
     int GetVersion() { return nWalletVersion; }
+
+    bool StakeForCharity();
 
     void FixSpentCoins(int& nMismatchSpent, int64_t& nBalanceInQuestion, bool fCheckOnly = false);
     void DisableTransaction(const CTransaction &tx);

@@ -1,4 +1,6 @@
 // Copyright (c) 2009-2012 The Bitcoin developers
+// Copyright (c) 2014-2016 The MaiaCoin developers
+// Copyright (c) 2015-2017 The EverGreenCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -29,6 +31,21 @@ namespace Checkpoints
         ( 20000, uint256("0x000000004e12e6e5a03c3923845a4a198f137ca94a314cf068cff44b04197aa5"))
         ( 30000, uint256("0x0000000026100d9b37836e21c0dcec409ca55dd04882bbed9a796272f1e851f9"))
         ( 40000, uint256("0x00000000042b21154e929d7510d35f4ffcd2c02c6b68da7a5ff3d816b62a65c4"))
+        ( 50004, uint256("0x000000000004d1d4032e811c0fc67b01c014492f5f19153b14a0e0d464754561"))
+        ( 60000, uint256("0x0000000006f508e1b5f9ca1c97778a546e1866ca30d6c58f3d380fd2b76ea7eb"))
+        ( 75002, uint256("0x00000000046abee379b15f4fabbcf47b8f2560012e9d75aa5ecae5351bd15e36"))
+        (100000, uint256("0x000000000bcaadbdc933e448f4b572a3395bc05ba5471b4596fc56ce5806971b"))
+        (125000, uint256("0x000000000797e4891dfec75012ea9937aa910f4cd59f867e64606d04cb303ea9"))
+        (200002, uint256("0x000000004aff3938ebe8e6a0c7a4afc0dc54d20639b06e22c362b5337da5a3b7"))
+        (300001, uint256("0x000000000d059badb1d58cd9a644ddc16c7173395270e5d4460ad376b3b42097"))
+        (400000, uint256("0x000000000d780cb4a5e9d67746e7856bd1b06a8c4d2dd3eea3d6510602685f76"))
+        (431000, uint256("0x0000000000e9c020b6abbfb10d116f6bdf5cd11dd1457bdaa900beb58c1f3f2e"))
+        (446023, uint256("0x00000000245cd1d12f16893305bc4c21357a598916dc7bb54b3873643b42d3d5"))
+        (487135, uint256("0x000000008691d6c33c3e400f369d13f8d59afc527492b7e3255bf539bde7f00d"))
+        (732854, uint256("0x58a6ef4c386b6664875f409da489ac56dcde750bb39f1b88f73f10fe54087faa"))
+        (804006, uint256("0x137146a8e2a4c60eee3ce806aa1b4ab20a9f6118ffd9f7c6b7064ba854e57a5c"))
+        (865663, uint256("0xee2b9cc7b40f7521cdaf5ba1b1d9ba82657582252af6fe0934062102d18e0d93"))
+        (887192, uint256("0x2e0d4999933c9db40915ec1c9bbf9ae6cf4e7201395f847426ff612f6e426b36"))
     ;
 
     // TestNet has no checkpoints
@@ -188,7 +205,7 @@ namespace Checkpoints
         return false;
     }
 
-    // Automatically select a suitable sync-checkpoint 
+    // Automatically select a suitable sync-checkpoint
     uint256 AutoSelectSyncCheckpoint()
     {
         const CBlockIndex *pindex = pindexBest;
@@ -233,7 +250,7 @@ namespace Checkpoints
             return false;
         if (hashBlock == hashPendingCheckpoint)
             return true;
-        if (mapOrphanBlocks.count(hashPendingCheckpoint) 
+        if (mapOrphanBlocks.count(hashPendingCheckpoint)
             && hashBlock == WantedByOrphan(mapOrphanBlocks[hashPendingCheckpoint]))
             return true;
         return false;

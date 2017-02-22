@@ -1,19 +1,17 @@
 ###############################################################################################
 # EverGreenCoin comes from original source of MaiaCoin by Mammix2
 ###############################################################################################
-# Public code, doesnt include anonymous mixer tech, for daemons etc...
-###############################################################################################
 TEMPLATE = app
 TARGET = EverGreenCoin-Qt
-VERSION = 1.1.1.0
+VERSION = 1.5.0.0
 INCLUDEPATH += src src/json \
     src/qt \
     src/sph
-QT += core gui network webkit
+QT += core gui network
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
 CONFIG += thread static
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport webkitwidgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 lessThan(QT_MAJOR_VERSION, 5): CONFIG += static
 QMAKE_CXXFLAGS = -fpermissive
 
@@ -38,8 +36,8 @@ win32 {
     BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
     BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
     BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-    OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1j/include
-    OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1j
+    OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.2a/include
+    OPENSSL_LIB_PATH=C:/deps/openssl-1.0.2a
     MINIUPNPC_INCLUDE_PATH=C:/deps/
     MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
     QRENCODE_INCLUDE_PATH=C:/deps/qrcode-win32-3.1.1/include
@@ -325,7 +323,8 @@ HEADERS += src/qt/bitcoingui.h \
     src/limitedmap.h \
     src/threadsafety.h \
     src/txdb-leveldb.h \
-    src/pow_control.h
+    src/pow_control.h \
+    src/qt/charitydialog.h
 
 
 
@@ -404,7 +403,8 @@ SOURCES += src/qt/bitcoin.cpp \
     src/pbkdf2.cpp \
     src/txdb-leveldb.cpp \
     src/json/json_spirit_reader.cpp \
-    src/json/json_spirit_writer.cpp 
+    src/json/json_spirit_writer.cpp \
+    src/qt/charitydialog.cpp
 
 RESOURCES += \
     src/qt/bitcoin.qrc
@@ -423,7 +423,8 @@ FORMS += \
     src/qt/forms/rpcconsole.ui \
     src/qt/forms/optionsdialog.ui \
     src/qt/forms/blockbrowser.ui \
-    src/qt/forms/statisticspage.ui
+    src/qt/forms/statisticspage.ui \
+    src/qt/forms/charitydialog.ui
 
 contains(USE_QRCODE, 1) {
 HEADERS += src/qt/qrcodedialog.h

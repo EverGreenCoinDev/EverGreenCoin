@@ -12,14 +12,9 @@
 
 #include <QAbstractItemDelegate>
 #include <QPainter>
-#include <QWebView>
-#include <QSslError>
-#include <QNetworkReply>
-#include <QSslConfiguration>
-#include <QUrl>
 
 #define DECORATION_SIZE 64
-#define NUM_ITEMS 5
+#define NUM_ITEMS 7
 
 class TxViewDelegate : public QAbstractItemDelegate
 {
@@ -106,21 +101,12 @@ OverviewPage::OverviewPage(QWidget *parent) :
     filter(0)
 {
     ui->setupUi(this);
-   // connect( ui->reload, SIGNAL(clicked()), this, SLOT(reloadTwitter()));
-       connect( ui->twitter->page()->networkAccessManager(),
-                    SIGNAL(sslErrors(QNetworkReply*, const QList<QSslError> & )),
-                    this,
-                    SLOT(sslErrorHandler(QNetworkReply*, const QList<QSslError> & )));
-                   QSslConfiguration sslCfg = QSslConfiguration::defaultConfiguration();
-                   QList<QSslCertificate> ca_list = sslCfg.caCertificates();
-                   QList<QSslCertificate> ca_new = QSslCertificate::fromPath("c:/global.pem");
-                   ca_list += ca_new;
 
-                   sslCfg.setCaCertificates(ca_list);
-                   sslCfg.setProtocol(QSsl::AnyProtocol);
-                   QSslConfiguration::setDefaultConfiguration(sslCfg);
-       ui->twitter->load(QUrl("http://evergreencoin.org/feed.html"));
-       ui->twitter->show();
+    QAction *stakeForCharityAction = new QAction(ui->startButton->text(), this);
+
+    // contextMenu = new QMenu();
+    // contextMenu->addAction(stakeForCharityAction);
+    connect(stakeForCharityAction, SIGNAL(triggered()), this, SLOT(on_startButton_clicked()));
 
     // Recent transactions
     ui->listTransactions->setItemDelegate(txdelegate);
@@ -138,6 +124,11 @@ OverviewPage::OverviewPage(QWidget *parent) :
     showOutOfSyncWarning(true);
 }
 
+void OverviewPage::on_startButton_clicked()
+{
+    return stakeForCharitySignal();
+}
+
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)
 {
     if(filter)
@@ -149,10 +140,6 @@ OverviewPage::~OverviewPage()
     delete ui;
 }
 
-void OverviewPage::reloadTwitter()
-{
-    ui->twitter->load(QUrl("http://evergreencoin.org/feed.html"));
-}
 
 void OverviewPage::setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBalance, qint64 immatureBalance)
 {
@@ -183,13 +170,13 @@ void OverviewPage::unlockWallet()
         dlg.setModel(model);
         if(dlg.exec() == QDialog::Accepted)
         {
-            ui->unlockWalletButton->setText(QString("Lock Wallet"));
+            ui->unlockWalletButton->setText(QString("Lock Software"));
         }
     }
     else
     {
         model->setWalletLocked(true);
-        ui->unlockWalletButton->setText(QString("Unlock Wallet"));
+        ui->unlockWalletButton->setText(QString("Unlock Software"));
     }
 }
 
@@ -221,13 +208,13 @@ void OverviewPage::setModel(WalletModel *model)
         if(status == WalletModel::Unencrypted)
         {
             ui->unlockWalletButton->setDisabled(true);
-            ui->unlockWalletButton->setText(QString("Wallet is not encrypted!"));
+            ui->unlockWalletButton->setText(QString("Not encrypted!"));
 
         }
 
         else
         {
-            ui->unlockWalletButton->setText(QString("Unlock Wallet"));
+            ui->unlockWalletButton->setText(QString("Unlock Software"));
         }
         connect(ui->unlockWalletButton, SIGNAL(clicked()), this, SLOT(unlockWallet()));
     }
@@ -248,15 +235,6 @@ void OverviewPage::updateDisplayUnit()
 
         ui->listTransactions->update();
     }
-}
-
-void OverviewPage::sslErrorHandler(QNetworkReply *reply, const QList<QSslError> & errors )
-{
-    qDebug() << "sslErrorHandler:";
-    foreach (QSslError err, errors)
-      qDebug() << "ssl error: " << err;
-
-    reply->ignoreSslErrors();
 }
 
 void OverviewPage::showOutOfSyncWarning(bool fShow)

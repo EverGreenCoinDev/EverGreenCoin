@@ -1,5 +1,7 @@
 /*
  * Copyright 2012 pooler@litecoinpool.org
+ * Copyright (c) 2013-2014 The BlackCoin developers
+ * Copyright (c) 2016 The EverGreenCoin developers
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the Free
@@ -9,10 +11,6 @@
 
 
 #if defined(OPTIMIZED_SALSA) &&  defined(__arm__) && defined(__APCS_32__)
-
-#if defined(__linux__) && defined(__ELF__)
-.section .note.GNU-stack,"",%progbits
-#endif
 
 #if defined(__ARM_ARCH_5E__) || defined(__ARM_ARCH_5TE__) || \
 	defined(__ARM_ARCH_5TEJ__) || defined(__ARM_ARCH_6__) || \
@@ -447,9 +445,9 @@ _scrypt_core:
 	sub	sp, sp, #21*4
 	bic	sp, sp, #63
 	str	r12, [sp, #20*4]
-	
+
 	scrypt_shuffle()
-	
+
 	str	r0, [sp, #16*4]
 	add	r12, r1, #1024*32*4
 	str	r12, [sp, #18*4]
@@ -462,9 +460,9 @@ scrypt_core_loop1:
 	scrypt_core_macro1a_x4()
 	scrypt_core_macro1a_x4()
 	str	r1, [sp, #17*4]
-	
+
 	salsa8_core()
-	
+
 	ldr	r0, [sp, #16*4]
 	mov	r12, sp
 	add	r2, r0, #16*4
@@ -472,9 +470,9 @@ scrypt_core_loop1:
 	scrypt_core_macro2_x4()
 	scrypt_core_macro2_x4()
 	scrypt_core_macro2_x4()
-	
+
 	salsa8_core()
-	
+
 	ldr	r0, [sp, #16*4]
 	mov	r1, sp
 	add	r0, r0, #16*4
@@ -483,12 +481,12 @@ scrypt_core_loop1:
 	ldr	r3, [sp, #17*4]
 	ldr	r12, [sp, #18*4]
 	scrypt_core_macro3_x4()
-	
+
 	add	r1, r3, #16*4
 	sub	r0, r0, #32*4
 	cmp	r1, r12
 	bne	scrypt_core_loop1
-	
+
 	ldr	r4, [r0, #16*4]
 	sub	r1, r1, #1024*32*4
 	str	r1, [sp, #17*4]
@@ -508,9 +506,9 @@ scrypt_core_loop2:
 	scrypt_core_macro1b_x4()
 	scrypt_core_macro1b_x4()
 	scrypt_core_macro1b_x4()
-	
+
 	salsa8_core()
-	
+
 	ldr	r0, [sp, #16*4]
 	mov	r12, sp
 	add	r2, r0, #16*4
@@ -518,9 +516,9 @@ scrypt_core_loop2:
 	scrypt_core_macro2_x4()
 	scrypt_core_macro2_x4()
 	scrypt_core_macro2_x4()
-	
+
 	salsa8_core()
-	
+
 	ldr	r0, [sp, #16*4]
 	mov	r1, sp
 	ldr	r3, [sp, #17*4]
@@ -535,15 +533,15 @@ scrypt_core_loop2:
 #endif
 	scrypt_core_macro3_x6()
 	scrypt_core_macro3_x6()
-	
+
 	ldr	r12, [sp, #18*4]
 	sub	r0, r0, #32*4
 	ldr	r1, [sp, #19*4]
 	subs	r12, r12, #1
 	bne	scrypt_core_loop2
-	
+
 	scrypt_shuffle()
-	
+
 	ldr	sp, [sp, #20*4]
 #ifdef __thumb__
 	ldmfd	sp!, {r4-r11, lr}
@@ -552,4 +550,8 @@ scrypt_core_loop2:
 	ldmfd	sp!, {r4-r11, pc}
 #endif
 
+#endif
+
+#if defined(__linux__) && defined(__ELF__)
+.section .note.GNU-stack,"",%progbits
 #endif

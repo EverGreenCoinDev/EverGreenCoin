@@ -46,6 +46,15 @@
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="cursor">
           <cursorShape>IBeamCursor</cursorShape>
          </property>
@@ -59,11 +68,20 @@
        </item>
        <item>
         <widget class="QLabel" name="versionLabel">
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="cursor">
           <cursorShape>IBeamCursor</cursorShape>
          </property>
          <property name="text">
-          <string notr="true">0.1.0.2-beta</string>
+          <string notr="true">0.1.1.2-beta</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -87,12 +105,21 @@
      </item>
      <item>
       <widget class="QLabel" name="copyrightLabel">
+       <property name="font">
+        <font>
+         <family>Typola</family>
+         <weight>75</weight>
+         <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
+        </font>
+       </property>
        <property name="cursor">
         <cursorShape>IBeamCursor</cursorShape>
        </property>
        <property name="text">
-        <string>Copyright © 2015-2016 EverGreenCoin 
-evergreencoindev@gmail.com</string>
+        <string>Copyright © 2015-2017 The EverGreenCoin Foundation and Steven Saxton
+For support, please make a ticket at http://support.EverGreenCoin.org
+Please join us at https://EverGreenCoin.org</string>
        </property>
        <property name="textInteractionFlags">
         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -101,6 +128,14 @@ evergreencoindev@gmail.com</string>
      </item>
      <item>
       <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>Typola</family>
+         <weight>75</weight>
+         <bold>true</bold>
+         <stylestrategy>PreferAntialias</stylestrategy>
+        </font>
+       </property>
        <property name="cursor">
         <cursorShape>IBeamCursor</cursorShape>
        </property>
@@ -110,7 +145,9 @@ This is experimental software.
 
 Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</string>
+This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.
+
+The Typola font is used by EverGreenCoin with permission from its authors, Willy Riftian (willyriftian@gmail.com) and Dewi Sata (dwsata@gmail.com).</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>

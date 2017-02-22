@@ -38,6 +38,14 @@
        </property>
        <item row="0" column="0">
         <widget class="QLabel" name="labelCoinControlQuantityText">
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">font-weight:bold;</string>
          </property>
@@ -50,8 +58,11 @@
         <widget class="QLabel" name="labelCoinControlQuantity">
          <property name="font">
           <font>
-           <family>Monospace</family>
+           <family>Typola</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -70,6 +81,14 @@
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="labelCoinControlBytesText">
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">font-weight:bold;</string>
          </property>
@@ -82,8 +101,11 @@
         <widget class="QLabel" name="labelCoinControlBytes">
          <property name="font">
           <font>
-           <family>Monospace</family>
+           <family>Typola</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -118,6 +140,14 @@
        </property>
        <item row="0" column="0">
         <widget class="QLabel" name="labelCoinControlAmountText">
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">font-weight:bold;</string>
          </property>
@@ -130,8 +160,11 @@
         <widget class="QLabel" name="labelCoinControlAmount">
          <property name="font">
           <font>
-           <family>Monospace</family>
+           <family>Typola</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -150,6 +183,14 @@
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="labelCoinControlPriorityText">
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">font-weight:bold;</string>
          </property>
@@ -162,8 +203,11 @@
         <widget class="QLabel" name="labelCoinControlPriority">
          <property name="font">
           <font>
-           <family>Monospace</family>
+           <family>Typola</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -198,6 +242,14 @@
        </property>
        <item row="0" column="0">
         <widget class="QLabel" name="labelCoinControlFeeText">
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">font-weight:bold;</string>
          </property>
@@ -210,8 +262,11 @@
         <widget class="QLabel" name="labelCoinControlFee">
          <property name="font">
           <font>
-           <family>Monospace</family>
+           <family>Typola</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -233,6 +288,14 @@
          <property name="enabled">
           <bool>false</bool>
          </property>
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">font-weight:bold;</string>
          </property>
@@ -248,8 +311,11 @@
          </property>
          <property name="font">
           <font>
-           <family>Monospace</family>
+           <family>Typola</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -284,6 +350,14 @@
        </property>
        <item row="0" column="0">
         <widget class="QLabel" name="labelCoinControlAfterFeeText">
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">font-weight:bold;</string>
          </property>
@@ -296,8 +370,11 @@
         <widget class="QLabel" name="labelCoinControlAfterFee">
          <property name="font">
           <font>
-           <family>Monospace</family>
+           <family>Typola</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -319,6 +396,14 @@
          <property name="enabled">
           <bool>false</bool>
          </property>
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">font-weight:bold;</string>
          </property>
@@ -334,8 +419,11 @@
          </property>
          <property name="font">
           <font>
-           <family>Monospace</family>
+           <family>Typola</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
          <property name="cursor">
@@ -364,6 +452,14 @@
        <height>40</height>
       </size>
      </property>
+     <property name="font">
+      <font>
+       <family>Typola</family>
+       <weight>75</weight>
+       <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -379,6 +475,14 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Typola</family>
+        <weight>75</weight>
+        <bold>true</bold>
+        <stylestrategy>PreferAntialias</stylestrategy>
+       </font>
+      </property>
       <layout class="QHBoxLayout" name="horizontalLayoutPanel" stretch="0,0,0,0">
        <property name="spacing">
         <number>14</number>
@@ -390,6 +494,14 @@
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
          </property>
          <property name="text">
           <string>(un)select all</string>
@@ -403,6 +515,14 @@
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
          </property>
          <property name="text">
           <string>Tree mode</string>
@@ -420,6 +540,14 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="text">
           <string>List mode</string>
          </property>
@@ -427,6 +555,14 @@
        </item>
        <item>
         <spacer name="horizontalSpacer">
+         <property name="font">
+          <font>
+           <family>Typola</family>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -444,6 +580,14 @@
    </item>
    <item>
     <widget class="CoinControlTreeWidget" name="treeWidget">
+     <property name="font">
+      <font>
+       <family>Typola</family>
+       <weight>75</weight>
+       <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
      <property name="contextMenuPolicy">
       <enum>Qt::CustomContextMenu</enum>
      </property>
@@ -526,6 +670,14 @@
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>Typola</family>
+       <weight>75</weight>
+       <bold>true</bold>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>

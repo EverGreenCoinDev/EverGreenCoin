@@ -223,6 +223,105 @@ Value getaccountaddress(const Array& params, bool fHelp)
     return ret;
 }
 
+Value stakeforcharity(const Array &params, bool fHelp)
+{
+    if (fHelp || params.size() < 2 || params.size() > 5)
+        throw runtime_error(
+            "stakeforcharity <EverGreenCoin Address> <percent> [Change Address] [min amount] [max amount]\n"
+            "Gives a percentage of a found stake to a different address, after stake matures\n"
+            "Percent is a whole number 1 to 100.\n"
+            "Change Address, Min and Max Amount are optional\n"
+            "Set percentage to zero to turn off"
+            + HelpRequiringPassphrase());
+
+    CBitcoinAddress address(params[0].get_str());
+    if (!address.IsValid())
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid EverGreenCoin address");
+
+    if (params[1].get_int() < 0)
+        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, expected valid percentage");
+
+    if (pwalletMain->IsLocked())
+        throw JSONRPCError(RPC_WALLET_UNLOCK_NEEDED, "Error: Please enter the wallet passphrase with wallet password first.");
+
+    unsigned int nPer = (unsigned int) params[1].get_int();
+
+    int64_t nMinAmount = MIN_TX_FEE;
+    int64_t nMaxAmount = MAX_MONEY;
+
+    // Optional Change Address
+    CBitcoinAddress changeAddress;
+    if (params.size() > 2) {
+        changeAddress = params[2].get_str();
+        if (!changeAddress.IsValid())
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid EverGreenCoin change address");
+    }
+
+    // Optional Min Amount
+    if (params.size() > 3)
+    {
+        int64_t nAmount = AmountFromValue(params[3]);
+        if (nAmount < MIN_TX_FEE)
+            throw JSONRPCError(-101, "Send amount too small");
+        else
+             nMinAmount = nAmount;
+    }
+
+    // Optional Max Amount
+    if (params.size() > 4)
+    {
+        int64_t nAmount = AmountFromValue(params[4]);
+
+        if (nAmount < MIN_TX_FEE)
+            throw JSONRPCError(-101, "Send amount too small");
+        else
+             nMaxAmount = nAmount;
+    }
+
+    CWalletDB walletdb(pwalletMain->strWalletFile);
+
+    LOCK(pwalletMain->cs_wallet);
+    {
+        bool fFileBacked = pwalletMain->fFileBacked;
+        //Turn off if we set to zero.
+        //Future: After we allow multiple addresses, only turn of this address
+        if(nPer == 0)
+        {
+            pwalletMain->fStakeForCharity = false;
+            pwalletMain->nStakeForCharityPercent = 0;
+            pwalletMain->nStakeForCharityMin = nMinAmount;
+            pwalletMain->nStakeForCharityMax = nMaxAmount;
+
+        if(fFileBacked)
+            walletdb.EraseStakeForCharity(pwalletMain->strStakeForCharityAddress.ToString());
+
+        pwalletMain->strStakeForCharityAddress = "";
+        pwalletMain->strStakeForCharityChangeAddress = "";
+
+            return Value::null;
+        }
+        //For now max percentage is 50. EGC 100%
+        if (nPer > 100 )
+            nPer = 100;
+
+        if(fFileBacked)
+            walletdb.EraseStakeForCharity(pwalletMain->strStakeForCharityAddress.ToString());
+
+        pwalletMain->strStakeForCharityAddress = address;
+        pwalletMain->nStakeForCharityPercent = nPer;
+        pwalletMain->strStakeForCharityChangeAddress = changeAddress;
+        pwalletMain->fStakeForCharity = true;
+        pwalletMain->nStakeForCharityMin = nMinAmount;
+        pwalletMain->nStakeForCharityMax = nMaxAmount;
+        fGlobalStakeForCharity = true;
+        if(fFileBacked)
+            walletdb.WriteStakeForCharity(address.ToString(), nPer, changeAddress.ToString(), nMinAmount, nMaxAmount);
+
+        if(fFileBacked)
+            walletdb.WriteStakeForCharity(address.ToString(), nPer, changeAddress.ToString(),nMinAmount,nMaxAmount);
+    }
+    return Value::null;
+}
 
 
 Value setaccount(const Array& params, bool fHelp)

@@ -1,4 +1,4 @@
-// Copyright (c) 2015 The evergreencoin developers
+// Copyright (c) 2015 - 2017 The Evergreencoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -18,9 +18,25 @@ typedef std::map<int, unsigned int> MapModifierCheckpoints;
 static std::map<int, unsigned int> mapStakeModifierCheckpoints =
     boost::assign::map_list_of
         ( 0, 0xfd11f4e7u )
-      //  ( 142000, 0xc4676505u )
-      //  ( 167000, 0xdd066dd1u )
-
+        ( 10000, 0xe9f582f4u )
+        ( 20000, 0x33dbe19fu )
+        ( 30000, 0xbed015abu )
+        ( 40000, 0x8c5c8247u )
+        ( 50004, 0x3cceadf6u )
+        ( 60000, 0x100ae9fcu )
+        ( 75002, 0x5a68b642u )
+        ( 100000, 0x2196897bu )
+        ( 125000, 0xfe594649u )
+        ( 200002, 0xbbdd1e6cu )
+        ( 300001, 0x0e2e61dfu )
+        ( 400000, 0xada9b1a9u )
+        ( 431000, 0x715bd2c1u )
+        ( 446023, 0x9df8a6f2u )
+        ( 487135, 0xfd4d427cu )
+        ( 732854, 0xff7431d3u )
+        ( 804006, 0x2e5fdbc5u )
+        ( 865663, 0x8ef9dfdcu )
+        ( 887192, 0x7dd6f1a8u )
     ;
 
 // Hard checkpoints of stake modifiers to ensure they are deterministic (testNet)

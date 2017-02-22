@@ -1,4 +1,6 @@
 # Copyright 2011 pooler@litecoinpool.org
+# Copyright (c) 2013-2014 The BlackCoin developers
+# Copyright (c) 2016 The EverGreenCoin developers
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -23,10 +25,6 @@
 # SUCH DAMAGE.
 
 #if defined(OPTIMIZED_SALSA) &&  defined(__i386__)
-
-#if defined(__linux__) && defined(__ELF__)
-.section .note.GNU-stack,"",%progbits
-#endif
 
 #define gen_salsa8_core_quadround() \
 	movl	52(%esp), %ecx; \
@@ -354,8 +352,8 @@ gen_salsa8_core:
 	gen_salsa8_core_quadround()
 	gen_salsa8_core_quadround()
 	ret
-	
-	
+
+
 	.text
 	.align 32
 	.globl scrypt_core
@@ -366,18 +364,18 @@ _scrypt_core:
 	pushl	%ebp
 	pushl	%edi
 	pushl	%esi
-	
+
 	# Check for SSE2 availability
 	movl	$1, %eax
 	cpuid
 	andl	$0x04000000, %edx
 	jnz xmm_scrypt_core
-	
+
 gen_scrypt_core:
 	movl	20(%esp), %edi
 	movl	24(%esp), %esi
 	subl	$72, %esp
-	
+
 #define scrypt_core_macro1a(p, q) \
 	movl	p(%edi), %eax; \
 	movl	q(%edi), %edx; \
@@ -387,7 +385,7 @@ gen_scrypt_core:
 	movl	%eax, p(%edi); \
 	movl	%eax, p(%esp); \
 
-	
+
 #define scrypt_core_macro1b(p, q) \
 	movl	p(%edi), %eax; \
 	xorl	p(%esi, %edx), %eax; \
@@ -398,7 +396,7 @@ gen_scrypt_core:
 	movl	%eax, p(%edi); \
 	movl	%eax, p(%esp); \
 
-	
+
 #define scrypt_core_macro2(p, q) \
 	movl	p(%esp), %eax; \
 	addl	p(%edi), %eax; \
@@ -407,18 +405,18 @@ gen_scrypt_core:
 	movl	%eax, q(%edi); \
 	movl	%eax, p(%esp); \
 
-	
+
 #define scrypt_core_macro3(p, q) \
 	movl	p(%esp), %eax; \
 	addl	q(%edi), %eax; \
 	movl	%eax, q(%edi); \
 
-	
+
 	leal	131072(%esi), %ecx
 gen_scrypt_core_loop1:
 	movl	%esi, 64(%esp)
 	movl	%ecx, 68(%esp)
-	
+
 	scrypt_core_macro1a(0, 64)
 	scrypt_core_macro1a(4, 68)
 	scrypt_core_macro1a(8, 72)
@@ -435,9 +433,9 @@ gen_scrypt_core_loop1:
 	scrypt_core_macro1a(52, 116)
 	scrypt_core_macro1a(56, 120)
 	scrypt_core_macro1a(60, 124)
-	
+
 	call gen_salsa8_core
-	
+
 	movl	92(%esp), %edi
 	scrypt_core_macro2(0, 64)
 	scrypt_core_macro2(4, 68)
@@ -455,9 +453,9 @@ gen_scrypt_core_loop1:
 	scrypt_core_macro2(52, 116)
 	scrypt_core_macro2(56, 120)
 	scrypt_core_macro2(60, 124)
-	
+
 	call gen_salsa8_core
-	
+
 	movl	92(%esp), %edi
 	scrypt_core_macro3(0, 64)
 	scrypt_core_macro3(4, 68)
@@ -475,7 +473,7 @@ gen_scrypt_core_loop1:
 	scrypt_core_macro3(52, 116)
 	scrypt_core_macro3(56, 120)
 	scrypt_core_macro3(60, 124)
-	
+
 	movl	64(%esp), %esi
 	movl	68(%esp), %ecx
 	addl	$128, %esi
@@ -486,11 +484,11 @@ gen_scrypt_core_loop1:
 	movl	$1024, %ecx
 gen_scrypt_core_loop2:
 	movl	%ecx, 68(%esp)
-	
+
 	movl	64(%edi), %edx
 	andl	$1023, %edx
 	shll	$7, %edx
-	
+
 	scrypt_core_macro1b(0, 64)
 	scrypt_core_macro1b(4, 68)
 	scrypt_core_macro1b(8, 72)
@@ -507,9 +505,9 @@ gen_scrypt_core_loop2:
 	scrypt_core_macro1b(52, 116)
 	scrypt_core_macro1b(56, 120)
 	scrypt_core_macro1b(60, 124)
-	
+
 	call gen_salsa8_core
-	
+
 	movl	92(%esp), %edi
 	scrypt_core_macro2(0, 64)
 	scrypt_core_macro2(4, 68)
@@ -527,9 +525,9 @@ gen_scrypt_core_loop2:
 	scrypt_core_macro2(52, 116)
 	scrypt_core_macro2(56, 120)
 	scrypt_core_macro2(60, 124)
-	
+
 	call gen_salsa8_core
-	
+
 	movl	92(%esp), %edi
 	movl	96(%esp), %esi
 	scrypt_core_macro3(0, 64)
@@ -548,11 +546,11 @@ gen_scrypt_core_loop2:
 	scrypt_core_macro3(52, 116)
 	scrypt_core_macro3(56, 120)
 	scrypt_core_macro3(60, 124)
-	
+
 	movl	68(%esp), %ecx
 	subl	$1, %ecx
 	ja gen_scrypt_core_loop2
-	
+
 	addl	$72, %esp
 	popl	%esi
 	popl	%edi
@@ -632,7 +630,7 @@ gen_scrypt_core_loop2:
 	xmm_salsa8_core_doubleround(); \
 	xmm_salsa8_core_doubleround(); \
 
-	
+
 	.align 32
 xmm_scrypt_core:
 	movl	20(%esp), %edi
@@ -640,7 +638,7 @@ xmm_scrypt_core:
 	movl	%esp, %ebp
 	subl	$128, %esp
 	andl	$-16, %esp
-	
+
 	# shuffle 1st block to (%esp)
 	movl	60(%edi), %edx
 	movl	44(%edi), %ecx
@@ -674,7 +672,7 @@ xmm_scrypt_core:
 	movl	%edx, 16(%esp)
 	movl	%ecx, 32(%esp)
 	movl	%ebx, 48(%esp)
-	
+
 	# shuffle 2nd block to 64(%esp)
 	movl	124(%edi), %edx
 	movl	108(%edi), %ecx
@@ -708,7 +706,7 @@ xmm_scrypt_core:
 	movl	%edx, 80(%esp)
 	movl	%ecx, 96(%esp)
 	movl	%ebx, 112(%esp)
-	
+
 	movl	%esi, %edx
 	leal	131072(%esi), %ecx
 xmm_scrypt_core_loop1:
@@ -728,7 +726,7 @@ xmm_scrypt_core_loop1:
 	movdqa	%xmm5, 80(%edx)
 	movdqa	%xmm6, 96(%edx)
 	movdqa	%xmm7, 112(%edx)
-	
+
 	pxor	%xmm4, %xmm0
 	pxor	%xmm5, %xmm1
 	pxor	%xmm6, %xmm2
@@ -746,7 +744,7 @@ xmm_scrypt_core_loop1:
 	movdqa	%xmm1, 16(%esp)
 	movdqa	%xmm2, 32(%esp)
 	movdqa	%xmm3, 48(%esp)
-	
+
 	pxor	64(%esp), %xmm0
 	pxor	80(%esp), %xmm1
 	pxor	96(%esp), %xmm2
@@ -764,11 +762,11 @@ xmm_scrypt_core_loop1:
 	movdqa	%xmm1, 80(%esp)
 	movdqa	%xmm2, 96(%esp)
 	movdqa	%xmm3, 112(%esp)
-	
+
 	addl	$128, %edx
 	cmpl	%ecx, %edx
 	jne xmm_scrypt_core_loop1
-	
+
 	movl	$1024, %ecx
 xmm_scrypt_core_loop2:
 	movdqa	0(%esp), %xmm0
@@ -794,7 +792,7 @@ xmm_scrypt_core_loop2:
 	movdqa	%xmm5, 80(%esp)
 	movdqa	%xmm6, 96(%esp)
 	movdqa	%xmm7, 112(%esp)
-	
+
 	pxor	%xmm4, %xmm0
 	pxor	%xmm5, %xmm1
 	pxor	%xmm6, %xmm2
@@ -812,7 +810,7 @@ xmm_scrypt_core_loop2:
 	movdqa	%xmm1, 16(%esp)
 	movdqa	%xmm2, 32(%esp)
 	movdqa	%xmm3, 48(%esp)
-	
+
 	pxor	64(%esp), %xmm0
 	pxor	80(%esp), %xmm1
 	pxor	96(%esp), %xmm2
@@ -830,10 +828,10 @@ xmm_scrypt_core_loop2:
 	movdqa	%xmm1, 80(%esp)
 	movdqa	%xmm2, 96(%esp)
 	movdqa	%xmm3, 112(%esp)
-	
+
 	subl	$1, %ecx
 	ja xmm_scrypt_core_loop2
-	
+
 	# re-shuffle 1st block back
 	movl	60(%esp), %edx
 	movl	44(%esp), %ecx
@@ -867,7 +865,7 @@ xmm_scrypt_core_loop2:
 	movl	%edx, 16(%edi)
 	movl	%ecx, 32(%edi)
 	movl	%ebx, 48(%edi)
-	
+
 	# re-shuffle 2nd block back
 	movl	124(%esp), %edx
 	movl	108(%esp), %ecx
@@ -901,7 +899,7 @@ xmm_scrypt_core_loop2:
 	movl	%edx, 80(%edi)
 	movl	%ecx, 96(%edi)
 	movl	%ebx, 112(%edi)
-	
+
 	movl	%ebp, %esp
 	popl	%esi
 	popl	%edi
@@ -909,4 +907,8 @@ xmm_scrypt_core_loop2:
 	popl	%ebx
 	ret
 
+#endif
+
+#if defined(__linux__) && defined(__ELF__)
+.section .note.GNU-stack,"",%progbits
 #endif
