@@ -110,7 +110,7 @@ private:
     QMovie *syncIconMovie;
 
     bool fStakeForCharity;
-    bool fS4CNotificator;
+    bool fS4CNotificator = false;
     int nCharityPercent;
     QString strCharityAddress;
 
