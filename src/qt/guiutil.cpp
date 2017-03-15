@@ -262,7 +262,7 @@ bool ToolTipToRichTextFilter::eventFilter(QObject *obj, QEvent *evt)
         {
             // Prefix <qt/> to make sure Qt detects this as rich text
             // Escape the current message as HTML and replace \n by <br>
-            tooltip = "<qt>" + HtmlEscape(tooltip, true) + "<qt/>";
+            tooltip = "<qt><nobr>" + HtmlEscape(tooltip, true) + "</ nobr></ br><qt/>";
             widget->setToolTip(tooltip);
             return true;
         }

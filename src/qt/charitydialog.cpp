@@ -1,12 +1,9 @@
 #include "charitydialog.h"
 #include "ui_charitydialog.h"
-
 #include "walletmodel.h"
 #include "addressbookpage.h"
-
 #include "init.h"
 #include "base58.h"
-
 #include <QLineEdit>
 
 StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
@@ -19,10 +16,10 @@ StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
     ui->charityPercentEdit->setPlaceholderText(tr(" % "));
-    ui->charityAddressEdit->setPlaceholderText(tr("Enter Charity Address"));
-    ui->charityMinEdit->setPlaceholderText(tr("Enter Min Amount (optional)"));
-    ui->charityMaxEdit->setPlaceholderText(tr("Enter Max Amount (optional)"));
-    ui->charityChangeAddressEdit->setPlaceholderText(tr("Enter Change Address (optional)"));
+    ui->charityAddressEdit->setPlaceholderText(tr("Enter Charity EverGreenCoin Account Address"));
+    ui->charityMinEdit->setPlaceholderText(tr("(optional)"));
+    ui->charityMaxEdit->setPlaceholderText(tr("(optional)"));
+    ui->charityChangeAddressEdit->setPlaceholderText(tr("(optional)"));
 #endif
 
     ui->label_2->setFocus();
@@ -55,8 +52,8 @@ void StakeForCharityDialog::setModel(WalletModel *model)
             ui->charityMinEdit->setText(QString::number(nMin/COIN));
         if (nMax > 0 && nMax != MAX_MONEY)
             ui->charityMaxEdit->setText(QString::number(nMax/COIN));
-        ui->message->setStyleSheet("QLabel { color: green; }");
-        ui->message->setText(tr("Thank you for giving to\n") + strAddress.ToString().c_str() + tr("."));
+        ui->message->setStyleSheet("QLabel { color: green; font-weight: 900; }");
+        ui->message->setText(tr("Thank you for giving to\n") + strAddress.ToString().c_str()+ " \n\n");
     }
 }
 
@@ -97,8 +94,8 @@ void StakeForCharityDialog::on_enableButton_clicked()
 {
     if(model->getEncryptionStatus() == WalletModel::Locked)
     {
-        ui->message->setStyleSheet("QLabel { color: black; }");
-        ui->message->setText(tr("Please unlock wallet before starting EverGreenCoin Stake For Charity."));
+        ui->message->setStyleSheet("QLabel { color: black; font-weight: 900;}");
+        ui->message->setText(tr("Please unlock your software before starting \nEverGreenCoin Stake For Charity.")+ " \n\n");
         return;
     }
 
@@ -110,17 +107,25 @@ void StakeForCharityDialog::on_enableButton_clicked()
     CBitcoinAddress address = ui->charityAddressEdit->text().toStdString();
     if (!address.IsValid())
     {
-        ui->message->setStyleSheet("QLabel { color: red; }");
-        ui->message->setText(tr("The entered address:\n") + ui->charityAddressEdit->text() + tr(" is invalid.\nPlease check the address and try again."));
+        ui->message->setStyleSheet("QLabel { color: red; font-weight: 900; }");
+        ui->message->setText(tr("The entered address:\n ") + ui->charityAddressEdit->text() + tr(" \nis invalid.\nPlease check the address and try again."));
         ui->charityAddressEdit->setFocus();
         return;
+    }
+
+    if (model->isMine(address))
+    {
+       ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
+       ui->message->setText(tr("The entered address:\n ") + ui->charityAddressEdit->text() + tr(" \nis your own.\nPlease check the address and try again."));
+       ui->charityAddressEdit->setFocus();
+       return;
     }
 
     int nCharityPercent = ui->charityPercentEdit->text().toInt(&fValidConversion, 10);
     if (!fValidConversion || nCharityPercent > 100 || nCharityPercent <= 0)
     {
-        ui->message->setStyleSheet("QLabel { color: red; }");
-        ui->message->setText(tr("Please Enter 1 - 100 for percent."));
+        ui->message->setStyleSheet("QLabel { color: red; font-weight: 900; }");
+        ui->message->setText(tr("Please Enter 1 - 100 for percent.")+ " \n\n\n");
         ui->charityPercentEdit->setFocus();
         return;
     }
@@ -130,8 +135,8 @@ void StakeForCharityDialog::on_enableButton_clicked()
         nMinAmount = ui->charityMinEdit->text().toDouble(&fValidConversion) * COIN;
         if(!fValidConversion || nMinAmount <= MIN_TX_FEE || nMinAmount >= MAX_MONEY  )
         {
-            ui->message->setStyleSheet("QLabel { color: red; }");
-            ui->message->setText(tr("Min Amount out of Range, please re-enter."));
+            ui->message->setStyleSheet("QLabel { color: red; font-weight: 900; }");
+            ui->message->setText(tr("Min Amount is too low, please re-enter.")+ " \n\n\n");
             ui->charityMinEdit->setFocus();
             return;
         }
@@ -142,8 +147,8 @@ void StakeForCharityDialog::on_enableButton_clicked()
         nMaxAmount = ui->charityMaxEdit->text().toDouble(&fValidConversion) * COIN;
         if(!fValidConversion || nMaxAmount <= MIN_TX_FEE || nMaxAmount >= MAX_MONEY  )
         {
-            ui->message->setStyleSheet("QLabel { color: red; }");
-            ui->message->setText(tr("Max Amount out of Range, please re-enter."));
+            ui->message->setStyleSheet("QLabel { color: red; font-weight: 900; }");
+            ui->message->setText(tr("Max Amount is too high, please re-enter.")+ " \n\n\n");
             ui->charityMaxEdit->setFocus();
             return;
         }
@@ -151,8 +156,8 @@ void StakeForCharityDialog::on_enableButton_clicked()
 
     if (nMinAmount >= nMaxAmount)
     {
-        ui->message->setStyleSheet("QLabel { color: red; }");
-        ui->message->setText(tr("Min Amount > Max Amount, please re-enter."));
+        ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
+        ui->message->setText(tr("Min Amount more than Max Amount, please re-enter.")+ " \n\n\n");
         ui->charityMinEdit->setFocus();
         return;
     }
@@ -162,15 +167,15 @@ void StakeForCharityDialog::on_enableButton_clicked()
         changeAddress = ui->charityChangeAddressEdit->text().toStdString();
         if (!changeAddress.IsValid())
         {
-            ui->message->setStyleSheet("QLabel { color: red; }");
-            ui->message->setText(tr("The entered change address:\n") + ui->charityChangeAddressEdit->text() + tr(" is invalid.\nPlease check the address and try again."));
+            ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
+            ui->message->setText(tr("The entered change address:\n ") + ui->charityChangeAddressEdit->text() + tr(" \nis invalid.\nPlease check the address and try again."));
             ui->charityChangeAddressEdit->setFocus();
             return;
         }
         else if (!model->isMine(changeAddress))
         {
-           ui->message->setStyleSheet("QLabel { color: red; }");
-           ui->message->setText(tr("The entered change address:\n") + ui->charityChangeAddressEdit->text() + tr(" is not owned.\nPlease check the address and try again."));
+           ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
+           ui->message->setText(tr("The entered change address:\n ") + ui->charityChangeAddressEdit->text() + tr(" \nis not owned.\nPlease check the address and try again."));
            ui->charityChangeAddressEdit->setFocus();
            return;
         }
@@ -179,8 +184,8 @@ void StakeForCharityDialog::on_enableButton_clicked()
     model->setStakeForCharity(true, nCharityPercent, address, changeAddress, nMinAmount, nMaxAmount);
     if(!fGlobalStakeForCharity)
          fGlobalStakeForCharity = true;
-    ui->message->setStyleSheet("QLabel { color: green; }");
-    ui->message->setText(tr("Thank you for giving to\n") + QString(address.ToString().c_str()) + tr("."));
+    ui->message->setStyleSheet("QLabel { color: green; font-weight: 900;}");
+    ui->message->setText(tr("Thank you for giving to:\n ") + QString(address.ToString().c_str()) + " \n\n");
     return;
 }
 
@@ -191,6 +196,7 @@ void StakeForCharityDialog::on_disableButton_clicked()
     CBitcoinAddress changeAddress = "";
     qint64 nMinAmount = MIN_TX_FEE;
     qint64 nMaxAmount = MAX_MONEY;
+    fGlobalStakeForCharity = false;
 
     model->setStakeForCharity(false, nCharityPercent, address, changeAddress, nMinAmount, nMaxAmount);
     ui->charityAddressEdit->clear();
@@ -198,7 +204,7 @@ void StakeForCharityDialog::on_disableButton_clicked()
     ui->charityMaxEdit->clear();
     ui->charityMinEdit->clear();
     ui->charityPercentEdit->clear();
-    ui->message->setStyleSheet("QLabel { color: black; }");
-    ui->message->setText(tr("EverGreenCoin Stake For Charity is now off"));
+    ui->message->setStyleSheet("QLabel { color: black; font-weight: 900;}");
+    ui->message->setText(tr("EverGreenCoin Stake For Charity is now off")+ " \n\n\n");
     return;
 }

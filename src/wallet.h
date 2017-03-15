@@ -89,8 +89,8 @@ public:
     std::string strWalletFile;
     bool fStakeForCharity;
     int nStakeForCharityPercent;
-    int64_t nStakeForCharityMin = MIN_TX_FEE;
-    int64_t nStakeForCharityMax = MAX_MONEY;
+    int64_t nStakeForCharityMin;
+    int64_t nStakeForCharityMax;
     CBitcoinAddress strStakeForCharityAddress;
     CBitcoinAddress strStakeForCharityChangeAddress;
 
@@ -110,6 +110,7 @@ public:
         nMasterKeyMaxID = 0;
         pwalletdbEncryption = NULL;
         nOrderPosNext = 0;
+        fStakeForCharity = false;
     }
     CWallet(std::string strWalletFileIn)
     {

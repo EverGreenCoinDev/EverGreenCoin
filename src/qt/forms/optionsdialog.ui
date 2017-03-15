@@ -22,13 +22,6 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTabWidget" name="tabWidget">
-     <property name="font">
-      <font>
-       <weight>50</weight>
-       <bold>false</bold>
-       <stylestrategy>PreferAntialias</stylestrategy>
-      </font>
-     </property>
      <property name="tabPosition">
       <enum>QTabWidget::North</enum>
      </property>
@@ -42,13 +35,6 @@
       <layout class="QVBoxLayout" name="verticalLayout_Main">
        <item>
         <widget class="QLabel" name="transactionFeeInfoLabel">
-         <property name="font">
-          <font>
-           <weight>50</weight>
-           <bold>false</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
-          </font>
-         </property>
          <property name="text">
           <string>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</string>
          </property>
@@ -64,13 +50,6 @@
         <layout class="QHBoxLayout" name="horizontalLayoutFee">
          <item>
           <widget class="QLabel" name="transactionFeeLabel">
-           <property name="font">
-            <font>
-             <weight>50</weight>
-             <bold>false</bold>
-             <stylestrategy>PreferAntialias</stylestrategy>
-            </font>
-           </property>
            <property name="text">
             <string>Pay transaction &amp;fee</string>
            </property>
@@ -84,24 +63,10 @@
          </item>
          <item>
           <widget class="BitcoinAmountField" name="transactionFee">
-           <property name="font">
-            <font>
-             <weight>50</weight>
-             <bold>false</bold>
-             <stylestrategy>PreferAntialias</stylestrategy>
-            </font>
-           </property>
           </widget>
          </item>
          <item>
           <spacer name="horizontalSpacerFee">
-           <property name="font">
-            <font>
-             <weight>50</weight>
-             <bold>false</bold>
-             <stylestrategy>PreferAntialias</stylestrategy>
-            </font>
-           </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
@@ -117,13 +82,6 @@
        </item>
        <item>
         <widget class="QLabel" name="reserveBalanceInfoLabel">
-         <property name="font">
-          <font>
-           <weight>50</weight>
-           <bold>false</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
-          </font>
-         </property>
          <property name="text">
           <string>Reserved amount does not participate in staking and is therefore spendable at any time.</string>
          </property>
@@ -139,13 +97,6 @@
         <layout class="QHBoxLayout" name="horizontalLayoutReserveBalance">
          <item>
           <widget class="QLabel" name="reserveBalanceLabel">
-           <property name="font">
-            <font>
-             <weight>50</weight>
-             <bold>false</bold>
-             <stylestrategy>PreferAntialias</stylestrategy>
-            </font>
-           </property>
            <property name="text">
             <string>Reserve</string>
            </property>
@@ -159,24 +110,10 @@
          </item>
          <item>
           <widget class="BitcoinAmountField" name="reserveBalance">
-           <property name="font">
-            <font>
-             <weight>50</weight>
-             <bold>false</bold>
-             <stylestrategy>PreferAntialias</stylestrategy>
-            </font>
-           </property>
           </widget>
          </item>
          <item>
           <spacer name="horizontalSpacerReserveBalance">
-           <property name="font">
-            <font>
-             <weight>50</weight>
-             <bold>false</bold>
-             <stylestrategy>PreferAntialias</stylestrategy>
-            </font>
-           </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
@@ -192,13 +129,6 @@
        </item>
        <item>
         <widget class="QCheckBox" name="bitcoinAtStartup">
-         <property name="font">
-          <font>
-           <weight>50</weight>
-           <bold>false</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
-          </font>
-         </property>
          <property name="toolTip">
           <string>Automatically start EverGreenCoin after logging in to the system.</string>
          </property>
@@ -209,13 +139,6 @@
        </item>
        <item>
         <widget class="QCheckBox" name="detachDatabases">
-         <property name="font">
-          <font>
-           <weight>50</weight>
-           <bold>false</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
-          </font>
-         </property>
          <property name="toolTip">
           <string>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</string>
          </property>
@@ -226,13 +149,6 @@
        </item>
        <item>
         <spacer name="verticalSpacer_Main">
-         <property name="font">
-          <font>
-           <weight>50</weight>
-           <bold>false</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
-          </font>
-         </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -509,13 +425,6 @@
     <layout class="QHBoxLayout" name="horizontalLayout_Buttons">
      <item>
       <spacer name="horizontalSpacer_1">
-       <property name="font">
-        <font>
-         <weight>50</weight>
-         <bold>false</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
-       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -529,13 +438,6 @@
      </item>
      <item>
       <widget class="QLabel" name="statusLabel">
-       <property name="font">
-        <font>
-         <weight>50</weight>
-         <bold>false</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
-       </property>
        <property name="text">
         <string/>
        </property>
@@ -549,13 +451,6 @@
      </item>
      <item>
       <spacer name="horizontalSpacer_2">
-       <property name="font">
-        <font>
-         <weight>50</weight>
-         <bold>false</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
-       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -569,13 +464,6 @@
      </item>
      <item>
       <widget class="QPushButton" name="okButton">
-       <property name="font">
-        <font>
-         <weight>50</weight>
-         <bold>false</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
-       </property>
        <property name="text">
         <string>&amp;OK</string>
        </property>
@@ -583,13 +471,6 @@
      </item>
      <item>
       <widget class="QPushButton" name="cancelButton">
-       <property name="font">
-        <font>
-         <weight>50</weight>
-         <bold>false</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
-       </property>
        <property name="text">
         <string>&amp;Cancel</string>
        </property>
@@ -600,13 +481,6 @@
      </item>
      <item>
       <widget class="QPushButton" name="applyButton">
-       <property name="font">
-        <font>
-         <weight>50</weight>
-         <bold>false</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
-       </property>
        <property name="text">
         <string>&amp;Apply</string>
        </property>

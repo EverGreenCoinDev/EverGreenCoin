@@ -54,6 +54,7 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
         ui->labelExplanation->setVisible(false);
         ui->deleteButton->setVisible(true);
         ui->signMessage->setVisible(false);
+        ui->verifyMessage->setVisible(true);
         ui->stakeForCharityPushButton->setVisible(true);
         break;
     case ReceivingTab:

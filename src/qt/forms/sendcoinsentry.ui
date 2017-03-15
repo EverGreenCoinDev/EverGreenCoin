@@ -448,16 +448,8 @@
          </disabled>
         </palette>
        </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
-       </property>
        <property name="toolTip">
-        <string>Enter a label for this address to add it to your address book</string>
+        <string>Enter a label for this address to add it to your account address book</string>
        </property>
       </widget>
      </item>
@@ -471,9 +463,9 @@
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -525,9 +517,9 @@
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -543,9 +535,9 @@
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -608,9 +600,9 @@
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -662,9 +654,9 @@
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -680,9 +672,9 @@
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -745,9 +737,9 @@
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>19</red>
+           <green>54</green>
+           <blue>31</blue>
           </color>
          </brush>
         </colorrole>
@@ -799,9 +791,9 @@
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>19</red>
+           <green>54</green>
+           <blue>31</blue>
           </color>
          </brush>
         </colorrole>
@@ -817,9 +809,9 @@
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>19</red>
+           <green>54</green>
+           <blue>31</blue>
           </color>
          </brush>
         </colorrole>
@@ -880,20 +872,8 @@
        </disabled>
       </palette>
      </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-       <stylestrategy>PreferAntialias</stylestrategy>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel { color: #266C3F; }</string>
-     </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;&amp;amp;Label:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#266C3F;&quot;&gt;&amp;amp;Label:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -911,9 +891,9 @@
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -965,9 +945,9 @@
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -983,9 +963,9 @@
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -1048,9 +1028,9 @@
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -1102,9 +1082,9 @@
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -1120,9 +1100,9 @@
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -1185,9 +1165,9 @@
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>19</red>
+           <green>54</green>
+           <blue>31</blue>
           </color>
          </brush>
         </colorrole>
@@ -1239,9 +1219,9 @@
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>19</red>
+           <green>54</green>
+           <blue>31</blue>
           </color>
          </brush>
         </colorrole>
@@ -1257,9 +1237,9 @@
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>19</red>
+           <green>54</green>
+           <blue>31</blue>
           </color>
          </brush>
         </colorrole>
@@ -1320,20 +1300,8 @@
        </disabled>
       </palette>
      </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-       <stylestrategy>PreferAntialias</stylestrategy>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel { color: #266C3F; }</string>
-     </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;A&amp;amp;mount:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#266C3F;&quot;&gt;A&amp;amp;mount:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1351,9 +1319,9 @@
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -1405,9 +1373,9 @@
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -1423,9 +1391,9 @@
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -1488,9 +1456,9 @@
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -1542,9 +1510,9 @@
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -1560,9 +1528,9 @@
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
           </color>
          </brush>
         </colorrole>
@@ -1625,9 +1593,9 @@
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>19</red>
+           <green>54</green>
+           <blue>31</blue>
           </color>
          </brush>
         </colorrole>
@@ -1679,9 +1647,9 @@
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>19</red>
+           <green>54</green>
+           <blue>31</blue>
           </color>
          </brush>
         </colorrole>
@@ -1697,9 +1665,9 @@
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>38</red>
-           <green>108</green>
-           <blue>63</blue>
+           <red>19</red>
+           <green>54</green>
+           <blue>31</blue>
           </color>
          </brush>
         </colorrole>
@@ -1760,20 +1728,8 @@
        </disabled>
       </palette>
      </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-       <stylestrategy>PreferAntialias</stylestrategy>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel { color: #266C3F; }</string>
-     </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Pay &amp;amp;To:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#266C3F;&quot;&gt;Pay &amp;amp;To:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2205,14 +2161,6 @@
          </disabled>
         </palette>
        </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
-       </property>
        <property name="toolTip">
         <string>The EGC address to send the payment to  (e.g. EdFwYw4Mo2Zq6CFM2yNJgXvE2DTJxgdBRX)</string>
        </property>
@@ -2637,13 +2585,6 @@
           </colorrole>
          </disabled>
         </palette>
-       </property>
-       <property name="font">
-        <font>
-         <weight>50</weight>
-         <bold>false</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
        </property>
        <property name="toolTip">
         <string>Choose address from address book</string>
@@ -3077,13 +3018,6 @@
          </disabled>
         </palette>
        </property>
-       <property name="font">
-        <font>
-         <weight>50</weight>
-         <bold>false</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
-       </property>
        <property name="toolTip">
         <string>Paste address from clipboard</string>
        </property>
@@ -3516,13 +3450,6 @@
          </disabled>
         </palette>
        </property>
-       <property name="font">
-        <font>
-         <weight>50</weight>
-         <bold>false</bold>
-         <stylestrategy>PreferAntialias</stylestrategy>
-        </font>
-       </property>
        <property name="toolTip">
         <string>Remove this recipient</string>
        </property>
@@ -3542,7 +3469,7 @@
      <property name="minimumSize">
       <size>
        <width>0</width>
-       <height>38</height>
+       <height>0</height>
       </size>
      </property>
      <property name="baseSize">
@@ -3966,15 +3893,8 @@
        </disabled>
       </palette>
      </property>
-     <property name="font">
-      <font>
-       <weight>50</weight>
-       <bold>false</bold>
-       <stylestrategy>PreferAntialias</stylestrategy>
-      </font>
-     </property>
      <property name="toolTip">
-      <string>The amount of EGC to send</string>
+        <string>Amount to send</string>
      </property>
      <property name="autoFillBackground">
       <bool>false</bool>

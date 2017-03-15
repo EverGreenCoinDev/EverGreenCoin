@@ -69,11 +69,13 @@ private:
     SendCoinsDialog *sendCoinsPage;
     SignVerifyMessageDialog *signVerifyMessageDialog;
     StakeForCharityDialog *stakeForCharityDialog;
+    StakeForCharityDialog *charityPage;
 
     QLabel *labelEncryptionIcon;
     QLabel *labelStakingIcon;
     QLabel *labelConnectionsIcon;
     QLabel *labelBlocksIcon;
+    QLabel *labelCharityIcon;
     QLabel *progressBarLabel;
     QProgressBar *progressBar;
 
@@ -109,8 +111,6 @@ private:
 
     QMovie *syncIconMovie;
 
-    bool fStakeForCharity;
-    bool fS4CNotificator = false;
     int nCharityPercent;
     QString strCharityAddress;
 
@@ -162,6 +162,8 @@ private slots:
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage();
+    /** Switch to charity page */
+    void gotoCharityPage();
 
     /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");

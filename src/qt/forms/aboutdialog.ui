@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>593</width>
+    <width>600</width>
     <height>470</height>
    </rect>
   </property>
@@ -46,21 +46,8 @@
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QLabel" name="label">
-         <property name="font">
-          <font>
-           <family>Sans Serif</family>
-           <pointsize>16</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-           <stylestrategy>PreferAntialias</stylestrategy>
-          </font>
-         </property>
          <property name="cursor">
           <cursorShape>IBeamCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
          </property>
          <property name="text">
           <string>&lt;b&gt;EverGreenCoin&lt;/b&gt; </string>
@@ -72,17 +59,8 @@
        </item>
        <item>
         <widget class="QLabel" name="versionLabel">
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
          <property name="cursor">
           <cursorShape>IBeamCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
          </property>
          <property name="text">
           <string notr="true">0.1.1.2-beta</string>
@@ -112,14 +90,17 @@
        <property name="cursor">
         <cursorShape>IBeamCursor</cursorShape>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel { color: #266C3F; }
-</string>
-       </property>
        <property name="text">
-        <string>Copyright © 2015-2017 The EverGreenCoin Foundation and Steven Saxton
-For support, please make a ticket at http://support.EverGreenCoin.org
-Please join us at https://EverGreenCoin.org</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Copyright © 2015-2017 The EverGreenCoin Foundation&lt;br/&gt;Founded and operated by Steven Saxton (Steve@EverGreenCoin.org)&lt;br/&gt;All rights reserved.&lt;br/&gt;For support, please visit &lt;a href=&quot;https://EverGreenCoin.org/support/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#266c3f;&quot;&gt;https://EverGreenCoin.org/support/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::RichText</enum>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="openExternalLinks">
+        <bool>true</bool>
        </property>
        <property name="textInteractionFlags">
         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -130,10 +111,6 @@ Please join us at https://EverGreenCoin.org</string>
       <widget class="QLabel" name="label_2">
        <property name="cursor">
         <cursorShape>IBeamCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLabel { color: #266C3F; }
-</string>
        </property>
        <property name="text">
         <string>

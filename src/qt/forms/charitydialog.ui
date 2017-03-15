@@ -31,14 +31,6 @@
    </property>
    <item row="0" column="0">
     <widget class="QScrollArea" name="scrollArea">
-     <property name="font">
-      <font>
-       <pointsize>9</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-       <stylestrategy>PreferAntialias</stylestrategy>
-      </font>
-     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -57,7 +49,7 @@
         <x>0</x>
         <y>0</y>
         <width>636</width>
-        <height>484</height>
+        <height>402</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_3">
@@ -65,9 +57,6 @@
         <spacer name="verticalSpacer_2">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -86,9 +75,6 @@
         <widget class="QFrame" name="gridLayout_4">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
@@ -101,81 +87,41 @@
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="1" column="0">
            <widget class="QLabel" name="label">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="toolTip">
-             <string>Percentage of stake to send</string>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-</string>
+             <string>Percentage of your interest installments (stake rewards) to send</string>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Percentage:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Percentage to give:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
           <item row="1" column="5">
            <widget class="QLabel" name="label_4">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="toolTip">
-             <string>Max amount to send</string>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-</string>
+             <string>Maximum amount to send</string>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&quot;&gt;Max Amount:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum Amount:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
           <item row="2" column="2" colspan="2">
            <widget class="QLineEdit" name="charityMinEdit">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="toolTip">
-             <string/>
+             <string>Minimum amount to send</string>
             </property>
             <property name="maxLength">
              <number>10</number>
             </property>
             <property name="placeholderText">
-             <string>Enter Min Amount (optional)</string>
+             <string>(optional)</string>
             </property>
            </widget>
           </item>
           <item row="2" column="5" colspan="2">
            <widget class="QLineEdit" name="charityMaxEdit">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="toolTip">
-             <string/>
+             <string>Maximum amount to send</string>
             </property>
             <property name="text">
              <string/>
@@ -184,26 +130,14 @@
              <number>10</number>
             </property>
             <property name="placeholderText">
-             <string>Enter Max Amount (optional)</string>
+             <string>(optional)</string>
             </property>
            </widget>
           </item>
           <item row="3" column="0">
            <widget class="QLabel" name="label_5">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="toolTip">
-             <string>Address to send portion of stake to</string>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-</string>
+             <string>Account address to send percentage of interest installments to</string>
             </property>
             <property name="text">
              <string>Charity Address:</string>
@@ -212,14 +146,6 @@
           </item>
           <item row="3" column="6">
            <widget class="QPushButton" name="addressBookButton">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="toolTip">
              <string>Choose an address from the address book</string>
             </property>
@@ -240,20 +166,8 @@
           </item>
           <item row="4" column="0">
            <widget class="QLabel" name="label_6">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="toolTip">
-             <string>The amount left over returned to you</string>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-</string>
+             <string>The amount left over returned to you (expert only, safe to ignore)</string>
             </property>
             <property name="text">
              <string>Change Address:</string>
@@ -262,14 +176,6 @@
           </item>
           <item row="4" column="6">
            <widget class="QPushButton" name="changeAddressBookButton">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="toolTip">
              <string>Choose an address from the address book</string>
             </property>
@@ -290,16 +196,8 @@
           </item>
           <item row="5" column="0">
            <widget class="QPushButton" name="enableButton">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="toolTip">
-             <string/>
+             <string>Enable EverGreenCoin Stake For Charity</string>
             </property>
             <property name="statusTip">
              <string>Click to turn on EverGreenCoin Stake For Charity</string>
@@ -311,47 +209,14 @@
           </item>
           <item row="5" column="2">
            <widget class="QPushButton" name="disableButton">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
+            <property name="toolTip">
+             <string>Disable EverGreenCoin Stake For Charity</string>
             </property>
             <property name="statusTip">
              <string>Click to turn off EverGreenCoin Stake For Charity</string>
             </property>
             <property name="text">
              <string>Disable</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0" colspan="7">
-           <widget class="QLabel" name="label_2">
-            <property name="font">
-             <font>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-</string>
-            </property>
-            <property name="lineWidth">
-             <number>1</number>
-            </property>
-            <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;&lt;br /&gt;EverGreenCoin Stake For Charity allows you to automatically send up to 100% of your stake rewards to another EverGreenCoin address after it matures. Note that you pay the tansaction fee (.0001 EGC) in addition to the percentage. Visit https://EverGreenCoin.org for a list of charities.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Please enter the percentage to give and the EverGreenCoin address to give to. Min and Max amount and change address are optional.&lt;/span&gt;&lt;/p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -363,9 +228,9 @@
                <colorrole role="WindowText">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>38</red>
-                  <green>108</green>
-                  <blue>63</blue>
+                  <red>255</red>
+                  <green>170</green>
+                  <blue>0</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -381,18 +246,9 @@
                <colorrole role="Text">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>38</red>
-                  <green>108</green>
-                  <blue>63</blue>
-                 </color>
-                </brush>
-               </colorrole>
-               <colorrole role="ButtonText">
-                <brush brushstyle="SolidPattern">
-                 <color alpha="255">
-                  <red>38</red>
-                  <green>108</green>
-                  <blue>63</blue>
+                  <red>255</red>
+                  <green>170</green>
+                  <blue>0</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -419,9 +275,9 @@
                <colorrole role="WindowText">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>38</red>
-                  <green>108</green>
-                  <blue>63</blue>
+                  <red>255</red>
+                  <green>170</green>
+                  <blue>0</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -437,18 +293,9 @@
                <colorrole role="Text">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>38</red>
-                  <green>108</green>
-                  <blue>63</blue>
-                 </color>
-                </brush>
-               </colorrole>
-               <colorrole role="ButtonText">
-                <brush brushstyle="SolidPattern">
-                 <color alpha="255">
-                  <red>38</red>
-                  <green>108</green>
-                  <blue>63</blue>
+                  <red>255</red>
+                  <green>170</green>
+                  <blue>0</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -475,9 +322,9 @@
                <colorrole role="WindowText">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>38</red>
-                  <green>108</green>
-                  <blue>63</blue>
+                  <red>120</red>
+                  <green>120</green>
+                  <blue>120</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -493,18 +340,9 @@
                <colorrole role="Text">
                 <brush brushstyle="SolidPattern">
                  <color alpha="255">
-                  <red>38</red>
-                  <green>108</green>
-                  <blue>63</blue>
-                 </color>
-                </brush>
-               </colorrole>
-               <colorrole role="ButtonText">
-                <brush brushstyle="SolidPattern">
-                 <color alpha="255">
-                  <red>38</red>
-                  <green>108</green>
-                  <blue>63</blue>
+                  <red>120</red>
+                  <green>120</green>
+                  <blue>120</blue>
                  </color>
                 </brush>
                </colorrole>
@@ -529,84 +367,47 @@
               </disabled>
              </palette>
             </property>
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-</string>
+             <string notr="true">background:transparent;</string>
             </property>
             <property name="text">
-             <string/>
+             <string>&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;</string>
             </property>
            </widget>
           </item>
           <item row="1" column="2">
            <widget class="QLabel" name="label_3">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="toolTip">
-             <string>Min amount to send</string>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLabel { color: #266C3F; }
-</string>
+             <string>Minimum amount to send</string>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Min Amount:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum Amount:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
           <item row="3" column="1" colspan="3">
            <widget class="QLineEdit" name="charityAddressEdit">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="toolTip">
-             <string/>
+             <string>Account address to send percentage of interest installments to</string>
             </property>
             <property name="maxLength">
              <number>34</number>
             </property>
             <property name="placeholderText">
-             <string>Enter Address to Send to</string>
+             <string>Enter account address to send to</string>
             </property>
            </widget>
           </item>
           <item row="4" column="1" colspan="3">
            <widget class="QLineEdit" name="charityChangeAddressEdit">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="toolTip">
-             <string>Change address must be owned by you</string>
+             <string>The amount left over returned to you (expert only, safe to ignore)</string>
             </property>
             <property name="maxLength">
              <number>34</number>
             </property>
             <property name="placeholderText">
-             <string>Enter Change Address (optional)</string>
+             <string>(optional)</string>
             </property>
            </widget>
           </item>
@@ -618,14 +419,6 @@
               <height>16777215</height>
              </size>
             </property>
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
             <property name="toolTip">
              <string>Enter whole numbers 1 - 100</string>
             </property>
@@ -634,6 +427,28 @@
             </property>
             <property name="placeholderText">
              <string> % </string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" colspan="7">
+           <widget class="QLabel" name="label_2">
+            <property name="styleSheet">
+             <string notr="true">color: black;</string>
+            </property>
+            <property name="lineWidth">
+             <number>1</number>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EverGreenCoin Stake For Charity allows you to automatically send up to 100% of your interest installments (stake rewards) to another EverGreenCoin account address after it matures. Note that you pay the tansaction fee (.0001 EGC) in addition to the percentage.&lt;br/&gt;Visit &lt;a href=&quot;https://EverGreenCoin.org/charities/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#266c3f;&quot;&gt;https://EverGreenCoin.org/charities/&lt;/span&gt;&lt;/a&gt; for a list of charities.&lt;/p&gt;&lt;p&gt;Please enter the percentage to give and the EverGreenCoin account address to give to. Minimum and Maximum amount and change address are optional.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="openExternalLinks">
+             <bool>true</bool>
             </property>
            </widget>
           </item>

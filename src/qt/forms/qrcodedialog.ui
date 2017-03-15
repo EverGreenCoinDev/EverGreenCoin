@@ -28,13 +28,6 @@
        <height>300</height>
       </size>
      </property>
-     <property name="font">
-      <font>
-       <weight>50</weight>
-       <bold>false</bold>
-       <stylestrategy>PreferAntialias</stylestrategy>
-      </font>
-     </property>
      <property name="textFormat">
       <enum>Qt::PlainText</enum>
      </property>
@@ -60,13 +53,6 @@
        <height>50</height>
       </size>
      </property>
-     <property name="font">
-      <font>
-       <weight>50</weight>
-       <bold>false</bold>
-       <stylestrategy>PreferAntialias</stylestrategy>
-      </font>
-     </property>
      <property name="tabChangesFocus">
       <bool>true</bool>
      </property>
@@ -77,25 +63,11 @@
    </item>
    <item>
     <widget class="QWidget" name="widget" native="true">
-     <property name="font">
-      <font>
-       <weight>50</weight>
-       <bold>false</bold>
-       <stylestrategy>PreferAntialias</stylestrategy>
-      </font>
-     </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QCheckBox" name="chkReqPayment">
         <property name="enabled">
          <bool>true</bool>
-        </property>
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-          <stylestrategy>PreferAntialias</stylestrategy>
-         </font>
         </property>
         <property name="text">
          <string>Request Payment</string>
@@ -109,13 +81,6 @@
         </property>
         <item row="1" column="0">
          <widget class="QLabel" name="lblLabel">
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <stylestrategy>PreferAntialias</stylestrategy>
-           </font>
-          </property>
           <property name="text">
            <string>Label:</string>
           </property>
@@ -132,24 +97,10 @@
         </item>
         <item row="1" column="1">
          <widget class="QLineEdit" name="lnLabel">
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <stylestrategy>PreferAntialias</stylestrategy>
-           </font>
-          </property>
          </widget>
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="lblMessage">
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <stylestrategy>PreferAntialias</stylestrategy>
-           </font>
-          </property>
           <property name="text">
            <string>Message:</string>
           </property>
@@ -166,13 +117,6 @@
         </item>
         <item row="2" column="1">
          <widget class="QLineEdit" name="lnMessage">
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <stylestrategy>PreferAntialias</stylestrategy>
-           </font>
-          </property>
          </widget>
         </item>
         <item row="0" column="0">
@@ -182,13 +126,6 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <stylestrategy>PreferAntialias</stylestrategy>
-           </font>
           </property>
           <property name="text">
            <string>Amount:</string>
@@ -215,13 +152,6 @@
             <height>0</height>
            </size>
           </property>
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <stylestrategy>PreferAntialias</stylestrategy>
-           </font>
-          </property>
          </widget>
         </item>
        </layout>
@@ -230,13 +160,6 @@
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
          <spacer name="horizontalSpacer">
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <stylestrategy>PreferAntialias</stylestrategy>
-           </font>
-          </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -250,13 +173,6 @@
         </item>
         <item>
          <widget class="QPushButton" name="btnSaveAs">
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <stylestrategy>PreferAntialias</stylestrategy>
-           </font>
-          </property>
           <property name="text">
            <string>&amp;Save As...</string>
           </property>

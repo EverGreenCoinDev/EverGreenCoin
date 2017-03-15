@@ -13,7 +13,7 @@
 #include <QAbstractItemDelegate>
 #include <QPainter>
 
-#define DECORATION_SIZE 64
+#define DECORATION_SIZE 58
 #define NUM_ITEMS 7
 
 class TxViewDelegate : public QAbstractItemDelegate
@@ -72,11 +72,11 @@ public:
         {
             amountText = QString("[") + amountText + QString("]");
         }
+        painter->setPen(QColor(1,132,87));
         painter->drawText(amountRect, Qt::AlignRight|Qt::AlignVCenter, amountText);
 
         painter->setPen(option.palette.color(QPalette::Text));
         painter->drawText(amountRect, Qt::AlignLeft|Qt::AlignVCenter, GUIUtil::dateTimeStr(date));
-
         painter->restore();
     }
 
@@ -102,16 +102,10 @@ OverviewPage::OverviewPage(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QAction *stakeForCharityAction = new QAction(ui->startButton->text(), this);
-
-    // contextMenu = new QMenu();
-    // contextMenu->addAction(stakeForCharityAction);
-    connect(stakeForCharityAction, SIGNAL(triggered()), this, SLOT(on_startButton_clicked()));
-
     // Recent transactions
     ui->listTransactions->setItemDelegate(txdelegate);
     ui->listTransactions->setIconSize(QSize(DECORATION_SIZE, DECORATION_SIZE));
-    ui->listTransactions->setMinimumHeight(NUM_ITEMS * (DECORATION_SIZE + 2));
+    ui->listTransactions->setMinimumHeight(NUM_ITEMS * (DECORATION_SIZE ));
     ui->listTransactions->setAttribute(Qt::WA_MacShowFocusRect, false);
 
     connect(ui->listTransactions, SIGNAL(clicked(QModelIndex)), this, SLOT(handleTransactionClicked(QModelIndex)));
@@ -122,11 +116,6 @@ OverviewPage::OverviewPage(QWidget *parent) :
 
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
-}
-
-void OverviewPage::on_startButton_clicked()
-{
-    return stakeForCharitySignal();
 }
 
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)
@@ -208,8 +197,8 @@ void OverviewPage::setModel(WalletModel *model)
         if(status == WalletModel::Unencrypted)
         {
             ui->unlockWalletButton->setDisabled(true);
-            ui->unlockWalletButton->setText(QString("Not encrypted!"));
-
+            ui->unlockWalletButton->setText(QString("Not encrypted"));
+            ui->unlockWalletButton->setToolTip(QString("Click 'Settings' then 'Encrypt Software' in the menu bar to encrypt"));
         }
 
         else
