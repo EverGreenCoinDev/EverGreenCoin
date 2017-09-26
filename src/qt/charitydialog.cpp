@@ -6,7 +6,6 @@
 #include "base58.h"
 #include <QLineEdit>
 #include <QFile>
-// #include <QStringList>
 #include <QtNetwork>
 #include <QJsonDocument>
 
@@ -17,7 +16,7 @@ StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    on_comboBox_activated(0); // load charities data from https://evergreencoin.org/charities.json
+    loadCharities(); // load charities data from https://evergreencoin.org/charities.json
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
@@ -72,7 +71,8 @@ void StakeForCharityDialog::setModel(WalletModel *model)
 }
 
 void StakeForCharityDialog::loadCharities()
-{qDebug() << "\n in load charities \n";
+{   
+    qDebug() << "\n in load charities \n";
     QNetworkRequest charitiesRequest(QUrl(QString("https://evergreencoin.org/charities.json")));
     QEventLoop eventLoop;
     QNetworkAccessManager nam;
@@ -81,14 +81,13 @@ void StakeForCharityDialog::loadCharities()
     eventLoop.exec();
 
     if (reply->error() == QNetworkReply::NoError) {
-
       QString strReply = (QString)reply->readAll();
       int i;
       int n = ui->comboBox->count();
       // clear current combo box entires
       for (i=2; i < n; i++ ) {
           ui->comboBox->removeItem(2);
-          qDebug() << "removed " << i << " of " << n << "\n";
+          // qDebug() << "removed " << i << " of " << n << "\n";
       }
 
       QJsonDocument jsonResponse = QJsonDocument::fromJson(strReply.toUtf8() );
@@ -266,7 +265,7 @@ void StakeForCharityDialog::on_disableButton_clicked()
 
 void StakeForCharityDialog::on_comboBox_activated(int index)
 {
-    loadCharities();
+
 }
 
 void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
@@ -279,7 +278,6 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setReadOnly(false);
         ui->addressBookButton->setDisabled(false);
         ui->charityAddressEdit->setStyleSheet("");
-
     }
     else if (index==1)
     {
