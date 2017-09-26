@@ -28,7 +28,10 @@ private slots:
     void on_disableButton_clicked();
     void on_addressBookButton_clicked();
     void on_changeAddressBookButton_clicked();
-
+    void on_comboBox_currentIndexChanged(int index);
+    void on_comboBox_activated(int index);
+    void loadCharities();
+    void on_btnRefreshCharities_clicked();
 
 private:
     Ui::StakeForCharityDialog *ui;

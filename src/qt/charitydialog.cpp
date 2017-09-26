@@ -5,6 +5,10 @@
 #include "init.h"
 #include "base58.h"
 #include <QLineEdit>
+#include <QFile>
+// #include <QStringList>
+#include <QtNetwork>
+#include <QJsonDocument>
 
 StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
     QWidget(parent),
@@ -12,6 +16,8 @@ StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
     model(0)
 {
     ui->setupUi(this);
+
+    on_comboBox_activated(0); // load charities data from https://evergreencoin.org/charities.json
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
@@ -24,6 +30,8 @@ StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
 
     ui->label_2->setFocus();
 }
+QString charitiesAddress[100];
+QString charitiesThanks[100];
 
 StakeForCharityDialog::~StakeForCharityDialog()
 {
@@ -52,9 +60,55 @@ void StakeForCharityDialog::setModel(WalletModel *model)
             ui->charityMinEdit->setText(QString::number(nMin/COIN));
         if (nMax > 0 && nMax != MAX_MONEY)
             ui->charityMaxEdit->setText(QString::number(nMax/COIN));
+
         ui->message->setStyleSheet("QLabel { color: green; font-weight: 900; }");
         ui->message->setText(tr("Thank you for giving to\n") + strAddress.ToString().c_str()+ " \n\n");
+        if (pwalletMain->IsLocked())
+        {
+            ui->message->setText(ui->message->text() + tr("Please unlock your EverGreenCoin software \nfor Staking For Charity to proceed to \n") + strAddress.ToString().c_str());
+        }
+        loadCharities();
     }
+}
+
+void StakeForCharityDialog::loadCharities()
+{qDebug() << "\n in load charities \n";
+    QNetworkRequest charitiesRequest(QUrl(QString("https://evergreencoin.org/charities.json")));
+    QEventLoop eventLoop;
+    QNetworkAccessManager nam;
+    QObject::connect(&nam, SIGNAL(finished(QNetworkReply*)), &eventLoop, SLOT(quit()));
+    QNetworkReply *reply = nam.get(charitiesRequest);
+    eventLoop.exec();
+
+    if (reply->error() == QNetworkReply::NoError) {
+
+      QString strReply = (QString)reply->readAll();
+      int i;
+      int n = ui->comboBox->count();
+      // clear current combo box entires
+      for (i=2; i < n; i++ ) {
+          ui->comboBox->removeItem(2);
+          qDebug() << "removed " << i << " of " << n << "\n";
+      }
+
+      QJsonDocument jsonResponse = QJsonDocument::fromJson(strReply.toUtf8() );
+      QJsonArray json_array = jsonResponse.array();
+      i = 1;
+      // load new combo box entires
+      foreach (const QJsonValue &value, json_array) {
+        QJsonObject json_obj = value.toObject();
+        // qDebug() << json_obj["charity"].toString();
+        ui->comboBox->addItem(QString(json_obj["charity"].toString()));
+        // qDebug() << json_obj["EGCaddress"].toString();
+        charitiesAddress[i] = json_obj["EGCaddress"].toString();
+        charitiesThanks[i] = json_obj["thanks"].toString();
+        // qDebug() << json_obj["thanks"].toString();
+        i = i + 1;
+      }
+    } else {
+        qDebug() << "Failure" <<reply->errorString();
+    }
+    delete reply;
 }
 
 void StakeForCharityDialog::setAddress(const QString &address)
@@ -94,7 +148,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
 {
     if(model->getEncryptionStatus() == WalletModel::Locked)
     {
-        ui->message->setStyleSheet("QLabel { color: black; font-weight: 900;}");
+        ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
         ui->message->setText(tr("Please unlock your software before starting \nEverGreenCoin Stake For Charity.")+ " \n\n");
         return;
     }
@@ -206,5 +260,54 @@ void StakeForCharityDialog::on_disableButton_clicked()
     ui->charityPercentEdit->clear();
     ui->message->setStyleSheet("QLabel { color: black; font-weight: 900;}");
     ui->message->setText(tr("EverGreenCoin Stake For Charity is now off")+ " \n\n\n");
+    ui->comboBox->setCurrentIndex(0); // reset charity select combo
     return;
+}
+
+void StakeForCharityDialog::on_comboBox_activated(int index)
+{
+    loadCharities();
+}
+
+void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
+{
+    if (index==0)
+    {
+        ui->charityAddressEdit->clear();
+        ui->charityAddressEdit->setFocus();
+        ui->charityAddressEdit->setEnabled(true);
+        ui->charityAddressEdit->setReadOnly(false);
+        ui->addressBookButton->setDisabled(false);
+        ui->charityAddressEdit->setStyleSheet("");
+
+    }
+    else if (index==1)
+    {
+        ui->charityAddressEdit->clear();
+        ui->charityAddressEdit->setDisabled(true);
+        ui->charityAddressEdit->setStyleSheet("");
+        if (!fTestNet) ui->charityAddressEdit->setText(QString(FOUNDATION));
+        else  ui->charityAddressEdit->setText(QString(FOUNDATION_TEST));
+        ui->addressBookButton->setDisabled(true);
+        ui->charityAddressEdit->setEnabled(false);
+        ui->charityAddressEdit->setReadOnly(true);
+    }
+    else if (index > 1)
+    {
+        ui->charityAddressEdit->clear();
+        ui->charityAddressEdit->setText(charitiesAddress[index-1]);
+        ui->charityAddressEdit->setEnabled(false);
+        ui->charityAddressEdit->setReadOnly(true);
+        ui->addressBookButton->setDisabled(true);
+        ui->message->setText(charitiesThanks[index-1]);
+    }
+}
+
+void StakeForCharityDialog::on_btnRefreshCharities_clicked()
+{
+    ui->btnRefreshCharities->setText("Downloading...");
+    ui->btnRefreshCharities->setDisabled(true);
+    loadCharities();
+    ui->btnRefreshCharities->setDisabled(false);
+    ui->btnRefreshCharities->setText("Refresh Charities");
 }
