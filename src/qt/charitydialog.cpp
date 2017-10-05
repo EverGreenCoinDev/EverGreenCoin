@@ -16,7 +16,7 @@ StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    loadCharities(); // load charities data from https://evergreencoin.org/charities.json
+    loadCharities();
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
@@ -72,8 +72,8 @@ void StakeForCharityDialog::setModel(WalletModel *model)
 
 void StakeForCharityDialog::loadCharities()
 {   
-    qDebug() << "\n in load charities \n";
-    QNetworkRequest charitiesRequest(QUrl(QString("https://evergreencoin.org/charities.json")));
+    if (fTestNet) qDebug() << "in loadCharities \n";
+    QNetworkRequest charitiesRequest(QUrl(QString("https://evergreencoin.org/charities/charities.json")));
     QEventLoop eventLoop;
     QNetworkAccessManager nam;
     QObject::connect(&nam, SIGNAL(finished(QNetworkReply*)), &eventLoop, SLOT(quit()));
@@ -87,7 +87,7 @@ void StakeForCharityDialog::loadCharities()
       // clear current combo box entires
       for (i=2; i < n; i++ ) {
           ui->comboBox->removeItem(2);
-          // qDebug() << "removed " << i << " of " << n << "\n";
+          if (fTestNet) qDebug() << "removed " << i+1 << " of " << n << "\n";
       }
 
       QJsonDocument jsonResponse = QJsonDocument::fromJson(strReply.toUtf8() );
@@ -96,13 +96,13 @@ void StakeForCharityDialog::loadCharities()
       // load new combo box entires
       foreach (const QJsonValue &value, json_array) {
         QJsonObject json_obj = value.toObject();
-        // qDebug() << json_obj["charity"].toString();
+        if (fTestNet) qDebug() << json_obj["charity"].toString();
         ui->comboBox->addItem(QString(json_obj["charity"].toString()));
-        // qDebug() << json_obj["EGCaddress"].toString();
+        if (fTestNet) qDebug() << json_obj["EGCaddress"].toString();
         charitiesAddress[i] = json_obj["EGCaddress"].toString();
         charitiesThanks[i] = json_obj["thanks"].toString();
-        // qDebug() << json_obj["thanks"].toString();
-        i = i + 1;
+        if (fTestNet) qDebug() << json_obj["thanks"].toString();
+        i++;
       }
     } else {
         qDebug() << "Failure" <<reply->errorString();
