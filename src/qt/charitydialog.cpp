@@ -16,7 +16,7 @@ StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // loadCharities();
+    loadCharities();
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
@@ -64,10 +64,8 @@ void StakeForCharityDialog::setModel(WalletModel *model)
         ui->message->setText(tr("Thank you for giving to\n") + strAddress.ToString().c_str()+ " \n\n");
         if (pwalletMain->IsLocked())
         {
-            ui->message->setText(ui->message->text() + tr("Please unlock your EverGreenCoin software \nfor Staking For Charity to proceed to \n") + strAddress.ToString().c_str());
+            ui->message->setText(ui->message->text() + tr("Please unlock your EverGreenCoin software for Staking for Charity to proceed to \n") + strAddress.ToString().c_str());
         }
-
-        // loadCharities();
     }
 }
 
@@ -155,7 +153,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
     else if (fWalletUnlockStakingOnly)
     {
         ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
-        ui->message->setText("Please unlock your EverGreenCoin software for spending\n (not staking only) for EverGreenCoin Staking For Charity to proceed and be able to send.");
+        ui->message->setText("Please unlock your EverGreenCoin software for spending\n (not staking only) for EverGreenCoin Staking for Charity to proceed and be able to send.");
         return;
     }
 
