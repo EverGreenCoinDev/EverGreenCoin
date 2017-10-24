@@ -196,7 +196,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if (!address.IsValid())
     {
         ui->message->setStyleSheet("QLabel { color: red; font-weight: 900; }");
-        ui->message->setText(tr("The entered address:<br /> \"") + ui->charityAddressEdit->text() + tr("\"<br />is invalid.<br />Please check the address and try again."));
+        ui->message->setText(tr("The entered address:<br /> \"") + ui->charityAddressEdit->text() + tr("\"<br />is invalid.<br />Please check the address and try again <br />or select from the drop-down menu."));
         ui->charityAddressEdit->setFocus();
         return;
     }
@@ -204,7 +204,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if (model->isMine(address))
     {
        ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
-       ui->message->setText(tr("The entered address: <br /> ") + ui->charityAddressEdit->text() + tr(" <br />is your own. <br />Please check the address and try again."));
+       ui->message->setText(tr("The entered address: <br /> ") + ui->charityAddressEdit->text() + tr(" <br />is your own. <br />Please check the address and try again <br />or select from the drop-down menu."));
        ui->charityAddressEdit->setFocus();
        return;
     }
@@ -256,14 +256,14 @@ void StakeForCharityDialog::on_enableButton_clicked()
         if (!changeAddress.IsValid())
         {
             ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
-            ui->message->setText(tr("The entered change address:\n ") + ui->charityChangeAddressEdit->text() + tr(" \nis invalid.\nPlease check the address and try again."));
+            ui->message->setText("The entered change address:<br />\"" + ui->charityChangeAddressEdit->text() + "\" <br />is invalid. <br />Please check the address and try again.");
             ui->charityChangeAddressEdit->setFocus();
             return;
         }
         else if (!model->isMine(changeAddress))
         {
            ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
-           ui->message->setText(tr("The entered change address:\n ") + ui->charityChangeAddressEdit->text() + tr(" \nis not owned.\nPlease check the address and try again."));
+           ui->message->setText("The entered change address:<br />\"" + ui->charityChangeAddressEdit->text() + "\"<br />is not your own. <br />Please check the address and try again.");
            ui->charityChangeAddressEdit->setFocus();
            return;
         }
@@ -273,7 +273,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if(!fGlobalStakeForCharity)
          fGlobalStakeForCharity = true;
     ui->message->setStyleSheet("QLabel { color: green; font-weight: 900;}");
-    ui->message->setText("EverGreenCoin Staking for Charity enabled to:<br /> " + QString(address.ToString().c_str()) + " <br />");
+    ui->message->setText("EverGreenCoin Staking For Charity enabled to:<br /> " + QString(address.ToString().c_str()) + " <br />");
     ui->comboBox->update();
     return;
 }
