@@ -46,8 +46,8 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>-108</x>
-        <y>0</y>
+        <x>0</x>
+        <y>-174</y>
         <width>773</width>
         <height>458</height>
        </rect>
@@ -250,7 +250,7 @@
              </size>
             </property>
             <property name="toolTip">
-             <string>Account address to send percentage of interest installments to</string>
+             <string>Account address to send percentage of interest installments to or select from the drop-down menu above</string>
             </property>
             <property name="maxLength">
              <number>34</number>
@@ -304,7 +304,7 @@
              </size>
             </property>
             <property name="toolTip">
-             <string>Enable EverGreenCoin Stake For Charity</string>
+             <string>Save any changes and enable EverGreenCoin Stake For Charity</string>
             </property>
             <property name="statusTip">
              <string>Click to turn on EverGreenCoin Stake For Charity</string>
@@ -556,6 +556,15 @@
          </property>
          <property name="text">
           <string>&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::RichText</enum>
+         </property>
+         <property name="openExternalLinks">
+          <bool>true</bool>
+         </property>
+         <property name="textInteractionFlags">
+          <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse</set>
          </property>
         </widget>
        </item>

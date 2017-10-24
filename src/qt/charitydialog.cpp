@@ -60,11 +60,41 @@ void StakeForCharityDialog::setModel(WalletModel *model)
         if (nMax > 0 && nMax != MAX_MONEY)
             ui->charityMaxEdit->setText(QString::number(nMax/COIN));
 
-        ui->message->setStyleSheet("QLabel { color: green; font-weight: 900; }");
-        ui->message->setText(tr("Thank you for giving to\n") + strAddress.ToString().c_str()+ " \n\n");
+
+        if (strAddress.ToString().c_str() == QString(FOUNDATION) || strAddress.ToString().c_str() == QString(FOUNDATION_TEST) )
+        {
+            ui->message->setStyleSheet("QLabel { color: green; font-weight: 900; }");
+            ui->message->setText(tr("Thank you for giving to The EverGreenCoin Foundation \n\n"));
+            ui->comboBox->setCurrentIndex(1);
+        }
+          /*  if (!fTestNet) ui->charityAddressEdit->setText(QString(FOUNDATION));
+            else  ui->charityAddressEdit->setText(QString(FOUNDATION_TEST)); */
+        else
+        {
+            int i;
+            for (i=0; i < 100; i++)
+            {
+                if ( QString::compare(charitiesAddress[i].toStdString().c_str(), strAddress.ToString().c_str(), Qt::CaseSensitive) == 0 )
+                { if (fTestNet) qDebug() << /* QString::compare(charitiesAddress[i].toStdString().c_str(), strAddress.ToString().c_str(), Qt::CaseSensitive)*/ charitiesAddress[i].toStdString().c_str() ;
+                    ui->message->setStyleSheet("QLabel { color: green; font-weight: 900; }");
+                    ui->message->setText(charitiesThanks[i]);
+                    ui->comboBox->setCurrentIndex(i+1);
+                    break;
+                }
+            }
+            if (i==100) // STS EGC must be a 'manual' entered address
+            {
+                ui->message->setStyleSheet("QLabel { color: green; font-weight: 900; }");
+                ui->message->setText(tr("You are manually sending to: ") + strAddress.ToString().c_str());
+                ui->comboBox->setCurrentIndex(0);
+            }
+        }
+
+
         if (pwalletMain->IsLocked())
         {
-            ui->message->setText(ui->message->text() + tr("Please unlock your EverGreenCoin software for Staking for Charity to proceed to \n") + strAddress.ToString().c_str());
+            ui->message->setStyleSheet("QLabel { color: red; font-weight: 900; }");
+            ui->message->setText(ui->message->text() + "<br />" + "You must unlock your EverGreenCoin software <br />for Staking for Charity to proceed to: " + strAddress.ToString().c_str());
         }
     }
 }
@@ -83,7 +113,7 @@ void StakeForCharityDialog::loadCharities()
       QString strReply = (QString)reply->readAll();
       int i;
       int n = ui->comboBox->count();
-      // clear current combo box entires
+      // clear current combo box entires, leaving the first 2, "manual" and "egc foundation"
       for (i=2; i < n; i++ ) {
           ui->comboBox->removeItem(2);
           if (fTestNet) qDebug() << "removed " << i+1 << " of " << n << "\n";
@@ -147,13 +177,13 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if(model->getEncryptionStatus() == WalletModel::Locked)
     {
         ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
-        ui->message->setText("Please unlock your EverGreenCoin software for spending (not staking only)\n before starting EverGreenCoin Stake For Charity to proceed and be able to send.\n");
+        ui->message->setText("Please unlock your EverGreenCoin software for spending (not staking only) <br /> for EverGreenCoin Staking for Charity to proceed.");
         return;
     }
     else if (fWalletUnlockStakingOnly)
     {
         ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
-        ui->message->setText("Please unlock your EverGreenCoin software for spending\n (not staking only) for EverGreenCoin Staking for Charity to proceed and be able to send.");
+        ui->message->setText("Please unlock your EverGreenCoin software for spending <br /> (not staking only) for EverGreenCoin Staking for Charity to proceed.");
         return;
     }
 
@@ -166,7 +196,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if (!address.IsValid())
     {
         ui->message->setStyleSheet("QLabel { color: red; font-weight: 900; }");
-        ui->message->setText(tr("The entered address:\n ") + ui->charityAddressEdit->text() + tr(" \nis invalid.\nPlease check the address and try again."));
+        ui->message->setText(tr("The entered address:<br /> \"") + ui->charityAddressEdit->text() + tr("\"<br />is invalid.<br />Please check the address and try again."));
         ui->charityAddressEdit->setFocus();
         return;
     }
@@ -174,7 +204,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if (model->isMine(address))
     {
        ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
-       ui->message->setText(tr("The entered address:\n ") + ui->charityAddressEdit->text() + tr(" \nis your own.\nPlease check the address and try again."));
+       ui->message->setText(tr("The entered address: <br /> ") + ui->charityAddressEdit->text() + tr(" <br />is your own. <br />Please check the address and try again."));
        ui->charityAddressEdit->setFocus();
        return;
     }
@@ -243,7 +273,8 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if(!fGlobalStakeForCharity)
          fGlobalStakeForCharity = true;
     ui->message->setStyleSheet("QLabel { color: green; font-weight: 900;}");
-    ui->message->setText(tr("Thank you for giving to:\n ") + QString(address.ToString().c_str()) + " \n\n");
+    ui->message->setText("EverGreenCoin Staking for Charity enabled to:<br /> " + QString(address.ToString().c_str()) + " <br />");
+    ui->comboBox->update();
     return;
 }
 
@@ -262,8 +293,8 @@ void StakeForCharityDialog::on_disableButton_clicked()
     ui->charityMaxEdit->clear();
     ui->charityMinEdit->clear();
     ui->charityPercentEdit->clear();
-    ui->message->setStyleSheet("QLabel { color: black; font-weight: 900;}");
-    ui->message->setText(tr("EverGreenCoin Stake For Charity is now off")+ " \n\n\n");
+    ui->message->setStyleSheet("QLabel { color: green; font-weight: 900;}");
+    ui->message->setText(tr("EverGreenCoin Stake for Charity is now off and saved off."));
     ui->comboBox->setCurrentIndex(0); // reset charity select combo
     return;
 }
@@ -302,7 +333,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setEnabled(false);
         ui->charityAddressEdit->setReadOnly(true);
         ui->addressBookButton->setDisabled(true);
-        ui->message->setText(charitiesThanks[index-1]);
+        ui->message->setText(charitiesThanks[index-1] + "<br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake For Charity");
     }
 }
 
@@ -311,6 +342,14 @@ void StakeForCharityDialog::on_btnRefreshCharities_clicked()
     ui->btnRefreshCharities->setText("Downloading...");
     ui->btnRefreshCharities->setDisabled(true);
     loadCharities();
+    ui->charityAddressEdit->clear();
+    ui->charityChangeAddressEdit->clear();
+    ui->charityMaxEdit->clear();
+    ui->charityMinEdit->clear();
+    ui->charityPercentEdit->clear();
+    ui->message->setStyleSheet("QLabel { color: green; font-weight: 900;}");
+    ui->message->setText(tr("Data refreshed from <a href='https://EverGreenCoin.org'>EverGreenCoin.org</a><br />Select a cause you find charitable<br />and click the 'Enable' button to apply changes."));
+    ui->comboBox->setCurrentIndex(0); // reset charity select combo
     ui->btnRefreshCharities->setDisabled(false);
     ui->btnRefreshCharities->setText("Refresh Charities");
 }
