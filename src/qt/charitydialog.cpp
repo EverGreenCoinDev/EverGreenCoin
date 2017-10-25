@@ -312,15 +312,16 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setEnabled(true);
         ui->charityAddressEdit->setReadOnly(false);
         ui->addressBookButton->setDisabled(false);
-        ui->charityAddressEdit->setStyleSheet("");
+        ui->charityAddressEdit->setStyleSheet("border-color: #00B300; color: #000000;");
     }
     else if (index==1)
     {
         ui->charityAddressEdit->clear();
         ui->charityAddressEdit->setDisabled(true);
-        ui->charityAddressEdit->setStyleSheet("");
+        ui->charityAddressEdit->setStyleSheet("border-color: #cacaca; color: #cacaca;");
         if (!fTestNet) ui->charityAddressEdit->setText(QString(FOUNDATION));
         else  ui->charityAddressEdit->setText(QString(FOUNDATION_TEST));
+        ui->message->setText("Thank you for donating to the <a href='https://evergreencoin.org'>EverGreenCoin Foundation, Inc.</a> <br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
         ui->addressBookButton->setDisabled(true);
         ui->charityAddressEdit->setEnabled(false);
         ui->charityAddressEdit->setReadOnly(true);
@@ -332,6 +333,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setEnabled(false);
         ui->charityAddressEdit->setReadOnly(true);
         ui->addressBookButton->setDisabled(true);
+        ui->charityAddressEdit->setStyleSheet("border-color: #cacaca; color: #cacaca;");
         ui->message->setText(charitiesThanks[index-1] + "<br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
     }
 }
