@@ -124,7 +124,7 @@
         <bool>false</bool>
        </property>
        <property name="toolTip">
-        <string>Serves to disable sendmoney when OS account compromised.</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Serves to disable sending EverGreenCoin when OS account compromised.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="text">
         <string>Unlock for staking only.</string>

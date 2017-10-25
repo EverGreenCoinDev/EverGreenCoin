@@ -67,8 +67,7 @@ void StakeForCharityDialog::setModel(WalletModel *model)
             ui->message->setText(tr("Thank you for giving to The EverGreenCoin Foundation \n\n"));
             ui->comboBox->setCurrentIndex(1);
         }
-          /*  if (!fTestNet) ui->charityAddressEdit->setText(QString(FOUNDATION));
-            else  ui->charityAddressEdit->setText(QString(FOUNDATION_TEST)); */
+
         else
         {
             int i;
@@ -273,7 +272,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if(!fGlobalStakeForCharity)
          fGlobalStakeForCharity = true;
     ui->message->setStyleSheet("QLabel { color: green; font-weight: 900;}");
-    ui->message->setText("EverGreenCoin Staking For Charity enabled to:<br /> " + QString(address.ToString().c_str()) + " <br />");
+    ui->message->setText(ui->message->text() + "<br />EverGreenCoin Staking For Charity enabled to:<br /> " + QString(address.ToString().c_str()) + " <br />");
     ui->comboBox->update();
     return;
 }
@@ -333,7 +332,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setEnabled(false);
         ui->charityAddressEdit->setReadOnly(true);
         ui->addressBookButton->setDisabled(true);
-        ui->message->setText(charitiesThanks[index-1] + "<br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake For Charity");
+        ui->message->setText(charitiesThanks[index-1] + "<br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
     }
 }
 
