@@ -140,11 +140,13 @@ void StakeForCharityDialog::loadCharities()
 
 void StakeForCharityDialog::setAddress(const QString &address)
 {
+    ui->comboBox->setCurrentIndex(0);
     setAddress(address, ui->charityAddressEdit);
 }
 
 void StakeForCharityDialog::setAddress(const QString &address, QLineEdit *addrEdit)
 {
+    ui->comboBox->setCurrentIndex(0);
     addrEdit->setText(address);
     addrEdit->setFocus();
 }
@@ -212,7 +214,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if (!fValidConversion || nCharityPercent > 100 || nCharityPercent <= 0)
     {
         ui->message->setStyleSheet("QLabel { color: red; font-weight: 900; }");
-        ui->message->setText(tr("Please Enter 1 - 100 for percent.")+ " \n\n\n");
+        ui->message->setText(tr("Please enter whole numbers, 1 through 100, for percentage")+ " \n\n\n");
         ui->charityPercentEdit->setFocus();
         return;
     }
@@ -272,7 +274,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if(!fGlobalStakeForCharity)
          fGlobalStakeForCharity = true;
     ui->message->setStyleSheet("QLabel { color: green; font-weight: 900;}");
-    ui->message->setText(ui->message->text() + "<br />EverGreenCoin Staking For Charity enabled to:<br /> " + QString(address.ToString().c_str()) + " <br />");
+    ui->message->setText(ui->message->text() + "<br />EverGreenCoin Staking For Charity enabled to:<br /> " + QString(address.ToString().c_str()) + " at a rate of " + QString(nCharityPercent) + "%");
     ui->comboBox->update();
     return;
 }
@@ -292,9 +294,9 @@ void StakeForCharityDialog::on_disableButton_clicked()
     ui->charityMaxEdit->clear();
     ui->charityMinEdit->clear();
     ui->charityPercentEdit->clear();
+    ui->comboBox->setCurrentIndex(0); // reset charity select combo
     ui->message->setStyleSheet("QLabel { color: green; font-weight: 900;}");
     ui->message->setText(tr("EverGreenCoin Stake for Charity is now off and saved off."));
-    ui->comboBox->setCurrentIndex(0); // reset charity select combo
     return;
 }
 
@@ -308,11 +310,12 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
     if (index==0)
     {
         ui->charityAddressEdit->clear();
-        ui->charityAddressEdit->setFocus();
         ui->charityAddressEdit->setEnabled(true);
         ui->charityAddressEdit->setReadOnly(false);
         ui->addressBookButton->setDisabled(false);
         ui->charityAddressEdit->setStyleSheet("border-color: #00B300; color: #000000;");
+        ui->message->setText("Please enter the EverGreenCoin address and then click 'enable'");
+        ui->charityAddressEdit->setFocus();
     }
     else if (index==1)
     {
@@ -321,7 +324,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setStyleSheet("border-color: #cacaca; color: #cacaca;");
         if (!fTestNet) ui->charityAddressEdit->setText(QString(FOUNDATION));
         else  ui->charityAddressEdit->setText(QString(FOUNDATION_TEST));
-        ui->message->setText("Thank you for donating to the <a href='https://evergreencoin.org'>EverGreenCoin Foundation, Inc.</a> <br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
+        ui->message->setText("Thank you for donating to the <a href='https://evergreencoin.org/EGCFoundation/'>EverGreenCoin Foundation, Inc.</a> <br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
         ui->addressBookButton->setDisabled(true);
         ui->charityAddressEdit->setEnabled(false);
         ui->charityAddressEdit->setReadOnly(true);
