@@ -274,7 +274,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if(!fGlobalStakeForCharity)
          fGlobalStakeForCharity = true;
     ui->message->setStyleSheet("QLabel { color: green; font-weight: 900;}");
-    ui->message->setText(ui->message->text() + "<br />EverGreenCoin Staking For Charity enabled to:<br /> " + QString(address.ToString().c_str()) + " at a rate of " + QString(nCharityPercent) + "%");
+    ui->message->setText(ui->message->text() + "<br />EverGreenCoin Staking For Charity enabled to:<br /> " + QString(address.ToString().c_str()) + " at a rate of " + QString::number(nCharityPercent) + "%");
     ui->comboBox->update();
     return;
 }
