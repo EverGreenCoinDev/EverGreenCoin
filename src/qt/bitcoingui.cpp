@@ -839,6 +839,16 @@ void BitcoinGUI::gotoSendCoinsPage()
     updateStakingIcon();
 }
 
+void BitcoinGUI::gotoCharityPage()
+{
+    charityAction->setChecked(true);
+    centralWidget->setCurrentWidget(stakeForCharityDialog);
+
+    exportAction->setEnabled(false);
+    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
+    updateStakingIcon();
+}
+
 void BitcoinGUI::gotoSignMessageTab(QString addr)
 {
     // call show() in showTab_SM()
@@ -1082,15 +1092,6 @@ void BitcoinGUI::charityClicked(QString addr)
 
     if(!addr.isEmpty())
         stakeForCharityDialog->setAddress(addr);
-
-    exportAction->setEnabled(false);
-    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
-}
-
-void BitcoinGUI::gotoCharityPage()
-{
-    charityAction->setChecked(true);
-    centralWidget->setCurrentWidget(stakeForCharityDialog);
 
     exportAction->setEnabled(false);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
