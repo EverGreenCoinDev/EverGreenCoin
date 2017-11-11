@@ -46,6 +46,7 @@ void StakeForCharityDialog::setModel(WalletModel *model)
     int nPer;
     qint64 nMin;
     qint64 nMax;
+    charitiesThanks[0]="Thank you for donating to the <a href='https://evergreencoin.org/EGCFoundation/'>EverGreenCoin Foundation, Inc.</a>";
 
     model->getStakeForCharity(nPer, strAddress, strChangeAddress, nMin, nMax);
 
@@ -315,7 +316,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setReadOnly(false);
         ui->addressBookButton->setDisabled(false);
         ui->charityAddressEdit->setStyleSheet("border-color: #00B300; color: #000000;");
-        ui->message->setText("Please enter the EverGreenCoin address and then click 'enable'");
+        ui->message->setText("Please enter the EverGreenCoin address and then click 'Enable'");
         ui->charityAddressEdit->setFocus();
     }
     else if (index==1)
