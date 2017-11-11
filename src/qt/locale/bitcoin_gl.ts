@@ -199,7 +199,7 @@ Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no Op
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>Esta operación precisa o contrasinal do teu moedeiro para desbloquear o moedeiro.</translation>
     </message>
     <message>

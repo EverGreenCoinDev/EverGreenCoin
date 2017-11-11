@@ -199,7 +199,7 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>Quest&apos;operazione necessita della passphrase per sbloccare il portamonete.</translation>
     </message>
     <message>

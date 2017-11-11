@@ -199,7 +199,7 @@ MIT/X11 프로그램 라이선스에 따라 배포합니다. COPYING 또는 http
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>이 작업은 지갑을 열기위해 사용자의 지갑의  암호가 필요합니다.</translation>
     </message>
     <message>

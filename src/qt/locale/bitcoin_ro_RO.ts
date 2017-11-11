@@ -201,7 +201,7 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>Această acțiune necesită fraza ta de acces pentru deblocarea portofelului.</translation>
     </message>
     <message>

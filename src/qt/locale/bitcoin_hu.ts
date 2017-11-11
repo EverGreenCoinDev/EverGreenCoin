@@ -198,7 +198,7 @@ Ez a termék tartalmaz az OpenSSL Project által az OpenSSL Toolkit-hez (http://
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>Ez a művelet a tárcád jelszavának megadását igényli annak megnyitásához.</translation>
     </message>
     <message>

@@ -200,7 +200,7 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>Tätä toimintoa varten sinun täytyy antaa lompakon tunnuslause sen avaamiseksi.</translation>
     </message>
     <message>

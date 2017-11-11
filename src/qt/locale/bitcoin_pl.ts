@@ -200,7 +200,7 @@ Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo 
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>Ta operacja wymaga hasła do portfela ażeby odblokować portfel.</translation>
     </message>
     <message>

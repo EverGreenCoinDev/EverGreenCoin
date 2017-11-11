@@ -199,7 +199,7 @@ Tiu ĉi produkto enhavas erojn kreitajn de la &quot;OpenSSL Project&quot; por uz
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>Ĉi tiu operacio bezonas vian monujan pasfrazon, por malŝlosi la monujon.</translation>
     </message>
     <message>

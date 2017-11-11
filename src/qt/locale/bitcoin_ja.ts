@@ -201,7 +201,7 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>この操作はウォレットをアンロックするためにパスフレーズが必要です。</translation>
     </message>
     <message>

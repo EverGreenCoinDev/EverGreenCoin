@@ -201,7 +201,7 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>Deze operatie vereist uw portemonneewachtwoord om de portemonnee te openen.</translation>
     </message>
     <message>

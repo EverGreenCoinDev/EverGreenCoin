@@ -197,7 +197,7 @@ Ing produktung ini atin yang makayabeng software a gewa dareng OpenSSL Project p
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>Ing operasyun a ini kailangan ne ing kekayung wallet passphrase, ban a-unlock ya ing wallet</translation>
     </message>
     <message>

@@ -201,7 +201,7 @@ Tento produkt obsahuje softvér vyvinutý Projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>Táto operácia potrebuje heslo k vašej peňaženke aby ju mohla dešifrovať.</translation>
     </message>
     <message>

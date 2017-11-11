@@ -198,7 +198,7 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>Huic operationi necesse est tessera cassidili tuo ut cassidile reseret.</translation>
     </message>
     <message>

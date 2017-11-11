@@ -201,7 +201,7 @@ Produktet indeholder software, som er udviklet af OpenSSL Project til brug i Ope
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>Denne funktion har brug for din tegnebogs adgangskode for at låse tegnebogen op.</translation>
     </message>
     <message>

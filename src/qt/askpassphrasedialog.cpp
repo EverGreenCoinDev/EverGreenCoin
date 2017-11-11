@@ -41,7 +41,7 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget *parent) :
             ui->stakingCheckBox->show();
             // fallthru
         case Unlock: // Ask passphrase
-            ui->warningLabel->setText(tr("This operation needs your wallet passphrase to unlock the wallet."));
+            ui->warningLabel->setText(tr("This operation needs your password to unlock your EverGreenCoin."));
             ui->passLabel2->hide();
             ui->passEdit2->hide();
             ui->passLabel3->hide();

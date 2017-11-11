@@ -198,7 +198,7 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>Ši operacija reikalauja jūsų piniginės slaptafrazės jai atrakinti.</translation>
     </message>
     <message>

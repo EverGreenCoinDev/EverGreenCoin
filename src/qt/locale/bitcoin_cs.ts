@@ -199,7 +199,7 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+7"/>
-        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <source>This operation needs your password to unlock your EverGreenCoin.</source>
         <translation>K provedení této operace musíš zadat heslo k peněžence, aby se mohla odemknout.</translation>
     </message>
     <message>
