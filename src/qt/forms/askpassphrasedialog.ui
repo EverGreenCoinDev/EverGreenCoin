@@ -56,7 +56,7 @@
      <item row="1" column="0">
       <widget class="QLabel" name="passLabel2">
        <property name="text">
-        <string>New EGC password</string>
+        <string>New EverGreenCoin password :</string>
        </property>
       </widget>
      </item>
@@ -75,7 +75,7 @@
      <item row="2" column="0">
       <widget class="QLabel" name="passLabel3">
        <property name="text">
-        <string>Repeat new EGC password</string>
+        <string>Repeat new EverGreenCoin password :</string>
        </property>
       </widget>
      </item>
@@ -111,7 +111,7 @@
      <item row="0" column="0">
       <widget class="QLabel" name="passLabel1">
        <property name="text">
-        <string>Enter your EGC password</string>
+        <string>Enter your EverGreenCoin password :</string>
        </property>
       </widget>
      </item>
@@ -124,7 +124,7 @@
         <bool>false</bool>
        </property>
        <property name="toolTip">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Serves to disable sending EverGreenCoin when OS account compromised.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Serves to disable sending EverGreenCoin if your OS account is compromised.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="text">
         <string>Unlock for staking only (not sending).</string>

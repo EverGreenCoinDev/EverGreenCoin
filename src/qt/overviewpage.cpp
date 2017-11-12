@@ -159,13 +159,13 @@ void OverviewPage::unlockWallet()
         dlg.setModel(model);
         if(dlg.exec() == QDialog::Accepted)
         {
-            ui->unlockWalletButton->setText(QString("Lock Software"));
+            ui->unlockWalletButton->setText(QString("Lock Your EverGreenCoin"));
         }
     }
     else
     {
         model->setWalletLocked(true);
-        ui->unlockWalletButton->setText(QString("Unlock Software"));
+        ui->unlockWalletButton->setText(QString("Unlock Your EverGreenCoin"));
     }
 }
 
@@ -197,13 +197,13 @@ void OverviewPage::setModel(WalletModel *model)
         if(status == WalletModel::Unencrypted)
         {
             ui->unlockWalletButton->setDisabled(true);
-            ui->unlockWalletButton->setText(QString("Not encrypted"));
-            ui->unlockWalletButton->setToolTip(QString("Click 'Settings' then 'Encrypt Software' in the menu bar to encrypt"));
+            ui->unlockWalletButton->setText(QString("EverGreenCoin not encrypted"));
+            ui->unlockWalletButton->setToolTip(QString("Click 'Settings' then 'Encrypt your EverGreenCoin' in the menu bar to encrypt"));
         }
 
         else
         {
-            ui->unlockWalletButton->setText(QString("Unlock Software"));
+            ui->unlockWalletButton->setText(QString("Unlock Your EverGreenCoin"));
         }
         connect(ui->unlockWalletButton, SIGNAL(clicked()), this, SLOT(unlockWallet()));
     }
