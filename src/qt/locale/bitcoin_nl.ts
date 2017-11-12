@@ -186,7 +186,7 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+3"/>
-        <source>Unlock for staking only.</source>
+        <source>Unlock for staking only (not sending).</source>
         <translation>Alleen voor staking</translation>
     </message>
     <message>

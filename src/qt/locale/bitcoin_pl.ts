@@ -185,7 +185,7 @@ Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo 
     </message>
     <message>
         <location line="+3"/>
-        <source>Unlock for staking only.</source>
+        <source>Unlock for staking only (not sending).</source>
         <translation type="unfinished"/>
     </message>
     <message>

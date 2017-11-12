@@ -186,7 +186,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+3"/>
-        <source>Unlock for staking only.</source>
+        <source>Unlock for staking only (not sending).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

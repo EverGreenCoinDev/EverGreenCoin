@@ -186,7 +186,7 @@ Tento produkt obsahuje softvér vyvinutý Projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+3"/>
-        <source>Unlock for staking only.</source>
+        <source>Unlock for staking only (not sending).</source>
         <translation>Len pre stávkovanie</translation>
     </message>
     <message>

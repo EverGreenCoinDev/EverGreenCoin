@@ -187,7 +187,7 @@ Denna produkten innehåller mjukvara utvecklad av OpenSSL Project för användni
     </message>
     <message>
         <location line="+3"/>
-        <source>Unlock for staking only.</source>
+        <source>Unlock for staking only (not sending).</source>
         <translation>Endast för &quot;staking&quot;</translation>
     </message>
     <message>

@@ -185,7 +185,7 @@ T채m채 tuote sis채lt채채 OpenSSL-projektin kehitt채m채채 ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+3"/>
-        <source>Unlock for staking only.</source>
+        <source>Unlock for staking only (not sending).</source>
         <translation>Vain osakkuutta varten</translation>
     </message>
     <message>
