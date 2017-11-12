@@ -174,7 +174,7 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="+14"/>
-        <source>Repeat new passphrase</source>
+        <source>Repeat new password</source>
         <translation>Gjenta ny adgangsfrase</translation>
     </message>
     <message>
@@ -189,7 +189,7 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+35"/>
-        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <source>Enter the new password to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>Skriv inn den nye adgangsfrasen for lommeboken.&lt;br/&gt;Vennligst bruk en adgangsfrase med &lt;b&gt;10 eller flere tilfeldige tegn&lt;/b&gt;, eller &lt;b&gt;åtte eller flere ord&lt;/b&gt;.</translation>
     </message>
     <message>
@@ -204,7 +204,7 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="+5"/>
-        <source>Unlock wallet</source>
+        <source>Unlock EverGreenCoin</source>
         <translation>Lås opp lommebok</translation>
     </message>
     <message>
@@ -219,12 +219,12 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="+3"/>
-        <source>Change passphrase</source>
+        <source>Change password</source>
         <translation>Endre adgangsfrase</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Enter the old and new passphrase to the wallet.</source>
+        <source>Enter the old and new password to the wallet.</source>
         <translation>Skriv inn gammel og ny adgangsfrase for lommeboken.</translation>
     </message>
     <message>
@@ -490,7 +490,7 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="+9"/>
-        <source>Unlock wallet</source>
+        <source>Unlock EverGreenCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>

@@ -176,7 +176,7 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="+14"/>
-        <source>Repeat new passphrase</source>
+        <source>Repeat new password</source>
         <translation>新しいパスフレーズをもう一度</translation>
     </message>
     <message>
@@ -191,7 +191,7 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+35"/>
-        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <source>Enter the new password to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>ウォレットの新しいパスフレーズを入力してください。&lt;br/&gt;&lt;b&gt;8個以上の単語か10個以上のランダムな文字&lt;/b&gt;を使ってください。</translation>
     </message>
     <message>
@@ -206,7 +206,7 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="+5"/>
-        <source>Unlock wallet</source>
+        <source>Unlock EverGreenCoin</source>
         <translation>ウォレットをアンロックする</translation>
     </message>
     <message>
@@ -221,12 +221,12 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="+3"/>
-        <source>Change passphrase</source>
+        <source>Change password</source>
         <translation>パスフレーズの変更</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Enter the old and new passphrase to the wallet.</source>
+        <source>Enter the old and new password to the wallet.</source>
         <translation>新旧両方のパスフレーズを入力してください。</translation>
     </message>
     <message>
@@ -492,7 +492,7 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="+9"/>
-        <source>Unlock wallet</source>
+        <source>Unlock EverGreenCoin</source>
         <translation>ウォレットをアンロックする</translation>
     </message>
     <message>

@@ -172,7 +172,7 @@ Ing produktung ini atin yang makayabeng software a gewa dareng OpenSSL Project p
     </message>
     <message>
         <location line="+14"/>
-        <source>Repeat new passphrase</source>
+        <source>Repeat new password</source>
         <translation>Pasibayuan ya ing bayung passphrase</translation>
     </message>
     <message>
@@ -187,7 +187,7 @@ Ing produktung ini atin yang makayabeng software a gewa dareng OpenSSL Project p
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+35"/>
-        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <source>Enter the new password to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>Palub ye ing bayung passphrase king wallet.&lt;br/&gt;Maliari pu sanang gumamit kayung passphrase a maki&lt;/b&gt; 10 or dakal pang miyayaliuang characters&lt;/b&gt;, o ualu o dakal pang salita&lt;/b&gt;</translation>
     </message>
     <message>
@@ -202,7 +202,7 @@ Ing produktung ini atin yang makayabeng software a gewa dareng OpenSSL Project p
     </message>
     <message>
         <location line="+5"/>
-        <source>Unlock wallet</source>
+        <source>Unlock EverGreenCoin</source>
         <translation>Unlock ya ing wallet</translation>
     </message>
     <message>
@@ -217,12 +217,12 @@ Ing produktung ini atin yang makayabeng software a gewa dareng OpenSSL Project p
     </message>
     <message>
         <location line="+3"/>
-        <source>Change passphrase</source>
+        <source>Change password</source>
         <translation>Alilan ya ing passphrase</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Enter the old and new passphrase to the wallet.</source>
+        <source>Enter the old and new password to the wallet.</source>
         <translation>Palub ye ing luma ampo ing bayung passphrase king wallet.</translation>
     </message>
     <message>
@@ -488,7 +488,7 @@ Ing produktung ini atin yang makayabeng software a gewa dareng OpenSSL Project p
     </message>
     <message>
         <location line="+9"/>
-        <source>Unlock wallet</source>
+        <source>Unlock EverGreenCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>

@@ -33,7 +33,7 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget *parent) :
         case Encrypt: // Ask passphrase x2
             ui->passLabel1->hide();
             ui->passEdit1->hide();
-            ui->warningLabel->setText(tr("Enter the new passphrase to the wallet.<br/>Please use a passphrase of <b>10 or more random characters</b>, or <b>eight or more words</b>."));
+            ui->warningLabel->setText(tr("Enter the new password to the wallet.<br/>Please use a passphrase of <b>10 or more random characters</b>, or <b>eight or more words</b>."));
             setWindowTitle(tr("Encrypt wallet"));
             break;
         case UnlockStaking:
@@ -46,7 +46,7 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget *parent) :
             ui->passEdit2->hide();
             ui->passLabel3->hide();
             ui->passEdit3->hide();
-            setWindowTitle(tr("Unlock wallet"));
+            setWindowTitle(tr("Unlock EverGreenCoin"));
             break;
         case Decrypt:   // Ask passphrase
             ui->warningLabel->setText(tr("This operation needs your wallet passphrase to decrypt the wallet."));
@@ -56,9 +56,9 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget *parent) :
             ui->passEdit3->hide();
             setWindowTitle(tr("Decrypt wallet"));
             break;
-        case ChangePass: // Ask old passphrase + new passphrase x2
-            setWindowTitle(tr("Change passphrase"));
-            ui->warningLabel->setText(tr("Enter the old and new passphrase to the wallet."));
+        case ChangePass: // Ask old passphrase + new password x2
+            setWindowTitle(tr("Change password"));
+            ui->warningLabel->setText(tr("Enter the old and new password to the wallet."));
             break;
     }
 
@@ -205,7 +205,7 @@ void AskPassphraseDialog::textChanged()
     case Decrypt:
         acceptable = !ui->passEdit1->text().isEmpty();
         break;
-    case ChangePass: // Old passphrase x1, new passphrase x2
+    case ChangePass: // Old passphrase x1, new password x2
         acceptable = !ui->passEdit1->text().isEmpty() && !ui->passEdit2->text().isEmpty() && !ui->passEdit3->text().isEmpty();
         break;
     }

@@ -169,7 +169,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+14"/>
-        <source>Repeat new passphrase</source>
+        <source>Repeat new password</source>
         <translation>Паўтарыце новую кодавую фразу</translation>
     </message>
     <message>
@@ -184,7 +184,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+35"/>
-        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <source>Enter the new password to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>Увядзіце новую кодавую фразу для гаманца. &lt;br/&gt;Калі ласка, ўжывайце пароль &lt;b&gt;не меньша за 10 адвольных сімвалаў&lt;/b&gt;, ці &lt;b&gt;болей васьмі слоў&lt;/b&gt;.</translation>
     </message>
     <message>
@@ -199,7 +199,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+5"/>
-        <source>Unlock wallet</source>
+        <source>Unlock EverGreenCoin</source>
         <translation>Разблакаваць гаманец</translation>
     </message>
     <message>
@@ -214,12 +214,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+3"/>
-        <source>Change passphrase</source>
+        <source>Change password</source>
         <translation>Змяніць пароль</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Enter the old and new passphrase to the wallet.</source>
+        <source>Enter the old and new password to the wallet.</source>
         <translation>Увядзіце стары і новы пароль да гаманца.</translation>
     </message>
     <message>
@@ -485,7 +485,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+9"/>
-        <source>Unlock wallet</source>
+        <source>Unlock EverGreenCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>

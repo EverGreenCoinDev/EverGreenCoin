@@ -979,7 +979,7 @@ void BitcoinGUI::unlockWallet()
 {
     if(!walletModel)
         return;
-    // Unlock wallet when requested by wallet model
+    // Unlock EverGreenCoin when requested by wallet model
     if(walletModel->getEncryptionStatus() == WalletModel::Locked)
     {
         AskPassphraseDialog::Mode mode = sender() == unlockWalletAction ?

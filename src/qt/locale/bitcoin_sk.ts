@@ -176,7 +176,7 @@ Tento produkt obsahuje softvér vyvinutý Projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+14"/>
-        <source>Repeat new passphrase</source>
+        <source>Repeat new password</source>
         <translation>Zopakujte nové heslo</translation>
     </message>
     <message>
@@ -191,7 +191,7 @@ Tento produkt obsahuje softvér vyvinutý Projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+35"/>
-        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <source>Enter the new password to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>Zadajte nové heslo k peňaženke.&lt;br/&gt;Prosím použite heslo s dĺžkou aspon &lt;b&gt;10 alebo viac náhodných znakov&lt;/b&gt;, alebo &lt;b&gt;8 alebo viac slov&lt;/b&gt;.</translation>
     </message>
     <message>
@@ -206,7 +206,7 @@ Tento produkt obsahuje softvér vyvinutý Projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+5"/>
-        <source>Unlock wallet</source>
+        <source>Unlock EverGreenCoin</source>
         <translation>Odomknúť peňaženku</translation>
     </message>
     <message>
@@ -221,12 +221,12 @@ Tento produkt obsahuje softvér vyvinutý Projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+3"/>
-        <source>Change passphrase</source>
+        <source>Change password</source>
         <translation>Zmena hesla</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Enter the old and new passphrase to the wallet.</source>
+        <source>Enter the old and new password to the wallet.</source>
         <translation>Zadajte staré a nové heslo k peňaženke.</translation>
     </message>
     <message>
@@ -492,7 +492,7 @@ Tento produkt obsahuje softvér vyvinutý Projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+9"/>
-        <source>Unlock wallet</source>
+        <source>Unlock EverGreenCoin</source>
         <translation>Odomknúť peňaženku</translation>
     </message>
     <message>

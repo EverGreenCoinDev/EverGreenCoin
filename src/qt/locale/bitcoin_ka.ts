@@ -174,7 +174,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+14"/>
-        <source>Repeat new passphrase</source>
+        <source>Repeat new password</source>
         <translation>გაიმეორეთ ახალი ფრაზა-პაროლი</translation>
     </message>
     <message>
@@ -189,7 +189,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+35"/>
-        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <source>Enter the new password to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>შეიყვანეთ საფულის ახალი ფრაზა-პაროლი.&lt;br/&gt;ფრაზა-პაროლი შეადგინეთ &lt;b&gt;არანაკლებ 10 შემთხვევითი სიმბოლოსაგან&lt;/b&gt;, ან &lt;b&gt;რვა და მეტი სიტყვისაგან&lt;/b&gt;.</translation>
     </message>
     <message>
@@ -204,7 +204,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+5"/>
-        <source>Unlock wallet</source>
+        <source>Unlock EverGreenCoin</source>
         <translation>საფულის განბლოკვა</translation>
     </message>
     <message>
@@ -219,12 +219,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+3"/>
-        <source>Change passphrase</source>
+        <source>Change password</source>
         <translation>ფრაზა-პაროლის შეცვლა</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Enter the old and new passphrase to the wallet.</source>
+        <source>Enter the old and new password to the wallet.</source>
         <translation>შეიყვანეთ საფულის ძველი და ახალი ფრაზა-პაროლი.</translation>
     </message>
     <message>
@@ -490,7 +490,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+9"/>
-        <source>Unlock wallet</source>
+        <source>Unlock EverGreenCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>

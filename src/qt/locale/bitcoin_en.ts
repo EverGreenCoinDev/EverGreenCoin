@@ -176,8 +176,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+14"/>
-        <source>Repeat new passphrase</source>
-        <translation>Repeat new passphrase</translation>
+        <source>Repeat new password</source>
+        <translation>Repeat new password</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -191,8 +191,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+35"/>
-        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
-        <translation>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</translation>
+        <source>Enter the new password to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <translation>Enter the new password to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -206,8 +206,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+5"/>
-        <source>Unlock wallet</source>
-        <translation>Unlock wallet</translation>
+        <source>Unlock EverGreenCoin</source>
+        <translation>Unlock EverGreenCoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -221,13 +221,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+3"/>
-        <source>Change passphrase</source>
-        <translation>Change passphrase</translation>
+        <source>Change password</source>
+        <translation>Change password</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Enter the old and new passphrase to the wallet.</source>
-        <translation>Enter the old and new passphrase to the wallet.</translation>
+        <source>Enter the old and new password to the wallet.</source>
+        <translation>Enter the old and new password to the wallet.</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -495,8 +495,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+9"/>
-        <source>Unlock wallet</source>
-        <translation type="unfinished">Unlock wallet</translation>
+        <source>Unlock EverGreenCoin</source>
+        <translation type="unfinished">Unlock EverGreenCoin</translation>
     </message>
     <message>
         <location line="+1"/>

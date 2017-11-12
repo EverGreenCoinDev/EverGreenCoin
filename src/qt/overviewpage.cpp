@@ -192,7 +192,7 @@ void OverviewPage::setModel(WalletModel *model)
 
         connect(model->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(updateDisplayUnit()));
 
-        // Unlock wallet button
+        // Unlock EverGreenCoin button
         WalletModel::EncryptionStatus status = model->getEncryptionStatus();
         if(status == WalletModel::Unencrypted)
         {

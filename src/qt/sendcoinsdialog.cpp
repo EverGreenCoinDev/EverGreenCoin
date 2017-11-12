@@ -164,7 +164,7 @@ void SendCoinsDialog::on_sendButton_clicked()
     WalletModel::UnlockContext ctx(model->requestUnlock());
     if(!ctx.isValid())
     {
-        // Unlock wallet was cancelled
+        // Unlock EverGreenCoin was cancelled
         fNewRecipientAllowed = true;
         return;
     }
