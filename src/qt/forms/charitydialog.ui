@@ -46,7 +46,7 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>-86</x>
+        <x>0</x>
         <y>0</y>
         <width>773</width>
         <height>458</height>
@@ -94,7 +94,7 @@
              <number>1</number>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EverGreenCoin Stake for Charity allows you to automatically send up to 100% of your interest installments (stake rewards) to another EverGreenCoin account address after it matures. Note that you pay the tansaction fee (.0001 EGC) in addition to the percentage.  &lt;br /&gt;&lt;a href=&quot;https://evergreencoin.org/staking-for-charity/&quot;&gt;Learn more here&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Please enter the percentage to send and the EverGreenCoin account address to send to or select a charitable cause from the drop-down menu. Minimum and Maximum amount and change address are optional.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EverGreenCoin Stake for Charity allows you to automatically send up to 100% of your interest installments (stake rewards) to another EverGreenCoin account address after it matures. Note that you pay the tansaction fee (~.0001 EGC) in addition to the percentage.  &lt;br /&gt;&lt;a href=&quot;https://evergreencoin.org/staking-for-charity/&quot;&gt;Learn more here&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Please enter the percentage to send and the EverGreenCoin account address to send to or select a charitable cause from the drop-down menu. Minimum and Maximum amount and change address are optional. Then click 'Enable' to save and start EverGreenCoin Stake for Charity. Click 'Disable' at any time to save off and stop.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
