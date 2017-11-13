@@ -847,6 +847,7 @@ void BitcoinGUI::gotoCharityPage()
     exportAction->setEnabled(false);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
     updateStakingIcon();
+    stakeForCharityDialog->updateMessageColor();
 }
 
 void BitcoinGUI::gotoSignMessageTab(QString addr)

@@ -22,7 +22,7 @@ public:
     void setModel(WalletModel *model);
     void setAddress(const QString &address);
     void setAddress(const QString &address, QLineEdit *addrEdit);
-    void StakeForCharityDialog::updateMessageColor();
+    void updateMessageColor();
 
 private slots:
     void on_enableButton_clicked();
