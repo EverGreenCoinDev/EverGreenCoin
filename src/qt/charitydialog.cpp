@@ -316,7 +316,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setReadOnly(false);
         ui->addressBookButton->setDisabled(false);
         ui->charityAddressEdit->setStyleSheet("border-color: #00B300;");
-        ui->message->setText("Please enter the EverGreenCoin address and then click 'Enable'");
+        ui->message->setText("Please enter the EverGreenCoin address <br />or select from the drop-down <br />and then click 'Enable'");
         ui->charityAddressEdit->setFocus();
     }
     else if (index==1)
