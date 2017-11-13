@@ -988,6 +988,7 @@ void BitcoinGUI::unlockWallet()
         dlg.setModel(walletModel);
         dlg.exec();
     }
+    overviewPage->updateButton();
 }
 
 void BitcoinGUI::lockWallet()
@@ -996,6 +997,7 @@ void BitcoinGUI::lockWallet()
         return;
 
     walletModel->setWalletLocked(true);
+    overviewPage->updateButton();
 }
 
 void BitcoinGUI::showNormalIfMinimized(bool fToggleHidden)

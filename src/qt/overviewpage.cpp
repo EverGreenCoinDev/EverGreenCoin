@@ -231,3 +231,10 @@ void OverviewPage::showOutOfSyncWarning(bool fShow)
     ui->labelWalletStatus->setVisible(fShow);
     ui->labelTransactionsStatus->setVisible(fShow);
 }
+
+void OverviewPage::updateButton()
+{
+   WalletModel::EncryptionStatus status = model->getEncryptionStatus();
+   if (status == WalletModel::Locked) ui->unlockWalletButton->setText(QString("Unlock your EverGreenCoin"));
+   else ui->unlockWalletButton->setText(QString("Lock your EverGreenCoin"));
+}

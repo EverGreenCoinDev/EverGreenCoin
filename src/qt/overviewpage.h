@@ -25,6 +25,7 @@ public:
 
     void setModel(WalletModel *model);
     void showOutOfSyncWarning(bool fShow);
+    void updateButton();
 
 public slots:
     void setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBalance, qint64 immatureBalance);
