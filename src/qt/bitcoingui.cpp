@@ -989,6 +989,7 @@ void BitcoinGUI::unlockWallet()
         dlg.exec();
     }
     overviewPage->updateButton();
+    stakeForCharityDialog->updateMessageColor();
 }
 
 void BitcoinGUI::lockWallet()
@@ -998,6 +999,7 @@ void BitcoinGUI::lockWallet()
 
     walletModel->setWalletLocked(true);
     overviewPage->updateButton();
+    stakeForCharityDialog->updateMessageColor();
 }
 
 void BitcoinGUI::showNormalIfMinimized(bool fToggleHidden)

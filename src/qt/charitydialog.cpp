@@ -359,3 +359,11 @@ void StakeForCharityDialog::on_btnRefreshCharities_clicked()
     ui->btnRefreshCharities->setDisabled(false);
     ui->btnRefreshCharities->setText("Refresh Charities");
 }
+
+void StakeForCharityDialog::updateMessageColor()
+{
+    WalletModel::EncryptionStatus status = model->getEncryptionStatus();
+    if (status == WalletModel::Locked) ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
+    else if (fWalletUnlockStakingOnly) ui->message->setStyleSheet("QLabel { color: red; font-weight: 900;}");
+    else ui->message->setStyleSheet("QLabel { color: green; font-weight: 900;}");
+}
