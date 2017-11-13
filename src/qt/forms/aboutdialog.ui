@@ -91,7 +91,7 @@
         <cursorShape>IBeamCursor</cursorShape>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Copyright © 2015-2017 The EverGreenCoin Foundation&lt;br/&gt;Founded and operated by Steven Saxton (Steve@EverGreenCoin.org)&lt;br/&gt;All rights reserved.&lt;br/&gt;For support, please visit &lt;a href=&quot;https://EverGreenCoin.org/support/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#266c3f;&quot;&gt;https://EverGreenCoin.org/support/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Copyright © 2015-2018 The EverGreenCoin Foundation, Inc.&lt;br/&gt;Founded by Steven Saxton (Steven@EverGreenCoin.org)&lt;br/&gt;All rights reserved.&lt;br/&gt;For support, please visit &lt;a href=&quot;https://EverGreenCoin.org/support/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#266c3f;&quot;&gt;https://EverGreenCoin.org/support/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="textFormat">
         <enum>Qt::RichText</enum>

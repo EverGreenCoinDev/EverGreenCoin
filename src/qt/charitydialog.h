@@ -22,13 +22,17 @@ public:
     void setModel(WalletModel *model);
     void setAddress(const QString &address);
     void setAddress(const QString &address, QLineEdit *addrEdit);
+    void updateMessageColor();
 
 private slots:
     void on_enableButton_clicked();
     void on_disableButton_clicked();
     void on_addressBookButton_clicked();
     void on_changeAddressBookButton_clicked();
-
+    void on_comboBox_currentIndexChanged(int index);
+    void on_comboBox_activated(int index);
+    void loadCharities();
+    void on_btnRefreshCharities_clicked();
 
 private:
     Ui::StakeForCharityDialog *ui;

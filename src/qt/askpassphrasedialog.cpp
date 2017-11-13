@@ -33,20 +33,20 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget *parent) :
         case Encrypt: // Ask passphrase x2
             ui->passLabel1->hide();
             ui->passEdit1->hide();
-            ui->warningLabel->setText(tr("Enter the new passphrase to the wallet.<br/>Please use a passphrase of <b>10 or more random characters</b>, or <b>eight or more words</b>."));
-            setWindowTitle(tr("Encrypt wallet"));
+            ui->warningLabel->setText(tr("Enter the new password for your EverGreenCoin.<br/>Please use a password of <b>10 or more random characters</b>, or <b>eight or more words</b>."));
+            setWindowTitle(tr("Encrypt your EverGrenCoin"));
             break;
         case UnlockStaking:
             ui->stakingCheckBox->setChecked(true);
             ui->stakingCheckBox->show();
             // fallthru
         case Unlock: // Ask passphrase
-            ui->warningLabel->setText(tr("This operation needs your wallet passphrase to unlock the wallet."));
+            ui->warningLabel->setText(tr("This operation needs your password to unlock your EverGreenCoin."));
             ui->passLabel2->hide();
             ui->passEdit2->hide();
             ui->passLabel3->hide();
             ui->passEdit3->hide();
-            setWindowTitle(tr("Unlock wallet"));
+            setWindowTitle(tr("Unlock your EverGreenCoin"));
             break;
         case Decrypt:   // Ask passphrase
             ui->warningLabel->setText(tr("This operation needs your wallet passphrase to decrypt the wallet."));
@@ -56,9 +56,9 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget *parent) :
             ui->passEdit3->hide();
             setWindowTitle(tr("Decrypt wallet"));
             break;
-        case ChangePass: // Ask old passphrase + new passphrase x2
-            setWindowTitle(tr("Change passphrase"));
-            ui->warningLabel->setText(tr("Enter the old and new passphrase to the wallet."));
+        case ChangePass: // Ask old passphrase + new password x2
+            setWindowTitle(tr("Change your EverGreenCoin password"));
+            ui->warningLabel->setText(tr("Enter the old and new password for your EverGreenCoin."));
             break;
     }
 
@@ -104,8 +104,8 @@ void AskPassphraseDialog::accept()
             // Cannot encrypt with empty passphrase
             break;
         }
-        QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm wallet encryption"),
-                 tr("Warning: If you encrypt your wallet and lose your passphrase, you will <b>LOSE ALL OF YOUR COINS</b>!") + "<br><br>" + tr("Are you sure you wish to encrypt your wallet?"),
+        QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm EverGreenCoin encryption"),
+                 tr("Warning: If you encrypt your EverGreenCoin and lose your password, you will <b>LOSE ALL OF YOUR EVERGREENCOIN</b>!") + "<br><br>" + tr("Are you sure you wish to encrypt your EverGreenCoin?"),
                  QMessageBox::Yes|QMessageBox::Cancel,
                  QMessageBox::Cancel);
         if(retval == QMessageBox::Yes)
@@ -114,28 +114,28 @@ void AskPassphraseDialog::accept()
             {
                 if(model->setWalletEncrypted(true, newpass1))
                 {
-                    QMessageBox::warning(this, tr("Wallet encrypted"),
+                    QMessageBox::warning(this, tr("EverGreenCoin encrypted"),
                                          "<qt>" + 
                                          tr("EverGreenCoin will close now to finish the encryption process. "
-                                         "Remember that encrypting your wallet cannot fully protect "
+                                         "Remember that encrypting your EverGreenCoin cannot fully protect "
                                          "your coins from being stolen by malware infecting your computer.") + 
                                          "<br><br><b>" + 
-                                         tr("IMPORTANT: Any previous backups you have made of your wallet file "
-                                         "should be replaced with the newly generated, encrypted wallet file. ") + 
+                                         tr("IMPORTANT: Any previous backups you have made of your wallet.dat file "
+                                         "should be replaced with the newly generated, encrypted wallet.dat file. ") +
                                          "</b></qt>");
                     QApplication::quit();
                 }
                 else
                 {
-                    QMessageBox::critical(this, tr("Wallet encryption failed"),
-                                         tr("Wallet encryption failed due to an internal error. Your wallet was not encrypted."));
+                    QMessageBox::critical(this, tr("EverGreenCoin encryption failed"),
+                                         tr("EverGreenCoin encryption failed due to an internal error. Your wallet.dat was not encrypted."));
                 }
                 QDialog::accept(); // Success
             }
             else
             {
-                QMessageBox::critical(this, tr("Wallet encryption failed"),
-                                     tr("The supplied passphrases do not match."));
+                QMessageBox::critical(this, tr("EverGreenCoin encryption failed"),
+                                     tr("The supplied passwords do not match."));
             }
         }
         else
@@ -147,8 +147,8 @@ void AskPassphraseDialog::accept()
     case Unlock:
         if(!model->setWalletLocked(false, oldpass))
         {
-            QMessageBox::critical(this, tr("Wallet unlock failed"),
-                                  tr("The passphrase entered for the wallet decryption was incorrect."));
+            QMessageBox::critical(this, tr("EverGreenCoin unlock failed"),
+                                  tr("The password entered for your EverGreenCoin decryption was incorrect."));
         }
         else
         {
@@ -159,8 +159,8 @@ void AskPassphraseDialog::accept()
     case Decrypt:
         if(!model->setWalletEncrypted(false, oldpass))
         {
-            QMessageBox::critical(this, tr("Wallet decryption failed"),
-                                  tr("The passphrase entered for the wallet decryption was incorrect."));
+            QMessageBox::critical(this, tr("EverGreenCoin decryption failed"),
+                                  tr("The password entered for your EverGreenCoin decryption was incorrect."));
         }
         else
         {
@@ -172,20 +172,20 @@ void AskPassphraseDialog::accept()
         {
             if(model->changePassphrase(oldpass, newpass1))
             {
-                QMessageBox::information(this, tr("Wallet encrypted"),
-                                     tr("Wallet passphrase was successfully changed."));
+                QMessageBox::information(this, tr("EverGreenCoin encrypted"),
+                                     tr("EverGreenCoin password was successfully changed."));
                 QDialog::accept(); // Success
             }
             else
             {
-                QMessageBox::critical(this, tr("Wallet encryption failed"),
-                                     tr("The passphrase entered for the wallet decryption was incorrect."));
+                QMessageBox::critical(this, tr("EverGreenCoin encryption failed"),
+                                     tr("The password entered for your EverGreenCoin decryption was incorrect."));
             }
         }
         else
         {
-            QMessageBox::critical(this, tr("Wallet encryption failed"),
-                                 tr("The supplied passphrases do not match."));
+            QMessageBox::critical(this, tr("EverGreenCoin encryption failed"),
+                                 tr("The supplied passwords do not match."));
         }
         break;
     }
@@ -205,7 +205,7 @@ void AskPassphraseDialog::textChanged()
     case Decrypt:
         acceptable = !ui->passEdit1->text().isEmpty();
         break;
-    case ChangePass: // Old passphrase x1, new passphrase x2
+    case ChangePass: // Old passphrase x1, new password x2
         acceptable = !ui->passEdit1->text().isEmpty() && !ui->passEdit2->text().isEmpty() && !ui->passEdit3->text().isEmpty();
         break;
     }

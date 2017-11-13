@@ -159,13 +159,13 @@ void OverviewPage::unlockWallet()
         dlg.setModel(model);
         if(dlg.exec() == QDialog::Accepted)
         {
-            ui->unlockWalletButton->setText(QString("Lock Software"));
+            ui->unlockWalletButton->setText(QString("Lock your EverGreenCoin"));
         }
     }
     else
     {
         model->setWalletLocked(true);
-        ui->unlockWalletButton->setText(QString("Unlock Software"));
+        ui->unlockWalletButton->setText(QString("Unlock your EverGreenCoin"));
     }
 }
 
@@ -192,18 +192,18 @@ void OverviewPage::setModel(WalletModel *model)
 
         connect(model->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(updateDisplayUnit()));
 
-        // Unlock wallet button
+        // Unlock EverGreenCoin button
         WalletModel::EncryptionStatus status = model->getEncryptionStatus();
         if(status == WalletModel::Unencrypted)
         {
             ui->unlockWalletButton->setDisabled(true);
-            ui->unlockWalletButton->setText(QString("Not encrypted"));
-            ui->unlockWalletButton->setToolTip(QString("Click 'Settings' then 'Encrypt Software' in the menu bar to encrypt"));
+            ui->unlockWalletButton->setText(QString("EverGreenCoin not encrypted"));
+            ui->unlockWalletButton->setToolTip(QString("Click 'Settings' then 'Encrypt your EverGreenCoin' in the menu bar to encrypt"));
         }
 
         else
         {
-            ui->unlockWalletButton->setText(QString("Unlock Software"));
+            ui->unlockWalletButton->setText(QString("Unlock your EverGreenCoin"));
         }
         connect(ui->unlockWalletButton, SIGNAL(clicked()), this, SLOT(unlockWallet()));
     }
@@ -230,4 +230,11 @@ void OverviewPage::showOutOfSyncWarning(bool fShow)
 {
     ui->labelWalletStatus->setVisible(fShow);
     ui->labelTransactionsStatus->setVisible(fShow);
+}
+
+void OverviewPage::updateButton()
+{
+   WalletModel::EncryptionStatus status = model->getEncryptionStatus();
+   if (status == WalletModel::Locked) ui->unlockWalletButton->setText(QString("Unlock your EverGreenCoin"));
+   else ui->unlockWalletButton->setText(QString("Lock your EverGreenCoin"));
 }

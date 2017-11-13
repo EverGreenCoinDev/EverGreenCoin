@@ -325,20 +325,20 @@ void BitcoinGUI::createActions()
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setToolTip(tr("Modify configuration options for EverGreenCoin"));
+    optionsAction->setToolTip(tr("Modify configuration options for your EverGreenCoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/evergreencoin"), tr("&Show / Hide"), this);
-    encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt software..."), this);
-    encryptWalletAction->setToolTip(tr("Encrypt software"));
+    encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt your EverGreenCoin..."), this);
+    encryptWalletAction->setToolTip(tr("Encrypt your EverGreenCoin"));
     encryptWalletAction->setCheckable(true);
     backupWalletAction = new QAction(QIcon(":/icons/filesave"), tr("&Backup your EverGreenCoin..."), this);
     backupWalletAction->setToolTip(tr("Backup your EverGreenCoin to another location"));
-    changePassphraseAction = new QAction(QIcon(":/icons/key"), tr("&Change Passphrase..."), this);
-    changePassphraseAction->setToolTip(tr("Change the passphrase used for software encryption"));
-    unlockWalletAction = new QAction(QIcon(":/icons/lock_open"), tr("&Unlock software..."), this);
-    unlockWalletAction->setToolTip(tr("Unlock software"));
-    lockWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Lock software"), this);
-    lockWalletAction->setToolTip(tr("Lock software"));
+    changePassphraseAction = new QAction(QIcon(":/icons/key"), tr("&Change password..."), this);
+    changePassphraseAction->setToolTip(tr("Change the password used for your EverGreenCoin encryption"));
+    unlockWalletAction = new QAction(QIcon(":/icons/lock_open"), tr("&Unlock your EverGreenCoin..."), this);
+    unlockWalletAction->setToolTip(tr("Prompt for password to unlock your EverGreenCoin"));
+    lockWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Lock your EverGreenCoin."), this);
+    lockWalletAction->setToolTip(tr("Lock your EverGreenCoin"));
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
 
@@ -839,6 +839,17 @@ void BitcoinGUI::gotoSendCoinsPage()
     updateStakingIcon();
 }
 
+void BitcoinGUI::gotoCharityPage()
+{
+    charityAction->setChecked(true);
+    centralWidget->setCurrentWidget(stakeForCharityDialog);
+
+    exportAction->setEnabled(false);
+    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
+    updateStakingIcon();
+    stakeForCharityDialog->updateMessageColor();
+}
+
 void BitcoinGUI::gotoSignMessageTab(QString addr)
 {
     // call show() in showTab_SM()
@@ -969,7 +980,7 @@ void BitcoinGUI::unlockWallet()
 {
     if(!walletModel)
         return;
-    // Unlock wallet when requested by wallet model
+    // Unlock EverGreenCoin when requested by wallet model
     if(walletModel->getEncryptionStatus() == WalletModel::Locked)
     {
         AskPassphraseDialog::Mode mode = sender() == unlockWalletAction ?
@@ -978,6 +989,8 @@ void BitcoinGUI::unlockWallet()
         dlg.setModel(walletModel);
         dlg.exec();
     }
+    overviewPage->updateButton();
+    stakeForCharityDialog->updateMessageColor();
 }
 
 void BitcoinGUI::lockWallet()
@@ -986,6 +999,8 @@ void BitcoinGUI::lockWallet()
         return;
 
     walletModel->setWalletLocked(true);
+    overviewPage->updateButton();
+    stakeForCharityDialog->updateMessageColor();
 }
 
 void BitcoinGUI::showNormalIfMinimized(bool fToggleHidden)
@@ -1082,15 +1097,6 @@ void BitcoinGUI::charityClicked(QString addr)
 
     if(!addr.isEmpty())
         stakeForCharityDialog->setAddress(addr);
-
-    exportAction->setEnabled(false);
-    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
-}
-
-void BitcoinGUI::gotoCharityPage()
-{
-    charityAction->setChecked(true);
-    centralWidget->setCurrentWidget(stakeForCharityDialog);
 
     exportAction->setEnabled(false);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);

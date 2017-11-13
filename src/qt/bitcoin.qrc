@@ -43,8 +43,8 @@
         <file alias="staking_on">res/icons/staking_on.png</file>
         <file alias="evergreencoin">res/icons/evergreencoin.png</file>
         <file alias="evergreencoin_testnet">res/icons/evergreencoin_testnet.png</file>
-        <file alias="toolbar">res/icons/16x16.png</file>
-        <file alias="toolbar_testnet">res/icons/16x16_testnet.png</file>
+        <file alias="toolbar">res/icons/evergreencoin.png</file>
+        <file alias="toolbar_testnet">res/icons/evergreencoin_testnet.png</file>
         <file alias="statistics">res/icons/statistics.png</file>
         <file alias="block">res/icons/block.png</file>
         <file alias="charity_on">res/icons/charity_on.png</file>
@@ -54,7 +54,6 @@
         <file alias="splash">res/images/splash.png</file>
         <file alias="Wallet_Logo">res/images/wallet_logo.png</file>
         <file alias="Small_logo">res/images/evergreen60x60.png</file>
-        <file alias="tor_logo">res/images/tor.png</file>
         <file alias="about">res/images/about.png</file>
         <file alias="splash_testnet">res/images/splash_testnet.png</file>
     </qresource>

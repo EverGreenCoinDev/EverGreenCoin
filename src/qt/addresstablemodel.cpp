@@ -348,7 +348,7 @@ QString AddressTableModel::addRow(const QString &type, const QString &label, con
         WalletModel::UnlockContext ctx(walletModel->requestUnlock());
         if(!ctx.isValid())
         {
-            // Unlock wallet failed or was cancelled
+            // Unlock EverGreenCoin failed or was cancelled
             editStatus = WALLET_UNLOCK_FAILURE;
             return QString();
         }
