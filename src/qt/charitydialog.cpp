@@ -8,6 +8,9 @@
 #include <QFile>
 #include <QtNetwork>
 #include <QJsonDocument>
+#include <QNetworkRequest>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 
 StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
     QWidget(parent),
@@ -30,6 +33,7 @@ StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
     ui->label_2->setFocus();
 }
 QString charitiesAddress[100];
+QString charitiesAsk[100];
 QString charitiesThanks[100];
 
 StakeForCharityDialog::~StakeForCharityDialog()
@@ -102,7 +106,12 @@ void StakeForCharityDialog::setModel(WalletModel *model)
 void StakeForCharityDialog::loadCharities()
 {   
     if (fTestNet) qDebug() << "in loadCharities \n";
-    QNetworkRequest charitiesRequest(QUrl(QString("https://evergreencoin.org/charities/charities.json")));
+    QSslConfiguration config = QSslConfiguration::defaultConfiguration();
+    config.setProtocol(QSsl::TlsV1_2);
+    QNetworkRequest charitiesRequest;
+    charitiesRequest.setSslConfiguration(config);
+    charitiesRequest.setUrl(QUrl(QString("https://evergreencoin.org/charities/charities.json")));
+    charitiesRequest.setHeader(QNetworkRequest::ServerHeader, "application/json");
     QEventLoop eventLoop;
     QNetworkAccessManager nam;
     QObject::connect(&nam, SIGNAL(finished(QNetworkReply*)), &eventLoop, SLOT(quit()));
@@ -130,6 +139,7 @@ void StakeForCharityDialog::loadCharities()
         if (fTestNet) qDebug() << json_obj["EGCaddress"].toString();
         charitiesAddress[i] = json_obj["EGCaddress"].toString();
         charitiesThanks[i] = json_obj["thanks"].toString();
+        charitiesAsk[i] = json_obj["ask"].toString();
         if (fTestNet) qDebug() << json_obj["thanks"].toString();
         i++;
       }
@@ -326,7 +336,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setStyleSheet("border-color: #cacaca;");
         if (!fTestNet) ui->charityAddressEdit->setText(QString(FOUNDATION));
         else  ui->charityAddressEdit->setText(QString(FOUNDATION_TEST));
-        ui->message->setText("Thank you for donating to the <a href='https://evergreencoin.org/EGCFoundation/'>EverGreenCoin Foundation, Inc.</a> <br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
+        ui->message->setText("Your EGC contribution will be used by the <a href='https://evergreencoin.org/EGCFoundation/'>EverGreenCoin Foundation, Inc.</a> <br />under the guidance of the board and community. <br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
         ui->addressBookButton->setDisabled(true);
         ui->charityAddressEdit->setEnabled(false);
         ui->charityAddressEdit->setReadOnly(true);
@@ -339,7 +349,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setReadOnly(true);
         ui->addressBookButton->setDisabled(true);
         ui->charityAddressEdit->setStyleSheet("border-color: #cacaca;");
-        ui->message->setText(charitiesThanks[index-1] + "<br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
+        ui->message->setText(charitiesAsk[index-1] + "<br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
     }
 }
 
