@@ -8,6 +8,9 @@
 #include <QFile>
 #include <QtNetwork>
 #include <QJsonDocument>
+#include <QNetworkRequest>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 
 StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
     QWidget(parent),
@@ -102,7 +105,12 @@ void StakeForCharityDialog::setModel(WalletModel *model)
 void StakeForCharityDialog::loadCharities()
 {   
     if (fTestNet) qDebug() << "in loadCharities \n";
-    QNetworkRequest charitiesRequest(QUrl(QString("https://evergreencoin.org/charities/charities.json")));
+    QSslConfiguration config = QSslConfiguration::defaultConfiguration();
+    config.setProtocol(QSsl::TlsV1_2);
+    QNetworkRequest charitiesRequest;
+    charitiesRequest.setSslConfiguration(config);
+    charitiesRequest.setUrl(QUrl(QString("https://evergreencoin.org/charities/charities.json")));
+    charitiesRequest.setHeader(QNetworkRequest::ServerHeader, "application/json");
     QEventLoop eventLoop;
     QNetworkAccessManager nam;
     QObject::connect(&nam, SIGNAL(finished(QNetworkReply*)), &eventLoop, SLOT(quit()));
