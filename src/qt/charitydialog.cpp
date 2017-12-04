@@ -7,10 +7,13 @@
 #include <QLineEdit>
 #include <QFile>
 #include <QtNetwork>
-#include <QJsonDocument>
-#include <QNetworkRequest>
 #include <QNetworkAccessManager>
+#include <QNetworkRequest>
 #include <QNetworkReply>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QJsonObject>
+#include <QJsonValue>
 
 StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
     QWidget(parent),
@@ -112,11 +115,15 @@ void StakeForCharityDialog::loadCharities()
     charitiesRequest.setSslConfiguration(config);
     charitiesRequest.setUrl(QUrl(QString("https://evergreencoin.org/charities/charities.json")));
     charitiesRequest.setHeader(QNetworkRequest::ServerHeader, "application/json");
-    QEventLoop eventLoop;
+    // QEventLoop eventLoop;
     QNetworkAccessManager nam;
-    QObject::connect(&nam, SIGNAL(finished(QNetworkReply*)), &eventLoop, SLOT(quit()));
+    // QObject::connect(&nam, SIGNAL(finished(QNetworkReply*)), &eventLoop, SLOT(quit()));
     QNetworkReply *reply = nam.get(charitiesRequest);
-    eventLoop.exec();
+    // eventLoop.exec();
+    while(!reply->isFinished())
+    {
+        qApp->processEvents();
+    }
 
     if (reply->error() == QNetworkReply::NoError) {
       QString strReply = (QString)reply->readAll();
@@ -146,7 +153,7 @@ void StakeForCharityDialog::loadCharities()
     } else {
         qDebug() << "Failure" <<reply->errorString();
     }
-    delete reply;
+    reply->deleteLater();
 }
 
 void StakeForCharityDialog::setAddress(const QString &address)
