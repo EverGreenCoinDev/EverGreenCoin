@@ -145,9 +145,9 @@ void StakeForCharityDialog::loadCharities()
         ui->comboBox->addItem(QString(json_obj["charity"].toString()));
         if (fTestNet) qDebug() << json_obj["EGCaddress"].toString();
         charitiesAddress[i] = json_obj["EGCaddress"].toString();
-        charitiesThanks[i] = json_obj["thanks"].toString();
+        charitiesThanks[i] = json_obj["thanksOnly"].toString();
         charitiesAsk[i] = json_obj["ask"].toString();
-        if (fTestNet) qDebug() << json_obj["thanks"].toString();
+        if (fTestNet) qDebug() << json_obj["thanksOnly"].toString();
         i++;
       }
     } else {
