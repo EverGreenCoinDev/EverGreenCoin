@@ -3,7 +3,7 @@
 ###############################################################################################
 TEMPLATE = app
 TARGET = EverGreenCoin-Qt
-VERSION = 1.7.2.1
+VERSION = 1.7.3.1
 INCLUDEPATH += src src/json \
     src/qt \
     src/sph
