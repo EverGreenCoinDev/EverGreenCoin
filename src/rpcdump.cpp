@@ -105,6 +105,63 @@ public:
     }
 };
 
+//#####Inicio de codigo agregado para importaddress
+void ImportScript(const CScript& script, const std::string& strLabel, const CKeyID& AddID)
+{
+    if (IsMine(*pwalletMain,script)) {
+    throw JSONRPCError(RPC_WALLET_ERROR, "The wallet already contains this address or script");
+    }
+
+    int64_t nCreateTime = 1;
+    pwalletMain->MarkDirty();
+    if (!pwalletMain->AddWatchOnly(script, 1 /* nCreateTime */, AddID)) {
+        throw JSONRPCError(RPC_WALLET_ERROR, "Error adding address to wallet");
+    }
+    pwalletMain->SetAddressBookName(AddID, strLabel);
+}
+
+Value importaddress(const Array& params, bool fHelp)
+{
+    if (fHelp || params.size() < 1 || params.size() > 4)
+        throw std::runtime_error(
+        "importaddress <address> [label] [rescan default true]\n"
+        "\nAdds a script (in hex) or address that can be WATCHED as if it were in your wallet but cannot be used to spend.\n"
+        "\nArguments:\n"
+        "1. \"script\" (string, required) The hex-encoded script (or address)\n"
+        "2. \"label\" (string, optional, default=\"\") An optional label\n"
+        "3. rescan (boolean, optional, default=true) Rescan the wallet for transactions\n"
+        "\nNote: This call can take minutes to complete if rescan is true.\n"
+        "If you have the full public key, you should call importpubkey instead of this.\n"
+        "\nNote: If you import a non-standard raw script in hex form, outputs sending to it will be treated\n"
+        "as change, and not show up in many RPCs."
+        );
+    std::string strLabel = "";
+    if (params.size() > 1)
+    strLabel = params[1].get_str();
+    // Whether to perform rescan after import
+    bool fRescan = true;
+    if (params.size() > 2)
+        fRescan = params[2].get_bool();
+    LOCK2(cs_main, pwalletMain->cs_wallet);
+    CBitcoinAddress coinAdd;
+    coinAdd.SetString(params[0].get_str());
+    CKeyID dest;
+    if (coinAdd.IsValid() && coinAdd.GetKeyID(dest)) {
+        CScript scriptAdd;
+        scriptAdd.SetDestination(dest);
+        ImportScript(scriptAdd, strLabel, dest);
+    } else {
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid EverGreenCoin address");
+    }
+    if (fRescan)
+    {
+        pwalletMain->ScanForWalletTransactions(pindexGenesisBlock, true);
+        pwalletMain->ReacceptWalletTransactions();
+    }
+    return Value::null;
+}
+//####Fin de codigo agregado para importaddress
+
 Value importprivkey(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)

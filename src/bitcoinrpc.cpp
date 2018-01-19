@@ -300,13 +300,14 @@ static const CRPCCommand vRPCCommands[] =
     { "signrawtransaction",     &signrawtransaction,     false,  false },
     { "sendrawtransaction",     &sendrawtransaction,     false,  false },
     { "getcheckpoint",          &getcheckpoint,          true,   false },
-    { "reservebalance",         &reservebalance,         false,  true},
-    { "checkwallet",            &checkwallet,            false,  true},
-    { "repairwallet",           &repairwallet,           false,  true},
-    { "resendtx",               &resendtx,               false,  true},
-    { "makekeypair",            &makekeypair,            false,  true},
-    { "sendalert",              &sendalert,              false,  false},
+    { "reservebalance",         &reservebalance,         false,  true  },
+    { "checkwallet",            &checkwallet,            false,  true  },
+    { "repairwallet",           &repairwallet,           false,  true  },
+    { "resendtx",               &resendtx,               false,  true  },
+    { "makekeypair",            &makekeypair,            false,  true  },
+    { "sendalert",              &sendalert,              false,  false },
     { "stakeforcharity",        &stakeforcharity,        false,  false },
+    { "importaddress",          &importaddress,          false,  false },
 };
 
 CRPCTable::CRPCTable()
@@ -1212,13 +1213,11 @@ Array RPCConvertValues(const std::string &strMethod, const std::vector<std::stri
     if (strMethod == "walletpassphrase"       && n > 2) ConvertTo<bool>(params[2]);
     if (strMethod == "getblocktemplate"       && n > 0) ConvertTo<Object>(params[0]);
     if (strMethod == "listsinceblock"         && n > 1) ConvertTo<boost::int64_t>(params[1]);
-
     if (strMethod == "sendalert"              && n > 2) ConvertTo<boost::int64_t>(params[2]);
     if (strMethod == "sendalert"              && n > 3) ConvertTo<boost::int64_t>(params[3]);
     if (strMethod == "sendalert"              && n > 4) ConvertTo<boost::int64_t>(params[4]);
     if (strMethod == "sendalert"              && n > 5) ConvertTo<boost::int64_t>(params[5]);
     if (strMethod == "sendalert"              && n > 6) ConvertTo<boost::int64_t>(params[6]);
-
     if (strMethod == "sendmany"               && n > 1) ConvertTo<Object>(params[1]);
     if (strMethod == "sendmany"               && n > 2) ConvertTo<boost::int64_t>(params[2]);
     if (strMethod == "reservebalance"         && n > 0) ConvertTo<bool>(params[0]);
@@ -1237,6 +1236,7 @@ Array RPCConvertValues(const std::string &strMethod, const std::vector<std::stri
     if (strMethod == "stakeforcharity"        && n > 1) ConvertTo<int>(params[1]);
     if (strMethod == "stakeforcharity"        && n > 3) ConvertTo<double>(params[3]);
     if (strMethod == "stakeforcharity"        && n > 4) ConvertTo<double>(params[4]);
+    if (strMethod == "importaddress"          && n > 2) ConvertTo<bool>(params[2]);
 
     return params;
 }

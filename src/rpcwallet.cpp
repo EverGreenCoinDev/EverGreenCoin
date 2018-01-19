@@ -229,7 +229,7 @@ Value stakeforcharity(const Array &params, bool fHelp)
 {
     if (fHelp || params.size() < 2 || params.size() > 5)
         throw runtime_error(
-            "stakeforcharity <EverGreenCoin Address> <percent> [Change Address] [min amount] [max amount]\n"
+            "stakeforcharity <evergreencoinaddress> <percent> [Change Address] [min amount] [max amount]\n"
             "Gives a percentage of a found stake to a different address, after stake matures\n"
             "Percent is a whole number 1 to 100.\n"
             "Change Address, Min and Max Amount are optional\n"

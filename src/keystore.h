@@ -27,12 +27,18 @@ public:
     virtual bool HaveKey(const CKeyID &address) const =0;
     virtual bool GetKey(const CKeyID &address, CKey& keyOut) const =0;
     virtual void GetKeys(std::set<CKeyID> &setAddress) const =0;
-    virtual bool GetPubKey(const CKeyID &address, CPubKey& vchPubKeyOut) const;
+    virtual bool GetPubKey(const CKeyID &address, CPubKey& vchPubKeyOut) const =0;
 
     // Support for BIP 0013 : see https://en.bitcoin.it/wiki/BIP_0013
     virtual bool AddCScript(const CScript& redeemScript) =0;
     virtual bool HaveCScript(const CScriptID &hash) const =0;
     virtual bool GetCScript(const CScriptID &hash, CScript& redeemScriptOut) const =0;
+
+    // Support for Watch-only addresses
+    virtual bool AddWatchOnly(const CScript &dest, const CKeyID &keyAdd) =0;
+    virtual bool RemoveWatchOnly(const CScript &dest) =0;
+    virtual bool HaveWatchOnly(const CScript &dest) const =0;
+    virtual bool HaveWatchOnly() const =0;
 
     virtual bool GetSecret(const CKeyID &address, CSecret& vchSecret, bool &fCompressed) const
     {
@@ -46,6 +52,9 @@ public:
 
 typedef std::map<CKeyID, std::pair<CSecret, bool> > KeyMap;
 typedef std::map<CScriptID, CScript > ScriptMap;
+typedef std::map<CKeyID, CPubKey> WatchKeyMap;
+typedef std::set<CKeyID> WatchOnlySet;
+typedef std::set<CScriptID> WatchOnlyScriptSet;
 
 /** Basic key store, that keeps keys in an address->secret map */
 class CBasicKeyStore : public CKeyStore
@@ -53,15 +62,19 @@ class CBasicKeyStore : public CKeyStore
 protected:
     KeyMap mapKeys;
     ScriptMap mapScripts;
+    WatchKeyMap mapWatchKeys;
+    WatchOnlySet setWatchOnly;
+    WatchOnlyScriptSet setScriptWatchOnly;
 
 public:
     bool AddKey(const CKey& key);
+    bool GetPubKey(const CKeyID &address, CPubKey& vchPubKeyOut) const override;
     bool HaveKey(const CKeyID &address) const
     {
         bool result;
         {
             LOCK(cs_KeyStore);
-            result = (mapKeys.count(address) > 0);
+            result = (mapKeys.count(address) > 0)|| (setWatchOnly.count(address) > 0);
         }
         return result;
     }
@@ -95,6 +108,10 @@ public:
     virtual bool AddCScript(const CScript& redeemScript);
     virtual bool HaveCScript(const CScriptID &hash) const;
     virtual bool GetCScript(const CScriptID &hash, CScript& redeemScriptOut) const;
+    bool AddWatchOnly(const CScript &dest, const CKeyID &keyAdd) override;
+    bool RemoveWatchOnly(const CScript &dest) override;
+    bool HaveWatchOnly(const CScript &dest) const override;
+    bool HaveWatchOnly() const override;
 };
 
 typedef std::map<CKeyID, std::pair<CPubKey, std::vector<unsigned char> > > CryptedKeyMap;
