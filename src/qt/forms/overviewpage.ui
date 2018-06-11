@@ -599,7 +599,7 @@
              <cursorShape>IBeamCursor</cursorShape>
             </property>
             <property name="toolTip">
-             <string>Total of EverGreenCoin that are presently locked earning interest and do not yet count toward your current balance</string>
+             <string>Total of EverGreenCoin that are presently locked earning network rewards and do not yet count toward your current balance</string>
             </property>
             <property name="text">
              <string notr="true">0 EGC</string>
