@@ -1064,29 +1064,29 @@ void BitcoinGUI::updateStakingIcon()
         if (fGlobalStakeForCharity == true)
         {
             labelCharityIcon->setPixmap(QIcon(":/icons/charity_on").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-            labelCharityIcon->setToolTip(tr("Thank you for donating your interest installments to charity"));
+            labelCharityIcon->setToolTip(tr("Thank you for donating your network rewards to charity"));
         }
         else
         {
             labelCharityIcon->setPixmap(QIcon(":/icons/charity_off").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-            labelCharityIcon->setToolTip(tr("You are not currently donating your interest installments to a charity"));
+            labelCharityIcon->setToolTip(tr("You are not currently donating your network rewards to a charity"));
         }
     }
     else
     {
         labelCharityIcon->setPixmap(QIcon(":/icons/charity_off").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-        labelCharityIcon->setToolTip(tr("You are not currently donating your interest installments to a charity"));
+        labelCharityIcon->setToolTip(tr("You are not currently donating your network rewards to a charity"));
         labelStakingIcon->setPixmap(QIcon(":/icons/staking_off").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
         if (pwalletMain && pwalletMain->IsLocked())
-            labelStakingIcon->setToolTip(tr("Not earning interest because software is locked"));
+            labelStakingIcon->setToolTip(tr("Not earning network rewards because software is locked"));
         else if (vNodes.empty())
-            labelStakingIcon->setToolTip(tr("Not earning interest because software is offline"));
+            labelStakingIcon->setToolTip(tr("Not earning network rewards because software is offline"));
         else if (IsInitialBlockDownload())
-            labelStakingIcon->setToolTip(tr("Not earning interest because software is syncing"));
+            labelStakingIcon->setToolTip(tr("Not earning network rewards because software is syncing"));
         else if (!nWeight)
-            labelStakingIcon->setToolTip(tr("Not earning interest because you don't have mature EverGreenCoin"));
+            labelStakingIcon->setToolTip(tr("Not earning network rewards because you don't have mature EverGreenCoin"));
         else
-            labelStakingIcon->setToolTip(tr("Not earning interest"));
+            labelStakingIcon->setToolTip(tr("Not earning network rewards"));
     }
 }
 
