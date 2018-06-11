@@ -200,7 +200,7 @@
           <item row="3" column="0">
            <widget class="QLabel" name="label_7">
             <property name="toolTip">
-             <string>Account address to send percentage of interest installments to</string>
+             <string>Account address to send percentage of network rewards to</string>
             </property>
             <property name="text">
              <string>                                    Charity Select:</string>
@@ -228,7 +228,7 @@
           <item row="4" column="0">
            <widget class="QLabel" name="label_5">
             <property name="toolTip">
-             <string>Account address to send percentage of interest installments to</string>
+             <string>Account address to send percentage of network rewards to</string>
             </property>
             <property name="text">
              <string>                                    Charity Address:</string>
@@ -250,7 +250,7 @@
              </size>
             </property>
             <property name="toolTip">
-             <string>Account address to send percentage of interest installments to or select from the drop-down menu above</string>
+             <string>Account address to send percentage of network rewards to or select from the drop-down menu above</string>
             </property>
             <property name="maxLength">
              <number>34</number>
