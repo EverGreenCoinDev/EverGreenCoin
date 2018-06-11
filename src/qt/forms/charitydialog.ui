@@ -110,7 +110,7 @@
           <item row="1" column="0">
            <widget class="QLabel" name="label">
             <property name="toolTip">
-             <string>Percentage of your interest installments (stake rewards) to send</string>
+             <string>Percentage of your network rewards (stake rewards) to send</string>
             </property>
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Percentage to give:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
