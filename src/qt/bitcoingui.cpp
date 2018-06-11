@@ -1060,7 +1060,7 @@ void BitcoinGUI::updateStakingIcon()
         }
 
         labelStakingIcon->setPixmap(QIcon(":/icons/staking_on").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-        labelStakingIcon->setToolTip(tr("Earning network rewards<br>Your weight is %1<br>Network weight is %2<br>Estimated time to earn your next interest installment is %3").arg(nWeight).arg(nNetworkWeight).arg(text));
+        labelStakingIcon->setToolTip(tr("Earning network rewards<br>Your weight is %1<br>Network weight is %2<br>Estimated time to earn your next network reward is %3").arg(nWeight).arg(nNetworkWeight).arg(text));
         if (fGlobalStakeForCharity == true)
         {
             labelCharityIcon->setPixmap(QIcon(":/icons/charity_on").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
