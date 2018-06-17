@@ -38,6 +38,10 @@ StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
 QString charitiesAddress[100];
 QString charitiesAsk[100];
 QString charitiesThanks[100];
+QString charitiesImage[100];
+//QString charitiesImageURL[100];
+//QString charitiesEGCImage[100];
+//QString charitiesEGCImageURL[100];
 
 StakeForCharityDialog::~StakeForCharityDialog()
 {
@@ -115,6 +119,7 @@ void StakeForCharityDialog::loadCharities()
     charitiesRequest.setSslConfiguration(config);
     charitiesRequest.setUrl(QUrl(QString("https://evergreencoin.org/charities/charities.json")));
     charitiesRequest.setHeader(QNetworkRequest::ServerHeader, "application/json");
+    QNetworkRequest::AlwaysNetwork;
     // QEventLoop eventLoop;
     QNetworkAccessManager nam;
     // QObject::connect(&nam, SIGNAL(finished(QNetworkReply*)), &eventLoop, SLOT(quit()));
@@ -148,6 +153,12 @@ void StakeForCharityDialog::loadCharities()
         charitiesThanks[i] = json_obj["thanksOnly"].toString();
         charitiesAsk[i] = json_obj["ask"].toString();
         if (fTestNet) qDebug() << json_obj["thanksOnly"].toString();
+
+        charitiesImage[i] = json_obj["img"].toString();
+        //charitiesImageURL[i] = json_obj["url"].toString();
+        //charitiesEGCImage[i] = json_obj["EGCimg"].toString();
+        //charitiesEGCImageURL[i] = json_obj["EGCurl"].toString();
+
         i++;
       }
     } else {
@@ -326,7 +337,10 @@ void StakeForCharityDialog::on_comboBox_activated(int index)
 
 void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
 {
-    if (index==0)
+    QPixmap IMGpixmap;
+    QPixmap EGCIMGpixmap;
+    EGCIMGpixmap.load(":/images/Wallet_Logo");
+    if (index==0)     // manual
     {
         ui->charityAddressEdit->clear();
         ui->charityAddressEdit->setEnabled(true);
@@ -335,28 +349,54 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setStyleSheet("border-color: #00B300;");
         ui->message->setText("Please enter the EverGreenCoin address <br />or select from the drop-down <br />and then click 'Enable'");
         ui->charityAddressEdit->setFocus();
+        ui->label_IMG->clear();
     }
-    else if (index==1)
+    else if (index==1) // foundation 
     {
         ui->charityAddressEdit->clear();
         ui->charityAddressEdit->setDisabled(true);
         ui->charityAddressEdit->setStyleSheet("border-color: #cacaca;");
         if (!fTestNet) ui->charityAddressEdit->setText(QString(FOUNDATION));
         else  ui->charityAddressEdit->setText(QString(FOUNDATION_TEST));
-        ui->message->setText("Your EGC contribution will be used by the <a href='https://evergreencoin.org/EGCFoundation/'>EverGreenCoin Foundation, Inc.</a> <br />under the guidance of the board and community. <br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
+        ui->message->setText("Your EGC donation will be used by the <a href='https://evergreencoin.org/EGCFoundation/'>EverGreenCoin Foundation, Inc.</a> <br />under the guidance of the board and community. <br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
         ui->addressBookButton->setDisabled(true);
         ui->charityAddressEdit->setEnabled(false);
         ui->charityAddressEdit->setReadOnly(true);
+        ui->label_IMG->setPixmap(EGCIMGpixmap);
     }
-    else if (index > 1)
+    else if (index > 1) // other
     {
         ui->charityAddressEdit->clear();
         ui->charityAddressEdit->setText(charitiesAddress[index-1]);
-        ui->charityAddressEdit->setEnabled(false);
+        ui->charityAddressEdit->setEnabled(true);
         ui->charityAddressEdit->setReadOnly(true);
-        ui->addressBookButton->setDisabled(true);
+        ui->addressBookButton->setDisabled(false);
         ui->charityAddressEdit->setStyleSheet("border-color: #cacaca;");
         ui->message->setText(charitiesAsk[index-1] + "<br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
+
+        if (ui->btnRefreshCharities->isEnabled())  // ensure images do not load during refresh. Clearing the combo (part of refresh) changes the index, calling this function. This prevents unnessicarily loading the images during refresh.
+        {   // load the charity's image
+            QSslConfiguration config = QSslConfiguration::defaultConfiguration();
+            config.setProtocol(QSsl::TlsV1_2);
+            QNetworkRequest imgRequest;
+            imgRequest.setSslConfiguration(config);
+            imgRequest.setUrl(QUrl(QString(charitiesImage[index-1])));
+            QNetworkRequest::AlwaysNetwork;
+            QNetworkAccessManager nam2;
+            QNetworkReply *reply = nam2.get(imgRequest);
+            while(!reply->isFinished())
+            {
+                qApp->processEvents();
+            }
+
+            if (reply->error() == QNetworkReply::NoError)
+            {
+                QByteArray imgData =  reply->readAll();
+                IMGpixmap.loadFromData(imgData);
+                ui->label_IMG->setPixmap(IMGpixmap);
+            }
+        }
+        //ui->label_IMG->setText("<a href='" + (QString)charitiesImageURL[index-1] +"'><img src='" + (QString)charitiesImage[index-1] + "' /></a>"+ (QString)charitiesImage[index-1]);
     }
 }
 
