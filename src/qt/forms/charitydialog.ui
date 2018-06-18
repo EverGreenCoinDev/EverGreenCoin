@@ -155,7 +155,7 @@
           <item row="3" column="1">
            <widget class="QComboBox" name="comboBox">
             <property name="toolTip">
-             <string>Select charity  
+             <string>Select charity.  
 </string>
             </property>
             <item>

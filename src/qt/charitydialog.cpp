@@ -58,7 +58,6 @@ void StakeForCharityDialog::setModel(WalletModel *model)
     qint64 nMin;
     qint64 nMax;
     charitiesThanks[0]="Thank you for donating to the <a href='https://evergreencoin.org/EGCFoundation/'>EverGreenCoin Foundation, Inc.</a>";
-
     model->getStakeForCharity(nPer, strAddress, strChangeAddress, nMin, nMax);
 
     if (strAddress.IsValid() && nPer > 0 )
@@ -72,11 +71,10 @@ void StakeForCharityDialog::setModel(WalletModel *model)
         if (nMax > 0 && nMax != MAX_MONEY)
             ui->charityMaxEdit->setText(QString::number(nMax/COIN));
 
-
         if (strAddress.ToString().c_str() == QString(FOUNDATION) || strAddress.ToString().c_str() == QString(FOUNDATION_TEST) )
         {
             ui->message->setStyleSheet("QLabel { color: green; font-weight: 900; }");
-            ui->message->setText(tr("Thank you for giving to The EverGreenCoin Foundation \n\n"));
+            ui->message->setText(tr("Thank you for donating to The EverGreenCoin Foundation, Inc. \n\n"));
             ui->comboBox->setCurrentIndex(1);
         }
 
@@ -101,7 +99,6 @@ void StakeForCharityDialog::setModel(WalletModel *model)
             }
         }
 
-
         if (pwalletMain->IsLocked())
         {
             ui->message->setStyleSheet("QLabel { color: red; font-weight: 900; }");
@@ -120,11 +117,9 @@ void StakeForCharityDialog::loadCharities()
     charitiesRequest.setUrl(QUrl(QString("https://evergreencoin.org/charities/charities.json")));
     charitiesRequest.setHeader(QNetworkRequest::ServerHeader, "application/json");
     QNetworkRequest::AlwaysNetwork;
-    // QEventLoop eventLoop;
     QNetworkAccessManager nam;
-    // QObject::connect(&nam, SIGNAL(finished(QNetworkReply*)), &eventLoop, SLOT(quit()));
     QNetworkReply *reply = nam.get(charitiesRequest);
-    // eventLoop.exec();
+
     while(!reply->isFinished())
     {
         qApp->processEvents();
@@ -134,7 +129,7 @@ void StakeForCharityDialog::loadCharities()
       QString strReply = (QString)reply->readAll();
       int i;
       int n = ui->comboBox->count();
-      // clear current combo box entires, leaving the first 2, "manual" and "egc foundation"
+      // clear current combo box entires, leaving the first 2, "manual" and "EverGreenCoin Foundation"
       for (i=2; i < n; i++ ) {
           ui->comboBox->removeItem(2);
           if (fTestNet) qDebug() << "removed " << i+1 << " of " << n << "\n";
