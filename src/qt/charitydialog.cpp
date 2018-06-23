@@ -39,7 +39,7 @@ QString charitiesAddress[100];
 QString charitiesAsk[100];
 QString charitiesThanks[100];
 QString charitiesImage[100];
-//QString charitiesImageURL[100];
+QString charitiesImageURL[100];
 //QString charitiesEGCImage[100];
 //QString charitiesEGCImageURL[100];
 
@@ -150,7 +150,7 @@ void StakeForCharityDialog::loadCharities()
         if (fTestNet) qDebug() << json_obj["thanksOnly"].toString();
 
         charitiesImage[i] = json_obj["img"].toString();
-        //charitiesImageURL[i] = json_obj["url"].toString();
+        charitiesImageURL[i] = json_obj["url"].toString();
         //charitiesEGCImage[i] = json_obj["EGCimg"].toString();
         //charitiesEGCImageURL[i] = json_obj["EGCurl"].toString();
 
@@ -345,6 +345,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->message->setText("Please enter the EverGreenCoin address <br />or select from the drop-down <br />and then click 'Enable'");
         ui->charityAddressEdit->setFocus();
         ui->label_IMG->clear();
+        ui->label_HREF->clear();
     }
     else if (index==1) // foundation 
     {
@@ -358,6 +359,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setEnabled(false);
         ui->charityAddressEdit->setReadOnly(true);
         ui->label_IMG->setPixmap(EGCIMGpixmap);
+        ui->label_HREF->setText("<a href='https://evergreencoin.org/EGCFoundation/'>Learn more</a>");
     }
     else if (index > 1) // other
     {
@@ -391,7 +393,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
                 ui->label_IMG->setPixmap(IMGpixmap);
             }
         }
-        //ui->label_IMG->setText("<a href='" + (QString)charitiesImageURL[index-1] +"'><img src='" + (QString)charitiesImage[index-1] + "' /></a>"+ (QString)charitiesImage[index-1]);
+        ui->label_HREF->setText("<a href='" + (QString)charitiesImageURL[index-1] +"'>Learn more</a>");
     }
 }
 
