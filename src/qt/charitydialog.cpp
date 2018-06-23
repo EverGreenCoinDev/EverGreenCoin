@@ -392,8 +392,9 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
                 IMGpixmap.loadFromData(imgData);
                 ui->label_IMG->setPixmap(IMGpixmap);
             }
+            // set charity's link
+            ui->label_HREF->setText("<a href='" + (QString)charitiesImageURL[index-1] +"'>Learn more</a>");
         }
-        ui->label_HREF->setText("<a href='" + (QString)charitiesImageURL[index-1] +"'>Learn more</a>");
     }
 }
 
