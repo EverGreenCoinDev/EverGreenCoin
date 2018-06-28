@@ -28,6 +28,18 @@ Alternatively, install Qt Creator and open the `EverGreenCoin-Qt.pro` file.
 
 An executable named `EverGreenCoin-Qt` will be built.
 
+Error: invalid use of incomplete type ‘BIGNUM {aka struct bignum_st}’
+
+Because of incompatibilities with openssl v1.1 still yet removed, users of newer distrobustions may encounter errors related to the BIGNUM (CBigNum) data type. 
+
+Installing openssl v1.0 will resolve this:
+
+::
+
+    sudo apt-get install openssl1.0 openssl1.0-dev
+    
+Work will continue to make the code compatible with openssl v1.1 as soon as possible. The changes are very considerable, as many of the functions and data constructors were changed in openssl v1.1.    
+
 
 Windows
 --------
