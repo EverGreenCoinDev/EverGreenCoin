@@ -111,9 +111,6 @@ private:
 
     QMovie *syncIconMovie;
 
-    int nCharityPercent;
-    QString strCharityAddress;
-
     /** Create the main UI actions. */
     void createActions();
     /** Create the menu bar and sub-menus. */
