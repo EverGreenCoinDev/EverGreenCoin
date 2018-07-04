@@ -82,6 +82,7 @@ endif
 		HARDENING+=-fPIC
 		LDHARDENING+=-pie
 	else ifdef PIE
+		LEVELDB_FLAG=-fPIE
 		HARDENING+=-fPIE
 		LDHARDENING+=-pie
 	endif
