@@ -4,12 +4,12 @@
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About EverGreenCoin</source>
-        <translation>关于黑币</translation>
+        <translation>关于常青硬币</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>&lt;b&gt;EverGreenCoin&lt;/b&gt; version</source>
-        <translation>黑币客户端 版本</translation>
+        <translation>常青硬币 版本</translation>
     </message>
     <message>
         <location line="+41"/>
