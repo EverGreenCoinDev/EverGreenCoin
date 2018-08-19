@@ -159,13 +159,13 @@ void OverviewPage::unlockWallet()
         dlg.setModel(model);
         if(dlg.exec() == QDialog::Accepted)
         {
-            ui->unlockWalletButton->setText(QString("Lock your EverGreenCoin"));
+            updateButton();
         }
     }
     else
     {
         model->setWalletLocked(true);
-        ui->unlockWalletButton->setText(QString("Unlock your EverGreenCoin"));
+        updateButton();
     }
 }
 
@@ -203,7 +203,7 @@ void OverviewPage::setModel(WalletModel *model)
 
         else
         {
-            ui->unlockWalletButton->setText(QString("Unlock your EverGreenCoin"));
+            updateButton();
         }
         connect(ui->unlockWalletButton, SIGNAL(clicked()), this, SLOT(unlockWallet()));
     }
