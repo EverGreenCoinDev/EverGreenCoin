@@ -26,7 +26,6 @@ public:
     explicit bignum_error(const std::string& str) : std::runtime_error(str) {}
 };
 
-
 /** RAII encapsulated BN_CTX (OpenSSL bignum context) */
 class CAutoBN_CTX
 {
@@ -65,7 +64,7 @@ class CBigNum
 {
 protected:
     BIGNUM *bn;
-     CBigNum_init()
+    void CBigNum_init()
     {
         bn = BN_secure_new();
     }
@@ -163,7 +162,7 @@ public:
 #endif
         setvch(vch);
     }
-// STS EGC start gap
+
     /** Generates a cryptographically secure random number between zero and range exclusive
     * i.e. 0 < returned number < range
     * @param range The upper bound on the number.
@@ -200,7 +199,6 @@ public:
         return  BN_num_bits(bn);
 #endif
     }
-// STS EGC end gap
 
     void setulong(unsigned long n)
     {
@@ -400,7 +398,6 @@ public:
         return n;
     }
 
-
     void setvch(const std::vector<unsigned char>& vch)
     {
         std::vector<unsigned char> vch2(vch.size() + 4);
@@ -517,33 +514,33 @@ public:
         CBigNum bn = *this;
         BN_set_negative(&bn, false);
 #else
-        CBigNum bn1 = *this;
-        BN_set_negative(&bn1, false);
+        CBigNum bna = *this;
+        BN_set_negative(&bna, false);
 #endif
         CBigNum dv;
         CBigNum rem;
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
         if (BN_cmp(&bn, &bn0) == 0)
 #else
-        if (BN_cmp(&bn1, &bn0) == 0)
+        if (BN_cmp(&bna, &bn0) == 0)
 #endif
             return "0";
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
         while (BN_cmp(&bn, &bn0) > 0)
 #else
-        while (BN_cmp(&bn1, &bn0) > 0)
+        while (BN_cmp(&bna, &bn0) > 0)
 #endif
         {
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
             if (!BN_div(&dv, &rem, &bn, &bnBase, pctx))
 #else
-            if (!BN_div(&dv, &rem, &bn1, &bnBase, pctx))
+            if (!BN_div(&dv, &rem, &bna, &bnBase, pctx))
 #endif
                 throw bignum_error("CBigNum::ToString() : BN_div failed");
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
             bn = dv;
 #else
-            bn1 = dv;
+            bna = dv;
 #endif
             unsigned int c = rem.getulong();
             str += "0123456789abcdef"[c];
@@ -551,7 +548,7 @@ public:
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
         if (BN_is_negative(this))
 #else
-        if (BN_is_negative(bn1)) // STS EGC - AUR PR?
+        if (BN_is_negative(&bna))
 #endif
             str += "-";
         reverse(str.begin(), str.end());
@@ -602,7 +599,7 @@ public:
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
         if (!BN_exp(&ret, this, &e, pctx))
 #else
-        if (!BN_exp(&ret, bn, &e, pctx))  // STS EGC ?
+        if (!BN_exp(&ret, bn, &e, pctx))
 #endif
             throw bignum_error("CBigNum::pow : BN_exp failed");
         return ret;
@@ -619,7 +616,7 @@ public:
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
         if (!BN_mod_mul(&ret, this, &b, &m, pctx))
 #else
-        if (!BN_mod_mul(&ret, bn, &b, &m, pctx))  // STS EGC ?
+        if (!BN_mod_mul(&ret, bn, &b, &m, pctx))
 #endif
             throw bignum_error("CBigNum::mul_mod : BN_mod_mul failed");
         
@@ -644,7 +641,7 @@ public:
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
             if (!BN_mod_exp(&ret, this, &e, &m, pctx))
 #else
-            if (!BN_mod_exp(&ret, bn, &e, &m, pctx))  // STS EGC ?
+            if (!BN_mod_exp(&ret, bn, &e, &m, pctx))
 #endif
                 throw bignum_error("CBigNum::pow_mod : BN_mod_exp failed");
 
@@ -663,7 +660,7 @@ public:
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
         if (!BN_mod_inverse(&ret, this, &m, pctx))
 #else
-        if (!BN_mod_inverse(&ret, bn, &m, pctx))  // STS EGC ?
+        if (!BN_mod_inverse(&ret, bn, &m, pctx))
 #endif
             throw bignum_error("CBigNum::inverse*= :BN_mod_inverse");
         return ret;
@@ -693,7 +690,7 @@ public:
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
         if (!BN_gcd(&ret, this, &b, pctx))
 #else
-        if (!BN_gcd(&ret, bn, &b, pctx))  // STS EGC ?
+        if (!BN_gcd(&ret, bn, &b, pctx))
 #endif
             throw bignum_error("CBigNum::gcd*= :BN_gcd");
         return ret;
@@ -710,7 +707,7 @@ public:
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
         int ret = BN_is_prime(this, checks, NULL, pctx, NULL);
 #else
-        int ret = BN_is_prime(bn, checks, NULL, pctx, NULL);  // STS EGC ?
+        int ret = BN_is_prime(bn, checks, NULL, pctx, NULL);
 #endif
         if(ret < 0){
             throw bignum_error("CBigNum::isPrime :BN_is_prime");
@@ -722,7 +719,7 @@ public:
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
         return BN_is_one(this);
 #else
-        return BN_is_one(bn);  // STS EGC ?
+        return BN_is_one(bn);
 #endif
     }
 
@@ -732,7 +729,7 @@ public:
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
         return BN_is_zero(this);
 #else
-        return BN_is_zero(bn);  // STS EGC ?
+        return BN_is_zero(bn);
 #endif
     }
 
@@ -741,7 +738,7 @@ public:
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
         if (!BN_add(this, this, &b))
 #else
-        if (!BN_add(bn, bn, &b))  // STS EGC
+        if (!BN_add(bn, bn, &b))
 #endif
             throw bignum_error("CBigNum::operator+= : BN_add failed");
         return *this;
