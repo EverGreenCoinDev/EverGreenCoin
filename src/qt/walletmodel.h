@@ -191,6 +191,11 @@ signals:
     // this means that the unlocking failed or was cancelled.
     void requireUnlock();
 
+    // STS EverGreenCoin
+    // Signal emitted when wallet lock status changes from less obvious ways such as during a send that uses relock or by RPC lock / unlock
+    // This is used to chenge the lock / unlock button on the overview tab / page in such events
+    void walletLockChanged();
+
     // Asynchronous error notification
     void error(const QString &title, const QString &message, bool modal);
 };

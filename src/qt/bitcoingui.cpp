@@ -991,6 +991,7 @@ void BitcoinGUI::unlockWallet()
     }
     overviewPage->updateButton();
     stakeForCharityDialog->updateMessageColor();
+    updateStakingIcon();
 }
 
 void BitcoinGUI::lockWallet()
@@ -1001,6 +1002,7 @@ void BitcoinGUI::lockWallet()
     walletModel->setWalletLocked(true);
     overviewPage->updateButton();
     stakeForCharityDialog->updateMessageColor();
+    updateStakingIcon();
 }
 
 void BitcoinGUI::showNormalIfMinimized(bool fToggleHidden)

@@ -72,6 +72,7 @@ void WalletModel::updateStatus()
 
     if(cachedEncryptionStatus != newEncryptionStatus)
         emit encryptionStatusChanged(newEncryptionStatus);
+    emit walletLockChanged();
 }
 
 void WalletModel::pollBalanceChanged()
@@ -368,6 +369,7 @@ static void NotifyKeyStoreStatusChanged(WalletModel *walletmodel, CCryptoKeyStor
 {
     OutputDebugStringF("NotifyKeyStoreStatusChanged\n");
     QMetaObject::invokeMethod(walletmodel, "updateStatus", Qt::QueuedConnection);
+    QMetaObject::invokeMethod(walletmodel, "walletLockChanged", Qt::QueuedConnection);
 }
 
 static void NotifyAddressBookChanged(WalletModel *walletmodel, CWallet *wallet, const CTxDestination &address, const std::string &label, bool isMine, ChangeType status)
@@ -429,7 +431,7 @@ WalletModel::UnlockContext WalletModel::requestUnlock()
 WalletModel::UnlockContext::UnlockContext(WalletModel *wallet, bool valid, bool relock):
         wallet(wallet),
         valid(valid),
-        relock(relock)
+        relock(relock) // relock(false) //relock)
 {
 }
 
