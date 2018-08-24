@@ -102,7 +102,6 @@ bool CCrypter::Encrypt(const CKeyingMaterial& vchPlaintext, std::vector<unsigned
 bool CCrypter::Decrypt(const std::vector<unsigned char>& vchCiphertext, CKeyingMaterial& vchPlaintext)
 {
     if (!fKeySet)
-        // Copyright (c) 2016-2018 The Auroracoin developers
         return false;
 
     // plaintext will always be equal to or lesser than length of ciphertext
