@@ -396,11 +396,11 @@ bool CKey::SignCompact(uint256 hash, std::vector<unsigned char>& vchSig)
 
         vchSig[0] = nRecId+27+(fCompressedPubKey ? 4 : 0);
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
-            BN_bn2bin(sig->r,&vchSig[32-(nBitsR+7)/8]);
-            BN_bn2bin(sig->s,&vchSig[64-(nBitsS+7)/8]);
+            BN_bn2bin(sig->r,&vchSig[33-(nBitsR+7)/8]);
+            BN_bn2bin(sig->s,&vchSig[65-(nBitsS+7)/8]);
 #else
-            BN_bn2bin(r,&vchSig[32-(nBitsR+7)/8]);
-            BN_bn2bin(s,&vchSig[64-(nBitsS+7)/8]);
+            BN_bn2bin(r,&vchSig[33-(nBitsR+7)/8]);
+            BN_bn2bin(s,&vchSig[65-(nBitsS+7)/8]);
 #endif
         fOk = true;
     }
