@@ -149,7 +149,7 @@ void StakeForCharityDialog::loadCharities()
             i++;
         }
         ui->comboBox->setItemData(1, "Your donation will be used by the <a href='https://evergreencoin.org/EGCFoundation/'>EverGreenCoin Foundation, Inc.</a> <br />under the guidance of the board and community.", Qt::ToolTipRole);
-        ui->comboBox->setItemData(0, "You can donate to any EverGreenCoin address you enter", Qt::ToolTipRole);
+        ui->comboBox->setItemData(0, "You can donate to any EverGreenCoin address you wish.", Qt::ToolTipRole);
     } else {
         qDebug() << "Failure" <<reply->errorString();
     }
