@@ -33,6 +33,7 @@ private slots:
     void on_comboBox_activated(int index);
     void loadCharities();
     void on_btnRefreshCharities_clicked();
+    void on_copyToClipboard_clicked();
 
 private:
     Ui::StakeForCharityDialog *ui;
