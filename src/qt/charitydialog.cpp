@@ -93,7 +93,7 @@ void StakeForCharityDialog::setModel(WalletModel *model)
             {
                 ui->message->setStyleSheet("QLabel { color: green; font-weight: 900; }");
                 ui->message->setText(tr("You are manually sending to: ") + strAddress.ToString().c_str());
-                ui->comboBox->setCurrentIndex(0);
+                ui->comboBox->setCurrentIndex(0);               
             }
         }
 
@@ -123,30 +123,33 @@ void StakeForCharityDialog::loadCharities()
     }
 
     if (reply->error() == QNetworkReply::NoError) {
-      QString strReply = (QString)reply->readAll();
-      int i;
-      int n = ui->comboBox->count();
-      // clear current combo box entires, leaving the first 2, "manual" and "egc foundation"
-      for (i=2; i < n; i++ ) {
-          ui->comboBox->removeItem(2);
-          if (fTestNet) qDebug() << "removed " << i+1 << " of " << n << "\n";
-      }
+        QString strReply = (QString)reply->readAll();
+        int i;
+        int n = ui->comboBox->count();
+        // clear current combo box entires, leaving the first 2, "manual" and "egc foundation"
+        for (i=2; i < n; i++ ) {
+            ui->comboBox->removeItem(2);
+            if (fTestNet) qDebug() << "removed " << i+1 << " of " << n << "\n";
+        }
 
-      QJsonDocument jsonResponse = QJsonDocument::fromJson(strReply.toUtf8() );
-      QJsonArray json_array = jsonResponse.array();
-      i = 1;
-      // load new combo box entires
-      foreach (const QJsonValue &value, json_array) {
-        QJsonObject json_obj = value.toObject();
-        if (fTestNet) qDebug() << json_obj["charity"].toString();
-        ui->comboBox->addItem(QString(json_obj["charity"].toString()));
-        if (fTestNet) qDebug() << json_obj["EGCaddress"].toString();
-        charitiesAddress[i] = json_obj["EGCaddress"].toString();
-        charitiesThanks[i] = json_obj["thanksOnly"].toString();
-        charitiesAsk[i] = json_obj["ask"].toString();
-        if (fTestNet) qDebug() << json_obj["thanksOnly"].toString();
-        i++;
-      }
+        QJsonDocument jsonResponse = QJsonDocument::fromJson(strReply.toUtf8() );
+        QJsonArray json_array = jsonResponse.array();
+        i = 1;
+        // load new combo box entires
+        foreach (const QJsonValue &value, json_array) {
+            QJsonObject json_obj = value.toObject();
+            if (fTestNet) qDebug() << json_obj["charity"].toString();
+            ui->comboBox->addItem(QString(json_obj["charity"].toString()));
+            if (fTestNet) qDebug() << json_obj["EGCaddress"].toString();
+            charitiesAddress[i] = json_obj["EGCaddress"].toString();
+            charitiesThanks[i] = json_obj["thanksOnly"].toString();
+            charitiesAsk[i] = json_obj["ask"].toString();
+            ui->comboBox->setItemData(i+1, json_obj["ask"].toString(), Qt::ToolTipRole);
+            if (fTestNet) qDebug() << json_obj["thanksOnly"].toString();
+            i++;
+        }
+        ui->comboBox->setItemData(1, "Your donation will be used by the <a href='https://evergreencoin.org/EGCFoundation/'>EverGreenCoin Foundation, Inc.</a> <br />under the guidance of the board and community.", Qt::ToolTipRole);
+        ui->comboBox->setItemData(0, "You can donate to any EverGreenCoin address you enter", Qt::ToolTipRole);
     } else {
         qDebug() << "Failure" <<reply->errorString();
     }
