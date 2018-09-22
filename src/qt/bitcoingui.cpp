@@ -86,7 +86,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 {
 
     resize(1000, 600);
-    setWindowTitle(tr("EverGreenCoin") );
+    setWindowTitle(tr("EverGreenCoin® Core - Wallet v1.8") );
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/evergreencoin"));
     setWindowIcon(QIcon(":icons/evergreencoin"));
@@ -166,6 +166,9 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     frameBlocks->setObjectName("frameBlocks");
     frameBlocks->setContentsMargins(0,0,0,0);
     frameBlocks->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+    frameBlocks->setFrameStyle(QFrame::NoFrame);
+    //frameBlocks->setFrameStyle(QFrame::StyledPanel);
+    frameBlocks->setFrameShadow(QFrame::Plain);
     QHBoxLayout *frameBlocksLayout = new QHBoxLayout(frameBlocks);
     frameBlocksLayout->setContentsMargins(3,0,3,0);
     frameBlocksLayout->setSpacing(4);
@@ -197,6 +200,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     // Progress bar and label for blocks download
     progressBarLabel = new QLabel();
     progressBarLabel->setVisible(false);
+    progressBarLabel->setStyleSheet("color: #ffffff;");
     progressBar = new QProgressBar();
     progressBar->setAlignment(Qt::AlignCenter);
     progressBar->setVisible(false);
@@ -432,7 +436,7 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
 #endif
             if(trayIcon)
             {
-                trayIcon->setToolTip(tr("EverGreenCoin") + QString(" ") + tr("[testnet]"));
+                trayIcon->setToolTip(tr("EverGreenCoin® Core - Wallet v1.8") + QString(" ") + tr("[testnet]"));
                 trayIcon->setIcon(QIcon(":/icons/toolbar_testnet"));
                 toggleHideAction->setIcon(QIcon(":/icons/toolbar_testnet"));
             }
