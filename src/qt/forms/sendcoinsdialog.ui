@@ -78,7 +78,7 @@
              </sizepolicy>
             </property>
             <property name="styleSheet">
-             <string notr="true">font-weight:bold;</string>
+             <string notr="true">font-weight:bold; color: #ffffff;</string>
             </property>
             <property name="text">
              <string>Coin Control Features</string>
@@ -107,6 +107,9 @@
           </item>
           <item>
            <widget class="QLabel" name="labelCoinControlAutomaticallySelected">
+            <property name="styleSheet">
+             <string notr="true"> color: #ffffff;</string>
+            </property>
             <property name="text">
              <string>automatically selected</string>
             </property>
@@ -204,7 +207,7 @@
                <item row="0" column="0">
                 <widget class="QLabel" name="labelCoinControlQuantityText">
                  <property name="styleSheet">
-                  <string notr="true">font-weight:bold;</string>
+                  <string notr="true">font-weight:bold;color: #1ab06c;</string>
                  </property>
                  <property name="text">
                   <string>Quantity:</string>
@@ -222,6 +225,9 @@
                  <property name="contextMenuPolicy">
                   <enum>Qt::ActionsContextMenu</enum>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #1ab06c;</string>
+                 </property>
                  <property name="text">
                   <string>0</string>
                  </property>
@@ -236,7 +242,7 @@
                <item row="1" column="0">
                 <widget class="QLabel" name="labelCoinControlBytesText">
                  <property name="styleSheet">
-                  <string notr="true">font-weight:bold;</string>
+                  <string notr="true">font-weight:bold;color: #1ab06c;</string>
                  </property>
                  <property name="text">
                   <string>Bytes:</string>
@@ -250,6 +256,9 @@
                  </property>
                  <property name="contextMenuPolicy">
                   <enum>Qt::ActionsContextMenu</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #1ab06c;</string>
                  </property>
                  <property name="text">
                   <string>0</string>
@@ -281,7 +290,7 @@
                <item row="0" column="0">
                 <widget class="QLabel" name="labelCoinControlAmountText">
                  <property name="styleSheet">
-                  <string notr="true">font-weight:bold;</string>
+                  <string notr="true">font-weight:bold;color: #1ab06c;</string>
                  </property>
                  <property name="text">
                   <string>Amount:</string>
@@ -299,6 +308,9 @@
                  <property name="contextMenuPolicy">
                   <enum>Qt::ActionsContextMenu</enum>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #1ab06c;</string>
+                 </property>
                  <property name="text">
                   <string>0.00 EGC</string>
                  </property>
@@ -310,7 +322,7 @@
                <item row="1" column="0">
                 <widget class="QLabel" name="labelCoinControlPriorityText">
                  <property name="styleSheet">
-                  <string notr="true">font-weight:bold;</string>
+                  <string notr="true">font-weight:bold;color: #1ab06c;</string>
                  </property>
                  <property name="text">
                   <string>Priority:</string>
@@ -324,6 +336,9 @@
                  </property>
                  <property name="contextMenuPolicy">
                   <enum>Qt::ActionsContextMenu</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #1ab06c;</string>
                  </property>
                  <property name="text">
                   <string>medium</string>
@@ -355,7 +370,7 @@
                <item row="0" column="0">
                 <widget class="QLabel" name="labelCoinControlFeeText">
                  <property name="styleSheet">
-                  <string notr="true">font-weight:bold;</string>
+                  <string notr="true">font-weight:bold;color: #1ab06c;</string>
                  </property>
                  <property name="text">
                   <string>Fee:</string>
@@ -373,6 +388,9 @@
                  <property name="contextMenuPolicy">
                   <enum>Qt::ActionsContextMenu</enum>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #1ab06c;</string>
+                 </property>
                  <property name="text">
                   <string>0.00 EGC</string>
                  </property>
@@ -384,7 +402,7 @@
                <item row="1" column="0">
                 <widget class="QLabel" name="labelCoinControlLowOutputText">
                  <property name="styleSheet">
-                  <string notr="true">font-weight:bold;</string>
+                  <string notr="true">font-weight:bold;color: #1ab06c;</string>
                  </property>
                  <property name="text">
                   <string>Low Output:</string>
@@ -398,6 +416,9 @@
                  </property>
                  <property name="contextMenuPolicy">
                   <enum>Qt::ActionsContextMenu</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #1ab06c;</string>
                  </property>
                  <property name="text">
                   <string>no</string>
@@ -429,7 +450,7 @@
                <item row="0" column="0">
                 <widget class="QLabel" name="labelCoinControlAfterFeeText">
                  <property name="styleSheet">
-                  <string notr="true">font-weight:bold;</string>
+                  <string notr="true">font-weight:bold;color: #1ab06c;</string>
                  </property>
                  <property name="text">
                   <string>After Fee:</string>
@@ -447,6 +468,9 @@
                  <property name="contextMenuPolicy">
                   <enum>Qt::ActionsContextMenu</enum>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #1ab06c;</string>
+                 </property>
                  <property name="text">
                   <string>0.00 EGC</string>
                  </property>
@@ -458,7 +482,7 @@
                <item row="1" column="0">
                 <widget class="QLabel" name="labelCoinControlChangeText">
                  <property name="styleSheet">
-                  <string notr="true">font-weight:bold;</string>
+                  <string notr="true">font-weight:bold;color: #1ab06c;</string>
                  </property>
                  <property name="text">
                   <string>Change</string>
@@ -472,6 +496,9 @@
                  </property>
                  <property name="contextMenuPolicy">
                   <enum>Qt::ActionsContextMenu</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: #1ab06c;</string>
                  </property>
                  <property name="text">
                   <string>0.00 EGC</string>
@@ -504,6 +531,9 @@
           </property>
           <item>
            <widget class="QCheckBox" name="checkBoxCoinControlChange">
+            <property name="styleSheet">
+             <string notr="true">background-color: #018457;  color: #ffffff;</string>
+            </property>
             <property name="text">
              <string>custom change address</string>
             </property>
@@ -575,7 +605,7 @@
         <x>0</x>
         <y>0</y>
         <width>830</width>
-        <height>175</height>
+        <height>172</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -679,9 +709,9 @@
             <colorrole role="WindowText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -733,9 +763,9 @@
             <colorrole role="Text">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>1</red>
-               <green>132</green>
-               <blue>87</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -751,9 +781,9 @@
             <colorrole role="ButtonText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -816,9 +846,9 @@
             <colorrole role="WindowText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -870,9 +900,9 @@
             <colorrole role="Text">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>1</red>
-               <green>132</green>
-               <blue>87</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -888,9 +918,9 @@
             <colorrole role="ButtonText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -953,9 +983,9 @@
             <colorrole role="WindowText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>66</green>
-               <blue>43</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -1007,9 +1037,9 @@
             <colorrole role="Text">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>66</green>
-               <blue>43</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -1025,9 +1055,9 @@
             <colorrole role="ButtonText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>66</green>
-               <blue>43</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -1088,6 +1118,9 @@
            </disabled>
           </palette>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: #1ab06c;</string>
+         </property>
          <property name="text">
           <string>Balance:</string>
          </property>
@@ -1107,9 +1140,9 @@
             <colorrole role="WindowText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -1161,9 +1194,9 @@
             <colorrole role="Text">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>1</red>
-               <green>132</green>
-               <blue>87</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -1179,9 +1212,9 @@
             <colorrole role="ButtonText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -1244,9 +1277,9 @@
             <colorrole role="WindowText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -1298,9 +1331,9 @@
             <colorrole role="Text">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>1</red>
-               <green>132</green>
-               <blue>87</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -1316,9 +1349,9 @@
             <colorrole role="ButtonText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -1381,9 +1414,9 @@
             <colorrole role="WindowText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>66</green>
-               <blue>43</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -1435,9 +1468,9 @@
             <colorrole role="Text">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>66</green>
-               <blue>43</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -1453,9 +1486,9 @@
             <colorrole role="ButtonText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>66</green>
-               <blue>43</blue>
+               <red>26</red>
+               <green>176</green>
+               <blue>108</blue>
               </color>
              </brush>
             </colorrole>
@@ -1518,6 +1551,9 @@
          </property>
          <property name="cursor">
           <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #1ab06c;</string>
          </property>
          <property name="text">
           <string>123.456 EGC</string>

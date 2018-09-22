@@ -85,7 +85,7 @@
        <string>QLabel { color: #266C3F; }
 </string>
       </property>
-      <layout class="QGridLayout" name="gridLayout_3" rowstretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" columnstretch="0,0">
+      <layout class="QGridLayout" name="gridLayout_3" rowstretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" columnstretch="0,0">
        <property name="sizeConstraint">
         <enum>QLayout::SetMaximumSize</enum>
        </property>
@@ -103,8 +103,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string/>
@@ -122,8 +121,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>Block Difficulty:</string>
@@ -141,8 +139,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>0</string>
@@ -160,8 +157,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>Block Merkle:</string>
@@ -179,8 +175,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>Block Hash:</string>
@@ -198,8 +193,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string/>
@@ -217,8 +211,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>Block Hashrate:</string>
@@ -245,8 +238,7 @@
           <bool>true</bool>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
@@ -267,8 +259,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>Fees:</string>
@@ -286,8 +277,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>Block nBits:</string>
@@ -305,8 +295,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>0</string>
@@ -330,8 +319,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>0x0</string>
@@ -349,8 +337,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>Outputs:</string>
@@ -371,8 +358,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string/>
@@ -393,8 +379,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>Block nNonce:</string>
@@ -412,8 +397,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>0</string>
@@ -431,8 +415,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>Block Timestamp:</string>
@@ -465,8 +448,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>0x0</string>
@@ -1413,8 +1395,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="maximum">
           <number>99999999</number>
@@ -1432,8 +1413,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>Value out:</string>
@@ -1451,8 +1431,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>Transaction ID:</string>
@@ -1470,8 +1449,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>0.00</string>
@@ -1489,8 +1467,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>000</string>
@@ -1511,8 +1488,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>Block Height:</string>
@@ -1530,8 +1506,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string/>
@@ -1580,11 +1555,10 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For more detailed information,&lt;br/&gt;please visit &lt;a href=&quot;https://EverGreenCoin.org/accounting/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#266c3f;&quot;&gt;https://EverGreenCoin.org/accounting/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For more detailed information,&lt;br/&gt;please visit &lt;a href=&quot;https://EverGreenCoin.org/accounting/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;https://EverGreenCoin.org/accounting/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="textFormat">
           <enum>Qt::RichText</enum>
@@ -1608,8 +1582,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>Inputs:</string>
@@ -1630,8 +1603,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QLabel { color: #266C3F; }
-</string>
+          <string notr="true">QLabel {color: #1ab06c;}</string>
          </property>
          <property name="text">
           <string>0000 KH/s</string>

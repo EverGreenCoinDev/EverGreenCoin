@@ -62,8 +62,7 @@
           </widget>
          </item>
          <item>
-          <widget class="BitcoinAmountField" name="transactionFee">
-          </widget>
+          <widget class="BitcoinAmountField" name="transactionFee"/>
          </item>
          <item>
           <spacer name="horizontalSpacerFee">
@@ -109,8 +108,7 @@
           </widget>
          </item>
          <item>
-          <widget class="BitcoinAmountField" name="reserveBalance">
-          </widget>
+          <widget class="BitcoinAmountField" name="reserveBalance"/>
          </item>
          <item>
           <spacer name="horizontalSpacerReserveBalance">

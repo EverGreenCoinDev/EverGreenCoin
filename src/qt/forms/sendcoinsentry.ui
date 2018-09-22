@@ -451,6 +451,9 @@
        <property name="toolTip">
         <string>Enter a label for this address to add it to your account address book</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid #ffffff;</string>
+       </property>
       </widget>
      </item>
     </layout>
@@ -873,7 +876,7 @@
       </palette>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#266C3F;&quot;&gt;&amp;amp;Label:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color: #ffffff;&quot;&gt;&amp;amp;Label:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1301,7 +1304,7 @@
       </palette>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#266C3F;&quot;&gt;A&amp;amp;mount:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;color: #ffffff;&quot;&gt;A&amp;amp;mount:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1729,7 +1732,7 @@
       </palette>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#266C3F;&quot;&gt;Pay &amp;amp;To:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;color: #ffffff;&quot;&gt;Pay &amp;amp;To:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2163,6 +2166,9 @@
        </property>
        <property name="toolTip">
         <string>The EGC address to send the payment to  (e.g. EdFwYw4Mo2Zq6CFM2yNJgXvE2DTJxgdBRX)</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid #ffffff;</string>
        </property>
        <property name="maxLength">
         <number>34</number>
@@ -3894,7 +3900,7 @@
       </palette>
      </property>
      <property name="toolTip">
-        <string>Amount to send</string>
+      <string>Amount to send</string>
      </property>
      <property name="autoFillBackground">
       <bool>false</bool>

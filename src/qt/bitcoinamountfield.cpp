@@ -36,6 +36,7 @@ BitcoinAmountField::BitcoinAmountField(QWidget *parent):
 
     setFocusPolicy(Qt::TabFocus);
     setFocusProxy(amount);
+    amount->setStyleSheet("QDoubleSpinBox {background-color: 1ab06c;}");
 
     // If one if the widgets changes, the combined content changes as well
     connect(amount, SIGNAL(valueChanged(QString)), this, SIGNAL(textChanged()));

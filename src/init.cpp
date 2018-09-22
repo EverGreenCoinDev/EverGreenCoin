@@ -118,10 +118,6 @@ void HandleSIGHUP(int)
     fReopenDebugLog = true;
 }
 
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////
 //
 // Start
@@ -761,6 +757,7 @@ bool AppInit2()
 
     if (GetBoolArg("-zapwallettxes", false)) {
         uiInterface.InitMessage(_("Zapping all transactions from wallet..."));
+        printf("Zapping all transactions from wallet...\n");
         pwalletMain = new CWallet(strWalletFileName);
         DBErrors nZapWalletRet = pwalletMain->ZapWalletTx();
         if (nZapWalletRet != DB_LOAD_OK) {

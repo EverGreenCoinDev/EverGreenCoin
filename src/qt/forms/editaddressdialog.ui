@@ -21,6 +21,9 @@
      </property>
      <item row="0" column="0">
       <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">color: #ffffff;</string>
+       </property>
        <property name="text">
         <string>&amp;Label</string>
        </property>
@@ -34,10 +37,16 @@
        <property name="toolTip">
         <string>The label associated with this address book entry</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: #ffffff;</string>
+       </property>
       </widget>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">color: #ffffff;</string>
+       </property>
        <property name="text">
         <string>&amp;Address</string>
        </property>
@@ -50,6 +59,9 @@
       <widget class="QLineEdit" name="addressEdit">
        <property name="toolTip">
         <string>The address associated with this address book entry. This can only be modified for sending addresses.</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: #ffffff;</string>
        </property>
       </widget>
      </item>
