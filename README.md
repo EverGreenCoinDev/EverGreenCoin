@@ -1,7 +1,9 @@
 
+![Alt text](src/qt/res/images/wallet_logo.png)
+
 EverGreenCoin version 1.7.3.1
 
-Cryptocurrency meets our environment. 
+Cryptocurrency meets environment. 
 
 EverGreenCoin (EGC) is a currency designed from the ground up not only to be an environmentally friendly currency but, an environmental movement and paradigm shift. With both the electrically and computationally efficient and secure algorithm of X15 Proof of Work and the generously rewarding 7% Proof of Stake the foundation has been set. On top of that foundation, we leverage renewable energy in ways our planet has never seen. EverGreenCoin is turning the mining and cryptocurrency industry on its head. From an industry that wastes electricity in the grandest scale, and in-turn our planet's finite precious resources lost forever to produce that electricity, to a profitable and prosperous endeavor for both our planet and its people. Back-feeding the grid it had once robbed. Then those profits are invested into the environment through environmental restoration projects such as forestry and wildlife rehabilitation. EverGreenCoin will make both our planet's environment and economy better than it was found.
 
