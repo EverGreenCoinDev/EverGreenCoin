@@ -325,7 +325,7 @@ void BitcoinGUI::createActions()
     aboutAction = new QAction(QIcon(":/icons/evergreencoin"), tr("&About EverGreenCoin"), this);
     aboutAction->setToolTip(tr("Show information about EverGreenCoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
-    aboutQtAction = new QAction(QIcon(":/icons/qtlogo.png"), tr("About &Qt"), this);
+    aboutQtAction = new QAction(QIcon(":/icons/qtlogo"), tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
