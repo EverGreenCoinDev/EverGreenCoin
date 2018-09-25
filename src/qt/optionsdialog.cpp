@@ -93,6 +93,10 @@ OptionsDialog::OptionsDialog(QWidget *parent) :
     connect(mapper, SIGNAL(currentIndexChanged(int)), this, SLOT(disableApplyButton()));
     /* setup/change UI elements when proxy IP is invalid/valid */
     connect(this, SIGNAL(proxyIpValid(QValidatedLineEdit *, bool)), this, SLOT(handleProxyIpValid(QValidatedLineEdit *, bool)));
+    QFile style(":/styles/res/styles/style.qss");
+    style.open(QFile::ReadOnly);
+    setStyleSheet(QString::fromUtf8(style.readAll()));
+
 }
 
 OptionsDialog::~OptionsDialog()

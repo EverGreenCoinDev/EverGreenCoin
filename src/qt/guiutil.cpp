@@ -158,10 +158,8 @@ void copyEntryData(QAbstractItemView *view, int column, int role)
 
     if(!selection.isEmpty())
     {
-        if (role == 0x0106) // EGC STS: 6 is TransactionTableModel::TxIDRole enum. If copying Tx ID, ignore the trailing recipient ID ("-000", "-001", ect.) from the transaction ID for easy pasting into an explorer
-            QApplication::clipboard()->setText(QString(selection.at(0).data(role).toString()).left(64));
-        else // otherwise just copy
-            QApplication::clipboard()->setText(selection.at(0).data(role).toString());
+        // Copy first item
+        QApplication::clipboard()->setText(selection.at(0).data(role).toString());
     }
 }
 

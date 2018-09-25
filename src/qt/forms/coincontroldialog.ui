@@ -39,7 +39,7 @@
        <item row="0" column="0">
         <widget class="QLabel" name="labelCoinControlQuantityText">
          <property name="styleSheet">
-          <string notr="true">font-weight:bold;</string>
+          <string notr="true">color: #ffffff; font-weight:bold;</string>
          </property>
          <property name="text">
           <string>Quantity:</string>
@@ -54,6 +54,9 @@
          <property name="contextMenuPolicy">
           <enum>Qt::ActionsContextMenu</enum>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff; </string>
+         </property>
          <property name="text">
           <string notr="true">0</string>
          </property>
@@ -65,7 +68,7 @@
        <item row="1" column="0">
         <widget class="QLabel" name="labelCoinControlBytesText">
          <property name="styleSheet">
-          <string notr="true">font-weight:bold;</string>
+          <string notr="true">color: #ffffff; font-weight:bold;</string>
          </property>
          <property name="text">
           <string>Bytes:</string>
@@ -79,6 +82,9 @@
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::ActionsContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff; </string>
          </property>
          <property name="text">
           <string notr="true">0</string>
@@ -107,7 +113,7 @@
        <item row="0" column="0">
         <widget class="QLabel" name="labelCoinControlAmountText">
          <property name="styleSheet">
-          <string notr="true">font-weight:bold;</string>
+          <string notr="true">color: #ffffff; font-weight:bold;</string>
          </property>
          <property name="text">
           <string>Amount:</string>
@@ -122,6 +128,9 @@
          <property name="contextMenuPolicy">
           <enum>Qt::ActionsContextMenu</enum>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff; </string>
+         </property>
          <property name="text">
           <string notr="true">0.00 EGC</string>
          </property>
@@ -133,7 +142,7 @@
        <item row="1" column="0">
         <widget class="QLabel" name="labelCoinControlPriorityText">
          <property name="styleSheet">
-          <string notr="true">font-weight:bold;</string>
+          <string notr="true">color: #ffffff; font-weight:bold;</string>
          </property>
          <property name="text">
           <string>Priority:</string>
@@ -147,6 +156,9 @@
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::ActionsContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff; </string>
          </property>
          <property name="text">
           <string/>
@@ -175,7 +187,7 @@
        <item row="0" column="0">
         <widget class="QLabel" name="labelCoinControlFeeText">
          <property name="styleSheet">
-          <string notr="true">font-weight:bold;</string>
+          <string notr="true">color: #ffffff; font-weight:bold;</string>
          </property>
          <property name="text">
           <string>Fee:</string>
@@ -189,6 +201,9 @@
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::ActionsContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff; </string>
          </property>
          <property name="text">
           <string notr="true">0.00 EGC</string>
@@ -204,7 +219,7 @@
           <bool>false</bool>
          </property>
          <property name="styleSheet">
-          <string notr="true">font-weight:bold;</string>
+          <string notr="true">color: #ffffff; font-weight:bold;</string>
          </property>
          <property name="text">
           <string>Low Output:</string>
@@ -221,6 +236,9 @@
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::ActionsContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff; </string>
          </property>
          <property name="text">
           <string notr="true">no</string>
@@ -249,7 +267,7 @@
        <item row="0" column="0">
         <widget class="QLabel" name="labelCoinControlAfterFeeText">
          <property name="styleSheet">
-          <string notr="true">font-weight:bold;</string>
+          <string notr="true">color: #ffffff; font-weight:bold;</string>
          </property>
          <property name="text">
           <string>After Fee:</string>
@@ -263,6 +281,9 @@
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::ActionsContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff; </string>
          </property>
          <property name="text">
           <string notr="true">0.00 EGC</string>
@@ -278,7 +299,7 @@
           <bool>false</bool>
          </property>
          <property name="styleSheet">
-          <string notr="true">font-weight:bold;</string>
+          <string notr="true">color: #ffffff; font-weight:bold;</string>
          </property>
          <property name="text">
           <string>Change:</string>
@@ -295,6 +316,9 @@
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::ActionsContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff; </string>
          </property>
          <property name="text">
           <string notr="true">0.00 EGC</string>
@@ -315,6 +339,9 @@
        <width>0</width>
        <height>40</height>
       </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame {background-color: transparent;}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -478,6 +505,9 @@
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>

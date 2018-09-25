@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>724</width>
-    <height>534</height>
+    <width>743</width>
+    <height>561</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -487,7 +487,7 @@
            </palette>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:900; color: rgb(1, 132, 87);&quot;&gt;EverGreenCoin Network Statistics&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:900; color: #ffffff;&quot;&gt;EverGreenCoin Network Statistics&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -535,6 +535,9 @@
         </property>
         <item row="1" column="0">
          <widget class="QLabel" name="label_14">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;Block Height&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
@@ -542,6 +545,9 @@
         </item>
         <item row="1" column="1">
          <widget class="QLabel" name="heightBox">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>00000</string>
           </property>
@@ -552,6 +558,9 @@
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="label_12">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;PoW Block Reward&lt;/span&gt; &lt;span style=&quot; font-size:8pt;&quot;&gt;(ended)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
@@ -559,6 +568,9 @@
         </item>
         <item row="2" column="1">
          <widget class="QLabel" name="rewardBox">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>50</string>
           </property>
@@ -566,6 +578,9 @@
         </item>
         <item row="3" column="0">
          <widget class="QLabel" name="label_13">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;PoW Difficulty&lt;/span&gt; &lt;span style=&quot; font-size:8pt;&quot;&gt;(ended)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
@@ -573,6 +588,9 @@
         </item>
         <item row="3" column="1">
          <widget class="QLabel" name="diffBox">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>0.0002</string>
           </property>
@@ -580,6 +598,9 @@
         </item>
         <item row="4" column="0">
          <widget class="QLabel" name="label_9">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;PoS Difficulty&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
@@ -587,6 +608,9 @@
         </item>
         <item row="4" column="1">
          <widget class="QLabel" name="diffBox2">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>0.0002</string>
           </property>
@@ -594,6 +618,9 @@
         </item>
         <item row="5" column="0">
          <widget class="QLabel" name="label_16">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;Net Hashrate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
@@ -601,6 +628,9 @@
         </item>
         <item row="5" column="1">
          <widget class="QLabel" name="pawrateBox">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>0 MH/s</string>
           </property>
@@ -614,6 +644,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;Last Block Time&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
@@ -621,6 +654,9 @@
         </item>
         <item row="6" column="1">
          <widget class="QLabel" name="localBox">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>0</string>
           </property>
@@ -628,6 +664,9 @@
         </item>
         <item row="7" column="0">
          <widget class="QLabel" name="label1_2">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;Connections&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
@@ -635,6 +674,9 @@
         </item>
         <item row="7" column="1">
          <widget class="QLabel" name="connectionBox">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>0</string>
           </property>
@@ -642,13 +684,19 @@
         </item>
         <item row="8" column="0">
          <widget class="QLabel" name="label_8">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;Total EGC Supply&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;Current EGC Supply&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
         <item row="8" column="1">
          <widget class="QLabel" name="volumeBox">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>250</string>
           </property>
@@ -656,6 +704,9 @@
         </item>
         <item row="9" column="0">
          <widget class="QLabel" name="label_10">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;Your Stake Weight&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
@@ -663,6 +714,9 @@
         </item>
         <item row="9" column="1">
          <widget class="QLabel" name="minBox">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>0</string>
           </property>
@@ -670,6 +724,9 @@
         </item>
         <item row="10" column="0">
          <widget class="QLabel" name="label_11">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;Network Stake Weight&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
@@ -677,6 +734,9 @@
         </item>
         <item row="10" column="1">
          <widget class="QLabel" name="maxBox">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>0</string>
           </property>
@@ -684,6 +744,9 @@
         </item>
         <item row="11" column="0">
          <widget class="QLabel" name="label_15">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;Current Mining Phase&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
@@ -691,6 +754,9 @@
         </item>
         <item row="11" column="1">
          <widget class="QLabel" name="cBox">
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
           <property name="text">
            <string>POW</string>
           </property>
@@ -734,7 +800,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;color:#018457;&quot;&gt;Mining Phases&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;color:#ffffff;&quot;&gt;Mining Phases&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLabel" name="phaselbl1">
@@ -745,6 +811,9 @@
         <width>251</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {color: #ffffff;}</string>
       </property>
       <property name="text">
        <string>phaselbl1</string>
@@ -758,6 +827,9 @@
         <width>251</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {color: #ffffff;}</string>
       </property>
       <property name="text">
        <string>phaselbl2</string>

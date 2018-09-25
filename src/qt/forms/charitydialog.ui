@@ -40,6 +40,12 @@
      <property name="widgetResizable">
       <bool>true</bool>
      </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
      <widget class="QWidget" name="scrollAreaWidgetContents">
       <property name="enabled">
        <bool>true</bool>
@@ -277,13 +283,13 @@
           <item row="0" column="0" colspan="6">
            <widget class="QLabel" name="label_2">
             <property name="styleSheet">
-             <string notr="true">color: black;</string>
+             <string notr="true">color: #1ab06c</string>
             </property>
             <property name="lineWidth">
              <number>1</number>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EverGreenCoin Stake for Charity allows you to automatically send up to 100% of your network rewards (stake rewards) to another EverGreenCoin account address after it matures. Note that you pay the tansaction fee (~.0001 EGC) in addition to the percentage.  &lt;br /&gt;&lt;a href=&quot;https://evergreencoin.org/staking-for-charity/&quot;&gt;Learn more here&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Please enter the percentage to send and the EverGreenCoin account address to send to or select a charitable cause from the drop-down menu. Minimum and Maximum amount and change address are optional. Then click 'Enable' to save and start EverGreenCoin Stake for Charity. Click 'Disable' at any time to save off and stop.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EverGreenCoin Stake for Charity allows you to automatically send up to 100% of your network rewards (stake rewards) to another EverGreenCoin account address after it matures. Note that you pay the tansaction fee (~.0001 EGC) in addition to the percentage.  &lt;br /&gt;&lt;a href=&quot;https://evergreencoin.org/staking-for-charity/&quot;&gt;&lt;span style=&quot;color: #1ab06c;&quot;&gt;Learn more on EverGreenCoin.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Please enter the percentage to send and the EverGreenCoin account address to send to or select a charitable cause from the drop-down menu. Minimum and Maximum amount and change address are optional. Then click 'Enable' to save and start EverGreenCoin Stake for Charity. Click 'Disable' at any time to save off and stop.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -303,6 +309,9 @@
             </property>
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum Amount:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {color: #1ab06c;}</string>
             </property>
            </widget>
           </item>
@@ -338,6 +347,9 @@
             </property>
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Percentage to give:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {color: #ffffff;}</string>
             </property>
            </widget>
           </item>
@@ -383,6 +395,9 @@
             <property name="placeholderText">
              <string>Enter account address to send to</string>
             </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {border-color: #ffffff;}</string>
+            </property>
            </widget>
           </item>
           <item row="5" column="3">
@@ -418,6 +433,9 @@
             </property>
             <property name="text">
              <string>                                    Change Address:</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {color: #1ab06c;}</string>
             </property>
            </widget>
           </item>
@@ -462,6 +480,8 @@
             </property>
             <property name="placeholderText">
              <string> % </string>
+            </property><property name="styleSheet">
+             <string notr="true">QLineEdit {border-color: #ffffff;}</string>
             </property>
            </widget>
           </item>
@@ -472,6 +492,9 @@
             </property>
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum Amount:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {color: #1ab06c;}</string>
             </property>
            </widget>
           </item>
@@ -490,6 +513,9 @@
             <property name="text">
              <string>                                    Charity Select:</string>
             </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {color: #ffffff;}</string>
+            </property>
            </widget>
           </item>
           <item row="4" column="0">
@@ -499,6 +525,9 @@
             </property>
             <property name="text">
              <string>                                    Charity Address:</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {color: #ffffff;}</string>
             </property>
            </widget>
           </item>
@@ -546,6 +575,9 @@
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="styleSheet">
+              <string notr="true">border: none;</string>
             </property>
             <property name="minimumSize">
              <size>

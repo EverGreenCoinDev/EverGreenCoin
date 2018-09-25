@@ -53,7 +53,6 @@
 #include <QProgressBar>
 #include <QStackedWidget>
 #include <QDateTime>
-#include <QMovie>
 #include <QFileDialog>
 #include <QDesktopServices>
 #include <QTimer>
@@ -86,7 +85,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 {
 
     resize(1000, 600);
-    setWindowTitle(tr("EverGreenCoin") );
+    setWindowTitle(tr("EverGreenCoin® Core - Wallet v1.8") );
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/evergreencoin"));
     setWindowIcon(QIcon(":icons/evergreencoin"));
@@ -166,6 +165,9 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     frameBlocks->setObjectName("frameBlocks");
     frameBlocks->setContentsMargins(0,0,0,0);
     frameBlocks->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+    frameBlocks->setFrameStyle(QFrame::NoFrame);
+    //frameBlocks->setFrameStyle(QFrame::StyledPanel);
+    frameBlocks->setFrameShadow(QFrame::Plain);
     QHBoxLayout *frameBlocksLayout = new QHBoxLayout(frameBlocks);
     frameBlocksLayout->setContentsMargins(3,0,3,0);
     frameBlocksLayout->setSpacing(4);
@@ -197,6 +199,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     // Progress bar and label for blocks download
     progressBarLabel = new QLabel();
     progressBarLabel->setVisible(false);
+    progressBarLabel->setStyleSheet("color: #ffffff;");
     progressBar = new QProgressBar();
     progressBar->setAlignment(Qt::AlignCenter);
     progressBar->setVisible(false);
@@ -212,8 +215,6 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     statusBar()->addWidget(progressBarLabel);
     statusBar()->addWidget(progressBar);
     statusBar()->addPermanentWidget(frameBlocks);
-
-    syncIconMovie = new QMovie(":/movies/update_spinner", "mng", this);
 
     // Clicking on a transaction on the overview page simply sends you to transaction history page
     connect(overviewPage, SIGNAL(transactionClicked(QModelIndex)), this, SLOT(gotoHistoryPage()));
@@ -321,7 +322,7 @@ void BitcoinGUI::createActions()
     aboutAction = new QAction(QIcon(":/icons/evergreencoin"), tr("&About EverGreenCoin"), this);
     aboutAction->setToolTip(tr("Show information about EverGreenCoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
-    aboutQtAction = new QAction(QIcon(":/icons/qtlogo.png"), tr("About &Qt"), this);
+    aboutQtAction = new QAction(QIcon(":/icons/qtlogo"), tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
@@ -432,7 +433,7 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
 #endif
             if(trayIcon)
             {
-                trayIcon->setToolTip(tr("EverGreenCoin") + QString(" ") + tr("[testnet]"));
+                trayIcon->setToolTip(tr("EverGreenCoin® Core - Wallet v1.8") + QString(" ") + tr("[testnet]"));
                 trayIcon->setIcon(QIcon(":/icons/toolbar_testnet"));
                 toggleHideAction->setIcon(QIcon(":/icons/toolbar_testnet"));
             }
@@ -654,8 +655,7 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
     else
     {
         tooltip = tr("Catching up...") + QString("<br>") + tooltip;
-        labelBlocksIcon->setMovie(syncIconMovie);
-        syncIconMovie->start();
+        labelBlocksIcon->setPixmap(QIcon(":/icons/connect_0").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE)); // EGC STS - Removed sync movie (src/qt/res/movies/update_spinner.mng). Replace with connect_0 icon (red exclamation)
 
         overviewPage->showOutOfSyncWarning(true);
     }

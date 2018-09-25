@@ -35,6 +35,9 @@
       <layout class="QVBoxLayout" name="verticalLayout_Main">
        <item>
         <widget class="QLabel" name="transactionFeeInfoLabel">
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;</string>
+         </property>
          <property name="text">
           <string>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</string>
          </property>
@@ -50,6 +53,9 @@
         <layout class="QHBoxLayout" name="horizontalLayoutFee">
          <item>
           <widget class="QLabel" name="transactionFeeLabel">
+           <property name="styleSheet">
+            <string notr="true">color: #ffffff;</string>
+           </property>
            <property name="text">
             <string>Pay transaction &amp;fee</string>
            </property>
@@ -62,8 +68,7 @@
           </widget>
          </item>
          <item>
-          <widget class="BitcoinAmountField" name="transactionFee">
-          </widget>
+          <widget class="BitcoinAmountField" name="transactionFee"/>
          </item>
          <item>
           <spacer name="horizontalSpacerFee">
@@ -82,6 +87,9 @@
        </item>
        <item>
         <widget class="QLabel" name="reserveBalanceInfoLabel">
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;</string>
+         </property>
          <property name="text">
           <string>Reserved amount does not participate in staking and is therefore spendable at any time.</string>
          </property>
@@ -97,6 +105,9 @@
         <layout class="QHBoxLayout" name="horizontalLayoutReserveBalance">
          <item>
           <widget class="QLabel" name="reserveBalanceLabel">
+           <property name="styleSheet">
+            <string notr="true">color: #ffffff;</string>
+           </property>
            <property name="text">
             <string>Reserve</string>
            </property>
@@ -109,8 +120,7 @@
           </widget>
          </item>
          <item>
-          <widget class="BitcoinAmountField" name="reserveBalance">
-          </widget>
+          <widget class="BitcoinAmountField" name="reserveBalance"/>
          </item>
          <item>
           <spacer name="horizontalSpacerReserveBalance">
@@ -163,6 +173,9 @@
       </layout>
      </widget>
      <widget class="QWidget" name="tabNetwork">
+      <property name="styleSheet">
+       <string notr="true">color: #ffffff;</string>
+      </property>
       <attribute name="title">
        <string>&amp;Network</string>
       </attribute>
@@ -340,6 +353,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_1_Display">
          <item>
           <widget class="QLabel" name="langLabel">
+           <property name="styleSheet">
+            <string notr="true">color: #ffffff;</string>
+           </property>
            <property name="text">
             <string>User Interface &amp;language:</string>
            </property>
@@ -364,6 +380,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_2_Display">
          <item>
           <widget class="QLabel" name="unitLabel">
+           <property name="styleSheet">
+            <string notr="true">color: #ffffff;</string>
+           </property>
            <property name="text">
             <string>&amp;Unit to show amounts in:</string>
            </property>

@@ -19,13 +19,13 @@
 #include <QDateTime>
 #include <QtAlgorithms>
 
-// Amount column is right-aligned it contains numbers
+// Amount column is right-aligned it contains numbers /// changed to center
 static int column_alignments[] = {
-        Qt::AlignLeft|Qt::AlignVCenter,
-        Qt::AlignLeft|Qt::AlignVCenter,
-        Qt::AlignLeft|Qt::AlignVCenter,
-        Qt::AlignLeft|Qt::AlignVCenter,
-        Qt::AlignRight|Qt::AlignVCenter
+        Qt::AlignHCenter|Qt::AlignVCenter,
+        Qt::AlignHCenter|Qt::AlignVCenter,
+        Qt::AlignHCenter|Qt::AlignVCenter,
+        Qt::AlignHCenter|Qt::AlignVCenter,
+        Qt::AlignHCenter|Qt::AlignVCenter
     };
 
 // Comparison operator for sort/binary search of model tx list

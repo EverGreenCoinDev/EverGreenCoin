@@ -109,8 +109,6 @@ private:
     TransactionView *transactionView;
     RPCConsole *rpcConsole;
 
-    QMovie *syncIconMovie;
-
     /** Create the main UI actions. */
     void createActions();
     /** Create the menu bar and sub-menus. */
