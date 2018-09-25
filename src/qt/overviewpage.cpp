@@ -129,7 +129,6 @@ OverviewPage::~OverviewPage()
     delete ui;
 }
 
-
 void OverviewPage::setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBalance, qint64 immatureBalance)
 {
     int unit = model->getOptionsModel()->getDisplayUnit();
