@@ -1393,7 +1393,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">QListView { background: transparent; }</string>
+           <string notr="true">QListView { background: transparent; color: #ffffff;}</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::NoFrame</enum>

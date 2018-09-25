@@ -220,13 +220,13 @@ QComboBox QAbstractItemView {
 }
 
 QTableView {
-        background: #35473c;
+        background: #153f30;
         color: #ffffff;
         border-style: none;
-        selection-background-color: #018457;
-        alternate-background-color: #153f30;
+        selection-background-color: #153f30;
+        alternate-background-color: #018457;
         selection-color: #FFFFFF;
-        border: 1px solid #018457;
+        border: 2px solid #018457;
 }
 
 QHeaderView { color: #ffffff; background-color: #153f30; background-image: none; }
