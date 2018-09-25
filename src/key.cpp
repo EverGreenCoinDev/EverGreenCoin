@@ -1,4 +1,5 @@
 // Copyright (c) 2009-2012 The Bitcoin developers
+// Copyright (c) 2015-2018 The EverGreenCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -56,6 +57,11 @@ int ECDSA_SIG_recover_key_GFp(EC_KEY *eckey, ECDSA_SIG *ecsig, const unsigned ch
     int ret = 0;
     BN_CTX *ctx = NULL;
 
+#if OPENSSL_VERSION_NUMBER >= 0x10100000
+    const BIGNUM *pr = NULL;
+    const BIGNUM *ps = NULL;
+#endif
+
     BIGNUM *x = NULL;
     BIGNUM *e = NULL;
     BIGNUM *order = NULL;
@@ -78,7 +84,12 @@ int ECDSA_SIG_recover_key_GFp(EC_KEY *eckey, ECDSA_SIG *ecsig, const unsigned ch
     x = BN_CTX_get(ctx);
     if (!BN_copy(x, order)) { ret=-1; goto err; }
     if (!BN_mul_word(x, i)) { ret=-1; goto err; }
+#if OPENSSL_VERSION_NUMBER < 0x10100000
     if (!BN_add(x, x, ecsig->r)) { ret=-1; goto err; }
+#else
+    ECDSA_SIG_get0(ecsig, &pr, &ps);
+    if (!BN_add(x, x, pr)) { ret=-1; goto err; }
+#endif
     field = BN_CTX_get(ctx);
     if (!EC_GROUP_get_curve_GFp(group, field, NULL, NULL, ctx)) { ret=-2; goto err; }
     if (BN_cmp(x, field) >= 0) { ret=0; goto err; }
@@ -99,9 +110,17 @@ int ECDSA_SIG_recover_key_GFp(EC_KEY *eckey, ECDSA_SIG *ecsig, const unsigned ch
     if (!BN_zero(zero)) { ret=-1; goto err; }
     if (!BN_mod_sub(e, zero, e, order, ctx)) { ret=-1; goto err; }
     rr = BN_CTX_get(ctx);
+#if OPENSSL_VERSION_NUMBER < 0x10100000
     if (!BN_mod_inverse(rr, ecsig->r, order, ctx)) { ret=-1; goto err; }
+#else
+    if (!BN_mod_inverse(rr, pr, order, ctx)) { ret=-1; goto err; }
+#endif
     sor = BN_CTX_get(ctx);
+#if OPENSSL_VERSION_NUMBER < 0x10100000
     if (!BN_mod_mul(sor, ecsig->s, rr, order, ctx)) { ret=-1; goto err; }
+#else
+    if (!BN_mod_mul(sor, ps, rr, order, ctx)) { ret=-1; goto err; }
+#endif
     eor = BN_CTX_get(ctx);
     if (!BN_mod_mul(eor, e, rr, order, ctx)) { ret=-1; goto err; }
     if (!EC_POINT_mul(group, Q, eor, R, sor, ctx)) { ret=-2; goto err; }
@@ -296,9 +315,26 @@ bool CKey::Sign(uint256 hash, std::vector<unsigned char>& vchSig)
     BIGNUM *halforder = BN_CTX_get(ctx);
     EC_GROUP_get_order(group, order, ctx);
     BN_rshift1(halforder, order);
+
+#if OPENSSL_VERSION_NUMBER >= 0x10100000
+    const BIGNUM *pr = NULL;
+    const BIGNUM *ps = NULL;
+    ECDSA_SIG_get0(sig, &pr, &ps);
+#endif
+#if OPENSSL_VERSION_NUMBER < 0x10100000
     if (BN_cmp(sig->s, halforder) > 0) {
+#else
+    if (BN_cmp(ps, halforder) > 0) {
+#endif
         // enforce low S values, by negating the value (modulo the order) if above order/2.
+#if OPENSSL_VERSION_NUMBER < 0x10100000
         BN_sub(sig->s, order, sig->s);
+#else
+        BIGNUM *pr0 = BN_dup(pr);
+                BIGNUM *ps0 = BN_new();
+                BN_sub(ps0, order, ps);
+                ECDSA_SIG_set0(sig, pr0, ps0);
+#endif
     }
     BN_CTX_end(ctx);
     BN_CTX_free(ctx);
@@ -323,8 +359,16 @@ bool CKey::SignCompact(uint256 hash, std::vector<unsigned char>& vchSig)
         return false;
     vchSig.clear();
     vchSig.resize(65,0);
+#if OPENSSL_VERSION_NUMBER < 0x10100000
     int nBitsR = BN_num_bits(sig->r);
     int nBitsS = BN_num_bits(sig->s);
+#else
+    const BIGNUM *pr = NULL;
+    const BIGNUM *ps = NULL;
+    ECDSA_SIG_get0(sig, &pr, &ps);
+    int nBitsR = BN_num_bits(pr);
+    int nBitsS = BN_num_bits(ps);
+#endif
     if (nBitsR <= 256 && nBitsS <= 256)
     {
         int nRecId = -1;
@@ -349,8 +393,13 @@ bool CKey::SignCompact(uint256 hash, std::vector<unsigned char>& vchSig)
         }
 
         vchSig[0] = nRecId+27+(fCompressedPubKey ? 4 : 0);
+#if OPENSSL_VERSION_NUMBER < 0x10100000
         BN_bn2bin(sig->r,&vchSig[33-(nBitsR+7)/8]);
         BN_bn2bin(sig->s,&vchSig[65-(nBitsS+7)/8]);
+#else
+        BN_bn2bin(pr, &vchSig[33-(nBitsR+7)/8]);
+        BN_bn2bin(ps, &vchSig[65-(nBitsS+7)/8]);
+#endif
         fOk = true;
     }
     ECDSA_SIG_free(sig);
@@ -369,8 +418,16 @@ bool CKey::SetCompactSignature(uint256 hash, const std::vector<unsigned char>& v
     if (nV<27 || nV>=35)
         return false;
     ECDSA_SIG *sig = ECDSA_SIG_new();
+#if OPENSSL_VERSION_NUMBER < 0x10100000
     BN_bin2bn(&vchSig[1],32,sig->r);
     BN_bin2bn(&vchSig[33],32,sig->s);
+#else
+    BIGNUM *pr = NULL;
+    BIGNUM *ps = NULL;
+    BN_bin2bn(&vchSig[1],  32, pr);
+    BN_bin2bn(&vchSig[33], 32, ps);
+    ECDSA_SIG_set0(sig, pr, ps);
+#endif
 
     EC_KEY_free(pkey);
     pkey = EC_KEY_new_by_curve_name(NID_secp256k1);
