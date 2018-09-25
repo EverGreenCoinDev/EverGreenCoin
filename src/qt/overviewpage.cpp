@@ -72,7 +72,7 @@ public:
         {
             amountText = QString("[") + amountText + QString("]");
         }
-        painter->setPen(QColor(1,132,87));
+        painter->setPen(QColor(255,255,255));
         painter->drawText(amountRect, Qt::AlignRight|Qt::AlignVCenter, amountText);
 
         painter->setPen(option.palette.color(QPalette::Text));
