@@ -84,8 +84,11 @@ public:
         if (!BN_copy(this->pbn, b.pbn))
 #endif
         {
-            //BN_clear_free(this);
+#if OPENSSL_VERSION_NUMBER < 0x10100000
+            BN_clear_free(this);
+#else
             BN_clear_free(this->pbn);
+#endif
             throw bignum_error("CBigNum::CBigNum(const CBigNum&) : BN_copy failed");
         }
     }
