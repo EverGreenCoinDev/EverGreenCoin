@@ -541,6 +541,9 @@
          <height>16777215</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
        </property>
@@ -552,6 +555,9 @@
             <width>500</width>
             <height>0</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
           </property>
           <property name="title">
            <string/>
@@ -581,7 +587,7 @@
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">border: 0;</string>
+            <string notr="true">border: none;</string>
            </property>
            <property name="title">
             <string/>
@@ -657,6 +663,9 @@
              <width>501</width>
              <height>111</height>
             </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: none;</string>
            </property>
            <property name="title">
             <string/>
