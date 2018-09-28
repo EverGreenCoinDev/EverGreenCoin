@@ -149,7 +149,7 @@ void StakeForCharityDialog::loadCharities()
             charitiesAddress[i] = json_obj["EGCaddress"].toString();
             charitiesThanks[i] = json_obj["thanksOnly"].toString();
             charitiesAsk[i] = json_obj["ask"].toString();
-            ui->comboBox->setItemData(i+1, json_obj["ask"].toString(), Qt::ToolTipRole);
+            ui->comboBox->setItemData(i+1, json_obj["ask"].toString().replace("<a href","<a style='color: #ffffff;' href") , Qt::ToolTipRole);
             if (fTestNet) qDebug() << json_obj["thanksOnly"].toString();
             charitiesImage[i] = json_obj["img"].toString();
             charitiesURL[i] = json_obj["url"].toString();
@@ -376,7 +376,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->addressBookButton->setDisabled(true);
         ui->charityAddressEdit->setStyleSheet("border-color: #35473c; color:35473c;");
         ui->label_5->setStyleSheet("QLabel {color: #018457;}");
-        ui->message->setText(charitiesAsk[index-1] + "<br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
+        ui->message->setText(charitiesAsk[index-1].replace("<a href","<a style='color: #1ab06c;' href") + "<br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
         if (ui->btnRefreshCharities->isEnabled())  // ensure images do not load during refresh. Clearing the combo (part of refresh) changes the index, calling this function.
         {   // load the charity's image
             QSslConfiguration config = QSslConfiguration::defaultConfiguration();
