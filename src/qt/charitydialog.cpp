@@ -39,6 +39,10 @@ StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
 QString charitiesAddress[100];
 QString charitiesAsk[100];
 QString charitiesThanks[100];
+QString charitiesImage[100];
+QString charitiesURL[100];
+//QString charitiesEGCImage[100];
+//QString charitiesEGCURL[100];
 
 StakeForCharityDialog::~StakeForCharityDialog()
 {
@@ -115,6 +119,7 @@ void StakeForCharityDialog::loadCharities()
     charitiesRequest.setSslConfiguration(config);
     charitiesRequest.setUrl(QUrl(QString("https://evergreencoin.org/charities/charities.json")));
     charitiesRequest.setHeader(QNetworkRequest::ServerHeader, "application/json");
+    QNetworkRequest::AlwaysNetwork;
     QNetworkAccessManager nam;
     QNetworkReply *reply = nam.get(charitiesRequest);
     while(!reply->isFinished())
@@ -146,6 +151,10 @@ void StakeForCharityDialog::loadCharities()
             charitiesAsk[i] = json_obj["ask"].toString();
             ui->comboBox->setItemData(i+1, json_obj["ask"].toString(), Qt::ToolTipRole);
             if (fTestNet) qDebug() << json_obj["thanksOnly"].toString();
+            charitiesImage[i] = json_obj["img"].toString();
+            charitiesURL[i] = json_obj["url"].toString();
+            //charitiesEGCImage[i] = json_obj["EGCimg"].toString();
+            //charitiesEGCURL[i] = json_obj["EGCurl"].toString();
             i++;
         }
         ui->comboBox->setItemData(1, "Your donation will be used by the <a href='https://evergreencoin.org/EGCFoundation/' style='color: #ffffff;'>EverGreenCoin Foundation, Inc.</a> <br />under the guidance of the board and community.", Qt::ToolTipRole);
@@ -327,6 +336,9 @@ void StakeForCharityDialog::on_comboBox_activated(int index)
 
 void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
 {
+    QPixmap IMGpixmap;
+    QPixmap EGCIMGpixmap;
+    EGCIMGpixmap.load(":/images/Wallet_Logo");
     if (index==0)
     {
         ui->charityAddressEdit->clear();
@@ -337,6 +349,8 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->label_5->setStyleSheet("QLabel {color: #ffffff;}");
         ui->message->setText("Please enter the EverGreenCoin address <br />or select from the drop-down <br />and then click 'Enable'");
         ui->charityAddressEdit->setFocus();
+        ui->label_IMG->clear();
+        ui->label_HREF->clear();
     }
     else if (index==1)
     {
@@ -350,6 +364,8 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->addressBookButton->setDisabled(true);
         ui->charityAddressEdit->setEnabled(false);
         ui->charityAddressEdit->setReadOnly(true);
+        ui->label_IMG->setPixmap(EGCIMGpixmap);
+        ui->label_HREF->setText("<a href='https://evergreencoin.org/EGCFoundation/'><span style='text-decoration: underline; color:#1ab06c;'>Learn more</span></a>");
     }
     else if (index > 1)
     {
@@ -361,6 +377,28 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setStyleSheet("border-color: #35473c; color:35473c;");
         ui->label_5->setStyleSheet("QLabel {color: #018457;}");
         ui->message->setText(charitiesAsk[index-1] + "<br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
+        if (ui->btnRefreshCharities->isEnabled())  // ensure images do not load during refresh. Clearing the combo (part of refresh) changes the index, calling this function.
+        {   // load the charity's image
+            QSslConfiguration config = QSslConfiguration::defaultConfiguration();
+            config.setProtocol(QSsl::TlsV1_2);
+            QNetworkRequest imgRequest;
+            imgRequest.setSslConfiguration(config);
+            imgRequest.setUrl(QUrl(QString(charitiesImage[index-1])));
+            QNetworkRequest::AlwaysNetwork;
+            QNetworkAccessManager nam2;
+            QNetworkReply *reply = nam2.get(imgRequest);
+            while(!reply->isFinished())
+            {
+                qApp->processEvents();
+            }
+            if (reply->error() == QNetworkReply::NoError)
+            {
+                QByteArray imgData =  reply->readAll();
+                IMGpixmap.loadFromData(imgData);
+                ui->label_IMG->setPixmap(IMGpixmap);
+            }
+            ui->label_HREF->setText("<a href='" + (QString)charitiesURL[index-1] +"'><span style='text-decoration: underline; color:#1ab06c;'>Learn more</span></a>");
+        }
     }
 }
 
