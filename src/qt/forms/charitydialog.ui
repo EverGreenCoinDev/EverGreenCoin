@@ -76,6 +76,9 @@
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="styleSheet">
+       <string notr="true">text-align: center;</string>
+      </property>
       <widget class="QFrame" name="gridLayout_4">
        <property name="geometry">
         <rect>
@@ -637,9 +640,6 @@
             <property name="toolTip">
              <string>Save any changes and enable EverGreenCoin Stake For Charity</string>
             </property>
-            <property name="statusTip">
-             <string>Click to turn on EverGreenCoin Stake For Charity</string>
-            </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
@@ -670,9 +670,6 @@
             </property>
             <property name="toolTip">
              <string>Disable EverGreenCoin Stake For Charity</string>
-            </property>
-            <property name="statusTip">
-             <string>Click to turn off EverGreenCoin Stake For Charity</string>
             </property>
             <property name="text">
              <string>Disable</string>
