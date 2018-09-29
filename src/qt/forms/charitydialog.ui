@@ -56,7 +56,7 @@
       <bool>true</bool>
      </property>
      <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      <set>Qt::AlignCenter</set>
      </property>
      <widget class="QWidget" name="scrollAreaWidgetContents">
       <property name="enabled">
@@ -71,7 +71,7 @@
        </rect>
       </property>
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -118,115 +118,26 @@
         <property name="sizeConstraint">
          <enum>QLayout::SetDefaultConstraint</enum>
         </property>
-        <item row="2" column="3" colspan="3">
-         <widget class="QLineEdit" name="charityMaxEdit">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
+        <item row="1" column="3">
+         <widget class="QLabel" name="label_4">
           <property name="toolTip">
            <string>Maximum amount to send</string>
           </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="maxLength">
-           <number>10</number>
-          </property>
-          <property name="placeholderText">
-           <string>(optional)</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLabel" name="label_3">
-          <property name="toolTip">
-           <string>Minimum amount to send</string>
-          </property>
           <property name="styleSheet">
            <string notr="true">QLabel {color: #1ab06c;}</string>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum Amount:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum Amount:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label">
+        <item row="3" column="3">
+         <widget class="QPushButton" name="btnRefreshCharities">
           <property name="toolTip">
-           <string>Percentage of your network rewards (stake rewards) to send</string>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QLabel {color: #ffffff;}</string>
+           <string>Click to download the current list</string>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Percentage to give:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1">
-         <widget class="QLineEdit" name="charityAddressEdit">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>350</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Account address to send percentage of network rewards to or select from the drop-down menu above</string>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QLineEdit {border-color: #ffffff;}</string>
-          </property>
-          <property name="maxLength">
-           <number>34</number>
-          </property>
-          <property name="placeholderText">
-           <string>Enter account address to send to</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="3">
-         <widget class="QPushButton" name="changeAddressBookButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="toolTip">
-           <string>Choose an address from the address book</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="../bitcoin.qrc">
-            <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
-          </property>
-          <property name="autoDefault">
-           <bool>false</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="0">
-         <widget class="QLabel" name="label_6">
-          <property name="toolTip">
-           <string>The amount left over returned to you (expert only, safe to ignore)</string>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QLabel {color: #1ab06c;}</string>
-          </property>
-          <property name="text">
-           <string>                                    Change Address:</string>
+           <string>Refresh Charities</string>
           </property>
          </widget>
         </item>
@@ -255,6 +166,19 @@
           </property>
          </widget>
         </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="toolTip">
+           <string>Account address to send percentage of network rewards to</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
+          <property name="text">
+           <string>                                    Charity Select:</string>
+          </property>
+         </widget>
+        </item>
         <item row="2" column="0">
          <widget class="QLineEdit" name="charityPercentEdit">
           <property name="maximumSize">
@@ -277,55 +201,6 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="3">
-         <widget class="QLabel" name="label_4">
-          <property name="toolTip">
-           <string>Maximum amount to send</string>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QLabel {color: #1ab06c;}</string>
-          </property>
-          <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum Amount:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="3">
-         <widget class="QPushButton" name="btnRefreshCharities">
-          <property name="toolTip">
-           <string>Click to download the current list</string>
-          </property>
-          <property name="text">
-           <string>Refresh Charities</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="0">
-         <widget class="QLabel" name="label_7">
-          <property name="toolTip">
-           <string>Account address to send percentage of network rewards to</string>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QLabel {color: #ffffff;}</string>
-          </property>
-          <property name="text">
-           <string>                                    Charity Select:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0">
-         <widget class="QLabel" name="label_5">
-          <property name="toolTip">
-           <string>Account address to send percentage of network rewards to</string>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QLabel {color: #ffffff;}</string>
-          </property>
-          <property name="text">
-           <string>                                    Charity Address:</string>
-          </property>
-         </widget>
-        </item>
         <item row="3" column="1">
          <widget class="QComboBox" name="comboBox">
           <property name="toolTip">
@@ -344,10 +219,10 @@
           </item>
          </widget>
         </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="charityMinEdit">
+        <item row="1" column="1">
+         <widget class="QLabel" name="label_3">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -355,11 +230,11 @@
           <property name="toolTip">
            <string>Minimum amount to send</string>
           </property>
-          <property name="maxLength">
-           <number>10</number>
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #1ab06c;}</string>
           </property>
-          <property name="placeholderText">
-           <string>(optional)</string>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum Amount:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -469,10 +344,147 @@
           </widget>
          </widget>
         </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="charityMinEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTip">
+           <string>Minimum amount to send</string>
+          </property>
+          <property name="maxLength">
+           <number>10</number>
+          </property>
+          <property name="placeholderText">
+           <string>(optional)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="toolTip">
+           <string>The amount left over returned to you (expert only, safe to ignore)</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #1ab06c;}</string>
+          </property>
+          <property name="text">
+           <string>                                    Change Address:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <widget class="QPushButton" name="changeAddressBookButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTip">
+           <string>Choose an address from the address book</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../bitcoin.qrc">
+            <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="toolTip">
+           <string>Account address to send percentage of network rewards to</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
+          <property name="text">
+           <string>                                    Charity Address:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="charityAddressEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>350</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Account address to send percentage of network rewards to or select from the drop-down menu above</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {border-color: #ffffff;}</string>
+          </property>
+          <property name="maxLength">
+           <number>34</number>
+          </property>
+          <property name="placeholderText">
+           <string>Enter account address to send to</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTip">
+           <string>Percentage of your network rewards (stake rewards) to send</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {color: #ffffff;}</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Percentage to give:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3" colspan="3">
+         <widget class="QLineEdit" name="charityMaxEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTip">
+           <string>Maximum amount to send</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="maxLength">
+           <number>10</number>
+          </property>
+          <property name="placeholderText">
+           <string>(optional)</string>
+          </property>
+         </widget>
+        </item>
         <item row="0" column="0" colspan="6">
          <widget class="QLabel" name="label_2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -486,7 +498,7 @@
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>125</height>
+            <height>16777215</height>
            </size>
           </property>
           <property name="styleSheet">
@@ -496,7 +508,7 @@
            <number>1</number>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EverGreenCoin Stake for Charity allows you to automatically send up to 100% of your network rewards (stake rewards) to another EverGreenCoin account address after it matures. Note that you pay the tansaction fee (~.0001 EGC) in addition to the percentage. &lt;br/&gt;&lt;a href=&quot;https://evergreencoin.org/staking-for-charity/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;Learn more on EverGreenCoin.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EverGreenCoin Stake for Charity allows you to automatically send up to 100% of your network rewards (stake rewards) to another EverGreenCoin address after it matures. Note that you pay the tansaction fee (~.0001 EGC) in addition to the percentage. &lt;a href=&quot;https://evergreencoin.org/staking-for-charity/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;Learn more on EverGreenCoin.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="textFormat">
            <enum>Qt::RichText</enum>
@@ -548,11 +560,11 @@
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
        </property>
        <layout class="QGridLayout" name="gridLayout_5">
-        <item row="0" column="0" rowspan="2" colspan="2">
+        <item row="1" column="0" rowspan="2" colspan="2">
          <widget class="QGroupBox" name="groupBox_3">
           <property name="minimumSize">
            <size>
-            <width>500</width>
+            <width>560</width>
             <height>0</height>
            </size>
           </property>
@@ -569,8 +581,8 @@
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>30</y>
-             <width>473</width>
+             <y>0</y>
+             <width>600</width>
              <height>40</height>
             </rect>
            </property>
@@ -579,6 +591,12 @@
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>400</width>
+             <height>0</height>
+            </size>
            </property>
            <property name="maximumSize">
             <size>
@@ -598,15 +616,21 @@
            <widget class="QPushButton" name="enableButton">
             <property name="geometry">
              <rect>
-              <x>90</x>
+              <x>40</x>
               <y>0</y>
-              <width>100</width>
+              <width>200</width>
               <height>40</height>
              </rect>
             </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
-              <width>50</width>
+              <width>200</width>
               <height>0</height>
              </size>
             </property>
@@ -626,21 +650,21 @@
            <widget class="QPushButton" name="disableButton">
             <property name="geometry">
              <rect>
-              <x>290</x>
+              <x>330</x>
               <y>0</y>
-              <width>100</width>
+              <width>200</width>
               <height>40</height>
              </rect>
             </property>
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
             <property name="minimumSize">
              <size>
-              <width>50</width>
+              <width>200</width>
               <height>0</height>
              </size>
             </property>
@@ -660,9 +684,15 @@
             <rect>
              <x>19</x>
              <y>90</y>
-             <width>501</width>
+             <width>540</width>
              <height>111</height>
             </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>540</width>
+             <height>0</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">border: none;</string>
@@ -674,20 +704,20 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>30</y>
-              <width>500</width>
+              <y>0</y>
+              <width>540</width>
               <height>70</height>
              </rect>
             </property>
             <property name="minimumSize">
              <size>
-              <width>500</width>
+              <width>540</width>
               <height>0</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>500</width>
+              <width>520</width>
               <height>16777215</height>
              </size>
             </property>
@@ -849,7 +879,7 @@
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
             </property>
             <property name="wordWrap">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="openExternalLinks">
              <bool>true</bool>
@@ -864,7 +894,7 @@
           <zorder>groupBox_4</zorder>
          </widget>
         </item>
-        <item row="1" column="3">
+        <item row="2" column="3">
          <widget class="QLabel" name="label_HREF">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
@@ -897,7 +927,33 @@
           </property>
          </widget>
         </item>
-        <item row="0" column="3">
+        <item row="3" column="3">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="3">
          <widget class="QLabel" name="label_IMG">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -934,8 +990,8 @@
           </property>
          </widget>
         </item>
-        <item row="0" column="2">
-         <spacer name="horizontalSpacer">
+        <item row="1" column="4">
+         <spacer name="horizontalSpacer_2">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -947,8 +1003,8 @@
           </property>
          </spacer>
         </item>
-        <item row="2" column="3">
-         <spacer name="verticalSpacer">
+        <item row="0" column="3">
+         <spacer name="verticalSpacer_2">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>

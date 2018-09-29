@@ -59,6 +59,10 @@ QLabel {
         color: #ffffff;
 }
 
+QMessageBox {
+        color: #ffffff;
+}
+
 QCheckBox {
         border-radius: 2px;
         border-width: 2;
@@ -160,7 +164,7 @@ QMenuBar {
 
 QMenuBar::item {
         background: #153f30;
-        color: white;
+        color: #ffffff;
         }
 
 QMenuBar::hovered {
