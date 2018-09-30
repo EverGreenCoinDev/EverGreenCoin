@@ -76,8 +76,11 @@
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
       <property name="styleSheet">
-       <string notr="true">text-align: center;</string>
+       <string notr="true"/>
       </property>
       <widget class="QFrame" name="gridLayout_4">
        <property name="geometry">
@@ -886,9 +889,6 @@
             </property>
            </widget>
           </widget>
-          <zorder>label_IMG</zorder>
-          <zorder>groupBox_2</zorder>
-          <zorder>groupBox_4</zorder>
          </widget>
         </item>
         <item row="2" column="3">

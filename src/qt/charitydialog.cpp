@@ -119,7 +119,10 @@ void StakeForCharityDialog::loadCharities()
     charitiesRequest.setSslConfiguration(config);
     charitiesRequest.setUrl(QUrl(QString("https://evergreencoin.org/charities/charities.json")));
     charitiesRequest.setHeader(QNetworkRequest::ServerHeader, "application/json");
-    QNetworkRequest::AlwaysNetwork;
+    charitiesRequest.setAttribute(
+                QNetworkRequest::CacheLoadControlAttribute,
+                QVariant(int(QNetworkRequest::AlwaysNetwork))
+                );
     QNetworkAccessManager nam;
     QNetworkReply *reply = nam.get(charitiesRequest);
     while(!reply->isFinished())
@@ -160,7 +163,7 @@ void StakeForCharityDialog::loadCharities()
         ui->comboBox->setItemData(1, "Your donation will be used by the <a href='https://evergreencoin.org/EGCFoundation/' style='color: #ffffff;'>EverGreenCoin Foundation, Inc.</a> <br />under the guidance of the board and community.", Qt::ToolTipRole);
         ui->comboBox->setItemData(0, "You can donate to any EverGreenCoin address you wish.", Qt::ToolTipRole);
     } else {
-        qDebug() << "Failure" <<reply->errorString();
+        uiInterface.ThreadSafeMessageBox("HTTP Error: " + reply->errorString().toStdString(), "EverGreenCoin Stake for Charity", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
     }
     reply->deleteLater();
 }
@@ -384,7 +387,10 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
             QNetworkRequest imgRequest;
             imgRequest.setSslConfiguration(config);
             imgRequest.setUrl(QUrl(QString(charitiesImage[index-1])));
-            QNetworkRequest::AlwaysNetwork;
+            imgRequest.setAttribute(
+                        QNetworkRequest::CacheLoadControlAttribute,
+                        QVariant(int(QNetworkRequest::AlwaysNetwork))
+                        );
             QNetworkAccessManager nam2;
             QNetworkReply *reply = nam2.get(imgRequest);
             while(!reply->isFinished())
@@ -417,6 +423,7 @@ void StakeForCharityDialog::on_btnRefreshCharities_clicked()
     ui->comboBox->setCurrentIndex(0); // reset charity select combo
     ui->btnRefreshCharities->setDisabled(false);
     ui->btnRefreshCharities->setText("Refresh Charities");
+    ui->charityAddressEdit->setFocus();
 }
 
 void StakeForCharityDialog::updateMessageColor()
