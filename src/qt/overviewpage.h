@@ -30,6 +30,8 @@ public slots:
     void setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBalance, qint64 immatureBalance);
     void unlockWallet();
     void updateButton();
+    void changeOverviewLogo(QString IMG, QString URL);
+    void resetOverviewLogo();
 
 signals:
     void transactionClicked(const QModelIndex &index);

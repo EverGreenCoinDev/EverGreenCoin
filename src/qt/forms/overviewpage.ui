@@ -1263,7 +1263,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="labelLogo">
        <property name="font">
         <font>
          <stylestrategy>PreferAntialias</stylestrategy>
@@ -1282,7 +1282,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_7">
+      <widget class="QLabel" name="labelURL">
        <property name="text">
         <string>&lt;center&gt;&lt;a href=&quot;http://EverGreenCoin.org&quot; style=&quot;text-decoration: none; color:#1ab06c;&quot;&gt;EverGreenCoin.org&lt;/a&gt;&lt;/center&gt;</string>
        </property>

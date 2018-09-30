@@ -34,15 +34,15 @@ StakeForCharityDialog::StakeForCharityDialog(QWidget *parent) :
     ui->charityChangeAddressEdit->setPlaceholderText(tr("(optional)"));
 #endif
 
-    ui->label_2->setFocus();
+    ui->charityAddressEdit->setFocus();
 }
 QString charitiesAddress[100];
 QString charitiesAsk[100];
 QString charitiesThanks[100];
 QString charitiesImage[100];
 QString charitiesURL[100];
-//QString charitiesEGCImage[100];
-//QString charitiesEGCURL[100];
+QString charitiesEGCImage[100];
+QString charitiesEGCURL[100];
 
 StakeForCharityDialog::~StakeForCharityDialog()
 {
@@ -90,6 +90,8 @@ void StakeForCharityDialog::setModel(WalletModel *model)
                     ui->message->setStyleSheet("QLabel { color: #1ab06c; font-weight: 900; }");
                     ui->message->setText(charitiesThanks[i]);
                     ui->comboBox->setCurrentIndex(i+1);
+                    emit resetOverviewLogo();
+                    emit changeOverviewLogo(QString(charitiesEGCImage[ui->comboBox->currentIndex()-1]),QString(charitiesEGCURL[ui->comboBox->currentIndex()-1]));
                     break;
                 }
             }
@@ -156,14 +158,14 @@ void StakeForCharityDialog::loadCharities()
             if (fTestNet) qDebug() << json_obj["thanksOnly"].toString();
             charitiesImage[i] = json_obj["img"].toString();
             charitiesURL[i] = json_obj["url"].toString();
-            //charitiesEGCImage[i] = json_obj["EGCimg"].toString();
-            //charitiesEGCURL[i] = json_obj["EGCurl"].toString();
+            charitiesEGCImage[i] = json_obj["EGCimg"].toString();
+            charitiesEGCURL[i] = json_obj["EGCurl"].toString();
             i++;
         }
         ui->comboBox->setItemData(1, "Your donation will be used by the <a href='https://evergreencoin.org/EGCFoundation/' style='color: #ffffff;'>EverGreenCoin Foundation, Inc.</a> <br />under the guidance of the board and community.", Qt::ToolTipRole);
         ui->comboBox->setItemData(0, "You can donate to any EverGreenCoin address you wish.", Qt::ToolTipRole);
     } else {
-        uiInterface.ThreadSafeMessageBox("HTTP Error: " + reply->errorString().toStdString(), "EverGreenCoin Stake for Charity", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+        uiInterface.ThreadSafeMessageBox("HTTP load json error: " + reply->errorString().toStdString() + "\n Please check your Internet connection.", "EverGreenCoin Dynamic Stake for Charity", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
     }
     reply->deleteLater();
 }
@@ -307,7 +309,16 @@ void StakeForCharityDialog::on_enableButton_clicked()
     ui->message->setStyleSheet("QLabel { color: #1ab06c; font-weight: 900;}");
     ui->message->setText("EverGreenCoin Staking For Charity enabled to:<br /> " + QString(address.ToString().c_str()) + " at a rate of " + QString::number(nCharityPercent) + "%");
     if (ui->comboBox->currentIndex() > 0) ui->message->setText(ui->message->text() + "<br />" + charitiesThanks[ui->comboBox->currentIndex()-1]) ;
+    qDebug()<< "there";
+    //if (ui->comboBox->currentIndex() > 2)
+        emit changeOverviewLogo(QString(charitiesEGCImage[ui->comboBox->currentIndex()-1]),QString(charitiesEGCURL[ui->comboBox->currentIndex()-1]));
+    qDebug()<< "there2"; //
+    QMetaObject::invokeMethod(this , "resetOverviewLogo", Qt::DirectConnection);
+    QMetaObject::invokeMethod(this , "changeOverviewLogo(QString(charitiesEGCImage[ui->comboBox->currentIndex()-1]),QString(charitiesEGCURL[ui->comboBox->currentIndex()-1]))", Qt::DirectConnection);
+     emit resetOverviewLogo();
+    qDebug()<< "there3";
     ui->comboBox->update();
+    qDebug()<< "there4";
     return;
 }
 
@@ -329,6 +340,7 @@ void StakeForCharityDialog::on_disableButton_clicked()
     ui->comboBox->setCurrentIndex(0); // reset charity select combo
     ui->message->setStyleSheet("QLabel { color: #1ab06c; font-weight: 900;}");
     ui->message->setText(tr("EverGreenCoin Stake for Charity is now off and saved off."));
+    emit resetOverviewLogo();
     return;
 }
 
@@ -402,6 +414,11 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
                 QByteArray imgData =  reply->readAll();
                 IMGpixmap.loadFromData(imgData);
                 ui->label_IMG->setPixmap(IMGpixmap);
+            }
+            else
+            {
+                uiInterface.ThreadSafeMessageBox("HTTP load image error: " + reply->errorString().toStdString() + "\n Please check your Internet connection.", "EverGreenCoin Dynamic Stake for Charity", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+                ui->label_IMG->setPixmap(EGCIMGpixmap);
             }
             ui->label_HREF->setText("<a href='" + (QString)charitiesURL[index-1] +"'><span style='text-decoration: underline; color:#1ab06c;'>Learn more</span></a>");
         }

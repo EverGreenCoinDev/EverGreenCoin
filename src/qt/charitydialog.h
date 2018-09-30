@@ -24,6 +24,10 @@ public:
     void setAddress(const QString &address, QLineEdit *addrEdit);
     void updateMessageColor();
 
+signals:
+    void changeOverviewLogo(QString IMG, QString URL);
+    void resetOverviewLogo();
+
 private slots:
     void on_enableButton_clicked();
     void on_disableButton_clicked();

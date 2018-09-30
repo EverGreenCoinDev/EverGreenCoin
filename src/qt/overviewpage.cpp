@@ -13,6 +13,11 @@
 #include <QAbstractItemDelegate>
 #include <QPainter>
 
+#include <QtNetwork>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+
 #define DECORATION_SIZE 58
 #define NUM_ITEMS 7
 
@@ -116,6 +121,7 @@ OverviewPage::OverviewPage(QWidget *parent) :
 
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
+    qDebug()<< "construct overview ";
 }
 
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)
@@ -125,7 +131,7 @@ void OverviewPage::handleTransactionClicked(const QModelIndex &index)
 }
 
 OverviewPage::~OverviewPage()
-{
+{qDebug()<< "destruct overview ";
     delete ui;
 }
 
@@ -199,7 +205,6 @@ void OverviewPage::setModel(WalletModel *model)
             ui->unlockWalletButton->setText(QString("EverGreenCoin not encrypted"));
             ui->unlockWalletButton->setToolTip(QString("Click 'Settings' then 'Encrypt your EverGreenCoin' in the menu bar to encrypt"));
         }
-
         else
         {
             updateButton();
@@ -237,4 +242,43 @@ void OverviewPage::updateButton()
    WalletModel::EncryptionStatus status = model->getEncryptionStatus();
    if (status == WalletModel::Locked) ui->unlockWalletButton->setText(QString("Unlock your EverGreenCoin"));
    else ui->unlockWalletButton->setText(QString("Lock your EverGreenCoin"));
+}
+
+void OverviewPage::changeOverviewLogo(QString IMG, QString URL)
+{qDebug()<< "in it ";
+    //uiInterface.ThreadSafeMessageBox("changeLogo: " + IMG.toStdString() + " " + URL.toStdString(), "EverGreenCoin Dynamic Stake for Charity", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+    QPixmap CHARITYpixmap;
+    QPixmap EGCpixmap;
+    EGCpixmap.load(":/images/Wallet_Logo");
+    QSslConfiguration config = QSslConfiguration::defaultConfiguration();
+    config.setProtocol(QSsl::TlsV1_2);
+    QNetworkRequest imgRequest;
+    imgRequest.setSslConfiguration(config);
+    imgRequest.setUrl(QUrl(IMG));
+    imgRequest.setAttribute(
+                QNetworkRequest::CacheLoadControlAttribute,
+                QVariant(int(QNetworkRequest::AlwaysNetwork))
+                );
+    QNetworkAccessManager namLogo;
+    QNetworkReply *reply = namLogo.get(imgRequest);
+    while(!reply->isFinished())
+    {
+        qApp->processEvents();
+    }
+    if (reply->error() == QNetworkReply::NoError)
+    {
+        QByteArray imgData =  reply->readAll();
+        CHARITYpixmap.loadFromData(imgData);
+        ui->labelLogo->setPixmap(CHARITYpixmap);
+    }
+    else
+    { qDebug()<< "Failure " <<reply->errorString();
+        //uiInterface.ThreadSafeMessageBox("HTTP load image error: " + reply->errorString().toStdString() + "\n Please check your Internet connection.", "EverGreenCoin Dynamic Stake for Charity", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+        ui->labelLogo->setPixmap(EGCpixmap);
+    }
+}
+
+void OverviewPage::resetOverviewLogo()
+{qDebug()<< "in it 2 ";
+    //uiInterface.ThreadSafeMessageBox("reLogo", "EverGreenCoin Dynamic Stake for Charity", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
 }
