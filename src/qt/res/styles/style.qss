@@ -109,8 +109,8 @@ QFrame#frame, QFrame#frame_2, QFrame#frame_3, QFrame#gridFrame_2, QFrame#SendCoi
         color: #ffffff;
 }
 
-QLabel[openExternalLinks=true], QHeaderView { color: #018457 }
-QLabel[openExternalLinks=false] { color: black; font-weight: normal }
+/* QLabel[openExternalLinks=true], QHeaderView { color: #018457 }
+QLabel[openExternalLinks=false] { color: black; font-weight: normal } */
 
 
 QPushButton, QToolButton {

@@ -490,7 +490,7 @@
         <item row="0" column="0" colspan="6">
          <widget class="QLabel" name="label_2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -514,7 +514,7 @@
            <number>1</number>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EverGreenCoin Stake for Charity allows you to automatically send up to 100% of your network rewards (stake rewards) to another EverGreenCoin address after it matures. Note that you pay the tansaction fee (~.0001 EGC) in addition to the percentage. &lt;a href=&quot;https://evergreencoin.org/staking-for-charity/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;Learn more on EverGreenCoin.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EverGreenCoin Stake for Charity allows you to automatically send up to 100% of your network rewards (stake rewards) to another EverGreenCoin address after it matures. Note that you pay the tansaction fee (~.0001 EGC) in addition to the percentage. &lt;a href=&quot;https://evergreencoin.org/staking-for-charity/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;Learn more at EverGreenCoin.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="textFormat">
            <enum>Qt::RichText</enum>
