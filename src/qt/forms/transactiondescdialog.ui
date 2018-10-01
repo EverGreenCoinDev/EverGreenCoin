@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Transaction details</string>
+   <string>Transaction Details</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog {background-color: #153f30; color: #ffffff;}</string>
