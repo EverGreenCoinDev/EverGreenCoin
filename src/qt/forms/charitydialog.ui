@@ -514,7 +514,7 @@
            <number>1</number>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EverGreenCoin Stake for Charity allows you to automatically send up to 100% of your network rewards (stake rewards) to another EverGreenCoin address after it matures. Note that you pay the tansaction fee (~.0001 EGC) in addition to the percentage. &lt;a href=&quot;https://evergreencoin.org/staking-for-charity/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;Learn more at EverGreenCoin.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EverGreenCoin Dynamic Stake for Charity allows you to automatically send up to 100% of your network rewards (stake rewards) to another EverGreenCoin address after it matures. Note that you pay the tansaction fee (~.0001 EGC) in addition to the percentage. &lt;a href=&quot;https://evergreencoin.org/staking-for-charity/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;Learn more at EverGreenCoin.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="textFormat">
            <enum>Qt::RichText</enum>
@@ -641,7 +641,7 @@
              </size>
             </property>
             <property name="toolTip">
-             <string>Save any changes and enable EverGreenCoin Stake For Charity</string>
+             <string>Save any changes and enable EverGreenCoin Dynamic Stake For Charity</string>
             </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
@@ -672,7 +672,7 @@
              </size>
             </property>
             <property name="toolTip">
-             <string>Disable EverGreenCoin Stake For Charity</string>
+             <string>Disable EverGreenCoin Dynamic Stake For Charity</string>
             </property>
             <property name="text">
              <string>Disable</string>

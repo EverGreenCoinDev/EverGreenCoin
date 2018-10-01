@@ -2165,13 +2165,13 @@
         </palette>
        </property>
        <property name="toolTip">
-        <string>The EGC address to send the payment to  (e.g. EdFwYw4Mo2Zq6CFM2yNJgXvE2DTJxgdBRX)</string>
+        <string>The EverGreenCoin address to send the payment to  (e.g. EdFwYw4Mo2Zq6CFM2yNJgXvE2DTJxgdBRX)</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border: 2px solid #ffffff;</string>
        </property>
        <property name="maxLength">
-        <number>34</number>
+        <number>33</number>
        </property>
       </widget>
      </item>
