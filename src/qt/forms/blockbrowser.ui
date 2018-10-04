@@ -903,10 +903,16 @@
        </item>
        <item row="1" column="1">
         <widget class="QPushButton" name="blockButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>300</width>
-           <height>25</height>
+           <height>35</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -1518,10 +1524,16 @@
        </item>
        <item row="12" column="1">
         <widget class="QPushButton" name="txButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>25</height>
+           <height>35</height>
           </size>
          </property>
          <property name="font">
