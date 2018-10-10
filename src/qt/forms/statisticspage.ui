@@ -793,9 +793,9 @@
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>20</x>
         <y>20</y>
-        <width>241</width>
+        <width>231</width>
         <height>181</height>
        </rect>
       </property>
@@ -806,9 +806,9 @@
      <widget class="QLabel" name="phaselbl1">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>20</x>
         <y>110</y>
-        <width>251</width>
+        <width>241</width>
         <height>20</height>
        </rect>
       </property>
@@ -822,9 +822,9 @@
      <widget class="QLabel" name="phaselbl2">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>20</x>
         <y>140</y>
-        <width>251</width>
+        <width>241</width>
         <height>20</height>
        </rect>
       </property>
