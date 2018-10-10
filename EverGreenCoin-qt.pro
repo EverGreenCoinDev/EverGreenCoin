@@ -8,7 +8,7 @@ INCLUDEPATH += src src/json \
     src/qt \
     src/sph
 QT += core gui network
-DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE BOOST_ASIO_ENABLE_OLD_SERVICES
+DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
 CONFIG += thread static
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
