@@ -1,7 +1,7 @@
 
 ![Alt text](src/qt/res/images/wallet_logo.png)
 
-EverGreenCoin version 1.8.0.1
+EverGreenCoin version 1.8.1.0
 
 Cryptocurrency meets environment. 
 
