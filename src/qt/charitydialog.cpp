@@ -163,7 +163,7 @@ void StakeForCharityDialog::loadCharities()
         ui->comboBox->setItemData(1, "Your donation will be used by the <a href='https://evergreencoin.org/EGCFoundation/' style='color: #ffffff;'>EverGreenCoin Foundation, Inc.</a> <br />under the guidance of the board and community.", Qt::ToolTipRole);
         ui->comboBox->setItemData(0, "You can donate to any EverGreenCoin address you wish.", Qt::ToolTipRole);
     } else {
-        uiInterface.ThreadSafeMessageBox("HTTP Error: " + reply->errorString().toStdString(), "EverGreenCoin Stake for Charity", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+        uiInterface.ThreadSafeMessageBox("HTTP Error: " + reply->errorString().toStdString(), "EverGreenCoin Dynamic Stake for Charity", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
     }
     reply->deleteLater();
 }
@@ -328,7 +328,7 @@ void StakeForCharityDialog::on_disableButton_clicked()
     ui->charityPercentEdit->clear();
     ui->comboBox->setCurrentIndex(0); // reset charity select combo
     ui->message->setStyleSheet("QLabel { color: #1ab06c; font-weight: 900;}");
-    ui->message->setText(tr("EverGreenCoin Stake for Charity is now off and saved off."));
+    ui->message->setText(tr("EverGreenCoin Dynamic Stake for Charity is now off and saved off."));
     return;
 }
 
@@ -363,7 +363,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->label_5->setStyleSheet("QLabel {color: #018457;}");
         if (!fTestNet) ui->charityAddressEdit->setText(QString(FOUNDATION));
         else  ui->charityAddressEdit->setText(QString(FOUNDATION_TEST));
-        ui->message->setText("Your donation will be used by the <a href='https://evergreencoin.org/EGCFoundation/' style='color: #1ab06c;'>EverGreenCoin Foundation, Inc.</a> <br />under the guidance of the board and community. <br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
+        ui->message->setText("Your donation will be used by the <a href='https://evergreencoin.org/EGCFoundation/' style='color: #1ab06c;'>EverGreenCoin Foundation, Inc.</a> <br />under the guidance of the board and community. <br />Click the 'Enable' button above to save <br />and start EverGreenCoin Dynamic Stake for Charity");
         ui->addressBookButton->setDisabled(true);
         ui->charityAddressEdit->setEnabled(false);
         ui->charityAddressEdit->setReadOnly(true);
@@ -379,7 +379,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->addressBookButton->setDisabled(true);
         ui->charityAddressEdit->setStyleSheet("border-color: #35473c; color:35473c;");
         ui->label_5->setStyleSheet("QLabel {color: #018457;}");
-        ui->message->setText(charitiesAsk[index-1].replace("<a href","<a style='color: #1ab06c;' href") + "<br />Click the 'Enable' button above to save <br />and start EverGreenCoin Stake for Charity");
+        ui->message->setText(charitiesAsk[index-1].replace("<a href","<a style='color: #1ab06c;' href") + "<br />Click the 'Enable' button above to save <br />and start EverGreenCoin Dynamic Stake for Charity");
         if (ui->btnRefreshCharities->isEnabled())  // ensure images do not load during refresh. Clearing the combo (part of refresh) changes the index, calling this function.
         {   // load the charity's image
             QSslConfiguration config = QSslConfiguration::defaultConfiguration();
