@@ -96,7 +96,7 @@ void StakeForCharityDialog::setModel(WalletModel *model)
             if (i==100) // STS EGC must be a 'manual' entered address
             {
                 ui->message->setStyleSheet("QLabel { color: #1ab06c; font-weight: 900; }");
-                ui->message->setText(tr("You are manually sending to: ") + strAddress.ToString().c_str());
+                ui->message->setText(tr("You are sending to manually entered address: ") + strAddress.ToString().c_str());
                 ui->comboBox->setCurrentIndex(0);               
             }
         }
