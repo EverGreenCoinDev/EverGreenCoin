@@ -36,6 +36,7 @@ static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 static const int64_t MAX_MONEY = 26298000 * COIN;
 static const int64_t COIN_YEAR_REWARD = 1 * CENT; // 1% per year
 static const int64_t MAX_MINT_PROOF_OF_STAKE = 0.07 * COIN;	// 7%
+static const unsigned int MAX_TX_COMMENT_LEN = 256;
 
 #define FOUNDATION "EdFwYw4Mo2Zq6CFM2yNJgXvE2DTJxgdBRX"
 #define FOUNDATION_TEST "eSvimXCk7dt9EY4BApFY8US82jYLDZwAJP"
@@ -428,6 +429,7 @@ public:
     std::vector<CTxIn> vin;
     std::vector<CTxOut> vout;
     unsigned int nLockTime;
+    std::string strTxComment;
 
     // Denial-of-service detection:
     mutable int nDoS;
@@ -446,6 +448,7 @@ public:
         READWRITE(vin);
         READWRITE(vout);
         READWRITE(nLockTime);
+        READWRITE(strTxComment);
     )
 
     void SetNull()
@@ -455,6 +458,7 @@ public:
         vin.clear();
         vout.clear();
         nLockTime = 0;
+        strTxComment.clear();
         nDoS = 0;  // Denial-of-service prevention
     }
 
@@ -630,13 +634,15 @@ public:
     {
         std::string str;
         str += IsCoinBase()? "Coinbase" : (IsCoinStake()? "Coinstake" : "CTransaction");
-        str += strprintf("(hash=%s, nTime=%d, ver=%d, vin.size=%"PRIszu", vout.size=%"PRIszu", nLockTime=%d)\n",
+        str += strprintf("(hash=%s, nTime=%d, ver=%d, vin.size=%"PRIszu", vout.size=%"PRIszu", nLockTime=%d, strTxComment=%s)\n",
             GetHash().ToString().substr(0,10).c_str(),
             nTime,
             nVersion,
             vin.size(),
             vout.size(),
-            nLockTime);
+            nLockTime,
+            strTxComment.substr(0,30).c_str()
+            );
         for (unsigned int i = 0; i < vin.size(); i++)
             str += "    " + vin[i].ToString() + "\n";
         for (unsigned int i = 0; i < vout.size(); i++)

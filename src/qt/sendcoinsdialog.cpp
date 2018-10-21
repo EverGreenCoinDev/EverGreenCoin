@@ -38,6 +38,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
     ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter an EverGreenCoin address (e.g. EdFwYw4Mo2Zq6CFM2yNJgXvE2DTJxgdBRX)"));
+    ui->editTxComment->setPlaceholderText(tr("Enter a transaction comment (MAX 256 Characters) (Note: This information is public)"));
 #endif
 
     addEntry();
@@ -120,6 +121,8 @@ void SendCoinsDialog::on_sendButton_clicked()
     if(!model)
         return;
 
+    QString txcomment = ui->editTxComment->text();
+
     for(int i = 0; i < ui->entries->count(); ++i)
     {
         SendCoinsEntry *entry = qobject_cast<SendCoinsEntry*>(ui->entries->itemAt(i)->widget());
@@ -172,9 +175,9 @@ void SendCoinsDialog::on_sendButton_clicked()
     WalletModel::SendCoinsReturn sendstatus;
 
     if (!model->getOptionsModel() || !model->getOptionsModel()->getCoinControlFeatures())
-        sendstatus = model->sendCoins(recipients);
+        sendstatus = model->sendCoins(txcomment, recipients);
     else
-        sendstatus = model->sendCoins(recipients, CoinControlDialog::coinControl);
+        sendstatus = model->sendCoins(txcomment, recipients, CoinControlDialog::coinControl);
 
     switch(sendstatus.status)
     {
@@ -227,6 +230,8 @@ void SendCoinsDialog::on_sendButton_clicked()
 
 void SendCoinsDialog::clear()
 {
+    ui->editTxComment->clear();
+
     // Remove entries until only one left
     while(ui->entries->count())
     {
@@ -294,6 +299,9 @@ void SendCoinsDialog::removeEntry(SendCoinsEntry* entry)
 
 QWidget *SendCoinsDialog::setupTabChain(QWidget *prev)
 {
+    QWidget::setTabOrder(prev, ui->editTxComment);
+    prev = ui->editTxComment;
+
     for(int i = 0; i < ui->entries->count(); ++i)
     {
         SendCoinsEntry *entry = qobject_cast<SendCoinsEntry*>(ui->entries->itemAt(i)->widget());

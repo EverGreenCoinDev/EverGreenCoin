@@ -50,6 +50,10 @@ void TxToJSON(const CTransaction& tx, const uint256 hashBlock, Object& entry)
     entry.push_back(Pair("version", tx.nVersion));
     entry.push_back(Pair("time", (boost::int64_t)tx.nTime));
     entry.push_back(Pair("locktime", (boost::int64_t)tx.nLockTime));
+    if (tx.nVersion >= 2)
+    {
+        entry.push_back(Pair("tx-comment", tx.strTxComment));
+    }
     Array vin;
     BOOST_FOREACH(const CTxIn& txin, tx.vin)
     {
