@@ -448,7 +448,7 @@ public:
         READWRITE(vin);
         READWRITE(vout);
         READWRITE(nLockTime);
-        //READWRITE(strTxComment);
+        READWRITE(strTxComment);
     )
 
     void SetNull()
