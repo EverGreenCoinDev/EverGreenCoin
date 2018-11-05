@@ -144,7 +144,7 @@ void StakeForCharityDialog::loadCharities()
         QJsonArray json_array = jsonResponse.array();
         i = 1;
         // load new combo box entires
-        foreach (const QJsonValue &value, json_array) {
+        Q_FOREACH(const QJsonValue &value, json_array) {
             QJsonObject json_obj = value.toObject();
             if (fTestNet) qDebug() << json_obj["charity"].toString();
             ui->comboBox->addItem(QString(json_obj["charity"].toString()));

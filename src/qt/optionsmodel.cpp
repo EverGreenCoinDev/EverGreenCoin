@@ -78,7 +78,7 @@ bool OptionsModel::Upgrade()
 
     QList<QString> intOptions;
     intOptions << "nDisplayUnit" << "nTransactionFee" << "nReserveBalance";
-    foreach(QString key, intOptions)
+    Q_FOREACH(QString key, intOptions)
     {
         int value = 0;
         if (walletdb.ReadSetting(key.toStdString(), value))
@@ -89,7 +89,7 @@ bool OptionsModel::Upgrade()
     }
     QList<QString> boolOptions;
     boolOptions << "bDisplayAddresses" << "fMinimizeToTray" << "fMinimizeOnClose" << "fUseProxy" << "fUseUPnP";
-    foreach(QString key, boolOptions)
+    Q_FOREACH(QString key, boolOptions)
     {
         bool value = false;
         if (walletdb.ReadSetting(key.toStdString(), value))
