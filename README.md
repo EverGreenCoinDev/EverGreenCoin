@@ -1,5 +1,5 @@
 
-![Alt text](src/qt/res/images/wallet_logo.png)
+![Alt text](src/qt/res/images/splash.png)
 
 EverGreenCoin version 1.8.2.0
 
