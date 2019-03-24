@@ -95,7 +95,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 #endif // QT_VERSION
 
     resize(1000, 600);
-    setWindowTitle(tr("EverGreenCoin® Core - Wallet v1.8.2") );
+    setWindowTitle(tr("EverGreenCoin® Core - Wallet v1.8.3") );
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/evergreencoin"));
     setWindowIcon(QIcon(":icons/evergreencoin"));
