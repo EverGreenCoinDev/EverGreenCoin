@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2014-2016 The MaiaCoin developers
-// Copyright (c) 2015-2017 The EverGreenCoin developers
+// Copyright (c) 2015-2019 The EverGreenCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -53,6 +53,7 @@ namespace Checkpoints
        (1025892, uint256("0x890d5d285469dd763cb2a578198727321e57a11209637ce9a180615506ef4aa7"))
        (1128000, uint256("0x67570526f24381855c51c61337c5587c59fdd9b214e0222a16c3f8e21fd0f128"))
        (1160893, uint256("0x42585ed3da0759b22be36b1f1a7c74228a36f2ea7b3b673f05fcc4014dc695c1"))
+       (1198185, uint256("0xb11e6ca05c1a952c22eee231ae90bb0f7b47001d74f197762ea46c1e90b96853"))
     ;
 
     // TestNet has no checkpoints

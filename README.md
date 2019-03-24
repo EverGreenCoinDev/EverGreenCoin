@@ -1,7 +1,7 @@
 
 ![Alt text](src/qt/res/images/splash.png)
 
-EverGreenCoin version 1.8.2.0
+EverGreenCoin version 1.8.3.0
 
 Cryptocurrency meets environment. 
 
