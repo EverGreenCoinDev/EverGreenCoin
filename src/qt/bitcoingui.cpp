@@ -779,6 +779,7 @@ void BitcoinGUI::gotoOverviewPage()
     exportAction->setEnabled(false);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
     updateStakingIcon();
+    if(overviewPage->isVisible()) overviewPage->updateButton();
 }
 
 void BitcoinGUI::gotoBlockBrowser()

@@ -197,7 +197,7 @@ void OverviewPage::setModel(WalletModel *model)
         {
             ui->unlockWalletButton->setDisabled(true);
             ui->unlockWalletButton->setText(QString("EverGreenCoin not encrypted"));
-            ui->unlockWalletButton->setToolTip(QString("Click 'Settings' then 'Encrypt your EverGreenCoin' in the menu bar to encrypt"));
+            ui->unlockWalletButton->setToolTip(QString("Click 'Settings' then 'Encrypt your EverGreenCoin' in the menu bar to encrypt."));
         }
 
         else
@@ -228,13 +228,50 @@ void OverviewPage::updateDisplayUnit()
 
 void OverviewPage::showOutOfSyncWarning(bool fShow)
 {
+    if((ui->labelWalletStatus->isVisible() != fShow) && !fShow) // going from true to false, displayed to not
+    {   WalletModel::EncryptionStatus status = model->getEncryptionStatus();
+        if(status == WalletModel::Unencrypted)
+        {
+            ui->unlockWalletButton->setDisabled(true);
+            ui->unlockWalletButton->setText(QString("EverGreenCoin not encrypted"));
+            ui->unlockWalletButton->setToolTip(QString("Click 'Settings' then 'Encrypt your EverGreenCoin' in the menu bar to encrypt."));
+        }
+        else if(status == WalletModel::Locked)
+        {
+            ui->unlockWalletButton->setDisabled(false);
+            ui->unlockWalletButton->setText(QString("Unlock your EverGreenCoin"));
+            ui->unlockWalletButton->setToolTip(QString("Unlock and send transactions will automatically be signed without again prompting for your password until locked or closed. <br />You will be mining to earn network rewards if you have any mature balance. <br />Automatic donation of network rewards will be possible, if enabled under 'Charity'."));
+        }
+        else
+        {
+            ui->unlockWalletButton->setDisabled(false);
+            ui->unlockWalletButton->setText(QString("Lock your EverGreenCoin"));
+            ui->unlockWalletButton->setToolTip(QString("Lock and send transactions will prompt you for your passowrd. <br />You will not earn network rewards while locked and can not automatically donate them."));
+        }
+    }
     ui->labelWalletStatus->setVisible(fShow);
     ui->labelTransactionsStatus->setVisible(fShow);
+    if(fShow)
+    {
+       ui->unlockWalletButton->setDisabled(true);
+       ui->unlockWalletButton->setText(QString("Please wait and allow full sync"));
+       ui->unlockWalletButton->setToolTip(QString("Full network synchronization can take a long time. <br />Please allow this software to run as often as possible and finish the process."));
+    }
 }
 
 void OverviewPage::updateButton()
 {
    WalletModel::EncryptionStatus status = model->getEncryptionStatus();
-   if (status == WalletModel::Locked) ui->unlockWalletButton->setText(QString("Unlock your EverGreenCoin"));
-   else ui->unlockWalletButton->setText(QString("Lock your EverGreenCoin"));
+   if(status == WalletModel::Locked)
+   {
+       ui->unlockWalletButton->setDisabled(false);
+       ui->unlockWalletButton->setText(QString("Unlock your EverGreenCoin"));
+       ui->unlockWalletButton->setToolTip(QString("Unlock and send transactions will automatically be signed without again prompting for your password until locked or closed. <br />You will be mining to earn network rewards if you have any mature balance. <br />Automatic donation of network rewards will be possible, if enabled under 'Charity'."));
+   }
+   else
+   {
+       ui->unlockWalletButton->setDisabled(false);
+       ui->unlockWalletButton->setText(QString("Lock your EverGreenCoin"));
+       ui->unlockWalletButton->setToolTip(QString("Lock and send transactions will prompt you for your passowrd. <br />You will not earn network rewards while locked and can not automatically donate them."));
+   }
 }
