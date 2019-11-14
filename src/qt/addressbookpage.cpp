@@ -54,12 +54,20 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
         ui->labelExplanation->setVisible(false);
         ui->deleteButton->setVisible(true);
         ui->signMessage->setVisible(false);
-        ui->verifyMessage->setVisible(true);
-        ui->stakeForCharityPushButton->setVisible(true);
+        if(window()->windowTitle() != "Address Book")
+        {
+            ui->verifyMessage->setVisible(true);
+            ui->stakeForCharityPushButton->setVisible(true);
+        }
+        else
+        {
+            ui->verifyMessage->setVisible(false);
+            ui->stakeForCharityPushButton->setVisible(false);
+        }
         break;
     case ReceivingTab:
         ui->deleteButton->setVisible(false);
-        ui->signMessage->setVisible(true);
+        ui->signMessage->setVisible(false);
         ui->verifyMessage->setVisible(false);
         ui->stakeForCharityPushButton->setVisible(false);
         break;
@@ -84,9 +92,9 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
         contextMenu->addAction(deleteAction);
     contextMenu->addSeparator();
     contextMenu->addAction(showQRCodeAction);
-    if(tab == ReceivingTab)
+    if(tab == ReceivingTab && window()->windowTitle() != "Address Book")
         contextMenu->addAction(signMessageAction);
-    else if(tab == SendingTab)
+    if(tab == SendingTab && window()->windowTitle() != "Address Book")
     {
         contextMenu->addAction(verifyMessageAction);
         contextMenu->addAction(stakeForCharityAction);
@@ -277,18 +285,24 @@ void AddressBookPage::selectionChanged()
             deleteAction->setEnabled(true);
             ui->signMessage->setEnabled(false);
             ui->signMessage->setVisible(false);
-            ui->verifyMessage->setEnabled(true);
-            ui->verifyMessage->setVisible(true);
-            ui->stakeForCharityPushButton->setEnabled(true);
-            ui->stakeForCharityPushButton->setVisible(true);
+            if(window()->windowTitle() != "Address Book")
+            {
+                ui->verifyMessage->setEnabled(true);
+                ui->verifyMessage->setVisible(true);
+                ui->stakeForCharityPushButton->setEnabled(true);
+                ui->stakeForCharityPushButton->setVisible(true);
+            }
             break;
         case ReceivingTab:
             // Deleting receiving addresses, however, is not allowed
             ui->deleteButton->setEnabled(false);
             ui->deleteButton->setVisible(false);
             deleteAction->setEnabled(false);
-            ui->signMessage->setEnabled(true);
-            ui->signMessage->setVisible(true);
+            if(window()->windowTitle() != "Address Book")
+            {
+                ui->signMessage->setEnabled(true);
+                ui->signMessage->setVisible(true);
+            }
             ui->verifyMessage->setEnabled(false);
             ui->verifyMessage->setVisible(false);
             ui->stakeForCharityPushButton->setEnabled(false);
