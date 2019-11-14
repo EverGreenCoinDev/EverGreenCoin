@@ -41,7 +41,7 @@
         <string>The label associated with this address book entry</string>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-color: #ffffff;</string>
+        <string notr="true">border-color: #ffffff;color: #ffffff;</string>
        </property>
       </widget>
      </item>
@@ -64,7 +64,7 @@
         <string>The address associated with this address book entry. This can only be modified for sending addresses.</string>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-color: #ffffff;</string>
+        <string notr="true">border-color: #ffffff;color: #ffffff;</string>
        </property>
       </widget>
      </item>
