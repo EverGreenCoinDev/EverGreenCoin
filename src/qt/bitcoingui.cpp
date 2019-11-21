@@ -85,7 +85,8 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 {
 
 #ifdef Q_OS_WIN
-    SetProcessDPIAware(); // call before the main event loop
+    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+//    SetProcessDPIAware(); // call before the main event loop
 #endif // Q_OS_WIN
 
 #if QT_VERSION >= QT_VERSION_CHECK(5,6,0)

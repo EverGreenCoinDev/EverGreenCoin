@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QSystemTrayIcon>
+#include <windows.h>
+#include <QApplication>
 
 class TransactionTableModel;
 class ClientModel;
