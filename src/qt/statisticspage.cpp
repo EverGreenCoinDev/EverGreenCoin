@@ -19,15 +19,15 @@ StatisticsPage::StatisticsPage(QWidget *parent) :
 {
     ui->setupUi(this);
     
-    resize(400, 420);
+    //resize(400, 420);
     
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(timerCountDown()));
     timer->start(1000);
-   // connect(startButton, SIGNAL (released()), this, SLOT (updateStatistics()));
+    // connect(startButton, SIGNAL (released()), this, SLOT (updateStatistics()));
 
-    ui->phaselbl1->setText("Block 1 -> " + QString::number(LAST_POW_BLOCK) + ": PoW & PoS");
-    ui->phaselbl2->setText("Block " + QString::number(LAST_POW_BLOCK + 1) + "-> ... : PoS");
+    // ui->phaselbl1->setText("Block 1 -> " + QString::number(LAST_POW_BLOCK) + ": PoW & PoS");
+    // ui->phaselbl2->setText("Block " + QString::number(LAST_POW_BLOCK + 1) + "-> ... : PoS");
 
 }
 

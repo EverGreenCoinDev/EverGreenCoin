@@ -326,7 +326,7 @@ BlockBrowser::BlockBrowser(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    resize(400, 420);
+    //resize(400, 420);
         
     connect(ui->blockButton, SIGNAL(pressed()), this, SLOT(blockClicked()));
     connect(ui->txButton, SIGNAL(pressed()), this, SLOT(txClicked()));

@@ -13,7 +13,7 @@
     <x>0</x>
     <y>0</y>
     <width>938</width>
-    <height>519</height>
+    <height>540</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -70,7 +70,7 @@
         <x>0</x>
         <y>19</y>
         <width>881</width>
-        <height>434</height>
+        <height>453</height>
        </rect>
       </property>
       <property name="font">
@@ -87,7 +87,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout_3" rowstretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" columnstretch="0,0">
        <property name="sizeConstraint">
-        <enum>QLayout::SetMaximumSize</enum>
+        <enum>QLayout::SetDefaultConstraint</enum>
        </property>
        <property name="spacing">
         <number>7</number>
@@ -96,7 +96,7 @@
         <widget class="QLabel" name="valueBox">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -114,7 +114,7 @@
         <widget class="QLabel" name="hardLabel">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -132,7 +132,7 @@
         <widget class="QLabel" name="timeBox">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -150,7 +150,7 @@
         <widget class="QLabel" name="merkleLabel">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -168,7 +168,7 @@
         <widget class="QLabel" name="hashLabel">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -186,7 +186,7 @@
         <widget class="QLabel" name="feesBox">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -204,7 +204,7 @@
         <widget class="QLabel" name="pawLabel">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -222,7 +222,7 @@
         <widget class="QLabel" name="heightLabel">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -252,7 +252,7 @@
         <widget class="QLabel" name="feesLabel">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -270,7 +270,7 @@
         <widget class="QLabel" name="bitsLabel">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -288,7 +288,7 @@
         <widget class="QLabel" name="bitsBox">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -312,7 +312,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -330,7 +330,7 @@
         <widget class="QLabel" name="outputLabel">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -351,7 +351,7 @@
         <widget class="QLabel" name="outputBox">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -372,7 +372,7 @@
         <widget class="QLabel" name="nonceLabel">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -390,7 +390,7 @@
         <widget class="QLabel" name="nonceBox">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -408,7 +408,7 @@
         <widget class="QLabel" name="timeLabel">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -441,7 +441,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -1412,7 +1412,7 @@
         <widget class="QLabel" name="valueLabel">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -1430,7 +1430,7 @@
         <widget class="QLabel" name="txLabel">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -1448,7 +1448,7 @@
         <widget class="QLabel" name="hardBox">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -1466,7 +1466,7 @@
         <widget class="QLabel" name="txID">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -1487,7 +1487,7 @@
         <widget class="QLabel" name="heightLabel_2">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -1505,7 +1505,7 @@
         <widget class="QLabel" name="inputBox">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -1587,7 +1587,7 @@
         <widget class="QLabel" name="inputLabel">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
@@ -1608,7 +1608,7 @@
         <widget class="QLabel" name="pawBox">
          <property name="font">
           <font>
-           <pointsize>9</pointsize>
+           <pointsize>11</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>

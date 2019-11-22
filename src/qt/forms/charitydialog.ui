@@ -19,6 +19,12 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>905</width>
+    <height>640</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Stake For Charity</string>
   </property>
@@ -42,6 +48,12 @@
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>905</width>
+       <height>640</height>
+      </size>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -72,8 +84,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>903</width>
-        <height>638</height>
+        <width>905</width>
+        <height>640</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -81,6 +93,12 @@
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>905</width>
+        <height>640</height>
+       </size>
       </property>
       <property name="layoutDirection">
        <enum>Qt::LeftToRight</enum>
