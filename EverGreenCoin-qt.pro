@@ -229,6 +229,9 @@ HEADERS += src/sph_blake.h \
 
 
 NO_LEVELDB=1
+!windows:!macx {
+    NO_LEVELDB=0
+}
 !contains(NO_LEVELDB, 1) {
     !win32 {
         # we use QMAKE_CXXFLAGS_RELEASE even without RELEASE=1 because we use RELEASE to indicate linking preferences not -O preferences
