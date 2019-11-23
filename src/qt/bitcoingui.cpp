@@ -83,18 +83,6 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     notificator(0),
     rpcConsole(0)
 {
-
-#ifdef Q_OS_WIN
-    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-//    SetProcessDPIAware(); // call before the main event loop
-#endif // Q_OS_WIN
-
-#if QT_VERSION >= QT_VERSION_CHECK(5,6,0)
-    QApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
-#else
-    qputenv("QT_DEVICE_PIXEL_RATIO", QByteArray("1"));
-#endif // QT_VERSION
-
     resize(1000, 600);
     setWindowTitle(tr("EverGreenCoin® Core - Wallet v1.9") );
 #ifndef Q_OS_MAC
@@ -152,8 +140,8 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     centralWidget = new QStackedWidget(this);
     centralWidget->setObjectName("central");
     centralWidget->addWidget(overviewPage);
-	centralWidget->addWidget(statisticsPage);
-	centralWidget->addWidget(blockBrowser);
+    centralWidget->addWidget(statisticsPage);
+    centralWidget->addWidget(blockBrowser);
     centralWidget->addWidget(transactionsPage);
     centralWidget->addWidget(addressBookPage);
     centralWidget->addWidget(receiveCoinsPage);
