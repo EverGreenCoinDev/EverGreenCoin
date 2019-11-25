@@ -83,6 +83,14 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     notificator(0),
     rpcConsole(0)
 {
+
+#if QT_VERSION >= QT_VERSION_CHECK(5,6,0)
+    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+#else
+    qputenv("QT_DEVICE_PIXEL_RATIO", QByteArray("1"));
+#endif // QT_VERSION
+
     resize(1000, 700);
     setWindowTitle(tr("EverGreenCoin® Core - Wallet v1.9") );
 #ifndef Q_OS_MAC

@@ -89,7 +89,7 @@
        </rect>
       </property>
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -163,7 +163,7 @@
           <item row="2" column="3">
            <widget class="QLabel" name="label_HREF">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -208,6 +208,12 @@
           </item>
           <item row="1" column="0" rowspan="2" colspan="2">
            <widget class="QGroupBox" name="groupBox_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
               <width>560</width>
@@ -252,7 +258,7 @@
                   </property>
                   <property name="minimumSize">
                    <size>
-                    <width>200</width>
+                    <width>300</width>
                     <height>40</height>
                    </size>
                   </property>
@@ -277,7 +283,7 @@
                   </property>
                   <property name="minimumSize">
                    <size>
-                    <width>200</width>
+                    <width>300</width>
                     <height>40</height>
                    </size>
                   </property>
@@ -309,6 +315,12 @@
                <layout class="QGridLayout" name="gridLayout_7">
                 <item row="0" column="0">
                  <widget class="QLabel" name="message">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
                     <width>540</width>
@@ -317,7 +329,7 @@
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>520</width>
+                    <width>16777215</width>
                     <height>16777215</height>
                    </size>
                   </property>
@@ -796,14 +808,14 @@
             <widget class="QPushButton" name="copyToClipboard">
              <property name="geometry">
               <rect>
-               <x>40</x>
+               <x>50</x>
                <y>0</y>
                <width>87</width>
                <height>40</height>
               </rect>
              </property>
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
