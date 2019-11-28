@@ -488,7 +488,7 @@
                    <string notr="true">background:transparent;</string>
                   </property>
                   <property name="text">
-                   <string>&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;</string>
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                   <property name="textFormat">
                    <enum>Qt::RichText</enum>
