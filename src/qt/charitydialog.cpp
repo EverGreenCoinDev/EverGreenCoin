@@ -227,7 +227,7 @@ void StakeForCharityDialog::on_enableButton_clicked()
     if (!address.IsValid())
     {
         ui->message->setStyleSheet("QLabel { color: red; font-weight: 900; }");
-        ui->message->setText(tr("The entered address:<br /> \"") + ui->charityAddressEdit->text() + tr("\"<br />is invalid.<br />Please check the address and try again <br />or select from the drop-down menu."));
+        ui->message->setText(tr("The entered address:<br /> \"") + ui->charityAddressEdit->text() + tr("\" is invalid. <br />Please check the address and try again <br />or select from the drop-down menu."));
         ui->charityAddressEdit->setFocus();
         return;
     }
