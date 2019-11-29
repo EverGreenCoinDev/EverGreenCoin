@@ -418,9 +418,9 @@ void StakeForCharityDialog::on_btnRefreshCharities_clicked()
     ui->charityMaxEdit->clear();
     ui->charityMinEdit->clear();
     ui->charityPercentEdit->clear();
+    ui->comboBox->setCurrentIndex(0); // reset charity select combo
     ui->message->setStyleSheet("QLabel { color: #1ab06c; font-weight: 900;}");
     ui->message->setText(tr("Data refreshed from <a href='https://EverGreenCoin.org' style='color: #1ab06c;'>EverGreenCoin.org</a><br />Select a cause you find charitable<br />and click the 'Enable' button to apply changes."));
-    ui->comboBox->setCurrentIndex(0); // reset charity select combo
     ui->btnRefreshCharities->setDisabled(false);
     ui->btnRefreshCharities->setText("Refresh Charities");
     ui->charityAddressEdit->setFocus();
