@@ -147,3 +147,16 @@ disable screen reader functionality for Qt apps:
     sudo apt-get remove qt-at-spi
 
 .. _`launchpad bug 857790`: https://bugs.launchpad.net/ubuntu/+source/qt-at-spi/+bug/857790
+
+
+Ubuntu bash jumpstart
+=====================
+
+A jumpstart bash script is available. It will take an Ubuntu machine through all the steps for you, based on your answer 
+of wanting a GUI (Qt Core) or CLI (Daemon) EverGreenCoin wallet. 
+To execute the bash script, copy the following in a terminal:
+
+::
+
+    bash <(wget -qO- https://raw.githubusercontent.com/EverGreenCoinDev/EverGreenCoin/master/build-ubuntu.sh)
+
