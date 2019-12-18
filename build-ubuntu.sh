@@ -8,10 +8,11 @@
 # If your using a desktop or laptop, VM or otherwise, you most-likely will want the Graphical User Interface (EverGreenCoin-qt) and it's easier to use.
 # If your using a VPS or server, you most-likely want a Command Line Interface (evergreencoind). This is more advanced to use.
 #
-# To open a shell terminal in Ubuntu desktop press "CTRL + ALT + T" at the same time on your keyboard. The following 3 commands get this shell script, gives it execute permission, and executes it:
-# wget https://raw.githubusercontent.com/EverGreenCoinDev/EverGreenCoin/master/build-ubuntu.sh
-# chmod +x build-ubuntu.sh
-# ./build-ubuntu.sh
+# To open a shell terminal in Ubuntu desktop press "CTRL + ALT + T" at the same time on your keyboard. Input the following command to get this bash script and executes it:
+# bash <(wget -qO- https://raw.githubusercontent.com/EverGreenCoinDev/EverGreenCoin/master/build-ubuntu.sh)
+#
+# Or if you already have this file, execute "chmod +x build-ubuntu.sh" on the file to give it executable permissions. Then "./build-ubuntu.sh" to execute it.
+#
 # After this script exits, you can delete the ~/EverGreenCoin directory if you wish. The resulting binary is copied to /usr/local/bin and ~/.evergreencoin is created for the user, containing the irreplaceable wallet.dat file.
 
 echo "build-ubuntu.sh - An EverGreenCoin jumpstart bash script for Ubuntu!"
