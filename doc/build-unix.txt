@@ -29,8 +29,6 @@ Dependencies
  libboost    Boost             C++ Library
  miniupnpc   UPnP Support      Optional firewall-jumping support
  libqrencode QRCode generation Optional QRCode generation
- qt5-default Qt GUI framework  Provides optional GUI interface framework
- qttools5-dev-tools            
 
 Note that libexecinfo should be installed, if you building under *BSD systems. 
 This library provides backtrace facility.
@@ -69,8 +67,6 @@ sudo apt-get install libdb++-dev
 sudo apt-get install libboost-all-dev
 sudo apt-get install libminiupnpc-dev
 sudo apt-get install libqrencode-dev (optional)
-sudo apt-get install qt5-default (optional)
-sudo apt-get install qttools5-dev-tools (optional)
 
 If using Boost 1.37, append -mt to the boost libraries in the makefile.
 
