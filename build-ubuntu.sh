@@ -41,8 +41,13 @@ case ${answer:0:1} in
         make
         strip EverGreenCoin-qt
         sudo cp ~/EverGreenCoin/EverGreenCoin-qt /usr/local/bin
-        EverGreenCoin-qt &
-        echo "Your GUI EverGreenCoin wallet (EverGreenCoin-qt) has been started! The binary was copied to /usr/local/bin and your irreplaceable wallet.dat is stored in your ~/.evergreencoin directory. You can safely delete the created ~/EverGreenCoin directory if you wish. Please visit us at EverGreenCoin.org!"
+        if
+           EverGreenCoin-qt &
+        then
+           echo "Your GUI EverGreenCoin wallet (EverGreenCoin-qt) has been started! The binary was copied to /usr/local/bin and your irreplaceable wallet.dat is stored in your ~/.evergreencoin directory. You can safely delete the created ~/EverGreenCoin directory if you wish. Please visit us at EverGreenCoin.org!"
+        else
+           echo "Sorry, something failed. Correct the error(s) above, starting with the first error output."
+        fi
     ;;
     c|C )
         sudo apt-get install build-essential -y
@@ -63,8 +68,13 @@ case ${answer:0:1} in
         echo daemon=1 >> ~/.evergreencoin/evergreencoin.conf
         echo listen=1 >> ~/.evergreencoin/evergreencoin.conf
         sudo cp ~/EverGreenCoin/src/evergreencoind /usr/local/bin
-        evergreencoind &
-        echo "Your CLI EverGreenCoin wallet (evergreencoind) has been started! The binary was copied to /usr/local/bin and your irreplaceable wallet.dat is stored in your ~/.evergreencoin directory. You can safely delete the created ~/EverGreenCoin directory if you wish. Please visit us at EverGreenCoin.org!"
+        if
+           evergreencoind &
+        then
+           echo "Your CLI EverGreenCoin wallet (evergreencoind) has been started! The binary was copied to /usr/local/bin and your irreplaceable wallet.dat is stored in your ~/.evergreencoin directory. You can safely delete the created ~/EverGreenCoin directory if you wish. Please visit us at EverGreenCoin.org!"
+        else
+           echo "Sorry, something failed. Correct the error(s) above, starting with the first error output."
+        fi
     ;;
     * )
         echo Exit
