@@ -1,6 +1,6 @@
 #!/bin/bash
 # build-fedora.sh
-# Install dependencies, downloads the EverGreenCoin source code, compile, and executes as current user (or sudo for root) on Fedora as of Fedora 31
+# Install dependencies, downloads the EverGreenCoin source code, compile, and executes as current user (or sudo for root) on Fedora Workstation as of Fedora Workstation 31
 # Copyright EverGreenCoin Developers
 # https://github.com/EverGreenCoinDev/EverGreenCoin/build-fedorau.sh
 #
