@@ -42,7 +42,7 @@ case ${answer:0:1} in
         fi
     ;;
     c|C )
-        sudo yum install -y make automake gcc gcc-c++ kernel-devel openssl-devel libdb-cxx-devel libdb-devel libdb-cxx-devel libstdc++-devel boost-devel miniupnpc-devel zlib-devel git
+        sudo yum install -y make automake gcc gcc-c++ kernel-devel openssl-devel libdb-cxx-devel libdb-devel libstdc++-devel boost-devel miniupnpc-devel zlib-devel git
         cd ~
         git clone https://github.com/EverGreenCoinDev/EverGreenCoin
         cd EverGreenCoin/src/
