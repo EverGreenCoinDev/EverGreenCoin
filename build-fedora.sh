@@ -1,6 +1,6 @@
 #!/bin/bash
 # build-fedora.sh
-# Install dependencies, downloads the EverGreenCoin source code, compile, and executes as current user (or sudo for root) on Fedora Workstation as of Fedora Workstation 31
+# Install dependencies, downloads the EverGreenCoin source code, compile, and executes as current user (or sudo for root) on Fedora as of Fedora 31.
 # Copyright EverGreenCoin Developers
 # https://github.com/EverGreenCoinDev/EverGreenCoin/build-fedorau.sh
 #
@@ -25,7 +25,7 @@ read -p "Choose EverGreenCoin Core (desktop Qt Graphical User Interface (GUI) wa
 (press 'G' for Core Qt GUI or press 'C' for Daemon CLI then enter)? " answer
 case ${answer:0:1} in
     g|G )
-        sudo yum install -y make automake gcc gcc-c++ kernel-devel openssl-devel libdb-devel libdb-cxx-devel miniupnpc-devel boost-devel qt5*-devel qt5-qtscript-devel qrencode-devel git
+        sudo yum install -y make automake gcc gcc-c++ kernel-devel openssl-devel libdb-devel libdb-cxx-devel miniupnpc-devel boost-devel qt5*-devel qt5-qtscript-devel qrencode-devel git libstdc++-devel.x86_64
         cd ~
         git clone https://github.com/EverGreenCoinDev/EverGreenCoin
         cd EverGreenCoin
@@ -42,7 +42,7 @@ case ${answer:0:1} in
         fi
     ;;
     c|C )
-        sudo yum install -y make automake gcc gcc-c++ kernel-devel openssl-devel libdb-cxx-devel libdb-devel libstdc++-devel boost-devel miniupnpc-devel zlib-devel git
+        sudo yum install -y make automake gcc gcc-c++ kernel-devel openssl-devel libdb-cxx-devel libdb-devel libstdc++-devel boost-devel miniupnpc-devel zlib-devel git libstdc++-devel.x86_64
         cd ~
         git clone https://github.com/EverGreenCoinDev/EverGreenCoin
         cd EverGreenCoin/src/
