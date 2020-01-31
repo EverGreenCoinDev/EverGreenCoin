@@ -160,3 +160,14 @@ To execute the bash script, copy the following in a terminal:
 
     bash <(wget -qO- https://raw.githubusercontent.com/EverGreenCoinDev/EverGreenCoin/master/build-ubuntu.sh)
 
+Fedora bash jumpstart
+=====================
+
+A jumpstart bash script is available. It will take a Fedora machine through all the steps for you, based on your answer 
+of wanting a GUI (Qt Core) or CLI (Daemon) EverGreenCoin wallet. 
+To execute the bash script, copy the following in a terminal:
+
+::
+
+    bash <(wget -qO- https://raw.githubusercontent.com/EverGreenCoinDev/EverGreenCoin/master/build-fedora.sh)
+
