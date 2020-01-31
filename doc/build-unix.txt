@@ -10,10 +10,24 @@ software written by Thomas Bernard.
 UNIX BUILD NOTES
 ================
 
+One-liners
+----------
+Bash scripts are available to install all dependencies, download the latest code, comile it, install it, and execute it for you.
+This is based on your dicission of a CLI (daemon) or GUI (core qt) when prompted.
+To start the process, simply copy and paste the following one line into a shell terminal:
+
+Ubuntu 
+bash <(wget -qO- https://raw.githubusercontent.com/EverGreenCoinDev/EverGreenCoin/master/build-ubuntu.sh)
+
+Fedora
+bash <(wget -qO- https://raw.githubusercontent.com/EverGreenCoinDev/EverGreenCoin/master/build-fedora.sh)
+
 To Build
 --------
 
-cd src/
+git clone https://github.com/EverGreenCoinDev/EverGreenCoin/
+cd EverGreenCoin
+cd src
 make -f makefile.unix            # Headless evergreencoin
 
 See readme-qt.rst for instructions on building EverGreenCoin QT,
