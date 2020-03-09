@@ -25,6 +25,7 @@ read -p "Choose EverGreenCoin Core (desktop Qt Graphical User Interface (GUI) wa
 (press 'G' for Core Qt GUI or press 'C' for Daemon CLI then enter)? " answer
 case ${answer:0:1} in
     g|G )
+        sudo apt-get update
         sudo apt-get install build-essential -y
         sudo apt-get install libssl-dev -y
         sudo apt-get install libdb++-dev -y
@@ -50,6 +51,7 @@ case ${answer:0:1} in
         fi
     ;;
     c|C )
+        sudo apt-get update
         sudo apt-get install build-essential -y
         sudo apt-get install libssl-dev -y
         sudo apt-get install libdb++-dev -y
