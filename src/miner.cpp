@@ -1,8 +1,13 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2013 The NovaCoin developers
+// Copyright (c) 2015-2020 The EverGreenCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#if BOOST_VERSION > 105600
+#include <boost/move/unique_ptr.hpp>
+#endif
 
 #include "txdb.h"
 #include "miner.h"
@@ -111,7 +116,16 @@ public:
 CBlock* CreateNewBlock(CWallet* pwallet, bool fProofOfStake, int64_t* pFees)
 {
     // Create new block
+#if BOOST_VERSION > 105600
+    boost::movelib::unique_ptr<CBlock> pblock(new CBlock());
+#else
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 500 && __cplusplus >= 201103L
+    std::unique_ptr<CBlock> pblock(new CBlock());
+#else
     auto_ptr<CBlock> pblock(new CBlock());
+#endif
+#endif
+    
     if (!pblock.get())
         return NULL;
 
@@ -568,7 +582,15 @@ void StakeMiner(CWallet *pwallet)
         // Create new block
         //
         int64_t nFees;
-        auto_ptr<CBlock> pblock(CreateNewBlock(pwallet, true, &nFees));
+#if BOOST_VERSION > 105600
+    boost::movelib::unique_ptr<CBlock> pblock(CreateNewBlock(pwallet, true, &nFees));
+#else
+#if (__GNUC__ * 100 + __GNUC_MINOR__) >= 500 && __cplusplus >= 201402L
+    std::unique_ptr<CBlock> pblock(CreateNewBlock(pwallet, true, &nFees));
+#else
+    auto_ptr<CBlock> pblock(CreateNewBlock(pwallet, true, &nFees));
+#endif
+#endif
         if (!pblock.get())
             return;
 
