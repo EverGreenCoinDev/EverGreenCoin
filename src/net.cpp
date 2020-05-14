@@ -1,5 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
+// Copyright (c) 2015-2020 The EverGreenCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1138,6 +1139,7 @@ void MapPort()
 static const char *strDNSSeed[][2] = {
     {"seed.evergreencoin.org", "seed.evergreencoin.org"},
     {"seed2.evergreencoin.org", "seed2.evergreencoin.org"},
+    {"seed3.evergreencoin.org", "seed3.evergreencoin.org"},
     {"cwi-seed01.evergreencoin.org", "cwi-seed01.evergreencoin.org"},
     {"cwi-seed02.evergreencoin.org", "cwi-seed02.evergreencoin.org"},
     {"cwi-seed03.evergreencoin.org", "cwi-seed03.evergreencoin.org"},
