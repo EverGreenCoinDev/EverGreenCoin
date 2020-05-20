@@ -88,9 +88,6 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     // Generate high-dpi pixmaps
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 #endif
-#if QT_VERSION >= 0x050600
-    QGuiApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
-#endif
 
     resize(1000, 700);
     setWindowTitle(tr("EverGreenCoin® Core - Wallet v1.9.1") );
