@@ -62,6 +62,7 @@
 #include <QStyleFactory>
 #include <QTextStream>
 #include <QTextDocument>
+#include <QDesktopWidget>
 
 #include <iostream>
 
@@ -90,6 +91,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 #endif
 
     resize(1000, 700);
+    this->setGeometry(QStyle::alignedRect(Qt::LeftToRight, Qt::AlignCenter, this->size(), QApplication::desktop()->screenGeometry()));
     setWindowTitle(tr("EverGreenCoin® Core - Wallet v1.9.1") );
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/evergreencoin"));
@@ -130,8 +132,8 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 #endif
     // Create tabs
     overviewPage = new OverviewPage();
-	statisticsPage = new StatisticsPage(this);
-	blockBrowser = new BlockBrowser(this);
+    statisticsPage = new StatisticsPage(this);
+    blockBrowser = new BlockBrowser(this);
     transactionsPage = new QWidget(this);
     QVBoxLayout *vbox = new QVBoxLayout();
     transactionView = new TransactionView(this);
