@@ -1,9 +1,15 @@
-Building EverGreenCoin
+Building EverGreenCoin from Source Code
 
-See doc/readme-qt.rst for instructions on building EverGreenCoin QT,
+See doc/readme-qt.rst for instructions on building EverGreenCoin Qt ,
 the intended-for-end-users, nice-graphical-interface, reference
 implementation of EverGreenCoin.
 
 See doc/build-*.txt for instructions on building eveergreencoind,
 the intended-for-services, no-graphical-interface, reference
 implementation of EverGreenCoin.
+
+There are bash jumpstart scripts in the root of this repo to build
+on Ubuntu and Fedora. These can download and install dependencies,
+download the latest EverGreenCoin source, compile, and launch
+either the daemon or Qt EverGreenCoin software. Community members
+are invited to contribute scripts for their own favorite OS.
