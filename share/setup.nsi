@@ -1,13 +1,13 @@
-Name NovaCoin
+Name EverGreenCoin
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 0.3.0
-!define COMPANY "NovaCoin project"
-!define URL http://www.novacoin.ru/
+!define VERSION 0.1.9
+!define COMPANY "EverGreenCoin"
+!define URL http://www.evergreencoin.org/
 
 # MUI Symbol Definitions
 !define MUI_ICON "../share/pixmaps/novacoin.ico"
