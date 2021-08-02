@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>About EverGreenCoin® Core</string>
+   <string>About EverGreenCoin® Qt Wallet</string>
   </property>
   <property name="windowOpacity">
    <double>1.000000000000000</double>
@@ -59,7 +59,7 @@
           <string notr="true">color: white;</string>
          </property>
          <property name="text">
-          <string>&lt;b&gt;EverGreenCoin® Core&lt;/b&gt; version</string>
+          <string>&lt;b&gt;EverGreenCoin® Qt Wallet&lt;/b&gt; version</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -109,7 +109,7 @@
         <string notr="true">color: white;</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Copyright © 2015-2020 The EverGreenCoin developers.&lt;br/&gt;&amp;quot;EVERGREENCOIN&amp;quot; and the EverGreenCoin logo are protected by international registered trademark. All rights reserved.&lt;br/&gt;Founded by Steven Saxton (Steven@EverGreenCoin.org)&lt;br/&gt;For support please visit &lt;a href=&quot;http://EverGreenCoin.org/support/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;http://EverGreenCoin.org/support/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;This is experimental software.&lt;br/&gt;&lt;br/&gt;Distributed under the MIT/X11 software license, see the accompanying file COPYING or &lt;a href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;http://www.opensource.org/licenses/mit-license.php&lt;/span&gt;&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (&lt;a href=&quot;http://www.openssl.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;http://www.openssl.org/&lt;/span&gt;&lt;/a&gt;) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Copyright © 2015-2021 The EverGreenCoin developers.&lt;br/&gt;&amp;quot;EVERGREENCOIN&amp;quot; and the EverGreenCoin logo are protected by international registered trademark. All rights reserved.&lt;br/&gt;For support please visit &lt;a href=&quot;http://EverGreenCoin.org/support/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;http://EverGreenCoin.org/support/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;This is experimental software.&lt;br/&gt;&lt;br/&gt;Distributed under the MIT/X11 software license, see the accompanying file COPYING or &lt;a href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;http://www.opensource.org/licenses/mit-license.php&lt;/span&gt;&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (&lt;a href=&quot;http://www.openssl.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;http://www.openssl.org/&lt;/span&gt;&lt;/a&gt;) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="textFormat">
         <enum>Qt::RichText</enum>

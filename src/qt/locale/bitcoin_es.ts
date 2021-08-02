@@ -1590,7 +1590,7 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>EverGreenCoin Core</source>
+        <source>EverGreenCoin</source>
         <translation>Núcleo EverGreenCoin</translation>
     </message>
     <message>

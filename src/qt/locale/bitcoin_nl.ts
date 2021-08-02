@@ -1587,7 +1587,7 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>EverGreenCoin Core</source>
+        <source>EverGreenCoin</source>
         <translation>EverGreenCoin Kern</translation>
     </message>
     <message>

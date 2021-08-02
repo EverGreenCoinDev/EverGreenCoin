@@ -153,7 +153,7 @@ Ubuntu bash jumpstart
 =====================
 
 A jumpstart bash script is available. It will take an Ubuntu machine through all the steps for you, based on your answer 
-of wanting a GUI (Qt Core) or CLI (Daemon) EverGreenCoin wallet. 
+of wanting a GUI (Qt) or CLI (Daemon) EverGreenCoin wallet. 
 To execute the bash script, copy the following in a terminal:
 
 ::
@@ -164,7 +164,7 @@ Fedora bash jumpstart
 =====================
 
 A jumpstart bash script is available. It will take a Fedora machine through all the steps for you, based on your answer 
-of wanting a GUI (Qt Core) or CLI (Daemon) EverGreenCoin wallet. 
+of wanting a GUI (Qt) or CLI (Daemon) EverGreenCoin wallet. 
 To execute the bash script, copy the following in a terminal:
 
 ::

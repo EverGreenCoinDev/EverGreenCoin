@@ -92,7 +92,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 
     resize(1000, 700);
     this->setGeometry(QStyle::alignedRect(Qt::LeftToRight, Qt::AlignCenter, this->size(), QApplication::desktop()->screenGeometry()));
-    setWindowTitle(tr("EverGreenCoin® Core - Wallet v1.9.1") );
+    setWindowTitle(tr("EverGreenCoin® Wallet v1.9.2") );
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/evergreencoin"));
     setWindowIcon(QIcon(":icons/evergreencoin"));
@@ -435,7 +435,7 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
 #endif
             if(trayIcon)
             {
-                trayIcon->setToolTip(tr("EverGreenCoin® Core - Wallet v1.8") + QString(" ") + tr("[testnet]"));
+                trayIcon->setToolTip(tr("EverGreenCoin® Wallet") + QString(" ") + tr("[testnet]"));
                 trayIcon->setIcon(QIcon(":/icons/toolbar_testnet"));
                 toggleHideAction->setIcon(QIcon(":/icons/toolbar_testnet"));
             }

@@ -1587,8 +1587,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>EverGreenCoin Core</source>
-        <translation>EverGreenCoin Core</translation>
+        <source>EverGreenCoin</source>
+        <translation>EverGreenCoin</translation>
     </message>
     <message>
         <location line="+279"/>

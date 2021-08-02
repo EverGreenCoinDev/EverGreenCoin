@@ -1588,8 +1588,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>EverGreenCoin Core</source>
-        <translation>EverGreenCoin Core</translation>
+        <source>EverGreenCoin</source>
+        <translation>EverGreenCoin</translation>
     </message>
     <message>
         <location line="+279"/>

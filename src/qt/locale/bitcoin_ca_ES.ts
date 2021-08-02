@@ -1578,7 +1578,7 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>EverGreenCoin Core</source>
+        <source>EverGreenCoin</source>
         <translation>Nucli EverGreenCoin</translation>
     </message>
     <message>

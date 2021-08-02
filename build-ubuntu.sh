@@ -4,7 +4,7 @@
 # Copyright EverGreenCoin Developers
 # https://github.com/EverGreenCoinDev/EverGreenCoin/build-ubuntu.sh
 #
-# Prompts to build one of the following: An EverGreenCoin Daemon Command Line Interface (CLI, advanced) or an EverGreenCoin Core Graphical User Interface (GUI, easiest). 
+# Prompts to build one of the following: An EverGreenCoin Daemon Command Line Interface (CLI, advanced) or an EverGreenCoin Qt Graphical User Interface (GUI, easiest). 
 # If your using a desktop or laptop, VM or otherwise, you most-likely will want the Graphical User Interface (EverGreenCoin-qt) and it's easier to use.
 # If your using a VPS or server, you most-likely want a Command Line Interface (evergreencoind). This is more advanced to use.
 #
@@ -18,11 +18,11 @@
 
 echo "build-ubuntu.sh - An EverGreenCoin jumpstart bash script for Ubuntu!"
 echo "==============="
-echo "This executes all the steps of installing all dependencies, downloading the source code, compiling it, copying the resulting executable to /usr/local/bin, and launches the EverGreenCoin wallet (either Daemon CLI or Core GUI) as the current user or sudo for root."
+echo "This executes all the steps of installing all dependencies, downloading the source code, compiling it, copying the resulting executable to /usr/local/bin, and launches the EverGreenCoin wallet (either Daemon CLI or Qt GUI) as the current user or sudo for root."
 echo "You'll be prompted for your super user password to install dependencies and copy the executable. Please enter the password when prompted."
 
-read -p "Choose EverGreenCoin Core (desktop Qt Graphical User Interface (GUI) wallet) or EverGreenCoin Daemon (shell Command Line Interface (CLI) wallet) 
-(press 'G' for Core Qt GUI or press 'C' for Daemon CLI then enter)? " answer
+read -p "Choose EverGreenCoin Qt (Graphical User Interface (GUI) wallet) or EverGreenCoin Daemon (shell Command Line Interface (CLI) wallet) 
+(press 'G' for Qt GUI or press 'C' for Daemon CLI then enter)? " answer
 case ${answer:0:1} in
     g|G )
         sudo apt-get update

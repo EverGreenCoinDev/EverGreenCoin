@@ -1603,8 +1603,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+25"/>
-        <source>EverGreenCoin Core</source>
-        <translation>EverGreenCoin Core</translation>
+        <source>EverGreenCoin</source>
+        <translation>EverGreenCoin</translation>
     </message>
     <message>
         <location line="+279"/>

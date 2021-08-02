@@ -1585,7 +1585,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>EverGreenCoin Core</source>
+        <source>EverGreenCoin</source>
         <translation>EverGreenCoinin ydin</translation>
     </message>
     <message>

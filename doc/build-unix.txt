@@ -1,5 +1,5 @@
 Copyright (c) 2009-2012 Bitcoin Developers
-Copyright (c) 2015-2020 EverGreenCoin Developers
+Copyright (c) 2015-2021 EverGreenCoin Developers
 Distributed under the MIT/X11 software license, see the accompanying
 file license.txt or http://www.opensource.org/licenses/mit-license.php.
 This product includes software developed by the OpenSSL Project for use in
@@ -13,7 +13,7 @@ UNIX BUILD NOTES
 One-liners
 ----------
 Bash scripts are available to install all dependencies, download the latest code, comile it, install it, and execute it for you.
-This is based on your dicission of a CLI (daemon) or GUI (core qt) when prompted.
+This is based on your dicission of a CLI (daemon) or GUI (Qt) when prompted.
 To start the process, simply copy and paste the following one line into a shell terminal:
 
 Ubuntu 
@@ -86,7 +86,7 @@ If using Boost 1.37, append -mt to the boost libraries in the makefile.
 
 An Ubuntu EverGreenCoin jumpstart bash script is available. It will do everything for you.
 It will perform all the steps needed, including installing needed dependencies, 
-based on your answer of a desired CLI (Daemon) or GUI (Qt Core) EverGreenCoin wallet.
+based on your answer of a desired CLI (Daemon) or GUI (Qt) EverGreenCoin wallet.
 To execute this script, from a shell terminal (CTRL + ALT + T) enter:
 bash <(wget -qO- https://raw.githubusercontent.com/EverGreenCoinDev/EverGreenCoin/master/build-ubuntu.sh)
 and follow the simple instructions.

@@ -1587,8 +1587,8 @@ Les montants inférieurs à  0.546 fois les frais minimum de relais apparaissent
     </message>
     <message>
         <location line="+25"/>
-        <source>EverGreenCoin Core</source>
-        <translation>EverGreenCoin Core</translation>
+        <source>EverGreenCoin</source>
+        <translation>EverGreenCoin</translation>
     </message>
     <message>
         <location line="+279"/>

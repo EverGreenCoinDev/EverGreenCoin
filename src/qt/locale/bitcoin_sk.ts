@@ -1586,8 +1586,8 @@ Sumy nižšie ako 0,546 násobok minimálneho poplatku sú zobrazené ako DUST.<
     </message>
     <message>
         <location line="+25"/>
-        <source>EverGreenCoin Core</source>
-        <translation>EverGreenCoin Core</translation>
+        <source>EverGreenCoin</source>
+        <translation>EverGreenCoin</translation>
     </message>
     <message>
         <location line="+279"/>

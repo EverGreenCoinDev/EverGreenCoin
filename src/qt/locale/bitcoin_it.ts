@@ -1572,7 +1572,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+25"/>
-        <source>EverGreenCoin Core</source>
+        <source>EverGreenCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>

@@ -19,13 +19,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "EverGreenCoin Foundation, Inc."
-            VALUE "FileDescription",    "EverGreenCoin Core (GUI node for EverGreenCoin)"
+            VALUE "FileDescription",    "EverGreenCoin Qt Wallet (GUI node for EverGreenCoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "EverGreenCoin® Core"
-            VALUE "LegalCopyright",     "2015 - 2020 EverGreenCoin Foundation, Inc."
+            VALUE "LegalCopyright",     "2015 - 2021 EverGreenCoin Foundation, Inc."
             VALUE "LegalTrademarks1",   "EverGreenCoin® and the EverGreenCoin logo are protected by registered trademark. All rights reserved. Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "EverGreenCoin-Qt.exe"
-            VALUE "ProductName",        "EverGreenCoin® Core"
+            VALUE "ProductName",        "EverGreenCoin® Qt Wallet"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END
