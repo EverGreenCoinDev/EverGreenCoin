@@ -97,7 +97,7 @@ void StakeForCharityDialog::setModel(WalletModel *model)
             {
                 ui->message->setStyleSheet("QLabel { color: #1ab06c; font-weight: 900; }");
                 ui->message->setText(tr("You are sending to manually entered address: ") + strAddress.ToString().c_str());
-                ui->comboBox->setCurrentIndex(0);               
+                ui->comboBox->setCurrentIndex(0);
             }
         }
 
@@ -341,7 +341,9 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
 {
     QPixmap IMGpixmap;
     QPixmap EGCIMGpixmap;
+    QPixmap PowerUppixmap;
     EGCIMGpixmap.load(":/images/Wallet_Logo");
+    PowerUppixmap.load(":/images/power-up");
     if (index==0)
     {
         ui->charityAddressEdit->clear();
@@ -349,11 +351,11 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setReadOnly(false);
         ui->addressBookButton->setDisabled(false);
         ui->charityAddressEdit->setStyleSheet("border-color: #ffffff; color: #ffffff;");
-        ui->label_5->setStyleSheet("QLabel {color: #ffffff;}");
+        ui->label_5->setStyleSheet("QLabel {color:#1ab06c;}");
         ui->message->setText("Please enter the EverGreenCoin address <br />or select from the drop-down <br />and then click 'Enable'");
         ui->charityAddressEdit->setFocus();
-        ui->label_IMG->clear();
-        ui->label_HREF->clear();
+        ui->label_IMG->setPixmap(PowerUppixmap);
+        ui->label_HREF->setText("<span style='text-decoration: none;'>Manual Address Entry</span>");
     }
     else if (index==1)
     {
@@ -368,7 +370,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
         ui->charityAddressEdit->setEnabled(false);
         ui->charityAddressEdit->setReadOnly(true);
         ui->label_IMG->setPixmap(EGCIMGpixmap);
-        ui->label_HREF->setText("<a href='https://evergreencoin.org/EGCFoundation/'><span style='text-decoration: underline; color:#1ab06c;'>Learn more</span></a>");
+        ui->label_HREF->setText("<a href='https://evergreencoin.org/EGCFoundation/'><span style='text-decoration: underline; color:#1ab06c;'>Learn More</span></a>");
     }
     else if (index > 1)
     {
@@ -403,7 +405,7 @@ void StakeForCharityDialog::on_comboBox_currentIndexChanged(int index)
                 IMGpixmap.loadFromData(imgData);
                 ui->label_IMG->setPixmap(IMGpixmap);
             }
-            ui->label_HREF->setText("<a href='" + (QString)charitiesURL[index-1] +"'><span style='text-decoration: underline; color:#1ab06c;'>Learn more</span></a>");
+            ui->label_HREF->setText("<a href='" + (QString)charitiesURL[index-1] +"'><span style='text-decoration: underline; color:#1ab06c;'>Learn More</span></a>");
         }
     }
 }

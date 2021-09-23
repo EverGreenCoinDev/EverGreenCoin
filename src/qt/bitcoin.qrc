@@ -49,6 +49,7 @@
         <file alias="block">res/icons/block.png</file>
         <file alias="charity_on">res/icons/charity_on.png</file>
         <file alias="charity_off">res/icons/charity_off.png</file>
+        <file>res/images/power-up.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="splash">res/images/splash.png</file>
@@ -56,6 +57,7 @@
         <file alias="Small_logo">res/images/evergreen60x60.png</file>
         <file alias="about">res/images/about.png</file>
         <file alias="splash_testnet">res/images/splash_testnet.png</file>
+        <file alias="power-up">res/images/power-up.png</file>
     </qresource>
     <qresource prefix="/translations">
         <file alias="af_ZA">locale/bitcoin_af_ZA.qm</file>

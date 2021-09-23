@@ -176,11 +176,15 @@
             </property>
             <property name="font">
              <font>
-              <underline>true</underline>
+              <underline>false</underline>
+              <strikeout>false</strikeout>
              </font>
             </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {color:#1ab06c; text-decoration: none;}</string>
+            </property>
             <property name="text">
-             <string/>
+             <string>Manual Address Entry</string>
             </property>
             <property name="textFormat">
              <enum>Qt::RichText</enum>
@@ -539,6 +543,9 @@
             <property name="textFormat">
              <enum>Qt::RichText</enum>
             </property>
+            <property name="pixmap">
+             <pixmap resource="../bitcoin.qrc">:/icons/res/images/power-up.png</pixmap>
+            </property>
             <property name="scaledContents">
              <bool>true</bool>
             </property>
@@ -664,7 +671,7 @@
              <string/>
             </property>
             <property name="icon">
-             <iconset>
+             <iconset resource="../bitcoin.qrc">
               <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
             </property>
             <property name="autoDefault">
@@ -839,7 +846,7 @@
               <string>&amp;Copy</string>
              </property>
              <property name="icon">
-              <iconset>
+              <iconset resource="../bitcoin.qrc">
                <normaloff>:/icons/editcopy</normaloff>:/icons/editcopy</iconset>
              </property>
              <property name="shortcut">
@@ -876,7 +883,7 @@
               <string/>
              </property>
              <property name="icon">
-              <iconset>
+              <iconset resource="../bitcoin.qrc">
                <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
              </property>
              <property name="autoDefault">
@@ -1022,6 +1029,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../bitcoin.qrc"/>
+ </resources>
  <connections/>
 </ui>
