@@ -262,7 +262,13 @@ void OverviewPage::showOutOfSyncWarning(bool fShow)
 void OverviewPage::updateButton()
 {
    WalletModel::EncryptionStatus status = model->getEncryptionStatus();
-   if(status == WalletModel::Locked)
+   if(status == WalletModel::Unencrypted)
+   {
+       ui->unlockWalletButton->setDisabled(true);
+       ui->unlockWalletButton->setText(QString("EverGreenCoin not encrypted"));
+       ui->unlockWalletButton->setToolTip(QString("Click 'Settings' then 'Encrypt your EverGreenCoin' in the menu bar to encrypt."));
+   }
+   else if(status == WalletModel::Locked)
    {
        ui->unlockWalletButton->setDisabled(false);
        ui->unlockWalletButton->setText(QString("Unlock your EverGreenCoin"));
