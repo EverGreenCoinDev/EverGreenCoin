@@ -563,13 +563,14 @@ void BitcoinGUI::setNumConnections(int count)
     switch(count)
     {
     case 0: icon = ":/icons/connect_0"; break;
-    case 1: case 2: case 3: icon = ":/icons/connect_1"; break;
-    case 4: case 5: case 6: icon = ":/icons/connect_2"; break;
-    case 7: case 8: case 9: icon = ":/icons/connect_3"; break;
+    case 1: case 2: case 3: case 4: icon = ":/icons/connect_1"; break;
+    case 5: case 6: case 7: icon = ":/icons/connect_2"; break;
+    case 8: case 9: case 10: icon = ":/icons/connect_3"; break;
     default: icon = ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
     labelConnectionsIcon->setToolTip(tr("%n active connection(s) to the EverGreenCoin network", "", count));
+    overviewPage->peerCountSafety(count);
 }
 
 void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
@@ -776,7 +777,6 @@ void BitcoinGUI::gotoOverviewPage()
     exportAction->setEnabled(false);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
     updateStakingIcon();
-    if(overviewPage->isVisible()) overviewPage->updateButton();
 }
 
 void BitcoinGUI::gotoBlockBrowser()

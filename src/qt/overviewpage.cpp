@@ -210,6 +210,7 @@ void OverviewPage::setModel(WalletModel *model)
 
     // update the display unit, to not use the default ("BTC")
     updateDisplayUnit();
+    peerCountSafety(0); // Send function 0 peers to initially disable overview unlock button until sufficient peers, # defined in the function, is reached. STS EGC
 }
 
 void OverviewPage::updateDisplayUnit()
@@ -272,12 +273,26 @@ void OverviewPage::updateButton()
    {
        ui->unlockWalletButton->setDisabled(false);
        ui->unlockWalletButton->setText(QString("Unlock your EverGreenCoin"));
-       ui->unlockWalletButton->setToolTip(QString("Unlock and send transactions will automatically be signed without again prompting for your password until locked or closed. <br />You will be mining to earn network rewards if you have any mature balance. <br />Automatic donation of network rewards will be possible, if enabled under 'Charity'."));
+       ui->unlockWalletButton->setToolTip(QString("Unlock and send transactions will automatically be signed without again prompting for your password until locked or closed. <br />You will be mining to earn network rewards if you have any mature balance. <br />Dynamic Staking for Charity donations of network rewards will be possible, if enabled under 'Charity.'"));
    }
    else
    {
        ui->unlockWalletButton->setDisabled(false);
        ui->unlockWalletButton->setText(QString("Lock your EverGreenCoin"));
-       ui->unlockWalletButton->setToolTip(QString("Lock and send transactions will prompt you for your passowrd. <br />You will not earn network rewards while locked and can not automatically donate them."));
+       ui->unlockWalletButton->setToolTip(QString("Lock and send transactions will prompt you for your passowrd. <br />You will not earn network rewards while locked and can not automatically donate them with Dynamic Staking for Charity."));
    }
+}
+
+void OverviewPage::peerCountSafety(int count)
+{
+    if (count <= 4)
+    {
+        ui->unlockWalletButton->setDisabled(true);
+        ui->unlockWalletButton->setText(QString("Please wait and allow more peers to connect"));
+        ui->unlockWalletButton->setToolTip(QString("Please wait and allow a stronger connection to the EverGreenCoin network."));
+    }
+    else
+    {
+        updateButton();
+    }
 }
