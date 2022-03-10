@@ -58,6 +58,8 @@
         <file alias="about">res/images/about.png</file>
         <file alias="splash_testnet">res/images/splash_testnet.png</file>
         <file alias="power-up">res/images/power-up.png</file>
+        <file alias="background">res/images/background.jpg</file>
+        <file alias="foundation">res/images/foundation.png</file>
     </qresource>
     <qresource prefix="/translations">
         <file alias="af_ZA">locale/bitcoin_af_ZA.qm</file>

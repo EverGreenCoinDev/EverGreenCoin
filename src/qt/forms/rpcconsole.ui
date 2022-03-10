@@ -33,7 +33,7 @@
        <item row="0" column="0">
         <widget class="QLabel" name="label_9">
          <property name="text">
-          <string>EverGreenCoin Qt Wallet</string>
+          <string>EverGreenCoin Core Wallet</string>
          </property>
         </widget>
        </item>
@@ -391,8 +391,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit">
-          </widget>
+          <widget class="QLineEdit" name="lineEdit"/>
          </item>
          <item>
           <widget class="QPushButton" name="clearButton">

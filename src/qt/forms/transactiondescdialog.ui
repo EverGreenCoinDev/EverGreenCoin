@@ -23,7 +23,7 @@
       <string>This shows a detailed description of the transaction</string>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: #153f30; background: transparent;</string>
+      <string notr="true">color: #ffffff; background: transparent;</string>
      </property>
      <property name="readOnly">
       <bool>true</bool>

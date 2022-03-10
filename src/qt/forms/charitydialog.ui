@@ -28,6 +28,9 @@
   <property name="windowTitle">
    <string>Stake For Charity</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">border: 0px;</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="leftMargin">
     <number>0</number>
@@ -54,6 +57,9 @@
        <width>905</width>
        <height>640</height>
       </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: rgba(1,132,87,10);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -84,7 +90,7 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>967</width>
+        <width>969</width>
         <height>640</height>
        </rect>
       </property>
@@ -181,7 +187,7 @@
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color:#1ab06c; text-decoration: none;}</string>
+             <string notr="true">QLabel {color:#000000; text-decoration: none;}</string>
             </property>
             <property name="text">
              <string>Manual Address Entry</string>
@@ -278,6 +284,9 @@
                   <property name="layoutDirection">
                    <enum>Qt::LeftToRight</enum>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">background: rgba(1,132,87,150);</string>
+                  </property>
                   <property name="text">
                    <string>Enable</string>
                   </property>
@@ -299,6 +308,9 @@
                   </property>
                   <property name="toolTip">
                    <string>Disable EverGreenCoin Dynamic Stake For Charity</string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background: rgba(1,132,87,150);</string>
                   </property>
                   <property name="text">
                    <string>Disable</string>
@@ -537,6 +549,9 @@
               <height>180</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background: #153f30;</string>
+            </property>
             <property name="text">
              <string/>
             </property>
@@ -625,6 +640,9 @@
             <property name="toolTip">
              <string>The amount left over returned to you (expert only, safe to ignore)</string>
             </property>
+            <property name="styleSheet">
+             <string notr="true">border: 2px solid #000000;</string>
+            </property>
             <property name="maxLength">
              <number>34</number>
             </property>
@@ -639,7 +657,7 @@
              <string>Maximum amount to send</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #1ab06c;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum Amount:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -649,7 +667,7 @@
           <item row="3" column="3">
            <widget class="QPushButton" name="btnRefreshCharities">
             <property name="toolTip">
-             <string>Click to download the current list</string>
+             <string>Click to download the current EverGreenCoin Authorized Efforts™ </string>
             </property>
             <property name="text">
              <string>Refresh Charities</string>
@@ -690,6 +708,9 @@
             <property name="toolTip">
              <string>Minimum amount to send</string>
             </property>
+            <property name="styleSheet">
+             <string notr="true">border: 2px solid #000000;</string>
+            </property>
             <property name="maxLength">
              <number>10</number>
             </property>
@@ -701,8 +722,11 @@
           <item row="3" column="1">
            <widget class="QComboBox" name="comboBox">
             <property name="toolTip">
-             <string>Select charity.
-             </string>
+             <string>Select an EverGreenCoin Authorized Effort™ 
+          </string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: 2px solid #000000;</string>
             </property>
             <item>
              <property name="text">
@@ -722,7 +746,7 @@
              <string>Account address to send percentage of network rewards to</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #ffffff;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>                                    Charity Select:</string>
@@ -741,7 +765,7 @@
              <string>Percentage of your network rewards (stake rewards) to send</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #ffffff;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Percentage to give:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -760,7 +784,7 @@
              <string>Minimum amount to send</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #1ab06c;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum Amount:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -773,7 +797,7 @@
              <string>The amount left over returned to you (expert only, safe to ignore)</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #1ab06c;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>                                    Change Address:</string>
@@ -840,7 +864,7 @@
               </size>
              </property>
              <property name="toolTip">
-              <string>Copy the current charity EverGreenCoin account address to the system clipboard</string>
+              <string>Copy the current EverGreenCoin address to the system clipboard</string>
              </property>
              <property name="text">
               <string>&amp;Copy</string>
@@ -898,7 +922,7 @@
              <string>Account address to send percentage of network rewards to</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #ffffff;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>                                    Charity Address:</string>
@@ -915,6 +939,9 @@
             </property>
             <property name="toolTip">
              <string>Maximum amount to send</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: 2px solid #000000;</string>
             </property>
             <property name="text">
              <string/>
@@ -942,10 +969,10 @@
              </size>
             </property>
             <property name="toolTip">
-             <string>Account address to send percentage of network rewards to or select from the drop-down menu above</string>
+             <string>EverGreenCoin address to send percentage of network rewards to or select an EverGreenCoin Authorized Effort™ from the drop-down menu above</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLineEdit {border-color: #ffffff;}</string>
+             <string notr="true">border: 2px solid #000000;</string>
             </property>
             <property name="maxLength">
              <number>34</number>
@@ -967,7 +994,7 @@
              <string>Enter whole numbers 1 - 100</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLineEdit {border-color: #ffffff;}</string>
+             <string notr="true">border: 2px solid #000000;</string>
             </property>
             <property name="maxLength">
              <number>3</number>
@@ -998,13 +1025,13 @@
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: #1ab06c</string>
+             <string notr="true"/>
             </property>
             <property name="lineWidth">
              <number>1</number>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EverGreenCoin Dynamic Stake for Charity allows you to automatically send up to 100% of your network rewards to another EverGreenCoin address after it matures. Note that you pay the transaction fee (min .0001 EGC) in addition to the percentage. &lt;a href=&quot;https://evergreencoin.org/staking-for-charity/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1ab06c;&quot;&gt;Learn more at EverGreenCoin.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EverGreenCoin Dynamic Stake for Charity™ allows you to automatically send up to 100% of your network rewards to another EverGreenCoin address after it matures. Note that you pay the transaction fee (min .0001 EGC) in addition to the percentage. &lt;a href=&quot;https://evergreencoin.org/staking-for-charity/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://evergreencoin.org/staking-for-charity/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;Learn more at EverGreenCoin.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="textFormat">
              <enum>Qt::RichText</enum>

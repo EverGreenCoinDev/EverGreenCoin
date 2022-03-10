@@ -76,7 +76,7 @@ bool BitcoinAmountField::validate()
 void BitcoinAmountField::setValid(bool valid)
 {
     if (valid)
-        amount->setStyleSheet("");
+        amount->setStyleSheet("border: 2px solid #000000;");
     else
         amount->setStyleSheet(STYLE_INVALID);
 }
@@ -136,6 +136,7 @@ void BitcoinAmountField::unitChanged(int idx)
 {
     // Use description tooltip for current unit for the combobox
     unit->setToolTip(unit->itemData(idx, Qt::ToolTipRole).toString());
+    unit->setStyleSheet("QToolTip { color: #ffffff; background-color: #000000; }");
 
     // Determine new unit ID
     int newUnit = unit->itemData(idx, BitcoinUnits::UnitRole).toInt();

@@ -391,10 +391,10 @@ void BlockBrowser::updateExplorer(bool block)
         ui->txLabel->show();
         ui->valueLabel->show();
         ui->valueBox->show();
-        ui->inputLabel->show();
-        ui->inputBox->show();
-        ui->outputLabel->show();
-        ui->outputBox->show();
+        //ui->inputLabel->show();
+        //ui->inputBox->show();
+        //ui->outputLabel->show();
+        //ui->outputBox->show();
         ui->feesLabel->show();
         ui->feesBox->show();
         std::string txid = ui->txBox->text().toUtf8().constData();
@@ -409,8 +409,8 @@ void BlockBrowser::updateExplorer(bool block)
         QString QFees = QString::number(fees, 'f', 6);
         ui->valueBox->setText(QValue + " EverGreenCoin");
         ui->txID->setText(QID);
-        ui->outputBox->setText(QOutputs);
-        ui->inputBox->setText(QInputs);
+        //ui->outputBox->setText(QOutputs);
+        //ui->inputBox->setText(QInputs);
         ui->feesBox->setText(QFees + " EverGreenCoin");
     }
 }

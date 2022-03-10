@@ -42,6 +42,8 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     case ForSending:
         connect(ui->tableView, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(accept()));
         ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        ui->tableView->setStyleSheet("background-color: rgb(1,132,87);");
+        this->setStyleSheet("background-color: rgb(1,132,87);");
         ui->tableView->setFocus();
         break;
     case ForEditing:

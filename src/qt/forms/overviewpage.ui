@@ -470,7 +470,7 @@
              </font>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;  color:#ffffff;&quot;&gt;Your EverGreenCoin Balances&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your EverGreenCoin Balance&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -537,7 +537,7 @@
              <string>Your current spendable EverGreenCoin balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #ffffff;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Spendable:</string>
@@ -568,7 +568,7 @@
              <string>Your current spendable EverGreenCoin balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #ffffff;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string notr="true">0 EGC</string>
@@ -594,7 +594,7 @@
  and do not yet count toward your spendable balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #ffffff;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Stake:</string>
@@ -620,7 +620,7 @@
  and do not yet count toward your spendable balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #ffffff;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string notr="true">0 EGC</string>
@@ -646,7 +646,7 @@
  and do not yet count toward the spendable balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #ffffff;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Unconfirmed:</string>
@@ -672,7 +672,7 @@
  and do not yet count toward the spendable balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #ffffff;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string notr="true">0 EGC</string>
@@ -698,7 +698,7 @@
  and do not count towards your spendable balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #ffffff;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Immature:</string>
@@ -721,7 +721,7 @@
  and do not count towards your spendable balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #ffffff;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string notr="true">0 EGC</string>
@@ -1199,7 +1199,7 @@
              <string>Your current total EverGreenCoin balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #ffffff;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Total:</string>
@@ -1231,7 +1231,7 @@
              <string>Your current total EverGreenCoin balance</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">QLabel {color: #ffffff;}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string notr="true">0 EGC</string>
@@ -1284,7 +1284,7 @@
      <item>
       <widget class="QLabel" name="label_7">
        <property name="text">
-        <string>&lt;center&gt;&lt;a href=&quot;http://EverGreenCoin.org&quot; style=&quot;text-decoration: none; color:#1ab06c;&quot;&gt;EverGreenCoin.org&lt;/a&gt;&lt;/center&gt;</string>
+        <string>&lt;center&gt;&lt;a href=&quot;http://EverGreenCoin.org&quot; style=&quot;text-decoration: none; color:#000000;&quot;&gt;EverGreenCoin.org&lt;/a&gt;&lt;/center&gt;</string>
        </property>
        <property name="openExternalLinks">
         <bool>true</bool>
@@ -1343,7 +1343,7 @@
              </size>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color: #ffffff;&quot;&gt;Your Recent Transactions&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your Recent Transactions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
@@ -1393,7 +1393,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">QListView { background: transparent; color: #ffffff;}</string>
+           <string notr="true">QListView { background: transparent;}</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::NoFrame</enum>
@@ -1433,7 +1433,7 @@
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">unlockWalletButton { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #155f30, stop: 0.005 #018457, stop: 0.955 #018457, stop: 1 #155f30); }</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>wallet unlock button</string>
