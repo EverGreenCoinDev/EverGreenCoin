@@ -246,7 +246,6 @@ void StakeForCharityDialog::on_enableButton_clicked()
         ui->message->setStyleSheet("QLabel { color: red; font-weight: 900; }");
         ui->message->setText(tr("Please enter whole numbers, 1 through 100, for percentage")+ " \n\n\n");
         ui->charityPercentEdit->setFocus();
-        ui->charityPercentEdit->setStyleSheet("border-color: #ffffff;");
         return;
     }
 

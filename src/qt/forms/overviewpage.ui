@@ -465,8 +465,9 @@
             <property name="font">
              <font>
               <family>Sans Serif</family>
-              <weight>50</weight>
-              <bold>false</bold>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="text">
@@ -1342,6 +1343,12 @@
               <height>30</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your Recent Transactions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
@@ -1425,6 +1432,12 @@
          <width>77214</width>
          <height>16777214</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
        </property>
        <property name="toolTip">
         <string/>

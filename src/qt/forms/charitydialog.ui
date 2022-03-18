@@ -278,8 +278,14 @@
                     <height>40</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="toolTip">
-                   <string>Save any changes and enable EverGreenCoin Dynamic Stake For Charity</string>
+                   <string>&lt;p&gt;&lt;span style=&quot; color:#ffffff; background-color: #000000; white-space:nowrap;&quot;&gt;Save any changes and enable EverGreenCoin Dynamic Stake For Charity™ &lt;/span&gt;</string>
                   </property>
                   <property name="layoutDirection">
                    <enum>Qt::LeftToRight</enum>
@@ -306,8 +312,14 @@
                     <height>40</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                   <property name="toolTip">
-                   <string>Disable EverGreenCoin Dynamic Stake For Charity</string>
+                   <string>&lt;span style=&quot; color:#ffffff; background-color: #000000; white-space:nowrap;&quot;&gt;Disable EverGreenCoin Dynamic Stake For Charity™ &lt;/span&gt;</string>
                   </property>
                   <property name="styleSheet">
                    <string notr="true">background: rgba(1,132,87,150);</string>
@@ -721,9 +733,14 @@
           </item>
           <item row="3" column="1">
            <widget class="QComboBox" name="comboBox">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="toolTip">
-             <string>Select an EverGreenCoin Authorized Effort™ 
-          </string>
+             <string>Select an EverGreenCoin Authorized Effort™ or select 'Manual Address Entry' to enter any EverGreenCoin address.</string>
             </property>
             <property name="styleSheet">
              <string notr="true">border: 2px solid #000000;</string>
@@ -742,6 +759,12 @@
           </item>
           <item row="3" column="0">
            <widget class="QLabel" name="label_7">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="toolTip">
              <string>Account address to send percentage of network rewards to</string>
             </property>
@@ -760,6 +783,12 @@
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
             </property>
             <property name="toolTip">
              <string>Percentage of your network rewards (stake rewards) to send</string>
@@ -918,6 +947,12 @@
           </item>
           <item row="4" column="0">
            <widget class="QLabel" name="label_5">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="toolTip">
              <string>Account address to send percentage of network rewards to</string>
             </property>
@@ -968,8 +1003,14 @@
               <height>0</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="toolTip">
-             <string>EverGreenCoin address to send percentage of network rewards to or select an EverGreenCoin Authorized Effort™ from the drop-down menu above</string>
+             <string>EverGreenCoin address to send percentage of network rewards to after maturity.</string>
             </property>
             <property name="styleSheet">
              <string notr="true">border: 2px solid #000000;</string>
