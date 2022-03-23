@@ -150,7 +150,7 @@ void SendCoinsDialog::on_sendButton_clicked()
 
     fNewRecipientAllowed = false;
 
-    QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm send EverGreenCoin"),
+    QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm Send EverGreenCoin"),
                           tr("Are you sure you want to send %1?").arg(formatted.join(tr(" and "))),
           QMessageBox::Yes|QMessageBox::Cancel,
           QMessageBox::Cancel);

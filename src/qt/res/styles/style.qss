@@ -60,8 +60,11 @@ QLabel {
 }
 
 QMessageBox {
-        color: #ffffff;
         background-color: rgba(1,132,87,50);
+}
+
+QMessageBox QLabel {
+        color: #ffffff;
 }
 
 QCheckBox {
@@ -238,8 +241,8 @@ QTableView {
 }
 
 QHeaderView { color: #000000; background: transparent; } /* QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #155f30, stop: 0.05 #018457, stop: 0.95 #018457, stop: 1 #155f30); background-image: none; qproperty-defaultAlignment: AlignHCenter; } */
-QHeaderView::section { color: #000000; background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #155f30, stop: 0.05 #018457, stop: 0.95 #018457, stop: 1 #155f30); background-image: none; qproperty-defaultAlignment: AlignHCenter; }
-QHeaderView::section:checked { selection-background-color: rgb(1,132,87); }
+QHeaderView::section { color: #000000; background-color: rgba(1,132,87,50); qproperty-defaultAlignment: AlignHCenter; }
+QHeaderView::section:checked { selection-background-color: rgba(1,132,87,50); }
 
 QTabWidget {
         border: 2px solid #018457;

@@ -90,7 +90,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 #endif
 
-    resize(1250, 1000);
+    resize(937.5, 750);
     this->setGeometry(QStyle::alignedRect(Qt::LeftToRight, Qt::AlignCenter, this->size(), QApplication::desktop()->screenGeometry()));
     setWindowTitle(tr("EverGreenCoin® Core - Wallet v1.9.5") );
 #ifndef Q_OS_MAC

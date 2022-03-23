@@ -541,7 +541,7 @@
          <enum>QFormLayout::ExpandingFieldsGrow</enum>
         </property>
         <property name="labelAlignment">
-         <set>Qt::AlignCenter</set>
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
         <property name="formAlignment">
          <set>Qt::AlignHCenter|Qt::AlignTop</set>
