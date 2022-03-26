@@ -138,7 +138,7 @@ USE_QRCODE=1
 contains(USE_QRCODE, 1) {
     message(Building with QRCode support)
     DEFINES += USE_QRCODE
-    LIBS += -lqrencode
+    !win32:macx:LIBS += -lqrencode
     win32:INCLUDEPATH +=$$QRENCODE_INCLUDE_PATH
     win32:LIBS += $$join(QRENCODE_LIB_PATH,,-L) -lqrencode
 }
