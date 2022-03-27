@@ -228,7 +228,7 @@ HEADERS += src/sph_blake.h \
 
 
 NO_LEVELDB=1
-!windows:!macx {
+!windows {
     NO_LEVELDB=0
 }
 !contains(NO_LEVELDB, 1) {
