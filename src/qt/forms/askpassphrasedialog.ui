@@ -52,7 +52,7 @@
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-color: #ffffff;</string>
+        <string notr="true">border-color: #ffffff; color: #ffffff;</string>
        </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
@@ -77,7 +77,7 @@
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-color: #ffffff;</string>
+        <string notr="true">border-color: #ffffff; color: #ffffff;</string>
        </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
@@ -102,7 +102,7 @@
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-color: #ffffff;</string>
+        <string notr="true">border-color: #ffffff; color: #ffffff;</string>
        </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
