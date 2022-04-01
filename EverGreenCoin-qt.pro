@@ -141,6 +141,7 @@ contains(USE_QRCODE, 1) {
     !win32:macx:LIBS += -lqrencode
     win32:INCLUDEPATH +=$$QRENCODE_INCLUDE_PATH
     win32:LIBS += $$join(QRENCODE_LIB_PATH,,-L) -lqrencode
+    !win32:!macx:LIBS += -lqrencode
 }
 
 # use: qmake "USE_UPNP=1" ( enabled by default; default)
