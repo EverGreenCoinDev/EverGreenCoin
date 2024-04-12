@@ -24,7 +24,8 @@
  * will be copied.  Always NUL terminates (unless siz == 0).
  * Returns strlen(src); if retval >= siz, truncation occurred.
  */
-inline size_t strlcpy(char *dst, const char *src, size_t siz)
+// STS EGC - Boolean 'overload' added so as to not redeclare string_fortified.h's function of the same name and prototype, which was added in glibc 2.38.
+inline size_t strlcpy(char *dst, const char *src, size_t siz, bool overload)
 {
     char *d = dst;
     const char *s = src;
@@ -59,7 +60,8 @@ inline size_t strlcpy(char *dst, const char *src, size_t siz)
  * Returns strlen(src) + MIN(siz, strlen(initial dst)).
  * If retval >= siz, truncation occurred.
  */
-inline size_t strlcat(char *dst, const char *src, size_t siz)
+// STS EGC - Boolean 'overload' added so as to not redeclare string_fortified.h's function of the same name and prototype, which was added in glibc 2.38.
+inline size_t strlcat(char *dst, const char *src, size_t siz, bool overload)
 {
     char *d = dst;
     const char *s = src;
