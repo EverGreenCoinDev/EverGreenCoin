@@ -510,7 +510,7 @@ void ParseParameters(int argc, const char* const argv[])
     for (int i = 1; i < argc; i++)
     {
         char psz[10000];
-        strlcpy(psz, argv[i], sizeof(psz));
+        strlcpy(psz, argv[i], sizeof(psz), true);
         char* pszValue = (char*)"";
         if (strchr(psz, '='))
         {
