@@ -24,6 +24,6 @@ RPC port: 5758 (testnet 15758).
 
 Visit https://EverGreenCoin.org and our Bitcoin Talk thread https://bitcointalk.org/index.php?topic=2057319.0 for more details.
 
-Copyright (C) 2015-2022 The EverGreenCoin developers. 
+Copyright (C) 2015-2024 The EverGreenCoin developers. 
 "EverGreenCoin" in all case variations and the EverGreenCoin logo are protected by registered international trademarks. 
 All rights reserved.
