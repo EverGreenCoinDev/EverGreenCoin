@@ -22,7 +22,7 @@ BEGIN
             VALUE "FileDescription",    "EverGreenCoin Core Wallet (Qt GUI node for EverGreenCoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "EverGreenCoin® Core Walllet"
-            VALUE "LegalCopyright",     "2015 - 2022 EverGreenCoin Foundation, Inc."
+            VALUE "LegalCopyright",     "2015 - 2025 EverGreenCoin Foundation, Inc."
             VALUE "LegalTrademarks1",   "EverGreenCoin® and the EverGreenCoin logo are protected by registered trademark. All rights reserved. Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "EverGreenCoin-Qt.exe"
             VALUE "ProductName",        "EverGreenCoin® Core Wallet"
