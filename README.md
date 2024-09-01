@@ -1,7 +1,7 @@
 
 ![Alt text](src/qt/res/images/background.jpg)
 
-EverGreenCoin version 1.9.6.0
+EverGreenCoin version 1.9.6.1
 
 Cryptocurrency meets our environment. 
 

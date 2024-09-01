@@ -5,7 +5,7 @@ TEMPLATE = app
 DEFINES += fName1 fName2
 fName1 = "EverGreenCoin-Core"
 macx:TARGET = "EverGreenCoin-Core"
-VERSION = 1.9.6.0
+VERSION = 1.9.6.1
 QMAKE_TARGET_BUNDLE_PREFIX = co.evergreen
 contains(QT_ARCH, i386) {
     fName2 = "-qt-x86-v"
