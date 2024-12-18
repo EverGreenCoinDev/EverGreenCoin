@@ -1,6 +1,6 @@
 #!/bin/bash
 # build-ubuntu.sh
-# Install dependencies, downloads the EverGreenCoin source code, compile, and executes as current user (or sudo for root) on Ubuntu as of Ubuntu 18.04.3 LTS
+# Install dependencies, downloads the EverGreenCoin source code, compile, and executes as current user (or sudo for root) on Ubuntu as of Ubuntu 24.04.01 LTS
 # Copyright EverGreenCoin Developers
 # https://github.com/EverGreenCoinDev/EverGreenCoin/build-ubuntu.sh
 #
@@ -34,6 +34,7 @@ case ${answer:0:1} in
         sudo apt-get install libqrencode-dev -y
         sudo apt-get install qt5-default -y
         sudo apt-get install qttools5-dev-tools -y
+        sudo apt-get install qtbase5-dev -y
         sudo apt-get install git -y
         cd ~
         git clone https://github.com/EverGreenCoinDev/EverGreenCoin
